@@ -1,0 +1,23 @@
+{
+  "case_count": 149,
+  "positive_count": 90,
+  "safe_count": 59,
+  "score": "mean of up to three non-overlapping 10-second chroma segment matches",
+  "positive_distribution": {
+    "mean": 0.9253184010585149,
+    "std": 0.034020040732570395,
+    "median": 0.9285926222801208,
+    "p10": 0.8772093802690506,
+    "p90": 0.9645293802022934
+  },
+  "safe_distribution": {
+    "mean": 0.8637121033533818,
+    "std": 0.052957794399806406,
+    "median": 0.8728097279866537,
+    "p10": 0.7946955879529317,
+    "p90": 0.9211558818817138
+  },
+  "roc_auc": 0.8563088512241055,
+  "cohen_d": 1.4491528621578116,
+  "interpretation_note": "The positive files are excerpts/transforms of the same source recording. Safe files are compared only with their CLAP Top-1 candidate. Chroma reflects pitch-class energy and harmonic patterns; this experiment is not a legal plagiarism verdict. The current segment comparison is time-aligned and transposition-tolerant but has no DTW tempo alignment."
+}

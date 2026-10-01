@@ -1,0 +1,59 @@
+{
+  "candidate_ranking_policy": {
+    "model": "clap_only",
+    "candidate_pool": "top 5 tracks by maximum window-pair cosine score",
+    "reranking_score": "mean cosine similarity across best aligned three windows",
+    "window_seconds": 10,
+    "stride_seconds": 5,
+    "minimum_coverage_seconds": 20,
+    "candidate_top_k": 5,
+    "calibrated": false
+  },
+  "reference_track_count": 295,
+  "reference_window_count": 9847,
+  "training_track_count": 174,
+  "held_out_positive_source_count": 11,
+  "positive_query_count": 63,
+  "reperformed_positive_query_count": 30,
+  "safe_query_count": 299,
+  "skipped_query_count": 1,
+  "query_window_policy": "all 10-second windows at 5-second stride",
+  "thresholds_are_calibrated": false,
+  "note": "CLAP cosine scores are similarity values, not plagiarism percentages. Same-recording synthetic queries are not independently performed covers. The reference index contains all unique-stem files in original_music, using cached vectors for trained tracks. Thresholds have not been calibrated.",
+  "models": {
+    "clap_only": {
+      "hold_0_85": {
+        "threshold": 0.85,
+        "true_positive": 63,
+        "false_negative": 0,
+        "false_positive": 293,
+        "true_negative": 6,
+        "precision": 0.17696629213483145,
+        "recall": 1.0,
+        "specificity": 0.020066889632107024,
+        "false_positive_rate": 0.979933110367893,
+        "f1": 0.3007159904534606
+      },
+      "warn_0_70_or_higher": {
+        "threshold": 0.7,
+        "true_positive": 63,
+        "false_negative": 0,
+        "false_positive": 299,
+        "true_negative": 0,
+        "precision": 0.17403314917127072,
+        "recall": 1.0,
+        "specificity": 0.0,
+        "false_positive_rate": 1.0,
+        "f1": 0.2964705882352941
+      },
+      "positive_source_recall_at_1": 0.8571428571428571,
+      "positive_median_source_rank": 1.0,
+      "clap_candidate_source_recall_at_5": 0.9523809523809523,
+      "continuity_reranked_source_recall_at_1": 0.873015873015873,
+      "continuity_candidate_coverage_at_5": 0.9523809523809523,
+      "continuity_reranked_median_rank_within_candidates": 1.0,
+      "positive_score_median": 0.9785279035568237,
+      "safe_score_median": 0.9335397481918335
+    }
+  }
+}

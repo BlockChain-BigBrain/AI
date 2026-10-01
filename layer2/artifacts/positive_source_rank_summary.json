@@ -1,0 +1,15 @@
+{
+  "query_count": 90,
+  "ranked_query_count": 90,
+  "reference_track_count": 295,
+  "reference_window_count": 9847,
+  "top_1_count": 70,
+  "top_5_count": 85,
+  "top_10_count": 88,
+  "top_1_rate": 0.7777777777777778,
+  "top_5_rate": 0.9444444444444444,
+  "top_10_rate": 0.9777777777777777,
+  "median_source_rank": 1.0,
+  "max_source_rank": 23,
+  "scope_note": "All positives are synthetic excerpts/transformations of the same original recording. This measures same-recording retrieval rank, not independently performed covers or legal plagiarism. Track score is the maximum cosine similarity across query/reference segment pairs."
+}

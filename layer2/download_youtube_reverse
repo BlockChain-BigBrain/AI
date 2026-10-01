@@ -1,0 +1,89 @@
+"""Download 100 available audio files, scanning backward through a playlist."""
+
+from pathlib import Path
+
+import yt_dlp
+
+
+SAVE_DIR = Path(__file__).resolve().parent.parent / "original_music"
+PLAYLIST_URL = "https://www.youtube.com/playlist?list=PLRBp0Fe2GpgmsW46rJyudVFlY6IYjFBIK"
+TARGET_COUNT = 100
+BATCH_SIZE = 10
+MEDIA_EXTENSIONS = {".mp3", ".m4a", ".webm", ".wav", ".flac", ".ogg"}
+
+YDL_OPTIONS = {
+    "format": "bestaudio/best",
+    # Save YouTube's audio-only WebM/M4A directly; this does not need FFmpeg.
+    "outtmpl": str(SAVE_DIR / "%(title)s.%(ext)s"),
+    "ignoreerrors": True,
+    "quiet": False,
+}
+
+
+def count_saved_tracks() -> int:
+    return sum(
+        1 for path in SAVE_DIR.iterdir()
+        if path.is_file() and path.suffix.lower() in MEDIA_EXTENSIONS
+    )
+
+
+def download_reverse_100() -> None:
+    SAVE_DIR.mkdir(parents=True, exist_ok=True)
+    saved_count = count_saved_tracks()
+    print(f"목표: {TARGET_COUNT}개 | 현재 폴더 음원: {saved_count}개 | 저장 위치: {SAVE_DIR}")
+    if saved_count >= TARGET_COUNT:
+        print(f"이미 목표 수량 {TARGET_COUNT}개 이상이 있습니다.")
+        return
+
+    # The last 100 playlist positions were already checked. Request older
+    # positions in small slices so a short first page cannot end the search.
+    older_than = 100
+    try:
+        while saved_count < TARGET_COUNT:
+            older_end = older_than + BATCH_SIZE
+            item_range = f"-{older_end}:-{older_than + 1}"
+            options = {**YDL_OPTIONS, "playlist_items": item_range}
+            print(f"재생목록 추가 확인: 끝에서 {older_than + 1}~{older_end}번째 항목")
+
+            with yt_dlp.YoutubeDL(options) as ydl:
+                playlist = ydl.extract_info(PLAYLIST_URL, download=False)
+                entries = (playlist or {}).get("entries") or []
+                if not entries:
+                    print("더 확인할 재생목록 항목이 없습니다.")
+                    break
+
+                for entry in reversed(entries):
+                    if saved_count >= TARGET_COUNT:
+                        break
+                    if not entry:
+                        continue
+
+                    video_id = entry.get("id")
+                    video_url = entry.get("webpage_url")
+                    if not video_url and video_id:
+                        video_url = f"https://www.youtube.com/watch?v={video_id}"
+                    if not video_url:
+                        continue
+
+                    before = count_saved_tracks()
+                    ydl.download([video_url])
+                    after = count_saved_tracks()
+                    if after > before:
+                        saved_count = after
+                        print(f"진행: {saved_count}/{TARGET_COUNT}개 저장")
+
+            older_than = older_end
+
+        if saved_count >= TARGET_COUNT:
+            print(f"완료: 음원 {saved_count}개가 {SAVE_DIR}에 있습니다.")
+        else:
+            print(
+                f"재생목록에서 확인 가능한 항목을 모두 살펴봤지만 "
+                f"{saved_count}/{TARGET_COUNT}개만 저장되어 있습니다."
+            )
+    except Exception as error:
+        print(f"[오류] 다운로드 실패: {error}")
+
+
+if __name__ == "__main__":
+    download_reverse_100()

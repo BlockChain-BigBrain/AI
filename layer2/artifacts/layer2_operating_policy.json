@@ -1,0 +1,38 @@
+{
+  "policy_status": "demo_recommendation_not_production_validated",
+  "evaluated_at": "2026-09-30",
+  "candidate_retrieval": {
+    "internal_top_k": 5,
+    "display_top_k": 3,
+    "positive_queries": 90,
+    "top3_source_recall": 0.8888888889,
+    "top5_source_recall": 0.9444444444,
+    "decision_reason": "Top-5 added 5 source hits over Top-3 while adding only two candidates per query."
+  },
+  "risk_score": {
+    "score_name": "seg_top3_centered",
+    "hold_threshold_inclusive": 0.8944060206,
+    "warn_threshold_inclusive": 0.8566381335,
+    "pass_rule": "score < warn_threshold",
+    "meaning": "Similarity/risk score, not plagiarism probability or legal finding.",
+    "hold_action": "Escrow/review hold; never automatic upload rejection by Layer 2 alone.",
+    "warn_action": "Allow registration and display risk score/candidate references.",
+    "automatic_upload_block": "Layer 1 exact fingerprint duplicate match only."
+  },
+  "held_out_metrics": {
+    "positive_queries": 32,
+    "safe_queries": 119,
+    "hold_positive_recall": 0.78125,
+    "hold_safe_false_positive_rate": 0.0504201681,
+    "warn_positive_recall": 0.875,
+    "warn_or_hold_safe_false_positive_rate": 0.1848739496,
+    "seg_top3_centered_source_recall_at_3": 0.96875,
+    "seg_top3_centered_source_recall_at_5": 0.96875
+  },
+  "limitations": [
+    "Positive examples are mainly same-recording synthetic edits, not independent performances or human-arranged covers.",
+    "Held-out sample is small; 6 of 119 safe queries crossed HOLD, slightly above the 5% target.",
+    "WARN recall on held-out positives was 87.5%, below the 90% target.",
+    "A standalone Layer 1 upload API now returns HTTP 409 for exact fingerprint matches. The repository has no existing frontend/backend upload route, so application-level wiring is still required."
+  ]
+}

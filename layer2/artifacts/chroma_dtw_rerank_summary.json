@@ -1,0 +1,88 @@
+{
+  "method": "10-second chroma windows, OTI shift, local DTW, aligned three-window mean",
+  "candidate_pool_sizes": [
+    5,
+    20
+  ],
+  "decision_thresholds_calibrated": false,
+  "query_count": 362,
+  "results_by_candidate_k": {
+    "5": {
+      "positive_count": 63,
+      "safe_count": 299,
+      "source_candidate_pool_recall": 0.9523809523809523,
+      "source_top1_after_dtw_rate": 0.8253968253968254,
+      "source_top5_after_dtw_rate": 0.9523809523809523,
+      "top1_given_source_in_pool": 0.8666666666666667,
+      "median_source_rank_when_present": 1.0,
+      "positive_top_candidate_score_median": 0.9783404390017192,
+      "safe_top_candidate_score_median": 0.9417751888434092,
+      "top_candidate_score_roc_auc": 0.8488612836438924,
+      "positive_breakdown": {
+        "remix_fx": {
+          "query_count": 10,
+          "source_in_candidate_pool": 10,
+          "source_top1_after_dtw": 10,
+          "source_top5_after_dtw": 10
+        },
+        "section_edit": {
+          "query_count": 10,
+          "source_in_candidate_pool": 10,
+          "source_top1_after_dtw": 10,
+          "source_top5_after_dtw": 10
+        },
+        "synthetic_same_recording_excerpt": {
+          "query_count": 33,
+          "source_in_candidate_pool": 33,
+          "source_top1_after_dtw": 31,
+          "source_top5_after_dtw": 33
+        },
+        "tempo_pitch_eq": {
+          "query_count": 10,
+          "source_in_candidate_pool": 7,
+          "source_top1_after_dtw": 1,
+          "source_top5_after_dtw": 7
+        }
+      }
+    },
+    "20": {
+      "positive_count": 63,
+      "safe_count": 299,
+      "source_candidate_pool_recall": 0.9841269841269841,
+      "source_top1_after_dtw_rate": 0.7301587301587301,
+      "source_top5_after_dtw_rate": 0.8253968253968254,
+      "top1_given_source_in_pool": 0.7419354838709677,
+      "median_source_rank_when_present": 1.0,
+      "positive_top_candidate_score_median": 0.9783404390017192,
+      "safe_top_candidate_score_median": 0.9507191568613053,
+      "top_candidate_score_roc_auc": 0.8221585178106917,
+      "positive_breakdown": {
+        "remix_fx": {
+          "query_count": 10,
+          "source_in_candidate_pool": 10,
+          "source_top1_after_dtw": 10,
+          "source_top5_after_dtw": 10
+        },
+        "section_edit": {
+          "query_count": 10,
+          "source_in_candidate_pool": 10,
+          "source_top1_after_dtw": 9,
+          "source_top5_after_dtw": 10
+        },
+        "synthetic_same_recording_excerpt": {
+          "query_count": 33,
+          "source_in_candidate_pool": 33,
+          "source_top1_after_dtw": 26,
+          "source_top5_after_dtw": 30
+        },
+        "tempo_pitch_eq": {
+          "query_count": 10,
+          "source_in_candidate_pool": 9,
+          "source_top1_after_dtw": 1,
+          "source_top5_after_dtw": 2
+        }
+      }
+    }
+  },
+  "scope_note": "This evaluates retrieval reranking, not a plagiarism verdict. Positive data include synthetic transforms. DTW cannot recover a source omitted from the CLAP candidate pool."
+}

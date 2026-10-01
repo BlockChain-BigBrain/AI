@@ -1,0 +1,10 @@
+{
+  "source_dir": "C:\\블록체인\\original_music",
+  "selected_source_count": 30,
+  "variants_per_source": 3,
+  "generated_query_count": 90,
+  "skipped_count": 0,
+  "failed_count": 0,
+  "output_dir": "C:\\블록체인\\layer2\\test_data\\plagiarism_positive",
+  "manifest": "C:\\블록체인\\layer2\\test_data\\plagiarism_positive\\manifest.csv"
+}

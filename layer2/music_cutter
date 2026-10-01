@@ -1,0 +1,108 @@
+"""Split source audio into 10-second WAV chunks with 5 seconds overlap."""
+
+import os
+import shutil
+import subprocess
+import tempfile
+import wave
+from pathlib import Path
+
+
+PROJECT_DIR = Path(__file__).resolve().parent.parent
+DOWNLOADED_DIR = PROJECT_DIR / "original_music"
+TEST_MUSIC_DIR = PROJECT_DIR / "music"
+SOURCE_DIR = DOWNLOADED_DIR if DOWNLOADED_DIR.is_dir() else TEST_MUSIC_DIR
+OUTPUT_DIR = PROJECT_DIR / "segments"
+SEGMENT_SECONDS = 10
+STRIDE_SECONDS = 5
+SUPPORTED_EXTENSIONS = {".mp3", ".wav", ".flac", ".m4a", ".ogg", ".webm"}
+
+
+def find_ffmpeg() -> str | None:
+    configured = os.environ.get("FFMPEG_EXE")
+    if configured and Path(configured).is_file():
+        return configured
+    on_path = shutil.which("ffmpeg")
+    if on_path:
+        return on_path
+    try:
+        import imageio_ffmpeg
+        return imageio_ffmpeg.get_ffmpeg_exe()
+    except ImportError:
+        pass
+
+    # Fall back to the imageio-ffmpeg binary already installed with Anaconda.
+    candidates = Path.home().glob(
+        "anaconda3/Lib/site-packages/imageio_ffmpeg/binaries/ffmpeg*.exe"
+    )
+    return next((str(path) for path in candidates if path.is_file()), None)
+
+
+def export_segments(audio_path: Path, ffmpeg: str) -> int:
+    destination = OUTPUT_DIR
+    destination.mkdir(parents=True, exist_ok=True)
+    
+
+    with tempfile.TemporaryDirectory() as temp_dir:
+        decoded_path = Path(temp_dir) / "decoded.wav"
+        subprocess.run(
+            [ffmpeg, "-y", "-i", str(audio_path), "-vn", "-ac", "2",
+             "-ar", "48000", "-c:a", "pcm_s16le", str(decoded_path)],
+            check=True,
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.PIPE,
+        )
+
+        with wave.open(str(decoded_path), "rb") as decoded:
+            params = decoded.getparams()
+            rate = params.framerate
+            frames_per_segment = SEGMENT_SECONDS * rate
+            stride_frames = STRIDE_SECONDS * rate
+            frame_count = params.nframes
+            count = 0
+            start = 0
+            while start + frames_per_segment <= frame_count:
+                decoded.setpos(start)
+                frames = decoded.readframes(frames_per_segment)
+                filename = f"{audio_path.stem}_seg_{count + 1:03d}_{start // rate:06d}s.wav"
+                with wave.open(str(destination / filename), "wb") as segment:
+                    segment.setparams(params._replace(nframes=0, comptype="NONE", compname="not compressed"))
+                    segment.writeframes(frames)
+                count += 1
+                start += stride_frames
+
+    if count:
+        print(f"[완료] {audio_path.name}: {count}개 조각")
+    else:
+        print(f"[건너뜀] {audio_path.name}: 10초 미만")
+    return count
+
+
+def main() -> None:
+    if not SOURCE_DIR.is_dir():
+        print(f"음원 폴더를 찾을 수 없습니다: {SOURCE_DIR}")
+        return
+    audio_files = sorted(
+        path for path in SOURCE_DIR.rglob("*")
+        if path.is_file() and path.suffix.lower() in SUPPORTED_EXTENSIONS
+    )
+    if not audio_files:
+        print(f"처리할 음원이 없습니다: {SOURCE_DIR}")
+        return
+    ffmpeg = find_ffmpeg()
+    if not ffmpeg:
+        print("FFmpeg를 찾을 수 없습니다. FFMPEG_EXE 환경 변수로 ffmpeg.exe 경로를 지정하세요.")
+        return
+
+    print(f"음원 {len(audio_files)}개 처리 시작 → {OUTPUT_DIR}")
+    total = 0
+    for audio_path in audio_files:
+        try:
+            total += export_segments(audio_path, ffmpeg)
+        except Exception as error:
+            print(f"[오류] {audio_path.name}: {error}")
+    print(f"작업 완료: 총 {total}개 조각 저장 → {OUTPUT_DIR}")
+
+
+if __name__ == "__main__":
+    main()

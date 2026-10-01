@@ -1,0 +1,313 @@
+﻿{
+    "experiment":  "six CLAP aggregation variants; reference-mean centering ablation",
+    "split":  {
+                  "method":  "deterministic source-group split",
+                  "tune_fraction":  0.6,
+                  "seed":  20260930,
+                  "groups":  {
+                                 "tune":  192,
+                                 "test":  128
+                             }
+              },
+    "corpus":  {
+                   "reference_tracks":  295,
+                   "reference_windows":  9847,
+                   "train_reference_tracks":  174,
+                   "safe_arranged_unverified_queries":  30,
+                   "safe_arranged_unverified_note":  "Reported separately; excluded from threshold calibration because negative labels are unverified.",
+                   "positive_source_groups":  20,
+                   "positive_tune_source_groups":  11,
+                   "positive_test_source_groups":  9,
+                   "positive_manifest_held_out_sources":  11
+               },
+    "protocol":  {
+                     "window_seconds":  10,
+                     "stride_seconds":  5,
+                     "positive_split_group":  "source_track_id",
+                     "safe_split_group":  "source/origin work",
+                     "safe_arranged_controls_in_threshold_fit":  false,
+                     "thresholds_are_model_tuning_only":  true,
+                     "score_interpretation":  "cosine similarity, not a plagiarism probability or legal finding"
+                 },
+    "models":  {
+                   "max_centered":  {
+                                        "thresholds_from_tune_split":  {
+                                                                           "hold_threshold":  0.91156226396560669,
+                                                                           "warn_threshold":  0.83867728710174561,
+                                                                           "target_safe_hold_rate":  0.05,
+                                                                           "target_positive_source_recall_for_warn":  0.9,
+                                                                           "tune_safe_hold_rate":  0.05,
+                                                                           "tune_positive_source_recall_at_hold":  0.69444444444444442,
+                                                                           "tune_positive_source_recall_at_warn":  0.91666666666666663,
+                                                                           "tune_safe_warn_or_hold_rate":  0.44444444444444442,
+                                                                           "feasible":  true,
+                                                                           "reason":  null
+                                                                       },
+                                        "held_out_test":  {
+                                                              "positive_query_count":  27,
+                                                              "safe_query_count":  119,
+                                                              "positive_expected_source_top1_rate":  0.9629629629629629,
+                                                              "positive_expected_source_top3_rate":  1.0,
+                                                              "positive_expected_source_top5_rate":  1.0,
+                                                              "positive_expected_source_score_median":  0.9423084855079651,
+                                                              "safe_top1_score_median":  0.8345818519592285,
+                                                              "hold_policy_test":  {
+                                                                                       "threshold":  0.91156226396560669,
+                                                                                       "positive_query_recall":  0.7407407407407407,
+                                                                                       "safe_query_false_positive_rate":  0.050420168067226892,
+                                                                                       "positive_query_count":  27,
+                                                                                       "safe_query_count":  119,
+                                                                                       "positive_expected_source_recall":  0.7407407407407407
+                                                                                   },
+                                                              "warn_policy_test":  {
+                                                                                       "threshold":  0.83867728710174561,
+                                                                                       "positive_query_recall":  0.88888888888888884,
+                                                                                       "safe_query_false_positive_rate":  0.453781512605042,
+                                                                                       "positive_query_count":  27,
+                                                                                       "safe_query_count":  119,
+                                                                                       "positive_expected_source_recall":  0.88888888888888884
+                                                                                   },
+                                                              "unverified_safe_arranged_top_score_median":  0.8390893638134003
+                                                          },
+                                        "tune_group_counts":  {
+                                                                  "positive_queries":  36,
+                                                                  "positive_sources":  11,
+                                                                  "safe_queries":  180,
+                                                                  "safe_source_groups":  180
+                                                              }
+                                    },
+                   "max_raw":  {
+                                   "thresholds_from_tune_split":  {
+                                                                      "hold_threshold":  0.96451210975646973,
+                                                                      "warn_threshold":  0.93645650148391724,
+                                                                      "target_safe_hold_rate":  0.05,
+                                                                      "target_positive_source_recall_for_warn":  0.9,
+                                                                      "tune_safe_hold_rate":  0.05,
+                                                                      "tune_positive_source_recall_at_hold":  0.75,
+                                                                      "tune_positive_source_recall_at_warn":  0.91666666666666663,
+                                                                      "tune_safe_warn_or_hold_rate":  0.44444444444444442,
+                                                                      "feasible":  true,
+                                                                      "reason":  null
+                                                                  },
+                                   "held_out_test":  {
+                                                         "positive_query_count":  27,
+                                                         "safe_query_count":  119,
+                                                         "positive_expected_source_top1_rate":  0.8518518518518519,
+                                                         "positive_expected_source_top3_rate":  0.9259259259259259,
+                                                         "positive_expected_source_top5_rate":  0.9629629629629629,
+                                                         "positive_expected_source_score_median":  0.9753895401954651,
+                                                         "safe_top1_score_median":  0.9342094659805298,
+                                                         "hold_policy_test":  {
+                                                                                  "threshold":  0.96451210975646973,
+                                                                                  "positive_query_recall":  0.66666666666666663,
+                                                                                  "safe_query_false_positive_rate":  0.058823529411764705,
+                                                                                  "positive_query_count":  27,
+                                                                                  "safe_query_count":  119,
+                                                                                  "positive_expected_source_recall":  0.66666666666666663
+                                                                              },
+                                                         "warn_policy_test":  {
+                                                                                  "threshold":  0.93645650148391724,
+                                                                                  "positive_query_recall":  0.85185185185185186,
+                                                                                  "safe_query_false_positive_rate":  0.43697478991596639,
+                                                                                  "positive_query_count":  27,
+                                                                                  "safe_query_count":  119,
+                                                                                  "positive_expected_source_recall":  0.85185185185185186
+                                                                              },
+                                                         "unverified_safe_arranged_top_score_median":  0.8851556777954102
+                                                     },
+                                   "tune_group_counts":  {
+                                                             "positive_queries":  36,
+                                                             "positive_sources":  11,
+                                                             "safe_queries":  180,
+                                                             "safe_source_groups":  180
+                                                         }
+                               },
+                   "mean_emb_centered":  {
+                                             "thresholds_from_tune_split":  {
+                                                                                "hold_threshold":  0.83366519212722778,
+                                                                                "warn_threshold":  0.60157877206802368,
+                                                                                "target_safe_hold_rate":  0.05,
+                                                                                "target_positive_source_recall_for_warn":  0.9,
+                                                                                "tune_safe_hold_rate":  0.05,
+                                                                                "tune_positive_source_recall_at_hold":  0.47222222222222221,
+                                                                                "tune_positive_source_recall_at_warn":  0.91666666666666663,
+                                                                                "tune_safe_warn_or_hold_rate":  0.75555555555555554,
+                                                                                "feasible":  true,
+                                                                                "reason":  null
+                                                                            },
+                                             "held_out_test":  {
+                                                                   "positive_query_count":  27,
+                                                                   "safe_query_count":  119,
+                                                                   "positive_expected_source_top1_rate":  0.7777777777777778,
+                                                                   "positive_expected_source_top3_rate":  0.8148148148148148,
+                                                                   "positive_expected_source_top5_rate":  0.9259259259259259,
+                                                                   "positive_expected_source_score_median":  0.8422302603721619,
+                                                                   "safe_top1_score_median":  0.6923952698707581,
+                                                                   "hold_policy_test":  {
+                                                                                            "threshold":  0.83366519212722778,
+                                                                                            "positive_query_recall":  0.51851851851851849,
+                                                                                            "safe_query_false_positive_rate":  0.058823529411764705,
+                                                                                            "positive_query_count":  27,
+                                                                                            "safe_query_count":  119,
+                                                                                            "positive_expected_source_recall":  0.51851851851851849
+                                                                                        },
+                                                                   "warn_policy_test":  {
+                                                                                            "threshold":  0.60157877206802368,
+                                                                                            "positive_query_recall":  0.92592592592592593,
+                                                                                            "safe_query_false_positive_rate":  0.81512605042016806,
+                                                                                            "positive_query_count":  27,
+                                                                                            "safe_query_count":  119,
+                                                                                            "positive_expected_source_recall":  0.88888888888888884
+                                                                                        },
+                                                                   "unverified_safe_arranged_top_score_median":  0.5899711847305298
+                                                               },
+                                             "tune_group_counts":  {
+                                                                       "positive_queries":  36,
+                                                                       "positive_sources":  11,
+                                                                       "safe_queries":  180,
+                                                                       "safe_source_groups":  180
+                                                                   }
+                                         },
+                   "mean_emb_raw":  {
+                                        "thresholds_from_tune_split":  {
+                                                                           "hold_threshold":  0.952926516532898,
+                                                                           "warn_threshold":  0.90462148189544678,
+                                                                           "target_safe_hold_rate":  0.05,
+                                                                           "target_positive_source_recall_for_warn":  0.9,
+                                                                           "tune_safe_hold_rate":  0.05,
+                                                                           "tune_positive_source_recall_at_hold":  0.55555555555555558,
+                                                                           "tune_positive_source_recall_at_warn":  0.91666666666666663,
+                                                                           "tune_safe_warn_or_hold_rate":  0.44444444444444442,
+                                                                           "feasible":  true,
+                                                                           "reason":  null
+                                                                       },
+                                        "held_out_test":  {
+                                                              "positive_query_count":  27,
+                                                              "safe_query_count":  119,
+                                                              "positive_expected_source_top1_rate":  0.7407407407407407,
+                                                              "positive_expected_source_top3_rate":  0.8518518518518519,
+                                                              "positive_expected_source_top5_rate":  0.8888888888888888,
+                                                              "positive_expected_source_score_median":  0.9523497223854065,
+                                                              "safe_top1_score_median":  0.896754264831543,
+                                                              "hold_policy_test":  {
+                                                                                       "threshold":  0.952926516532898,
+                                                                                       "positive_query_recall":  0.48148148148148145,
+                                                                                       "safe_query_false_positive_rate":  0.084033613445378158,
+                                                                                       "positive_query_count":  27,
+                                                                                       "safe_query_count":  119,
+                                                                                       "positive_expected_source_recall":  0.48148148148148145
+                                                                                   },
+                                                              "warn_policy_test":  {
+                                                                                       "threshold":  0.90462148189544678,
+                                                                                       "positive_query_recall":  0.81481481481481477,
+                                                                                       "safe_query_false_positive_rate":  0.453781512605042,
+                                                                                       "positive_query_count":  27,
+                                                                                       "safe_query_count":  119,
+                                                                                       "positive_expected_source_recall":  0.7407407407407407
+                                                                                   },
+                                                              "unverified_safe_arranged_top_score_median":  0.7603383958339691
+                                                          },
+                                        "tune_group_counts":  {
+                                                                  "positive_queries":  36,
+                                                                  "positive_sources":  11,
+                                                                  "safe_queries":  180,
+                                                                  "safe_source_groups":  180
+                                                              }
+                                    },
+                   "seg_top3_centered":  {
+                                             "thresholds_from_tune_split":  {
+                                                                                "hold_threshold":  0.8944060206413269,
+                                                                                "warn_threshold":  0.82723444700241089,
+                                                                                "target_safe_hold_rate":  0.05,
+                                                                                "target_positive_source_recall_for_warn":  0.9,
+                                                                                "tune_safe_hold_rate":  0.05,
+                                                                                "tune_positive_source_recall_at_hold":  0.69444444444444442,
+                                                                                "tune_positive_source_recall_at_warn":  0.91666666666666663,
+                                                                                "tune_safe_warn_or_hold_rate":  0.35,
+                                                                                "feasible":  true,
+                                                                                "reason":  null
+                                                                            },
+                                             "held_out_test":  {
+                                                                   "positive_query_count":  27,
+                                                                   "safe_query_count":  119,
+                                                                   "positive_expected_source_top1_rate":  0.9259259259259259,
+                                                                   "positive_expected_source_top3_rate":  0.9629629629629629,
+                                                                   "positive_expected_source_top5_rate":  0.9629629629629629,
+                                                                   "positive_expected_source_score_median":  0.9319706559181213,
+                                                                   "safe_top1_score_median":  0.8050505518913269,
+                                                                   "hold_policy_test":  {
+                                                                                            "threshold":  0.8944060206413269,
+                                                                                            "positive_query_recall":  0.7407407407407407,
+                                                                                            "safe_query_false_positive_rate":  0.050420168067226892,
+                                                                                            "positive_query_count":  27,
+                                                                                            "safe_query_count":  119,
+                                                                                            "positive_expected_source_recall":  0.7407407407407407
+                                                                                        },
+                                                                   "warn_policy_test":  {
+                                                                                            "threshold":  0.82723444700241089,
+                                                                                            "positive_query_recall":  0.85185185185185186,
+                                                                                            "safe_query_false_positive_rate":  0.37815126050420167,
+                                                                                            "positive_query_count":  27,
+                                                                                            "safe_query_count":  119,
+                                                                                            "positive_expected_source_recall":  0.85185185185185186
+                                                                                        },
+                                                                   "unverified_safe_arranged_top_score_median":  0.8295497894287109
+                                                               },
+                                             "tune_group_counts":  {
+                                                                       "positive_queries":  36,
+                                                                       "positive_sources":  11,
+                                                                       "safe_queries":  180,
+                                                                       "safe_source_groups":  180
+                                                                   }
+                                         },
+                   "seg_top3_raw":  {
+                                        "thresholds_from_tune_split":  {
+                                                                           "hold_threshold":  0.95913571119308472,
+                                                                           "warn_threshold":  0.92832201719284058,
+                                                                           "target_safe_hold_rate":  0.05,
+                                                                           "target_positive_source_recall_for_warn":  0.9,
+                                                                           "tune_safe_hold_rate":  0.05,
+                                                                           "tune_positive_source_recall_at_hold":  0.72222222222222221,
+                                                                           "tune_positive_source_recall_at_warn":  0.91666666666666663,
+                                                                           "tune_safe_warn_or_hold_rate":  0.43333333333333335,
+                                                                           "feasible":  true,
+                                                                           "reason":  null
+                                                                       },
+                                        "held_out_test":  {
+                                                              "positive_query_count":  27,
+                                                              "safe_query_count":  119,
+                                                              "positive_expected_source_top1_rate":  0.8888888888888888,
+                                                              "positive_expected_source_top3_rate":  0.9629629629629629,
+                                                              "positive_expected_source_top5_rate":  0.9629629629629629,
+                                                              "positive_expected_source_score_median":  0.9705166220664978,
+                                                              "safe_top1_score_median":  0.9251711964607239,
+                                                              "hold_policy_test":  {
+                                                                                       "threshold":  0.95913571119308472,
+                                                                                       "positive_query_recall":  0.66666666666666663,
+                                                                                       "safe_query_false_positive_rate":  0.025210084033613446,
+                                                                                       "positive_query_count":  27,
+                                                                                       "safe_query_count":  119,
+                                                                                       "positive_expected_source_recall":  0.66666666666666663
+                                                                                   },
+                                                              "warn_policy_test":  {
+                                                                                       "threshold":  0.92832201719284058,
+                                                                                       "positive_query_recall":  0.85185185185185186,
+                                                                                       "safe_query_false_positive_rate":  0.453781512605042,
+                                                                                       "positive_query_count":  27,
+                                                                                       "safe_query_count":  119,
+                                                                                       "positive_expected_source_recall":  0.85185185185185186
+                                                                                   },
+                                                              "unverified_safe_arranged_top_score_median":  0.8710469901561737
+                                                          },
+                                        "tune_group_counts":  {
+                                                                  "positive_queries":  36,
+                                                                  "positive_sources":  11,
+                                                                  "safe_queries":  180,
+                                                                  "safe_source_groups":  180
+                                                              }
+                                    }
+               },
+    "skipped_queries":  [
+                            "C:\\釉붾줉泥댁씤\\music\\track_01.wav"
+                        ]
+}
