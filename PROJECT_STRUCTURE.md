@@ -1,51 +1,57 @@
-# Track-AI 프로젝트 구조
+﻿# Track-AI ?꾨줈?앺듃 援ъ“
 
-이 문서는 처음 프로젝트를 여는 사람이 **어떤 폴더를 실행하고, 어떤 자료를 보존하며,
-무엇을 무시해도 되는지** 바로 알 수 있도록 정리한 안내서입니다.
+??臾몄꽌??泥섏쓬 ?꾨줈?앺듃瑜??щ뒗 ?щ엺??**?대뼡 ?대뜑瑜??ㅽ뻾?섍퀬, ?대뼡 ?먮즺瑜?蹂댁〈?섎ŉ,
+臾댁뾿??臾댁떆?대룄 ?섎뒗吏** 諛붾줈 ?????덈룄濡??뺣━???덈궡?쒖엯?덈떎.
 
-## 현재 운영 경로
+## ?꾩옱 ?댁쁺 寃쎈줈
 
-| 경로 | 역할 | 주요 파일 |
+| 寃쎈줈 | ??븷 | 二쇱슂 ?뚯씪 |
 |---|---|---|
-| `api/` | AI 검증 FastAPI 서버 | `server.py`, `engine.py`, `schemas.py` |
-| `backend/` | Node/Express 업로드 API와 SQLite 저장 | `src/server.ts`, `src/track-ai-client.ts`, `test/e2e.ts` |
-| `layer1/` | Chromaprint 기반 완전 중복 차단 | `upload_guard_api.py`, `fingerprints_db.json` |
-| `layer2/` | CLAP 후보 검색 및 연속성·Top-3 평가 | `evaluate_retrieval_baseline.py`, `chroma_comparator.py`, `evaluate_chroma_dtw_rerank.py` |
-| `original_music/` | Layer 2 검색 기준 원본 음원 | 원본 데이터, 삭제하지 않음 |
-| `music/` | 정상 대조 음원 | 평가용 데이터, 삭제하지 않음 |
-| `segments/` | 10초 길이·5초 간격 분할 결과 | 재생성 가능하지만 평가에 사용 |
-| `layer2/test_data/` | 양성·정상 대조군 manifest | 테스트 구성과 매핑 기록 |
-| `review_handoff/` | 최종 검수 CSV와 전처리 자료 | 멘토링·팀 공유용 |
+| `api/` | AI 寃利?FastAPI ?쒕쾭 | `server.py`, `engine.py`, `schemas.py` |
+| `backend/` | Node/Express ?낅줈??API? SQLite ???| `src/server.ts`, `src/track-ai-client.ts`, `test/e2e.ts` |
+| `layer1/` | Chromaprint 湲곕컲 ?꾩쟾 以묐났 李⑤떒 | `upload_guard_api.py`, `fingerprints_db.json` |
+| `layer2/` | CLAP ?꾨낫 寃??諛??곗냽?굿톂op-3 ?됯? | `evaluate_retrieval_baseline.py`, `chroma_comparator.py`, `evaluate_chroma_dtw_rerank.py` |
+| `original_music/` | Layer 2 寃??湲곗? ?먮낯 ?뚯썝 | ?먮낯 ?곗씠?? ??젣?섏? ?딆쓬 |
+| `music/` | ?뺤긽 ?議??뚯썝 | ?됯????곗씠?? ??젣?섏? ?딆쓬 |
+| `segments/` | 10珥?湲몄씠쨌5珥?媛꾧꺽 遺꾪븷 寃곌낵 | ?ъ깮??媛?ν븯吏留??됯????ъ슜 |
+| `layer2/test_data/` | ?묒꽦쨌?뺤긽 ?議곌뎔 manifest | ?뚯뒪??援ъ꽦怨?留ㅽ븨 湲곕줉 |
+| `review_handoff/` | 理쒖쥌 寃??CSV? ?꾩쿂由??먮즺 | 硫섑넗留겶룻? 怨듭쑀??|
 
-## 문서와 설정
+## 臾몄꽌? ?ㅼ젙
 
-- `README.md`: 프로젝트 전체 개요
-- `MENTORING_GUIDE.md`: 지금까지의 모델·수치·한계·멘토링 질문
-- `GITHUB_UPLOAD_GUIDE.md`: 공유 GitHub에 올릴 파일과 실행 순서
-- `api/README.md`, `backend/README.md`, `layer1/README.md`, `layer2/README.md`: 각 모듈 설명
-- `.env`: 로컬 FastAPI↔Node 내부 API 키. **Git에 올리지 않음**
-- `.env.example`: 팀원이 복사해서 사용할 환경 변수 템플릿
+- `README.md`: ?꾨줈?앺듃 ?꾩껜 媛쒖슂
+- `MENTORING_GUIDE.md`: 吏湲덇퉴吏??紐⑤뜽쨌?섏튂쨌?쒓퀎쨌硫섑넗留?吏덈Ц
+- `GITHUB_UPLOAD_GUIDE.md`: 怨듭쑀 GitHub???щ┫ ?뚯씪怨??ㅽ뻾 ?쒖꽌
+- `api/README.md`, `backend/README.md`, `layer1/README.md`, `layer2/README.md`: 媛?紐⑤뱢 ?ㅻ챸
+- `.env`: 濡쒖뺄 FastAPI?봏ode ?대? API ?? **Git???щ━吏 ?딆쓬**
+- `.env.example`: ??먯씠 蹂듭궗?댁꽌 ?ъ슜???섍꼍 蹂???쒗뵆由?
+## ?ㅽ뻾 ?쒖꽌
 
-## 실행 순서
+1. `layer1/upload_guard_api.py`濡??숈씪 ?뚯썝 ?щ?瑜?癒쇱? ?뺤씤?⑸땲??
+2. Node 諛깆뿏?쒓? `api/server.py`??`/verify`瑜??몄텧?⑸땲??
+3. FastAPI媛 Layer 2 CLAP?쇰줈 ?꾨낫瑜?李얘퀬 Top-3 寃곌낵? PASS/WARN/HOLD瑜?諛섑솚?⑸땲??
+4. Node媛 寃곌낵瑜?SQLite????ν빀?덈떎.
 
-1. `layer1/upload_guard_api.py`로 동일 음원 여부를 먼저 확인합니다.
-2. Node 백엔드가 `api/server.py`의 `/verify`를 호출합니다.
-3. FastAPI가 Layer 2 CLAP으로 후보를 찾고 Top-3 결과와 PASS/WARN/HOLD를 반환합니다.
-4. Node가 결과를 SQLite에 저장합니다.
+FastAPI? Node ?ъ씠?먮뒗 `X-Internal-API-Key` ?몄쬆???ъ슜?⑸땲?? ???꾨줈?몄뒪媛 媛숈?
+`.env`??`TRACK_AI_API_KEY`瑜??쎌뼱???⑸땲??
 
-FastAPI와 Node 사이에는 `X-Internal-API-Key` 인증을 사용합니다. 두 프로세스가 같은
-`.env`의 `TRACK_AI_API_KEY`를 읽어야 합니다.
+## Layer 2???꾩옱 踰붿쐞
 
-## Layer 2의 현재 범위
-
-- 운영 후보 검색은 `seg_top3_centered-v1` CLAP 경로입니다.
-- CoverHunter와 예전 MetricHead 학습 코드는 운영 경로에서 제외했습니다.
-- CLAP 점수는 표절 확률이 아니라 후보 검색 신호이므로, 결과는 자동 법적 판정이 아닌
-  `PASS/WARN/HOLD` 위험 신호로 사용합니다.
-- 실제 서비스 품질을 높이려면 재연주·편곡 양성 데이터와 장르·템포가 비슷한 정상곡을
-  추가하고, 독립 테스트셋으로 임계값을 다시 보정해야 합니다.
+- ?댁쁺 ?꾨낫 寃?됱? `seg_top3_centered-v1` CLAP 寃쎈줈?낅땲??
+- CoverHunter? ?덉쟾 MetricHead ?숈뒿 肄붾뱶???댁쁺 寃쎈줈?먯꽌 ?쒖쇅?덉뒿?덈떎.
+- CLAP ?먯닔???쒖젅 ?뺣쪧???꾨땲???꾨낫 寃???좏샇?대?濡? 寃곌낵???먮룞 踰뺤쟻 ?먯젙???꾨땶
+  `PASS/WARN/HOLD` ?꾪뿕 ?좏샇濡??ъ슜?⑸땲??
+- ?ㅼ젣 ?쒕퉬???덉쭏???믪씠?ㅻ㈃ ?ъ뿰二셋룻렪怨??묒꽦 ?곗씠?곗? ?λⅤ쨌?쒗룷媛 鍮꾩듂???뺤긽怨≪쓣
+  異붽??섍퀬, ?낅┰ ?뚯뒪?몄뀑?쇰줈 ?꾧퀎媛믪쓣 ?ㅼ떆 蹂댁젙?댁빞 ?⑸땲??
 
 ## `_archive/`
 
-현재 운영에서 사용하지 않는 구버전 코드, CoverHunter 실험 파일, 캐시, 상세 CSV를
-되돌릴 수 있게 보관한 폴더입니다. 운영 코드와 혼동하지 마세요.
+?꾩옱 ?댁쁺?먯꽌 ?ъ슜?섏? ?딅뒗 援щ쾭??肄붾뱶, CoverHunter ?ㅽ뿕 ?뚯씪, 罹먯떆, ?곸꽭 CSV瑜??섎룎由????덇쾶 蹂닿????대뜑?낅땲?? ?댁쁺 肄붾뱶? ?쇰룞?섏? 留덉꽭??
+
+
+
+### FastAPI 실행 필수 로컬 산출물
+
+- `layer2/artifacts/segment_manifest.csv`: CLAP 임베딩 행과 세그먼트 매핑
+- `layer2/artifacts/clap_embeddings.npz`: 기준 세그먼트 CLAP 벡터
+

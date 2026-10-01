@@ -1,6 +1,7 @@
 import express from "express";
 import multer from "multer";
 import { DatabaseSync } from "node:sqlite";
+import { existsSync } from "node:fs";
 import { mkdir, unlink } from "node:fs/promises";
 import { randomUUID } from "node:crypto";
 import { dirname, extname, resolve } from "node:path";
@@ -140,4 +141,3 @@ app.use((error: unknown, _request: express.Request, response: express.Response, 
 
 const port = Number(process.env.PORT ?? 3000);
 app.listen(port, "127.0.0.1", () => console.log(`Track-AI backend: http://127.0.0.1:${port}`));
-import { existsSync } from "node:fs";

@@ -12,7 +12,10 @@
 | `chroma_evaluation_summary.json` | 크로마 분리 평가 요약 |
 | `chroma_dtw_rerank_summary.json` | CLAP 후보의 크로마·DTW 재정렬 요약 |
 | `clap_embeddings.npz` | 평가에 사용한 CLAP 임베딩 캐시 |
+| `segment_manifest.csv` | 임베딩 행과 원본 세그먼트·곡 ID를 연결하는 FastAPI 실행 필수 매핑 |
 | `README.md` | 이 폴더의 산출물 안내 |
 
 운영 API는 `api/engine.py`의 `seg_top3_centered-v1` 경로를 사용합니다. CoverHunter
 실험 자료는 현재 운영에서 제외되어 `_archive/`에 보관되어 있습니다.
+
+
