@@ -8,6 +8,14 @@ import { fileURLToPath } from "node:url";
 import { aiHealth, submitVerification, waitForVerification } from "./track-ai-client.js";
 
 const HERE = dirname(fileURLToPath(import.meta.url));
+// FastAPI와 공유하는 로컬 환경 변수(.env)를 개발 시 자동 로드합니다.
+const ROOT_ENV = resolve(HERE, "../..", ".env");
+const loadEnvFile = (process as NodeJS.Process & {
+  loadEnvFile?: (path?: string) => void;
+}).loadEnvFile;
+if (existsSync(ROOT_ENV) && loadEnvFile) {
+  loadEnvFile(ROOT_ENV);
+}
 const RUNTIME = resolve(HERE, "../runtime");
 const UPLOADS = resolve(RUNTIME, "uploads");
 await mkdir(UPLOADS, { recursive: true });
@@ -132,3 +140,4 @@ app.use((error: unknown, _request: express.Request, response: express.Response, 
 
 const port = Number(process.env.PORT ?? 3000);
 app.listen(port, "127.0.0.1", () => console.log(`Track-AI backend: http://127.0.0.1:${port}`));
+import { existsSync } from "node:fs";

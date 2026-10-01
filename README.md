@@ -25,3 +25,7 @@
 | fpcalc.exe | Chromaprint 실행 파일 |
 
 오디오·모델·임베딩 캐시는 다시 만드는 데 시간이 걸려 보존합니다. Python 바이트코드만 정리하고 .gitignore로 재생성을 무시하도록 했습니다.
+# 먼저 읽을 문서
+
+프로젝트 폴더별 역할과 실행 순서는 [PROJECT_STRUCTURE.md](PROJECT_STRUCTURE.md)를
+먼저 확인하세요.

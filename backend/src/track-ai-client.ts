@@ -1,7 +1,8 @@
 import { createReadStream } from "node:fs";
 import { basename } from "node:path";
 
-const AI_BASE_URL = process.env.TRACK_AI_URL ?? "http://127.0.0.1:8000";
+// 환경 변수 파일은 서버 진입점에서 로드될 수 있으므로 호출 시점에 읽습니다.
+const getAiBaseUrl = () => process.env.TRACK_AI_URL ?? "http://127.0.0.1:8000";
 
 export type AiJob = {
   jobId: string;
@@ -12,7 +13,7 @@ export type AiJob = {
 };
 
 export async function aiHealth(): Promise<Response> {
-  return fetch(`${AI_BASE_URL}/health`, { signal: AbortSignal.timeout(5_000) });
+  return fetch(`${getAiBaseUrl()}/health`, { signal: AbortSignal.timeout(5_000) });
 }
 
 export async function submitVerification(
@@ -28,13 +29,21 @@ export async function submitVerification(
   const merged = Buffer.concat(chunks);
   const bytes = new Uint8Array(merged.length);
   bytes.set(merged);
+  const apiKey = process.env.TRACK_AI_API_KEY;
+  if (!apiKey) {
+    throw new Error("TRACK_AI_API_KEY_NOT_CONFIGURED");
+  }
+
   const form = new FormData();
   form.set("file", new Blob([bytes.buffer]), basename(originalName));
   form.set("trackId", trackId);
   form.set("requestId", requestId);
-  const response = await fetch(`${AI_BASE_URL}/verify`, {
+  const response = await fetch(`${getAiBaseUrl()}/verify`, {
     method: "POST",
     body: form,
+    headers: {
+      "X-Internal-API-Key": apiKey,
+    },
     signal: AbortSignal.timeout(120_000),
   });
   if (!response.ok) throw new Error(`AI_SUBMIT_${response.status}:${await response.text()}`);
@@ -44,7 +53,7 @@ export async function submitVerification(
 export async function waitForVerification(statusUrl: string): Promise<AiJob> {
   const deadline = Date.now() + 30 * 60_000;
   while (Date.now() < deadline) {
-    const response = await fetch(`${AI_BASE_URL}${statusUrl}`, {
+    const response = await fetch(`${getAiBaseUrl()}${statusUrl}`, {
       signal: AbortSignal.timeout(10_000),
     });
     if (!response.ok) throw new Error(`AI_POLL_${response.status}`);

@@ -47,3 +47,6 @@ review_handoff/
 .env
 .env.*
 !.env.example
+
+# Local archive of removed experiments and caches (never upload)
+_archive/

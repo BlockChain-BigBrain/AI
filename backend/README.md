@@ -24,3 +24,8 @@ npm run test:e2e -- "C:\블록체인\original_music\검사용.mp3" BLOCK
 ```
 
 2026-10-01 확인 결과 원본 중복은 `VERIFIED/BLOCK`, 변형 음원은 `VERIFIED/PASS`로 저장됐고 변형 음원 결과에 Top-3가 포함됐습니다. 분석 후 임시 업로드 폴더는 비어 있었습니다. 변형 양성이 `PASS`인 것은 현재 결과를 재현한 것이며, 바람직한 탐지 성공을 뜻하지 않습니다.
+# FastAPI 연결 인증
+
+Node 백엔드는 요청마다 `X-Internal-API-Key` 헤더를 넣어 FastAPI `/verify`를
+호출합니다. 프로젝트 루트 `.env`의 `TRACK_AI_API_KEY`가 두 서비스에서 같은 값이어야
+합니다. 비밀값은 커밋하지 말고 `.env.example`만 공유하세요.

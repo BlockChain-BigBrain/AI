@@ -41,3 +41,10 @@ node api\node-client.mjs "C:\음원\test.mp3" track-123 request-123
 ## 응답에서 반드시 저장할 필드
 
 `audioHash`, `decision`, `similarityScore`, `similarTracks`, `thresholds`, `modelVersion`, `scoreVersion`, `corpusVersion`, `processingSeconds`를 저장해야 나중에 어떤 파일과 모델로 나온 결과인지 재현할 수 있습니다.
+# 내부 API 인증
+
+`POST /verify`는 백엔드와 FastAPI 사이의 내부 호출만 허용하도록
+`X-Internal-API-Key` 헤더를 검사합니다. 프로젝트 루트 `.env`에
+`TRACK_AI_API_KEY`를 설정하면 서버가 이를 사용합니다. `/health`는 모니터링을
+위해 인증 없이 사용할 수 있습니다. `.env`는 Git에 커밋하지 말고 `.env.example`을
+복사해 각 개발 환경에서 별도로 설정하세요.
