@@ -143,7 +143,8 @@ async def verify(file: UploadFile = File(...), trackId: str = Form(..., min_leng
             path.unlink(missing_ok=True)
 
 
-@app.get('/verify/{job_id}', response_model=VerificationJob)
+@app.get('/verify/{job_id}', response_model=VerificationJob,
+         dependencies=[Depends(require_internal_api_key)])
 def result(job_id: str):
     with connection() as db:
         row = db.execute('SELECT track_id,state,result,error FROM jobs WHERE id=?', (job_id,)).fetchone()

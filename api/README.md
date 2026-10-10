@@ -48,3 +48,8 @@ node api\node-client.mjs "C:\음원\test.mp3" track-123 request-123
 `TRACK_AI_API_KEY`를 설정하면 서버가 이를 사용합니다. `/health`는 모니터링을
 위해 인증 없이 사용할 수 있습니다. `.env`는 Git에 커밋하지 말고 `.env.example`을
 복사해 각 개발 환경에서 별도로 설정하세요.
+
+검증 결과에는 `decision`, `decisionReason`, `disposition`, `reviewRequired`가 함께
+포함됩니다. `BLOCK`만 자동 차단이고, `HOLD`와 `WARN`은 사람이 확인하는 상태이며,
+`PASS`는 Layer 2 위험 기준을 넘지 않았다는 뜻입니다. Layer 2 결과는 법적 표절
+확정이 아니라 위험 신호입니다.

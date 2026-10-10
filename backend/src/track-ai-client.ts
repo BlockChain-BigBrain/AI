@@ -51,9 +51,16 @@ export async function submitVerification(
 }
 
 export async function waitForVerification(statusUrl: string): Promise<AiJob> {
+  const apiKey = process.env.TRACK_AI_API_KEY;
+  if (!apiKey) {
+    throw new Error("TRACK_AI_API_KEY_NOT_CONFIGURED");
+  }
   const deadline = Date.now() + 30 * 60_000;
   while (Date.now() < deadline) {
     const response = await fetch(`${getAiBaseUrl()}${statusUrl}`, {
+      headers: {
+        "X-Internal-API-Key": apiKey,
+      },
       signal: AbortSignal.timeout(10_000),
     });
     if (!response.ok) throw new Error(`AI_POLL_${response.status}`);

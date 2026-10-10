@@ -52,10 +52,13 @@ class Engine:
         common = dict(audioHash=audio_hash, modelVersion=baseline.BASE_MODEL,
                       scoreVersion='seg_top3_centered-v1', corpusVersion=self.corpus_version,
                       thresholds=self.thresholds, provisional=True,
+                      decisionPolicyVersion='layer2-risk-v1',
                       durationSeconds=fingerprint['duration'])
         if duplicate:
             return dict(common, decision='BLOCK', duplicate={'detected': True,
                         'matchedTrackId': duplicate['track_id']}, similarityScore=None,
+                        decisionReason='EXACT_FINGERPRINT_MATCH',
+                        disposition='AUTO_BLOCK', reviewRequired=False,
                         similarTracks=[], queryWindowCount=0)
         # Extract all 10-second windows at 5-second stride (including final tail).
         # Temporary uploads bypass path-based evaluation caches to avoid accumulating files.
@@ -84,5 +87,12 @@ class Engine:
         candidates.sort(key=lambda x: x['score'], reverse=True)
         score = candidates[0]['score']
         decision = 'HOLD' if score >= self.thresholds['hold'] else 'WARN' if score >= self.thresholds['warn'] else 'PASS'
+        if decision == 'HOLD':
+            reason, disposition, review = 'HIGH_SIMILARITY_REVIEW', 'HUMAN_REVIEW', True
+        elif decision == 'WARN':
+            reason, disposition, review = 'SIMILARITY_WARNING', 'HUMAN_REVIEW', True
+        else:
+            reason, disposition, review = 'BELOW_SIMILARITY_THRESHOLD', 'ALLOW', False
         return dict(common, decision=decision, duplicate={'detected': False, 'matchedTrackId': None},
+                    decisionReason=reason, disposition=disposition, reviewRequired=review,
                     similarityScore=score, similarTracks=candidates[:3], queryWindowCount=len(offsets))
