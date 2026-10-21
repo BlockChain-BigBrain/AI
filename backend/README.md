@@ -29,3 +29,35 @@ npm run test:e2e -- "C:\블록체인\original_music\검사용.mp3" BLOCK
 Node 백엔드는 요청마다 `X-Internal-API-Key` 헤더를 넣어 FastAPI `/verify`를
 호출합니다. 프로젝트 루트 `.env`의 `TRACK_AI_API_KEY`가 두 서비스에서 같은 값이어야
 합니다. 비밀값은 커밋하지 말고 `.env.example`만 공유하세요.
+
+## 프론트·창작 이력·정산 API
+
+프론트엔드는 Node 백엔드만 호출합니다. FastAPI 키는 프론트에 노출하지 않습니다.
+
+| 요청 | 용도 |
+|---|---|
+| `POST /api/tracks` | 음원 업로드와 비동기 AI 검증 시작 |
+| `GET /api/tracks/:id` | 판정·Top-3 후보·매칭 구간·검토 상태 조회 |
+| `POST /api/tracks/:id/provenance` | 창작 manifest와 지갑 서명 저장, 해시 생성 |
+| `GET /api/tracks/:id/provenance` | 창작 이력과 manifest hash 조회 |
+| `POST /api/tracks/:id/contributors` | 참여자 지갑과 지분(bps) 등록. 합계는 10,000이어야 함 |
+| `POST /api/tracks/:id/review` | HOLD/WARN 검토 결과 기록 |
+| `GET /api/reviews/pending` | 검토 대기 목록 조회 |
+| `POST /api/tracks/:id/settlement-quote` | 수수료 차감 후 참여자별 정산 금액 계산 |
+| `POST /api/settlements/:id/anchor` | 실제 블록체인 트랜잭션 hash 기록 |
+
+정산 quote는 금액을 이동시키지 않습니다. 프론트 또는 지갑 서비스가 Polygon
+트랜잭션을 실행한 뒤 transaction hash를 anchor API로 제출하는 구조입니다. 지분은
+AI가 추정하지 않고 참여자가 서명해 제출합니다.
+
+## 프론트 호출 예시
+
+```ts
+const form = new FormData();
+form.append("file", audioFile);
+const accepted = await fetch("/api/tracks", { method: "POST", body: form }).then(r => r.json());
+const result = await fetch(`/api/tracks/${accepted.trackId}`).then(r => r.json());
+```
+
+프론트에는 `decision`, `disposition`, `reviewRequired`, `similarTracks`를 표시하고,
+`BLOCK`만 즉시 차단합니다. `HOLD`와 `WARN`은 검토 또는 위험 표시 흐름으로 보냅니다.
