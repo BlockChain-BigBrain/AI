@@ -145,10 +145,11 @@ def score_all_tracks(
     return outputs
 
 
-def build_queries(train_track_ids: set[str]) -> tuple[list[dict[str, str]], dict[str, dict[str, Any]]]:
-    """Load positives, safe tracks, and unverified safe-arranged controls."""
+def build_queries(train_track_ids: set[str], include_reperformed: bool = False) -> tuple[list[dict[str, str]], dict[str, dict[str, Any]]]:
+    """Load synthetic positives by default; optionally add reperformances."""
     positives, held_out = baseline.read_positive_queries(train_track_ids)
-    positives.extend(baseline.read_reperformance_queries(train_track_ids))
+    if include_reperformed:
+        positives.extend(baseline.read_reperformance_queries(train_track_ids))
     # Add generated instrumental-layer tests under the same source group,
     # so every variant of one original stays together in tune or test.
     for row in read_csv(LAYERED_POSITIVE_MANIFEST):
@@ -332,6 +333,11 @@ def main() -> None:
     """Generate separate comparison artifacts while reusing embedding caches."""
     if not (ARTIFACT_DIR / "clap_embeddings.npz").is_file():
         raise SystemExit("Missing layer2/artifacts/clap_embeddings.npz")
+    import argparse
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--include-reperformed", action="store_true",
+                        help="재연주형 manifest를 포함합니다. 기본값은 합성 변형만 평가합니다.")
+    args = parser.parse_args()
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     if device.type == "cpu":
         torch.set_num_threads(min(4, torch.get_num_threads()))
@@ -345,7 +351,7 @@ def main() -> None:
         raise SystemExit("ffmpeg was not found in PATH or imageio-ffmpeg.")
 
     train_ids = set(row["track_id"] for row in read_csv(ARTIFACT_DIR / "segment_manifest.csv"))
-    queries, held_out = build_queries(train_ids)
+    queries, held_out = build_queries(train_ids, include_reperformed=args.include_reperformed)
     all_groups = {row["group_id"] for row in queries if row["dataset"] != "safe_arranged_unverified"}
     # Keep safe-arranged examples in the same partition as their unmodified
     # source query without letting them affect the positive/safe split counts.
@@ -412,7 +418,8 @@ def main() -> None:
                    "synthetic_instrument_overlay_queries": sum(
                        q["query_kind"] == "synthetic_instrument_layer_overlay" for q in queries
                    ),
-                   "safe_arranged_unverified_note": "Reported separately; excluded from threshold calibration because negative labels are unverified."},
+                   "safe_arranged_unverified_note": "Reported separately; excluded from threshold calibration because negative labels are unverified.",
+                   "reperformed_included": args.include_reperformed},
         "protocol": {"window_seconds": baseline.WINDOW_SECONDS, "stride_seconds": baseline.STRIDE_SECONDS,
                      "positive_split_group": "source_track_id", "safe_split_group": "source/origin work",
                      "safe_arranged_controls_in_threshold_fit": False,

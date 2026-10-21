@@ -408,6 +408,8 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--max-positive", type=int, default=0, help="양성 쿼리 상한; 0은 전부")
     parser.add_argument("--max-safe", type=int, default=0, help="정상 쿼리 상한; 0은 전부")
+    parser.add_argument("--include-reperformed", action="store_true",
+                        help="재연주형 manifest를 포함합니다. 기본값은 합성 변형만 평가합니다.")
     args = parser.parse_args()
     if args.max_positive < 0 or args.max_safe < 0:
         raise SystemExit("--max-positive와 --max-safe는 0 이상이어야 합니다.")
@@ -433,7 +435,8 @@ def main() -> None:
 
     # 학습 때 본 곡을 제외한 양성 테스트 쿼리와 그 원곡 경로를 선택합니다.
     positive_queries, held_out_sources = read_positive_queries(train_track_ids)
-    positive_queries.extend(read_reperformance_queries(train_track_ids))
+    if args.include_reperformed:
+        positive_queries.extend(read_reperformance_queries(train_track_ids))
     if args.max_positive:
         # 표본 시험에서는 여러 변형본 대신 서로 다른 원곡을 먼저 하나씩 고릅니다.
         first_by_source: dict[str, dict[str, str]] = {}
@@ -631,6 +634,7 @@ def main() -> None:
             row["query_kind"] == "reperformed_cover_or_arrangement"
             for row in model_results["clap_only"]
         ),
+        "reperformed_included": args.include_reperformed,
         "safe_query_count": sum(row["label"] == "safe" for row in model_results["clap_only"]),
         "skipped_query_count": len(all_queries) - len(model_results["clap_only"]),
         "query_window_policy": f"all 10-second windows at {STRIDE_SECONDS}-second stride",

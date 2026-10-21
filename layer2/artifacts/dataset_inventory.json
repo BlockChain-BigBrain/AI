@@ -1,0 +1,15 @@
+{
+  "reference_tracks": 295,
+  "normal_audio_files": 300,
+  "synthetic_positive": 90,
+  "synthetic_layered_positive": 10,
+  "reperformed_positive_excluded_by_default": 30,
+  "safe_arranged_controls": 30,
+  "policy": {
+    "primary_positive_scope": "synthetic_transformations_only",
+    "reperformed_in_primary_evaluation": false,
+    "reference_target": 1000,
+    "synthetic_positive_target": 300,
+    "normal_test_target": 200
+  }
+}

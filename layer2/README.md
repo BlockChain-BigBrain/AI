@@ -28,3 +28,23 @@ Layer 2는 CLAP 임베딩으로 음악 후보를 검색하고, 연속 구간 점
 - `../segments/`: 분할된 세그먼트
 
 상세 CSV와 계산 캐시는 `_archive/`로 이동했습니다. 운영에 필요한 요약 리포트만 `artifacts/`에 남겨 두었습니다.
+
+## 현재 평가 데이터 정책
+
+- 기본 평가는 코드로 만든 합성 변형 양성곡만 포함합니다.
+- `reperformed_positive`는 `--include-reperformed`를 지정할 때만 포함합니다.
+- 사람이 직접 재연주한 데이터가 확보되기 전에는 합성 변형 결과를 사람 편곡 성능으로 해석하지 않습니다.
+- 현재 목표 규모는 원본 DB 1,000곡, 합성 양성 300개, 정상 테스트 200곡 이상입니다.
+
+```powershell
+python layer2/inventory_dataset.py
+python layer2/evaluate_retrieval_baseline.py
+python layer2/evaluate_top3_aggregation.py
+```
+
+재연주형 데이터를 별도 분석할 때만 다음 옵션을 사용합니다.
+
+```powershell
+python layer2/evaluate_retrieval_baseline.py --include-reperformed
+python layer2/evaluate_top3_aggregation.py --include-reperformed
+```
