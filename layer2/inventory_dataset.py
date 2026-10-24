@@ -28,18 +28,30 @@ def count_manifest(path: Path) -> int:
         return sum(1 for _ in csv.DictReader(handle))
 
 
+def count_duplicate_status(path: Path, status: str) -> int | None:
+    """Count one status in the current music-vs-reference duplicate report."""
+    if not path.is_file():
+        return None
+    with path.open("r", encoding="utf-8-sig", newline="") as handle:
+        return sum(1 for row in csv.DictReader(handle) if row.get("status") == status)
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output", type=Path, default=ROOT / "layer2" / "artifacts" / "dataset_inventory.json")
     args = parser.parse_args()
 
     test_root = ROOT / "layer2" / "test_data"
+    duplicate_report = ROOT / "layer2" / "artifacts" / "music_duplicate_report.csv"
     result = {
         "reference_tracks": count_audio(ROOT / "original_music"),
         "normal_audio_files": count_audio(ROOT / "music"),
+        "normal_verified_no_exact_duplicate": count_duplicate_status(duplicate_report, "NO_EXACT_MATCH"),
+        "normal_exact_duplicates_excluded": count_duplicate_status(duplicate_report, "DUPLICATE_PREVIEW"),
         "synthetic_positive": count_manifest(test_root / "plagiarism_positive" / "manifest.csv"),
         "synthetic_layered_positive": count_manifest(test_root / "synthetic_layered_positive" / "manifest.csv"),
-        "reperformed_positive_excluded_by_default": count_manifest(test_root / "reperformed_positive" / "manifest.csv"),
+        "synthetic_extended_positive": count_manifest(test_root / "extended_positive" / "manifest.csv"),
+        "synthetic_arrangement_positive_excluded_by_default": count_manifest(test_root / "reperformed_positive" / "manifest.csv"),
         "safe_arranged_controls": count_manifest(test_root / "safe_arranged" / "manifest.csv"),
         "policy": {
             "primary_positive_scope": "synthetic_transformations_only",

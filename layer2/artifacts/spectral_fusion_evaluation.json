@@ -1,0 +1,158 @@
+{
+  "status": "completed_exploratory_development",
+  "active_policy_changed": false,
+  "protocol": "Tune-only primary cutoff at <=10% work-level false warnings; spectral cutoff max(.30,1.05*maximum tune normal work spectral score). Max of mapped candidate scores, spectral route cannot create HOLD.",
+  "primary_cutoff": 0.5872029654108561,
+  "spectral_cutoff": 0.3,
+  "warn": 0.34748932160579077,
+  "hold": 0.493385559387385,
+  "summary": {
+    "external_diagnostic": {
+      "positive_queries": 0,
+      "correct_source_count": 0,
+      "recall": null,
+      "normal_queries": 8,
+      "normal_works": 2,
+      "warn_works": 0,
+      "hold_works": 0,
+      "warn_rate": 0.0,
+      "hold_rate": 0.0
+    },
+    "new_replication": {
+      "positive_queries": 28,
+      "correct_source_count": 26,
+      "recall": 0.9285714285714286,
+      "normal_queries": 0,
+      "normal_works": 0,
+      "warn_works": 0,
+      "hold_works": 0,
+      "warn_rate": null,
+      "hold_rate": null
+    },
+    "new_transform_stress": {
+      "positive_queries": 28,
+      "correct_source_count": 25,
+      "recall": 0.8928571428571429,
+      "normal_queries": 0,
+      "normal_works": 0,
+      "warn_works": 0,
+      "hold_works": 0,
+      "warn_rate": null,
+      "hold_rate": null
+    },
+    "prospective_five_family": {
+      "positive_queries": 70,
+      "correct_source_count": 66,
+      "recall": 0.9428571428571428,
+      "normal_queries": 0,
+      "normal_works": 0,
+      "warn_works": 0,
+      "hold_works": 0,
+      "warn_rate": null,
+      "hold_rate": null
+    },
+    "test": {
+      "positive_queries": 28,
+      "correct_source_count": 28,
+      "recall": 1.0,
+      "normal_queries": 44,
+      "normal_works": 11,
+      "warn_works": 0,
+      "hold_works": 0,
+      "warn_rate": 0.0,
+      "hold_rate": 0.0
+    },
+    "tune": {
+      "positive_queries": 40,
+      "correct_source_count": 40,
+      "recall": 1.0,
+      "normal_queries": 72,
+      "normal_works": 18,
+      "warn_works": 1,
+      "hold_works": 0,
+      "warn_rate": 0.05555555555555555,
+      "hold_rate": 0.0
+    }
+  },
+  "by_family": {
+    "basic": {
+      "positive_queries": 14,
+      "correct_source_count": 14,
+      "recall": 1.0,
+      "normal_queries": 0,
+      "normal_works": 0,
+      "warn_works": 0,
+      "hold_works": 0,
+      "warn_rate": null,
+      "hold_rate": null
+    },
+    "instrument_layer": {
+      "positive_queries": 14,
+      "correct_source_count": 14,
+      "recall": 1.0,
+      "normal_queries": 0,
+      "normal_works": 0,
+      "warn_works": 0,
+      "hold_works": 0,
+      "warn_rate": null,
+      "hold_rate": null
+    },
+    "local_tempo": {
+      "positive_queries": 14,
+      "correct_source_count": 14,
+      "recall": 1.0,
+      "normal_queries": 0,
+      "normal_works": 0,
+      "warn_works": 0,
+      "hold_works": 0,
+      "warn_rate": null,
+      "hold_rate": null
+    },
+    "long_auto_edit": {
+      "positive_queries": 14,
+      "correct_source_count": 10,
+      "recall": 0.7142857142857143,
+      "normal_queries": 0,
+      "normal_works": 0,
+      "warn_works": 0,
+      "hold_works": 0,
+      "warn_rate": null,
+      "hold_rate": null
+    },
+    "room_effect": {
+      "positive_queries": 14,
+      "correct_source_count": 14,
+      "recall": 1.0,
+      "normal_queries": 0,
+      "normal_works": 0,
+      "warn_works": 0,
+      "hold_works": 0,
+      "warn_rate": null,
+      "hold_rate": null
+    }
+  },
+  "raw_test": {
+    "positive_queries": 28,
+    "correct_source_count": 28,
+    "recall": 1.0,
+    "normal_queries": 45,
+    "normal_works": 12,
+    "warn_works": 1,
+    "hold_works": 1,
+    "warn_rate": 0.08333333333333333,
+    "hold_rate": 0.08333333333333333
+  },
+  "limits": "Protocol chosen after spectral development observations; all works already seen. Independent fresh AI evaluation remains required.",
+  "per_query_source_regressions": [
+    "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\ai_improvement_stress\\001__spliced_sections.wav",
+    "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\ai_improvement_stress\\002__spliced_sections.wav",
+    "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\ai_improvement_stress\\009__spliced_sections.wav",
+    "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\ai_selective_replication\\000__spliced_sections.wav",
+    "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\ai_selective_replication\\009__spliced_sections.wav",
+    "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\five_family_ai\\009__long_auto_edit.wav",
+    "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\five_family_ai\\010__long_auto_edit.wav",
+    "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\five_family_ai\\011__long_auto_edit.wav",
+    "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\five_family_ai\\012__long_auto_edit.wav"
+  ],
+  "acceptance_met": false
+}

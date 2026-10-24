@@ -1,0 +1,45 @@
+{
+  "policy_status": "tonal_confirmation_experimental",
+  "evaluated_at": "2026-10-22T12:28:09.768875+00:00",
+  "candidate_retrieval": {
+    "internal_top_k": 5,
+    "display_top_k": 3,
+    "positive_queries": 340,
+    "top3_source_recall": 0.8484848484848485,
+    "top5_source_recall": 0.8787878787878788,
+    "decision_reason": "Existing display policy retained; recalls are from the new held-out source groups."
+  },
+  "risk_score": {
+    "score_name": "clap-top5+tonal-local-v1",
+    "warn_threshold_inclusive": 0.3303172208078136,
+    "hold_threshold_inclusive": 0.5440137575316275
+  },
+  "held_out_metrics": {
+    "normal_count": 121,
+    "positive_count": 132,
+    "normal_false_positive_rate": 0.10743801652892562,
+    "positive_query_recall": 0.8863636363636364,
+    "correct_source_recall": 0.8560606060606061
+  },
+  "limitations": [
+    "Historical test groups reused after aggregate failure was seen; not a fresh blind test.",
+    "Synthetic positives and fingerprint-unique normal candidates; no legal labels.",
+    "Sources outside CLAP Top-5 cannot be recovered by confirmation.",
+    "Exploratory evaluation on previously inspected Covers80 works; not fresh blind validation.",
+    "No production risk thresholds fitted on these covers.",
+    "This corpus does not establish recall in the production 1000-song catalog.",
+    "Additional positives are synthetic, not independently performed covers.",
+    "Unused normal candidates pass fingerprint checks but lack expert musical labels.",
+    "Only 20 new positive works and 30 normal candidates; estimates are uncertain."
+  ],
+  "corpus_version": "5024eab8bb046fb5506be213d1abe25a81840cdc93a66d1a51e6cd287c90e191",
+  "current_evidence": "tonal_confirmation_evaluation.json",
+  "fresh_audit": "fresh_audit_summary.json",
+  "test_set_status": "historical groups reused, additional fresh source audit separately reported",
+  "independent_cover_benchmark": {
+    "recall_at_1": 0.2375,
+    "recall_at_3": 0.2875,
+    "recall_at_5": 0.3375,
+    "mrr": 0.3114111513557666
+  }
+}

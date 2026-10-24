@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import hashlib
+import os
 import subprocess
 from pathlib import Path
 
@@ -15,15 +16,15 @@ WINDOW_SECONDS = 10
 STRIDE_SECONDS = 5
 
 
-def extract_chroma(path: Path, ffmpeg: str, cache_dir: Path) -> tuple[np.ndarray, float]:
+def extract_chroma(path: Path, ffmpeg: str, cache_dir: Path | None) -> tuple[np.ndarray, float]:
     """ffmpeg로 오디오를 디코딩하고 캐시된 12음계 크로마그램을 돌려줍니다."""
 
     # 경로, 크기, 수정 시각을 캐시 키에 넣어 파일이 바뀌면 다시 분석합니다.
     signature = f"{path.resolve()}|{path.stat().st_size}|{path.stat().st_mtime_ns}"
-    cache_path = cache_dir / (hashlib.sha256(signature.encode("utf-8")).hexdigest() + ".npz")
-    if cache_path.is_file():
-        saved = np.load(cache_path, allow_pickle=False)
-        return saved["chroma"].astype(np.float32), float(saved["duration"])
+    cache_path = cache_dir / (hashlib.sha256(signature.encode("utf-8")).hexdigest() + ".npz") if cache_dir else None
+    if cache_path and cache_path.is_file():
+        with np.load(cache_path, allow_pickle=False) as saved:
+            return saved["chroma"].astype(np.float32), float(saved["duration"])
 
     # MP3, WebM 등 입력 형식을 ffmpeg가 모노 float 배열로 통일합니다.
     decoded = subprocess.run(
@@ -60,8 +61,11 @@ def extract_chroma(path: Path, ffmpeg: str, cache_dir: Path) -> tuple[np.ndarray
     norms = np.linalg.norm(chroma, axis=0, keepdims=True)
     chroma = np.divide(chroma, np.maximum(norms, 1e-8)).astype(np.float32)
 
-    cache_dir.mkdir(parents=True, exist_ok=True)
-    np.savez_compressed(cache_path, chroma=chroma, duration=np.asarray(duration))
+    if cache_dir:
+        cache_dir.mkdir(parents=True, exist_ok=True)
+        temporary = cache_path.with_suffix(f'.{os.getpid()}.tmp.npz')
+        np.savez_compressed(temporary, chroma=chroma, duration=np.asarray(duration))
+        temporary.replace(cache_path)
     return chroma, duration
 
 

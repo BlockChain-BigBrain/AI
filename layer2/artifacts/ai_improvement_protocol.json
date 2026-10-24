@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-23",
+  "candidates": [
+    "margin_top5",
+    "contrast_top5",
+    "margin_top20"
+  ],
+  "warn_rule": "Midpoint between tune normal FPR<=10% boundary and tune positive source 5th percentile, if feasible.",
+  "hold_rule": "Maximum of strict tune normal FPR<=2% boundary and tune positive source 25th percentile.",
+  "selection": "Tune only: maximize correct-source WARN recall in display Top3; then prefer margin_top5, margin_top20, contrast_top5. No test-driven selection.",
+  "test_status": "Previously observed source-disjoint test; not fresh blind validation.",
+  "normal_exclusion": "Only independently audited near-identical recording; report both raw and audited counts.",
+  "new_stress": "After selection: all 14 test works, pitch+tempo+codec and spliced-section variants; not unseen works.",
+  "targets": {
+    "normal_warn_max": 0.1,
+    "normal_hold_max": 0.02,
+    "correct_source_warn_min": 0.9
+  }
+}

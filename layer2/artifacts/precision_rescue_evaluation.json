@@ -1,0 +1,143 @@
+{
+  "protocol": {
+    "date": "2026-10-23",
+    "method": "ambiguous-cqt3-fragment-rescue",
+    "precision_features": "cqt36-centered-0.5s-v1",
+    "trigger": "Current selective score <0.60; evaluate only original CLAP Top3 candidates.",
+    "score_rule": "Keep original scores; max with 0.5*CQT_whole_score^2 or 0.5*mean(3 separated CQT fragments)^2.",
+    "fragment_rule": "Query>=45s; up to twelve nonoverlapping 10s windows; each>=8s alignment, three distinct reference spans, each score>=.65.",
+    "thresholds": {
+      "warn": 0.34748932160579077,
+      "hold": 0.8337449399145463
+    },
+    "status": "Development diagnostics after observed five-family failures; no blind-validation claim.",
+    "deployment": "Not automatic. Reject if tune normal target or old source recall regresses."
+  },
+  "signature": "46bedb83122edb1d2a03cecee11bf11b6677e3748e96da78f1bc099396642ab9",
+  "summary": {
+    "external_diagnostic": {
+      "positive_queries": 0,
+      "correct_source_warn_top3_count": 0,
+      "correct_source_warn_top3_recall": null,
+      "normal_candidates": 2,
+      "normal_warn_count": 0,
+      "normal_hold_count": 0,
+      "normal_warn_rate": 0.0,
+      "normal_hold_rate": 0.0
+    },
+    "new_replication": {
+      "positive_queries": 28,
+      "correct_source_warn_top3_count": 27,
+      "correct_source_warn_top3_recall": 0.9642857142857143,
+      "normal_candidates": 0,
+      "normal_warn_count": 0,
+      "normal_hold_count": 0,
+      "normal_warn_rate": null,
+      "normal_hold_rate": null
+    },
+    "new_transform_stress": {
+      "positive_queries": 28,
+      "correct_source_warn_top3_count": 26,
+      "correct_source_warn_top3_recall": 0.9285714285714286,
+      "normal_candidates": 0,
+      "normal_warn_count": 0,
+      "normal_hold_count": 0,
+      "normal_warn_rate": null,
+      "normal_hold_rate": null
+    },
+    "prospective_five_family": {
+      "positive_queries": 70,
+      "correct_source_warn_top3_count": 59,
+      "correct_source_warn_top3_recall": 0.8428571428571429,
+      "normal_candidates": 0,
+      "normal_warn_count": 0,
+      "normal_hold_count": 0,
+      "normal_warn_rate": null,
+      "normal_hold_rate": null
+    },
+    "by_family": {
+      "basic": {
+        "positive_queries": 14,
+        "correct_source_warn_top3_count": 11,
+        "correct_source_warn_top3_recall": 0.7857142857142857,
+        "normal_candidates": 0,
+        "normal_warn_count": 0,
+        "normal_hold_count": 0,
+        "normal_warn_rate": null,
+        "normal_hold_rate": null
+      },
+      "instrument_layer": {
+        "positive_queries": 14,
+        "correct_source_warn_top3_count": 11,
+        "correct_source_warn_top3_recall": 0.7857142857142857,
+        "normal_candidates": 0,
+        "normal_warn_count": 0,
+        "normal_hold_count": 0,
+        "normal_warn_rate": null,
+        "normal_hold_rate": null
+      },
+      "local_tempo": {
+        "positive_queries": 14,
+        "correct_source_warn_top3_count": 14,
+        "correct_source_warn_top3_recall": 1.0,
+        "normal_candidates": 0,
+        "normal_warn_count": 0,
+        "normal_hold_count": 0,
+        "normal_warn_rate": null,
+        "normal_hold_rate": null
+      },
+      "long_auto_edit": {
+        "positive_queries": 14,
+        "correct_source_warn_top3_count": 9,
+        "correct_source_warn_top3_recall": 0.6428571428571429,
+        "normal_candidates": 0,
+        "normal_warn_count": 0,
+        "normal_hold_count": 0,
+        "normal_warn_rate": null,
+        "normal_hold_rate": null
+      },
+      "room_effect": {
+        "positive_queries": 14,
+        "correct_source_warn_top3_count": 14,
+        "correct_source_warn_top3_recall": 1.0,
+        "normal_candidates": 0,
+        "normal_warn_count": 0,
+        "normal_hold_count": 0,
+        "normal_warn_rate": null,
+        "normal_hold_rate": null
+      }
+    },
+    "test": {
+      "positive_queries": 28,
+      "correct_source_warn_top3_count": 28,
+      "correct_source_warn_top3_recall": 1.0,
+      "normal_candidates": 11,
+      "normal_warn_count": 1,
+      "normal_hold_count": 0,
+      "normal_warn_rate": 0.09090909090909091,
+      "normal_hold_rate": 0.0
+    },
+    "tune": {
+      "positive_queries": 40,
+      "correct_source_warn_top3_count": 40,
+      "correct_source_warn_top3_recall": 1.0,
+      "normal_candidates": 18,
+      "normal_warn_count": 2,
+      "normal_hold_count": 0,
+      "normal_warn_rate": 0.1111111111111111,
+      "normal_hold_rate": 0.0
+    }
+  },
+  "raw_test": {
+    "positive_queries": 28,
+    "correct_source_warn_top3_count": 28,
+    "correct_source_warn_top3_recall": 1.0,
+    "normal_candidates": 12,
+    "normal_warn_count": 2,
+    "normal_hold_count": 1,
+    "normal_warn_rate": 0.16666666666666666,
+    "normal_hold_rate": 0.08333333333333333
+  },
+  "active_policy_changed": false,
+  "rescue_queries": 78
+}

@@ -1,0 +1,1022 @@
+{
+  "status": "passed",
+  "meaning": "Execution completed; not a statement that false-positive targets passed.",
+  "scope": "ai_labeled",
+  "reference_tracks": 34,
+  "queries": 93,
+  "works": 31,
+  "policy_sha256": "9ec02d41ce56fd36581ae61162b4a60c0b240dd09e39aa98df30d45e9abbbb24",
+  "thresholds": {
+    "warn": 0.34748932160579077,
+    "hold": 0.8337449399145463
+  },
+  "normal_unit": "A work warns if any of its three 30s crops warns; existing known works, not independent new validation.",
+  "summary": {
+    "external_diagnostic": {
+      "queries": 6,
+      "works": 2,
+      "warn_works": 1,
+      "hold_works": 0,
+      "block_queries": 0,
+      "warn_rate": 0.5,
+      "hold_rate": 0.0
+    },
+    "test": {
+      "queries": 33,
+      "works": 11,
+      "warn_works": 2,
+      "hold_works": 0,
+      "block_queries": 0,
+      "warn_rate": 0.18181818181818182,
+      "hold_rate": 0.0
+    },
+    "tune": {
+      "queries": 54,
+      "works": 18,
+      "warn_works": 5,
+      "hold_works": 0,
+      "block_queries": 0,
+      "warn_rate": 0.2777777777777778,
+      "hold_rate": 0.0
+    }
+  },
+  "failures": [
+    {
+      "dataset": "safe_music",
+      "split": "tune",
+      "group_id": "normal:nocopyrightsound633-living-dead-298306",
+      "expected_track_id": "",
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\duration_matched_normal_20261024\\003__start.wav",
+      "query_kind": "normal_30s_start",
+      "sha256": "4249292bca50686978faccab1e5d06e891763f873edf43f42ff1876602aadae4",
+      "source_file": "C:\\\ube14\ub85d\uccb4\uc778\\music\\nocopyrightsound633-living-dead-298306.mp3",
+      "source_sha256": "6c143adbd80890201fb30f5116861be70624f29d9a5223add9919d2ca5a07d6d",
+      "offset_seconds": 0.0,
+      "signature": "7e071d57abd7806a845da1b43bae91db86ae6a047171143f1e017fffa7448048",
+      "decision": "WARN",
+      "score": 0.418410694735268,
+      "scoreVersion": "clap-top20+tonal-local-v1+expanded-square-v1+secondary-clap-cqt-fragments-v1",
+      "candidates": [
+        {
+          "trackId": "the_mountain-documentary-documentary-music-508000",
+          "score": 0.418410694735268,
+          "retrievalScore": 0.518821120262146,
+          "matchedSegments": [
+            {
+              "queryStartSec": 0.0,
+              "queryEndSec": 30.0,
+              "refStartSec": 105.4185941043084,
+              "refEndSec": 133.2825396825397,
+              "score": 0.418410694735268
+            }
+          ]
+        },
+        {
+          "trackId": "velariomusic-meditation-music-603880",
+          "score": 0.3752214933064981,
+          "retrievalScore": 0.4731522500514984,
+          "matchedSegments": [
+            {
+              "queryStartSec": 0.46439909297052157,
+              "queryEndSec": 19.969160997732427,
+              "refStartSec": 182.04444444444445,
+              "refEndSec": 200.1560090702948,
+              "score": 0.3752214933064981
+            }
+          ]
+        },
+        {
+          "trackId": "velariomusic-calm-ambient-603158 (1)",
+          "score": 0.3657219515253718,
+          "retrievalScore": 0.4697631597518921,
+          "matchedSegments": [
+            {
+              "queryStartSec": 0.0,
+              "queryEndSec": 30.0,
+              "refStartSec": 167.6480725623583,
+              "refEndSec": 200.62040816326532,
+              "score": 0.3657219515253718
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "dataset": "safe_music",
+      "split": "tune",
+      "group_id": "normal:nocopyrightsound633-living-dead-298306",
+      "expected_track_id": "",
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\duration_matched_normal_20261024\\003__middle.wav",
+      "query_kind": "normal_30s_middle",
+      "sha256": "9163192d700e8c09f96df0fafe07103398b47c7d5dad911b3beba39116f9868a",
+      "source_file": "C:\\\ube14\ub85d\uccb4\uc778\\music\\nocopyrightsound633-living-dead-298306.mp3",
+      "source_sha256": "6c143adbd80890201fb30f5116861be70624f29d9a5223add9919d2ca5a07d6d",
+      "offset_seconds": 105.01,
+      "signature": "7e071d57abd7806a845da1b43bae91db86ae6a047171143f1e017fffa7448048",
+      "decision": "WARN",
+      "score": 0.5194136693191607,
+      "scoreVersion": "clap-top20+tonal-local-v1+expanded-square-v1+secondary-clap-cqt-fragments-v1",
+      "candidates": [
+        {
+          "trackId": "the_mountain-documentary-documentary-music-508000",
+          "score": 0.5194136693191607,
+          "retrievalScore": 0.6785776019096375,
+          "matchedSegments": [
+            {
+              "queryStartSec": 2.7863945578231295,
+              "queryEndSec": 28.328344671201815,
+              "refStartSec": 101.2390022675737,
+              "refEndSec": 125.85215419501134,
+              "score": 0.5194136693191607
+            }
+          ]
+        },
+        {
+          "trackId": "alex-morgan-horror-thriller-545512",
+          "score": 0.3144363201080033,
+          "retrievalScore": 0.5620155334472656,
+          "matchedSegments": [
+            {
+              "queryStartSec": 1.3931972789115648,
+              "queryEndSec": 27.39954648526077,
+              "refStartSec": 30.650340136054425,
+              "refEndSec": 58.51428571428572,
+              "score": 0.3144363201080033
+            }
+          ]
+        },
+        {
+          "trackId": "velariomusic-calm-ambient-603158 (1)",
+          "score": 0.2881651999178222,
+          "retrievalScore": 0.19481734931468964,
+          "matchedSegments": [
+            {
+              "queryStartSec": 0.0,
+              "queryEndSec": 30.0,
+              "refStartSec": 125.38775510204083,
+              "refEndSec": 159.75328798185942,
+              "score": 0.2881651999178222
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "dataset": "safe_music",
+      "split": "tune",
+      "group_id": "normal:nocopyrightsound633-living-dead-298306",
+      "expected_track_id": "",
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\duration_matched_normal_20261024\\003__end.wav",
+      "query_kind": "normal_30s_end",
+      "sha256": "4e647ef9d0714af865278cb050a664979790d62e1071d1c69eea2106ab31c7bf",
+      "source_file": "C:\\\ube14\ub85d\uccb4\uc778\\music\\nocopyrightsound633-living-dead-298306.mp3",
+      "source_sha256": "6c143adbd80890201fb30f5116861be70624f29d9a5223add9919d2ca5a07d6d",
+      "offset_seconds": 210.02,
+      "signature": "7e071d57abd7806a845da1b43bae91db86ae6a047171143f1e017fffa7448048",
+      "decision": "WARN",
+      "score": 0.5872029654108561,
+      "scoreVersion": "clap-top20+tonal-local-v1+expanded-square-v1+secondary-clap-cqt-fragments-v1",
+      "candidates": [
+        {
+          "trackId": "the_mountain-documentary-documentary-music-508000",
+          "score": 0.5872029654108561,
+          "retrievalScore": 0.6037445068359375,
+          "matchedSegments": [
+            {
+              "queryStartSec": 0.0,
+              "queryEndSec": 28.792743764172336,
+              "refStartSec": 104.02539682539683,
+              "refEndSec": 133.74693877551022,
+              "score": 0.5872029654108561
+            }
+          ]
+        },
+        {
+          "trackId": "velariomusic-meditation-music-603880",
+          "score": 0.5098713509176518,
+          "retrievalScore": 0.45308372378349304,
+          "matchedSegments": [
+            {
+              "queryStartSec": 0.0,
+              "queryEndSec": 30.0,
+              "refStartSec": 167.6480725623583,
+              "refEndSec": 200.1560090702948,
+              "score": 0.5098713509176518
+            }
+          ]
+        },
+        {
+          "trackId": "alex-morgan-horror-thriller-545512",
+          "score": 0.3237926423191451,
+          "retrievalScore": 0.46363237500190735,
+          "matchedSegments": [
+            {
+              "queryStartSec": 5.108390022675737,
+              "queryEndSec": 29.72154195011338,
+              "refStartSec": 31.114739229024945,
+              "refEndSec": 58.51428571428572,
+              "score": 0.3237926423191451
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "dataset": "safe_music",
+      "split": "test",
+      "group_id": "normal:oceanframemusic-music-no-copyright-motivation-463767",
+      "expected_track_id": "",
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\duration_matched_normal_20261024\\004__start.wav",
+      "query_kind": "normal_30s_start",
+      "sha256": "140c722493b40c270a19dc48bbf3f3f8cf21881f5ab415ffc2ef79aaa04e310f",
+      "source_file": "C:\\\ube14\ub85d\uccb4\uc778\\music\\oceanframemusic-music-no-copyright-motivation-463767.mp3",
+      "source_sha256": "7af6e428cfe2637bc4d4b1ae9848ca1cb0ede353c758c9b8c5a6c73b78ad20e0",
+      "offset_seconds": 0.0,
+      "signature": "7e071d57abd7806a845da1b43bae91db86ae6a047171143f1e017fffa7448048",
+      "decision": "WARN",
+      "score": 0.4753873838358639,
+      "scoreVersion": "clap-top20+tonal-local-v1+expanded-square-v1+secondary-clap-cqt-fragments-v1",
+      "candidates": [
+        {
+          "trackId": "the_mountain-dramatic-610133 (1)",
+          "score": 0.4753873838358639,
+          "retrievalScore": 0.45648714900016785,
+          "matchedSegments": [
+            {
+              "queryStartSec": 0.0,
+              "queryEndSec": 30.0,
+              "refStartSec": 1.8575963718820863,
+              "refEndSec": 40.867120181405895,
+              "score": 0.4753873838358639
+            }
+          ]
+        },
+        {
+          "trackId": "the_mountain-cinematic-489998 (1)",
+          "score": 0.32601428169985963,
+          "retrievalScore": 0.3979658782482147,
+          "matchedSegments": [
+            {
+              "queryStartSec": 0.46439909297052157,
+              "queryEndSec": 30.0,
+              "refStartSec": 20.89795918367347,
+              "refEndSec": 47.3687074829932,
+              "score": 0.32601428169985963
+            }
+          ]
+        },
+        {
+          "trackId": "alex-morgan-documentary-nature-528316",
+          "score": 0.3222148656741215,
+          "retrievalScore": 0.5562203526496887,
+          "matchedSegments": [
+            {
+              "queryStartSec": 0.0,
+              "queryEndSec": 23.6843537414966,
+              "refStartSec": 44.11791383219955,
+              "refEndSec": 77.5546485260771,
+              "score": 0.3222148656741215
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "dataset": "safe_music",
+      "split": "test",
+      "group_id": "normal:oceanframemusic-music-no-copyright-motivation-463767",
+      "expected_track_id": "",
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\duration_matched_normal_20261024\\004__middle.wav",
+      "query_kind": "normal_30s_middle",
+      "sha256": "aa2ad7eb581b18d80f78feb133e61e2da5c5bdbc0f24cd5150be6a1bdc6bd931",
+      "source_file": "C:\\\ube14\ub85d\uccb4\uc778\\music\\oceanframemusic-music-no-copyright-motivation-463767.mp3",
+      "source_sha256": "7af6e428cfe2637bc4d4b1ae9848ca1cb0ede353c758c9b8c5a6c73b78ad20e0",
+      "offset_seconds": 77.495,
+      "signature": "7e071d57abd7806a845da1b43bae91db86ae6a047171143f1e017fffa7448048",
+      "decision": "WARN",
+      "score": 0.5433276843619891,
+      "scoreVersion": "clap-top20+tonal-local-v1+expanded-square-v1+secondary-clap-cqt-fragments-v1",
+      "candidates": [
+        {
+          "trackId": "the_mountain-dramatic-610133 (1)",
+          "score": 0.5433276843619891,
+          "retrievalScore": 0.8733263611793518,
+          "matchedSegments": [
+            {
+              "queryStartSec": 0.0,
+              "queryEndSec": 29.72154195011338,
+              "refStartSec": 39.00952380952381,
+              "refEndSec": 78.01904761904763,
+              "score": 0.5433276843619891
+            }
+          ]
+        },
+        {
+          "trackId": "the_mountain-cinematic-489998 (1)",
+          "score": 0.4326244175684853,
+          "retrievalScore": 0.8780679702758789,
+          "matchedSegments": [
+            {
+              "queryStartSec": 0.0,
+              "queryEndSec": 28.792743764172336,
+              "refStartSec": 34.82993197278912,
+              "refEndSec": 60.3718820861678,
+              "score": 0.4326244175684853
+            }
+          ]
+        },
+        {
+          "trackId": "the_mountain-instrumental-508025",
+          "score": 0.38501748855924234,
+          "retrievalScore": 0.8968742489814758,
+          "matchedSegments": [
+            {
+              "queryStartSec": 0.0,
+              "queryEndSec": 28.792743764172336,
+              "refStartSec": 90.5578231292517,
+              "refEndSec": 115.63537414965987,
+              "score": 0.38501748855924234
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "dataset": "safe_music",
+      "split": "tune",
+      "group_id": "normal:oceanframemusic-no-copyright-romantic-music-484344",
+      "expected_track_id": "",
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\duration_matched_normal_20261024\\007__middle.wav",
+      "query_kind": "normal_30s_middle",
+      "sha256": "8bcae04f0a165e1f1b1685173550d697cece618ff6a95fed8a50df5954cb78d7",
+      "source_file": "C:\\\ube14\ub85d\uccb4\uc778\\music\\oceanframemusic-no-copyright-romantic-music-484344.mp3",
+      "source_sha256": "1ef8e42eca828d1128630f3a38ccce0f4969c118cac8ae06b56c0feea4d99791",
+      "offset_seconds": 66.33500000000001,
+      "signature": "7e071d57abd7806a845da1b43bae91db86ae6a047171143f1e017fffa7448048",
+      "decision": "WARN",
+      "score": 0.3616153448103712,
+      "scoreVersion": "clap-top20+tonal-local-v1+expanded-square-v1+secondary-clap-cqt-fragments-v1",
+      "candidates": [
+        {
+          "trackId": "the_mountain-dramatic-610133 (1)",
+          "score": 0.3616153448103712,
+          "retrievalScore": 0.8049662709236145,
+          "matchedSegments": [
+            {
+              "queryStartSec": 0.0,
+              "queryEndSec": 24.61315192743764,
+              "refStartSec": 3.250793650793651,
+              "refEndSec": 27.863945578231295,
+              "score": 0.3616153448103712
+            }
+          ]
+        },
+        {
+          "trackId": "the_mountain-cinematic-489998 (1)",
+          "score": 0.29821668666644163,
+          "retrievalScore": 0.7439208030700684,
+          "matchedSegments": [
+            {
+              "queryStartSec": 1.8575963718820863,
+              "queryEndSec": 30.0,
+              "refStartSec": 94.27301587301588,
+              "refEndSec": 116.56417233560092,
+              "score": 0.29821668666644163
+            }
+          ]
+        },
+        {
+          "trackId": "the_mountain-instrumental-508025",
+          "score": 0.25849233629325263,
+          "retrievalScore": 0.7842833399772644,
+          "matchedSegments": [
+            {
+              "queryStartSec": 0.0,
+              "queryEndSec": 30.0,
+              "refStartSec": 0.46439909297052157,
+              "refEndSec": 21.826757369614512,
+              "score": 0.25849233629325263
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "dataset": "safe_music",
+      "split": "tune",
+      "group_id": "normal:poorkidmusic-meditation-music-no-copyright-388227",
+      "expected_track_id": "",
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\duration_matched_normal_20261024\\013__start.wav",
+      "query_kind": "normal_30s_start",
+      "sha256": "fa1e76f9c0d17580290f43be760b30d3ad808707aca9e45ff1696acbde75890e",
+      "source_file": "C:\\\ube14\ub85d\uccb4\uc778\\music\\poorkidmusic-meditation-music-no-copyright-388227.mp3",
+      "source_sha256": "8babc18a0825af6d549edfb694619065f4ab67886d00b293735007cc4dc4d73f",
+      "offset_seconds": 0.0,
+      "signature": "7e071d57abd7806a845da1b43bae91db86ae6a047171143f1e017fffa7448048",
+      "decision": "WARN",
+      "score": 0.555381931987806,
+      "scoreVersion": "clap-top20+tonal-local-v1+expanded-square-v1+secondary-clap-cqt-fragments-v1",
+      "candidates": [
+        {
+          "trackId": "marlowemusic-snowfall-608469",
+          "score": 0.555381931987806,
+          "retrievalScore": 0.596842885017395,
+          "matchedSegments": [
+            {
+              "queryStartSec": 0.0,
+              "queryEndSec": 26.47074829931973,
+              "refStartSec": 27.39954648526077,
+              "refEndSec": 67.80226757369614,
+              "score": 0.555381931987806
+            }
+          ]
+        },
+        {
+          "trackId": "alex-morgan-documentary-nature-528316",
+          "score": 0.3547928949015645,
+          "retrievalScore": 0.6245490312576294,
+          "matchedSegments": [
+            {
+              "queryStartSec": 0.0,
+              "queryEndSec": 30.0,
+              "refStartSec": 98.45260770975057,
+              "refEndSec": 130.96054421768707,
+              "score": 0.3547928949015645
+            }
+          ]
+        },
+        {
+          "trackId": "the_mountain-instrumental-minimal-522469",
+          "score": 0.32713062902554296,
+          "retrievalScore": 0.4237130582332611,
+          "matchedSegments": [
+            {
+              "queryStartSec": 0.0,
+              "queryEndSec": 29.25714285714286,
+              "refStartSec": 83.59183673469389,
+              "refEndSec": 122.6013605442177,
+              "score": 0.32713062902554296
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "dataset": "safe_music",
+      "split": "tune",
+      "group_id": "normal:poorkidmusic-meditation-music-no-copyright-388227",
+      "expected_track_id": "",
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\duration_matched_normal_20261024\\013__middle.wav",
+      "query_kind": "normal_30s_middle",
+      "sha256": "f4594846616f7cdc654669969bb872c2ad469f4bca8de301c0899b1b9498b307",
+      "source_file": "C:\\\ube14\ub85d\uccb4\uc778\\music\\poorkidmusic-meditation-music-no-copyright-388227.mp3",
+      "source_sha256": "8babc18a0825af6d549edfb694619065f4ab67886d00b293735007cc4dc4d73f",
+      "offset_seconds": 65.59,
+      "signature": "7e071d57abd7806a845da1b43bae91db86ae6a047171143f1e017fffa7448048",
+      "decision": "WARN",
+      "score": 0.475327357512254,
+      "scoreVersion": "clap-top20+tonal-local-v1+expanded-square-v1+secondary-clap-cqt-fragments-v1",
+      "candidates": [
+        {
+          "trackId": "marlowemusic-snowfall-608469",
+          "score": 0.475327357512254,
+          "retrievalScore": 0.6899673342704773,
+          "matchedSegments": [
+            {
+              "queryStartSec": 0.0,
+              "queryEndSec": 30.0,
+              "refStartSec": 11.145578231292518,
+              "refEndSec": 59.907482993197284,
+              "score": 0.475327357512254
+            }
+          ]
+        },
+        {
+          "trackId": "alex-morgan-documentary-nature-528316",
+          "score": 0.3345951605215669,
+          "retrievalScore": 0.5817800760269165,
+          "matchedSegments": [
+            {
+              "queryStartSec": 0.0,
+              "queryEndSec": 30.0,
+              "refStartSec": 101.2390022675737,
+              "refEndSec": 131.88934240362812,
+              "score": 0.3345951605215669
+            }
+          ]
+        },
+        {
+          "trackId": "the_mountain-dramatic-610133 (1)",
+          "score": 0.292646083028755,
+          "retrievalScore": 0.11787297576665878,
+          "matchedSegments": [
+            {
+              "queryStartSec": 0.0,
+              "queryEndSec": 30.0,
+              "refStartSec": 11.145578231292518,
+              "refEndSec": 53.8702947845805,
+              "score": 0.292646083028755
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "dataset": "safe_music",
+      "split": "tune",
+      "group_id": "normal:poorkidmusic-meditation-music-no-copyright-388227",
+      "expected_track_id": "",
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\duration_matched_normal_20261024\\013__end.wav",
+      "query_kind": "normal_30s_end",
+      "sha256": "1017aed26fb3f8c468ca0d216fda7c1768b2e953add8f5b2248be3e5cdb2f8bd",
+      "source_file": "C:\\\ube14\ub85d\uccb4\uc778\\music\\poorkidmusic-meditation-music-no-copyright-388227.mp3",
+      "source_sha256": "8babc18a0825af6d549edfb694619065f4ab67886d00b293735007cc4dc4d73f",
+      "offset_seconds": 131.18,
+      "signature": "7e071d57abd7806a845da1b43bae91db86ae6a047171143f1e017fffa7448048",
+      "decision": "WARN",
+      "score": 0.39028420267769925,
+      "scoreVersion": "clap-top20+tonal-local-v1+expanded-square-v1+secondary-clap-cqt-fragments-v1",
+      "candidates": [
+        {
+          "trackId": "marlowemusic-snowfall-608469",
+          "score": 0.39028420267769925,
+          "retrievalScore": 0.6310631632804871,
+          "matchedSegments": [
+            {
+              "queryStartSec": 0.0,
+              "queryEndSec": 23.6843537414966,
+              "refStartSec": 32.507936507936506,
+              "refEndSec": 65.48027210884354,
+              "score": 0.39028420267769925
+            }
+          ]
+        },
+        {
+          "trackId": "velariomusic-meditation-music-603880",
+          "score": 0.3396238322916011,
+          "retrievalScore": 0.518315315246582,
+          "matchedSegments": [
+            {
+              "queryStartSec": 1.8575963718820863,
+              "queryEndSec": 29.72154195011338,
+              "refStartSec": 86.37823129251701,
+              "refEndSec": 118.421768707483,
+              "score": 0.3396238322916011
+            }
+          ]
+        },
+        {
+          "trackId": "alex-morgan-documentary-nature-528316",
+          "score": 0.2794839322566986,
+          "retrievalScore": 0.5146372318267822,
+          "matchedSegments": [
+            {
+              "queryStartSec": 0.0,
+              "queryEndSec": 21.36235827664399,
+              "refStartSec": 88.70022675736962,
+              "refEndSec": 112.38458049886621,
+              "score": 0.2794839322566986
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "dataset": "safe_music",
+      "split": "tune",
+      "group_id": "normal:pulsebox-corporate-no-copyright-music-405818",
+      "expected_track_id": "",
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\duration_matched_normal_20261024\\014__start.wav",
+      "query_kind": "normal_30s_start",
+      "sha256": "1302cac3dcf1da83f8b849714ce30a7e61fff6c868fca0e5c7bdb4387a0a0e05",
+      "source_file": "C:\\\ube14\ub85d\uccb4\uc778\\music\\pulsebox-corporate-no-copyright-music-405818.mp3",
+      "source_sha256": "fd35a0fc16486f279676d079f83f9d195e79e820f75b2a73fbe19fe29da57b98",
+      "offset_seconds": 0.0,
+      "signature": "7e071d57abd7806a845da1b43bae91db86ae6a047171143f1e017fffa7448048",
+      "decision": "WARN",
+      "score": 0.4402982626737167,
+      "scoreVersion": "clap-top20+tonal-local-v1+expanded-square-v1+secondary-clap-cqt-fragments-v1",
+      "candidates": [
+        {
+          "trackId": "daynigthmorning-background-inspiring-corporate-motivational-281454",
+          "score": 0.4402982626737167,
+          "retrievalScore": 0.6536929607391357,
+          "matchedSegments": [
+            {
+              "queryStartSec": 0.0,
+              "queryEndSec": 30.0,
+              "refStartSec": 75.69705215419502,
+              "refEndSec": 113.77777777777779,
+              "score": 0.4402982626737167
+            }
+          ]
+        },
+        {
+          "trackId": "alex-morgan-background-music-545525",
+          "score": 0.40094557954356647,
+          "retrievalScore": 0.40443697571754456,
+          "matchedSegments": [
+            {
+              "queryStartSec": 0.46439909297052157,
+              "queryEndSec": 30.0,
+              "refStartSec": 50.61950113378685,
+              "refEndSec": 83.59183673469389,
+              "score": 0.40094557954356647
+            }
+          ]
+        },
+        {
+          "trackId": "the_mountain-instrumental-minimal-522469",
+          "score": 0.37087469334320095,
+          "retrievalScore": 0.698173463344574,
+          "matchedSegments": [
+            {
+              "queryStartSec": 0.0,
+              "queryEndSec": 30.0,
+              "refStartSec": 67.80226757369614,
+              "refEndSec": 102.63219954648527,
+              "score": 0.37087469334320095
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "dataset": "safe_music",
+      "split": "tune",
+      "group_id": "normal:pulsebox-corporate-no-copyright-music-405818",
+      "expected_track_id": "",
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\duration_matched_normal_20261024\\014__middle.wav",
+      "query_kind": "normal_30s_middle",
+      "sha256": "ce4f41339a42fa31eb129292c5b4d10a648256d226218863ee217bf17c12fdb7",
+      "source_file": "C:\\\ube14\ub85d\uccb4\uc778\\music\\pulsebox-corporate-no-copyright-music-405818.mp3",
+      "source_sha256": "fd35a0fc16486f279676d079f83f9d195e79e820f75b2a73fbe19fe29da57b98",
+      "offset_seconds": 78.165,
+      "signature": "7e071d57abd7806a845da1b43bae91db86ae6a047171143f1e017fffa7448048",
+      "decision": "WARN",
+      "score": 0.4876758964320358,
+      "scoreVersion": "clap-top20+tonal-local-v1+expanded-square-v1+secondary-clap-cqt-fragments-v1",
+      "candidates": [
+        {
+          "trackId": "daynigthmorning-background-inspiring-corporate-motivational-281454",
+          "score": 0.4876758964320358,
+          "retrievalScore": 0.6329832673072815,
+          "matchedSegments": [
+            {
+              "queryStartSec": 0.0,
+              "queryEndSec": 28.792743764172336,
+              "refStartSec": 66.87346938775511,
+              "refEndSec": 104.95419501133787,
+              "score": 0.4876758964320358
+            }
+          ]
+        },
+        {
+          "trackId": "the_mountain-instrumental-minimal-522469",
+          "score": 0.30989214699410905,
+          "retrievalScore": 0.4819129705429077,
+          "matchedSegments": [
+            {
+              "queryStartSec": 0.0,
+              "queryEndSec": 28.792743764172336,
+              "refStartSec": 53.40589569160998,
+              "refEndSec": 89.62902494331067,
+              "score": 0.30989214699410905
+            }
+          ]
+        },
+        {
+          "trackId": "alex-morgan-video-background-music-591338",
+          "score": 0.2255630983074489,
+          "retrievalScore": 0.28504377603530884,
+          "matchedSegments": [
+            {
+              "queryStartSec": 0.0,
+              "queryEndSec": 30.0,
+              "refStartSec": 93.34421768707483,
+              "refEndSec": 130.49614512471655,
+              "score": 0.2255630983074489
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "dataset": "safe_music",
+      "split": "tune",
+      "group_id": "normal:pulsebox-corporate-no-copyright-music-405818",
+      "expected_track_id": "",
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\duration_matched_normal_20261024\\014__end.wav",
+      "query_kind": "normal_30s_end",
+      "sha256": "d8f78c663839d52c937a890c15b4eeec6edbad79c17b93f26e015931180b7e0e",
+      "source_file": "C:\\\ube14\ub85d\uccb4\uc778\\music\\pulsebox-corporate-no-copyright-music-405818.mp3",
+      "source_sha256": "fd35a0fc16486f279676d079f83f9d195e79e820f75b2a73fbe19fe29da57b98",
+      "offset_seconds": 156.33,
+      "signature": "7e071d57abd7806a845da1b43bae91db86ae6a047171143f1e017fffa7448048",
+      "decision": "WARN",
+      "score": 0.3574885034790406,
+      "scoreVersion": "clap-top20+tonal-local-v1+expanded-square-v1+secondary-clap-cqt-fragments-v1",
+      "candidates": [
+        {
+          "trackId": "alex-morgan-documentary-nature-528316",
+          "score": 0.3574885034790406,
+          "retrievalScore": 0.46313461661338806,
+          "matchedSegments": [
+            {
+              "queryStartSec": 0.0,
+              "queryEndSec": 30.0,
+              "refStartSec": 72.44625850340137,
+              "refEndSec": 104.02539682539683,
+              "score": 0.3574885034790406
+            }
+          ]
+        },
+        {
+          "trackId": "daynigthmorning-background-inspiring-corporate-motivational-281454",
+          "score": 0.3378366316167208,
+          "retrievalScore": 0.655256986618042,
+          "matchedSegments": [
+            {
+              "queryStartSec": 0.0,
+              "queryEndSec": 27.39954648526077,
+              "refStartSec": 88.2358276643991,
+              "refEndSec": 114.24217687074831,
+              "score": 0.3378366316167208
+            }
+          ]
+        },
+        {
+          "trackId": "the_mountain-instrumental-minimal-522469",
+          "score": 0.279722340276035,
+          "retrievalScore": 0.49491778016090393,
+          "matchedSegments": [
+            {
+              "queryStartSec": 1.8575963718820863,
+              "queryEndSec": 30.0,
+              "refStartSec": 84.98503401360544,
+              "refEndSec": 122.6013605442177,
+              "score": 0.279722340276035
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "dataset": "safe_music",
+      "split": "tune",
+      "group_id": "normal:ribhavagrawal-meditation-relaxing-music-calmingrelaxingambient-608705",
+      "expected_track_id": "",
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\duration_matched_normal_20261024\\018__end.wav",
+      "query_kind": "normal_30s_end",
+      "sha256": "1fa57f6059d41f1cf26f584ccd91de1517a06eab1ddb236c32f6104f91c0ec28",
+      "source_file": "C:\\\ube14\ub85d\uccb4\uc778\\music\\ribhavagrawal-meditation-relaxing-music-calmingrelaxingambient-608705.mp3",
+      "source_sha256": "5eb976d78e1acd9308f1642530cbb3bf4ec60ca79eb13095635810479258d880",
+      "offset_seconds": 188.45,
+      "signature": "7e071d57abd7806a845da1b43bae91db86ae6a047171143f1e017fffa7448048",
+      "decision": "WARN",
+      "score": 0.5022240255314571,
+      "scoreVersion": "clap-top20+tonal-local-v1+expanded-square-v1+secondary-clap-cqt-fragments-v1",
+      "candidates": [
+        {
+          "trackId": "velariomusic-meditation-music-603880",
+          "score": 0.5022240255314571,
+          "retrievalScore": 0.6457693576812744,
+          "matchedSegments": [
+            {
+              "queryStartSec": 2.7863945578231295,
+              "queryEndSec": 30.0,
+              "refStartSec": 163.9328798185941,
+              "refEndSec": 197.83401360544218,
+              "score": 0.5022240255314571
+            }
+          ]
+        },
+        {
+          "trackId": "velariomusic-calm-ambient-603158 (1)",
+          "score": 0.42813407502208767,
+          "retrievalScore": 0.5634239315986633,
+          "matchedSegments": [
+            {
+              "queryStartSec": 1.8575963718820863,
+              "queryEndSec": 30.0,
+              "refStartSec": 163.9328798185941,
+              "refEndSec": 198.76281179138323,
+              "score": 0.42813407502208767
+            }
+          ]
+        },
+        {
+          "trackId": "alex-morgan-background-music-545525",
+          "score": 0.30514958279135707,
+          "retrievalScore": 0.514900803565979,
+          "matchedSegments": [
+            {
+              "queryStartSec": 0.9287981859410431,
+              "queryEndSec": 30.0,
+              "refStartSec": 0.0,
+              "refEndSec": 32.04353741496599,
+              "score": 0.30514958279135707
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "dataset": "safe_music",
+      "split": "test",
+      "group_id": "normal:turtlebeats-dark-synthwave-spectral-251688",
+      "expected_track_id": "",
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\duration_matched_normal_20261024\\022__end.wav",
+      "query_kind": "normal_30s_end",
+      "sha256": "61fc88d7d880d0ec3d2c59dc89b68b9b231c5eb5c55c08fcebd1ce326ba701c2",
+      "source_file": "C:\\\ube14\ub85d\uccb4\uc778\\music\\turtlebeats-dark-synthwave-spectral-251688.mp3",
+      "source_sha256": "787436ed955aa0414a763d7a0107b41c5dd76e75b4f45915eff43886fc468d31",
+      "offset_seconds": 90.02,
+      "signature": "7e071d57abd7806a845da1b43bae91db86ae6a047171143f1e017fffa7448048",
+      "decision": "WARN",
+      "score": 0.5258837606328038,
+      "scoreVersion": "clap-top20+tonal-local-v1+expanded-square-v1+secondary-clap-cqt-fragments-v1",
+      "candidates": [
+        {
+          "trackId": "the_mountain-documentary-documentary-music-508000",
+          "score": 0.5258837606328038,
+          "retrievalScore": 0.5326071977615356,
+          "matchedSegments": [
+            {
+              "queryStartSec": 0.0,
+              "queryEndSec": 30.0,
+              "refStartSec": 93.80861678004536,
+              "refEndSec": 125.85215419501134,
+              "score": 0.5258837606328038
+            }
+          ]
+        },
+        {
+          "trackId": "daynigthmorning-background-inspiring-corporate-motivational-281454",
+          "score": 0.23305323456343416,
+          "retrievalScore": 0.21073095500469208,
+          "matchedSegments": [
+            {
+              "queryStartSec": 0.0,
+              "queryEndSec": 30.0,
+              "refStartSec": 76.16145124716553,
+              "refEndSec": 112.84897959183674,
+              "score": 0.23305323456343416
+            }
+          ]
+        },
+        {
+          "trackId": "alex-morgan-cinematic-591327",
+          "score": 0.19407778309944732,
+          "retrievalScore": 0.5902159810066223,
+          "matchedSegments": [
+            {
+              "queryStartSec": 0.0,
+              "queryEndSec": 28.328344671201815,
+              "refStartSec": 38.54512471655329,
+              "refEndSec": 68.73106575963719,
+              "score": 0.19407778309944732
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "dataset": "premusic_audit",
+      "split": "external_diagnostic",
+      "group_id": "normal:nastelbom-inspirational-inspirational-music-473260",
+      "expected_track_id": "",
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\duration_matched_normal_20261024\\029__start.wav",
+      "query_kind": "normal_30s_start",
+      "sha256": "aa359d65553f5b1b40ba3b711202a79ae6593eeb3d2d8b9b00fe8baf77f325ed",
+      "source_file": "C:\\\ube14\ub85d\uccb4\uc778\\premusic\\nastelbom-inspirational-inspirational-music-473260.mp3",
+      "source_sha256": "3d0f206a6eac160c2be42b4c4319e2bde615af8bbd59a6b7fcc0f8545d9f8b6a",
+      "offset_seconds": 0.0,
+      "signature": "7e071d57abd7806a845da1b43bae91db86ae6a047171143f1e017fffa7448048",
+      "decision": "WARN",
+      "score": 0.41352676207629535,
+      "scoreVersion": "clap-top20+tonal-local-v1+expanded-square-v1+secondary-clap-cqt-fragments-v1",
+      "candidates": [
+        {
+          "trackId": "the_mountain-dramatic-610133 (1)",
+          "score": 0.41352676207629535,
+          "retrievalScore": 0.6345149278640747,
+          "matchedSegments": [
+            {
+              "queryStartSec": 0.46439909297052157,
+              "queryEndSec": 30.0,
+              "refStartSec": 65.01587301587301,
+              "refEndSec": 100.77460317460319,
+              "score": 0.41352676207629535
+            }
+          ]
+        },
+        {
+          "trackId": "the_mountain-cinematic-489998 (1)",
+          "score": 0.3131085584799831,
+          "retrievalScore": 0.6342096924781799,
+          "matchedSegments": [
+            {
+              "queryStartSec": 1.3931972789115648,
+              "queryEndSec": 30.0,
+              "refStartSec": 20.89795918367347,
+              "refEndSec": 45.04671201814059,
+              "score": 0.3131085584799831
+            }
+          ]
+        },
+        {
+          "trackId": "the_mountain-instrumental-508025",
+          "score": 0.27301685171058543,
+          "retrievalScore": 0.594762921333313,
+          "matchedSegments": [
+            {
+              "queryStartSec": 1.3931972789115648,
+              "queryEndSec": 28.328344671201815,
+              "refStartSec": 57.58548752834467,
+              "refEndSec": 89.62902494331067,
+              "score": 0.27301685171058543
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "dataset": "premusic_audit",
+      "split": "external_diagnostic",
+      "group_id": "normal:nastelbom-inspirational-inspirational-music-473260",
+      "expected_track_id": "",
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\duration_matched_normal_20261024\\029__middle.wav",
+      "query_kind": "normal_30s_middle",
+      "sha256": "b434c2110d24f2a6b4cb5d775ba2590cf5edeedbd128029a477e88dc911d630d",
+      "source_file": "C:\\\ube14\ub85d\uccb4\uc778\\premusic\\nastelbom-inspirational-inspirational-music-473260.mp3",
+      "source_sha256": "3d0f206a6eac160c2be42b4c4319e2bde615af8bbd59a6b7fcc0f8545d9f8b6a",
+      "offset_seconds": 51.44,
+      "signature": "7e071d57abd7806a845da1b43bae91db86ae6a047171143f1e017fffa7448048",
+      "decision": "WARN",
+      "score": 0.35959456670098006,
+      "scoreVersion": "clap-top20+tonal-local-v1+expanded-square-v1+secondary-clap-cqt-fragments-v1",
+      "candidates": [
+        {
+          "trackId": "the_mountain-dramatic-610133 (1)",
+          "score": 0.35959456670098006,
+          "retrievalScore": 0.8805856704711914,
+          "matchedSegments": [
+            {
+              "queryStartSec": 0.0,
+              "queryEndSec": 30.0,
+              "refStartSec": 58.978684807256236,
+              "refEndSec": 93.34421768707483,
+              "score": 0.35959456670098006
+            }
+          ]
+        },
+        {
+          "trackId": "the_mountain-cinematic-489998 (1)",
+          "score": 0.309453137519841,
+          "retrievalScore": 0.8921034336090088,
+          "matchedSegments": [
+            {
+              "queryStartSec": 0.0,
+              "queryEndSec": 28.792743764172336,
+              "refStartSec": 28.328344671201815,
+              "refEndSec": 60.3718820861678,
+              "score": 0.309453137519841
+            }
+          ]
+        },
+        {
+          "trackId": "the_mountain-instrumental-508025",
+          "score": 0.2572063179968749,
+          "retrievalScore": 0.8708741068840027,
+          "matchedSegments": [
+            {
+              "queryStartSec": 2.7863945578231295,
+              "queryEndSec": 29.25714285714286,
+              "refStartSec": 63.15827664399093,
+              "refEndSec": 96.13061224489796,
+              "score": 0.2572063179968749
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "full_and_crop_work_summary": {
+    "tune": {
+      "normal_works": 18,
+      "warn_works": 5,
+      "hold_works": 0
+    },
+    "test": {
+      "normal_works": 11,
+      "warn_works": 2,
+      "hold_works": 0
+    },
+    "external_diagnostic": {
+      "normal_works": 2,
+      "warn_works": 1,
+      "hold_works": 0
+    }
+  }
+}

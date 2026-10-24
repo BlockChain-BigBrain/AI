@@ -1,9 +1,12 @@
 {
-  "reference_tracks": 295,
+  "reference_tracks": 1000,
   "normal_audio_files": 300,
+  "normal_verified_no_exact_duplicate": 300,
+  "normal_exact_duplicates_excluded": 0,
   "synthetic_positive": 90,
   "synthetic_layered_positive": 10,
-  "reperformed_positive_excluded_by_default": 30,
+  "synthetic_extended_positive": 180,
+  "synthetic_arrangement_positive_excluded_by_default": 60,
   "safe_arranged_controls": 30,
   "policy": {
     "primary_positive_scope": "synthetic_transformations_only",

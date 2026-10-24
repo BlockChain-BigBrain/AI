@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "cases": [
+    {
+      "file": "20886885-alfarex-need-your-love-royalty-free-music-166731.mp3",
+      "decision": "PASS",
+      "score": 0.1334675572783544
+    },
+    {
+      "file": "20886885-cateholic-lay-it-out-royalty-free-music-177843__room_rerecord_simulation__L3.wav",
+      "decision": "HOLD",
+      "score": 0.9774779214702833
+    }
+  ]
+}

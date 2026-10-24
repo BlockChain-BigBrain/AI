@@ -5,18 +5,20 @@
     "tune_fraction": 0.6,
     "seed": 20260930,
     "groups": {
-      "tune": 192,
-      "test": 128
+      "tune": 209,
+      "test": 140
     }
   },
   "corpus": {
-    "reference_tracks": 295,
-    "reference_windows": 9847,
+    "reference_tracks": 1000,
+    "embedding_sha256": "5024eab8bb046fb5506be213d1abe25a81840cdc93a66d1a51e6cd287c90e191",
+    "reference_windows": 32218,
     "train_reference_tracks": 174,
-    "positive_source_groups": 20,
+    "positive_source_groups": 49,
     "safe_arranged_unverified_queries": 30,
     "synthetic_instrument_overlay_queries": 10,
-    "safe_arranged_unverified_note": "Reported separately; excluded from threshold calibration because negative labels are unverified."
+    "safe_arranged_unverified_note": "Reported separately; excluded from threshold calibration because negative labels are unverified.",
+    "reperformed_included": true
   },
   "protocol": {
     "window_seconds": 10,
@@ -25,329 +27,550 @@
     "safe_split_group": "source/origin work",
     "safe_arranged_controls_in_threshold_fit": false,
     "thresholds_are_model_tuning_only": true,
+    "full_synthetic_frozen_clap": true,
     "score_interpretation": "cosine similarity, not a plagiarism probability or legal finding"
   },
   "models": {
     "max_centered": {
       "thresholds_from_tune_split": {
-        "hold_threshold": 0.9104094505310059,
-        "warn_threshold": 0.8675162196159363,
+        "hold_threshold": 0.9723775386810303,
+        "warn_threshold": 0.7282671332359314,
         "target_safe_hold_rate": 0.05,
         "target_positive_source_recall_for_warn": 0.9,
-        "tune_safe_hold_rate": 0.05,
-        "tune_positive_source_recall_at_hold": 0.7317073170731707,
-        "tune_positive_source_recall_at_warn": 0.9024390243902439,
-        "tune_safe_warn_or_hold_rate": 0.2111111111111111,
+        "tune_safe_hold_rate": 0.0446927374301676,
+        "tune_positive_source_recall_at_hold": 0.052884615384615384,
+        "tune_positive_source_recall_at_warn": 0.9038461538461539,
+        "tune_safe_warn_or_hold_rate": 0.994413407821229,
         "feasible": true,
         "reason": null
       },
       "held_out_test": {
-        "positive_query_count": 32,
-        "safe_query_count": 119,
-        "positive_expected_source_top1_rate": 0.96875,
-        "positive_expected_source_top3_rate": 1.0,
-        "positive_expected_source_top5_rate": 1.0,
-        "positive_expected_source_score_median": 0.94246906042099,
-        "safe_top1_score_median": 0.8345819711685181,
+        "positive_query_count": 132,
+        "positive_by_transformation": {
+          "synthetic_same_recording_excerpt": {
+            "query_count": 33,
+            "independent_source_count": 11,
+            "expected_source_top5_rate": 0.9090909090909091,
+            "source_macro_top5_rate": 0.9090909090909091,
+            "expected_source_warn_or_hold_rate": 1.0
+          },
+          "room_rerecord_simulation": {
+            "query_count": 33,
+            "independent_source_count": 11,
+            "expected_source_top5_rate": 0.7878787878787878,
+            "source_macro_top5_rate": 0.7878787878787878,
+            "expected_source_warn_or_hold_rate": 0.7878787878787878
+          },
+          "local_tempo_warp": {
+            "query_count": 33,
+            "independent_source_count": 11,
+            "expected_source_top5_rate": 1.0,
+            "source_macro_top5_rate": 1.0,
+            "expected_source_warn_or_hold_rate": 1.0
+          },
+          "synthetic_arrangement_or_audio_transform": {
+            "query_count": 27,
+            "independent_source_count": 9,
+            "expected_source_top5_rate": 0.8518518518518519,
+            "source_macro_top5_rate": 0.8518518518518519,
+            "expected_source_warn_or_hold_rate": 0.9259259259259259
+          },
+          "synthetic_instrument_layer_overlay": {
+            "query_count": 6,
+            "independent_source_count": 6,
+            "expected_source_top5_rate": 1.0,
+            "source_macro_top5_rate": 1.0,
+            "expected_source_warn_or_hold_rate": 1.0
+          }
+        },
+        "safe_query_count": 121,
+        "positive_expected_source_top1_rate": 0.7424242424242424,
+        "positive_expected_source_top3_rate": 0.8409090909090909,
+        "positive_expected_source_top5_rate": 0.8939393939393939,
+        "positive_expected_source_score_median": 0.8978579342365265,
+        "safe_top1_score_median": 0.8924539089202881,
         "hold_policy_test": {
-          "threshold": 0.9104094505310059,
-          "positive_query_recall": 0.78125,
-          "positive_expected_source_recall": 0.78125,
-          "safe_query_false_positive_rate": 0.058823529411764705,
-          "positive_query_count": 32,
-          "safe_query_count": 119
+          "threshold": 0.9723775386810303,
+          "positive_query_recall": 0.007575757575757576,
+          "positive_expected_source_recall": 0.007575757575757576,
+          "safe_query_false_positive_rate": 0.04132231404958678,
+          "positive_query_count": 132,
+          "safe_query_count": 121
         },
         "warn_policy_test": {
-          "threshold": 0.8675162196159363,
-          "positive_query_recall": 0.875,
-          "positive_expected_source_recall": 0.875,
-          "safe_query_false_positive_rate": 0.2689075630252101,
-          "positive_query_count": 32,
-          "safe_query_count": 119
+          "threshold": 0.7282671332359314,
+          "positive_query_recall": 0.9696969696969697,
+          "positive_expected_source_recall": 0.9318181818181818,
+          "safe_query_false_positive_rate": 1.0,
+          "positive_query_count": 132,
+          "safe_query_count": 121
         },
         "synthetic_instrument_overlay_test": {
-          "query_count": 5,
+          "query_count": 6,
           "source_top1_rate": 1.0,
           "source_top3_rate": 1.0,
-          "source_at_hold_rate": 1.0,
+          "source_at_hold_rate": 0.0,
           "source_at_warn_rate": 1.0
         },
-        "unverified_safe_arranged_top_score_median": 0.839089423418045
+        "unverified_safe_arranged_top_score_median": 0.8491838574409485
       },
       "tune_group_counts": {
-        "positive_queries": 41,
-        "positive_sources": 11,
-        "safe_queries": 180,
-        "safe_source_groups": 180
+        "positive_queries": 208,
+        "positive_sources": 30,
+        "safe_queries": 179,
+        "safe_source_groups": 179
       }
     },
     "max_raw": {
       "thresholds_from_tune_split": {
-        "hold_threshold": 0.9645121097564697,
-        "warn_threshold": 0.9420080780982971,
+        "hold_threshold": 0.9848222732543945,
+        "warn_threshold": 0.9110130071640015,
         "target_safe_hold_rate": 0.05,
         "target_positive_source_recall_for_warn": 0.9,
-        "tune_safe_hold_rate": 0.05,
-        "tune_positive_source_recall_at_hold": 0.7804878048780488,
-        "tune_positive_source_recall_at_warn": 0.9024390243902439,
-        "tune_safe_warn_or_hold_rate": 0.3611111111111111,
+        "tune_safe_hold_rate": 0.0446927374301676,
+        "tune_positive_source_recall_at_hold": 0.08653846153846154,
+        "tune_positive_source_recall_at_warn": 0.9038461538461539,
+        "tune_safe_warn_or_hold_rate": 0.9776536312849162,
         "feasible": true,
         "reason": null
       },
       "held_out_test": {
-        "positive_query_count": 32,
-        "safe_query_count": 119,
-        "positive_expected_source_top1_rate": 0.875,
-        "positive_expected_source_top3_rate": 0.9375,
-        "positive_expected_source_top5_rate": 0.96875,
-        "positive_expected_source_score_median": 0.9743638336658478,
-        "safe_top1_score_median": 0.9342094659805298,
+        "positive_query_count": 132,
+        "positive_by_transformation": {
+          "synthetic_same_recording_excerpt": {
+            "query_count": 33,
+            "independent_source_count": 11,
+            "expected_source_top5_rate": 0.8181818181818182,
+            "source_macro_top5_rate": 0.818181818181818,
+            "expected_source_warn_or_hold_rate": 1.0
+          },
+          "room_rerecord_simulation": {
+            "query_count": 33,
+            "independent_source_count": 11,
+            "expected_source_top5_rate": 0.8181818181818182,
+            "source_macro_top5_rate": 0.8181818181818182,
+            "expected_source_warn_or_hold_rate": 0.7878787878787878
+          },
+          "local_tempo_warp": {
+            "query_count": 33,
+            "independent_source_count": 11,
+            "expected_source_top5_rate": 1.0,
+            "source_macro_top5_rate": 1.0,
+            "expected_source_warn_or_hold_rate": 1.0
+          },
+          "synthetic_arrangement_or_audio_transform": {
+            "query_count": 27,
+            "independent_source_count": 9,
+            "expected_source_top5_rate": 0.7037037037037037,
+            "source_macro_top5_rate": 0.7037037037037037,
+            "expected_source_warn_or_hold_rate": 0.6296296296296297
+          },
+          "synthetic_instrument_layer_overlay": {
+            "query_count": 6,
+            "independent_source_count": 6,
+            "expected_source_top5_rate": 1.0,
+            "source_macro_top5_rate": 1.0,
+            "expected_source_warn_or_hold_rate": 1.0
+          }
+        },
+        "safe_query_count": 121,
+        "positive_expected_source_top1_rate": 0.6818181818181818,
+        "positive_expected_source_top3_rate": 0.7954545454545454,
+        "positive_expected_source_top5_rate": 0.8484848484848485,
+        "positive_expected_source_score_median": 0.9618498086929321,
+        "safe_top1_score_median": 0.959311306476593,
         "hold_policy_test": {
-          "threshold": 0.9645121097564697,
-          "positive_query_recall": 0.6875,
-          "positive_expected_source_recall": 0.6875,
-          "safe_query_false_positive_rate": 0.058823529411764705,
-          "positive_query_count": 32,
-          "safe_query_count": 119
+          "threshold": 0.9848222732543945,
+          "positive_query_recall": 0.05303030303030303,
+          "positive_expected_source_recall": 0.05303030303030303,
+          "safe_query_false_positive_rate": 0.04132231404958678,
+          "positive_query_count": 132,
+          "safe_query_count": 121
         },
         "warn_policy_test": {
-          "threshold": 0.9420080780982971,
-          "positive_query_recall": 0.875,
-          "positive_expected_source_recall": 0.84375,
-          "safe_query_false_positive_rate": 0.37815126050420167,
-          "positive_query_count": 32,
-          "safe_query_count": 119
+          "threshold": 0.9110130071640015,
+          "positive_query_recall": 0.9621212121212122,
+          "positive_expected_source_recall": 0.8712121212121212,
+          "safe_query_false_positive_rate": 0.9917355371900827,
+          "positive_query_count": 132,
+          "safe_query_count": 121
         },
         "synthetic_instrument_overlay_test": {
-          "query_count": 5,
+          "query_count": 6,
           "source_top1_rate": 1.0,
           "source_top3_rate": 1.0,
-          "source_at_hold_rate": 0.8,
+          "source_at_hold_rate": 0.0,
           "source_at_warn_rate": 1.0
         },
-        "unverified_safe_arranged_top_score_median": 0.8851556777954102
+        "unverified_safe_arranged_top_score_median": 0.9281301498413086
       },
       "tune_group_counts": {
-        "positive_queries": 41,
-        "positive_sources": 11,
-        "safe_queries": 180,
-        "safe_source_groups": 180
+        "positive_queries": 208,
+        "positive_sources": 30,
+        "safe_queries": 179,
+        "safe_source_groups": 179
       }
     },
     "mean_emb_centered": {
       "thresholds_from_tune_split": {
-        "hold_threshold": 0.8315403461456299,
-        "warn_threshold": 0.6162865161895752,
+        "hold_threshold": 0.9562798738479614,
+        "warn_threshold": 0.5742043852806091,
         "target_safe_hold_rate": 0.05,
         "target_positive_source_recall_for_warn": 0.9,
-        "tune_safe_hold_rate": 0.05,
-        "tune_positive_source_recall_at_hold": 0.4878048780487805,
-        "tune_positive_source_recall_at_warn": 0.9024390243902439,
-        "tune_safe_warn_or_hold_rate": 0.7166666666666667,
+        "tune_safe_hold_rate": 0.0446927374301676,
+        "tune_positive_source_recall_at_hold": 0.004807692307692308,
+        "tune_positive_source_recall_at_warn": 0.9038461538461539,
+        "tune_safe_warn_or_hold_rate": 1.0,
         "feasible": true,
         "reason": null
       },
       "held_out_test": {
-        "positive_query_count": 32,
-        "safe_query_count": 119,
-        "positive_expected_source_top1_rate": 0.8125,
-        "positive_expected_source_top3_rate": 0.84375,
-        "positive_expected_source_top5_rate": 0.9375,
-        "positive_expected_source_score_median": 0.8618841469287872,
-        "safe_top1_score_median": 0.6923953294754028,
+        "positive_query_count": 132,
+        "positive_by_transformation": {
+          "synthetic_same_recording_excerpt": {
+            "query_count": 33,
+            "independent_source_count": 11,
+            "expected_source_top5_rate": 0.7272727272727273,
+            "source_macro_top5_rate": 0.7272727272727273,
+            "expected_source_warn_or_hold_rate": 1.0
+          },
+          "room_rerecord_simulation": {
+            "query_count": 33,
+            "independent_source_count": 11,
+            "expected_source_top5_rate": 0.6666666666666666,
+            "source_macro_top5_rate": 0.6666666666666666,
+            "expected_source_warn_or_hold_rate": 0.7272727272727273
+          },
+          "local_tempo_warp": {
+            "query_count": 33,
+            "independent_source_count": 11,
+            "expected_source_top5_rate": 0.9090909090909091,
+            "source_macro_top5_rate": 0.9090909090909091,
+            "expected_source_warn_or_hold_rate": 1.0
+          },
+          "synthetic_arrangement_or_audio_transform": {
+            "query_count": 27,
+            "independent_source_count": 9,
+            "expected_source_top5_rate": 0.7777777777777778,
+            "source_macro_top5_rate": 0.7777777777777778,
+            "expected_source_warn_or_hold_rate": 0.8518518518518519
+          },
+          "synthetic_instrument_layer_overlay": {
+            "query_count": 6,
+            "independent_source_count": 6,
+            "expected_source_top5_rate": 1.0,
+            "source_macro_top5_rate": 1.0,
+            "expected_source_warn_or_hold_rate": 1.0
+          }
+        },
+        "safe_query_count": 121,
+        "positive_expected_source_top1_rate": 0.5833333333333334,
+        "positive_expected_source_top3_rate": 0.7045454545454546,
+        "positive_expected_source_top5_rate": 0.7803030303030303,
+        "positive_expected_source_score_median": 0.7774487435817719,
+        "safe_top1_score_median": 0.8068373203277588,
         "hold_policy_test": {
-          "threshold": 0.8315403461456299,
-          "positive_query_recall": 0.5625,
-          "positive_expected_source_recall": 0.5625,
-          "safe_query_false_positive_rate": 0.058823529411764705,
-          "positive_query_count": 32,
-          "safe_query_count": 119
+          "threshold": 0.9562798738479614,
+          "positive_query_recall": 0.0,
+          "positive_expected_source_recall": 0.0,
+          "safe_query_false_positive_rate": 0.03305785123966942,
+          "positive_query_count": 132,
+          "safe_query_count": 121
         },
         "warn_policy_test": {
-          "threshold": 0.6162865161895752,
-          "positive_query_recall": 0.9375,
-          "positive_expected_source_recall": 0.90625,
-          "safe_query_false_positive_rate": 0.7478991596638656,
-          "positive_query_count": 32,
-          "safe_query_count": 119
+          "threshold": 0.5742043852806091,
+          "positive_query_recall": 0.9772727272727273,
+          "positive_expected_source_recall": 0.9015151515151515,
+          "safe_query_false_positive_rate": 1.0,
+          "positive_query_count": 132,
+          "safe_query_count": 121
         },
         "synthetic_instrument_overlay_test": {
-          "query_count": 5,
+          "query_count": 6,
           "source_top1_rate": 1.0,
           "source_top3_rate": 1.0,
-          "source_at_hold_rate": 0.8,
+          "source_at_hold_rate": 0.0,
           "source_at_warn_rate": 1.0
         },
-        "unverified_safe_arranged_top_score_median": 0.5899711847305298
+        "unverified_safe_arranged_top_score_median": 0.6560242772102356
       },
       "tune_group_counts": {
-        "positive_queries": 41,
-        "positive_sources": 11,
-        "safe_queries": 180,
-        "safe_source_groups": 180
+        "positive_queries": 208,
+        "positive_sources": 30,
+        "safe_queries": 179,
+        "safe_source_groups": 179
       }
     },
     "mean_emb_raw": {
       "thresholds_from_tune_split": {
-        "hold_threshold": 0.952926516532898,
-        "warn_threshold": 0.910382866859436,
+        "hold_threshold": 0.9797983169555664,
+        "warn_threshold": 0.863761305809021,
         "target_safe_hold_rate": 0.05,
         "target_positive_source_recall_for_warn": 0.9,
-        "tune_safe_hold_rate": 0.05,
-        "tune_positive_source_recall_at_hold": 0.5365853658536586,
-        "tune_positive_source_recall_at_warn": 0.9024390243902439,
-        "tune_safe_warn_or_hold_rate": 0.37222222222222223,
+        "tune_safe_hold_rate": 0.0446927374301676,
+        "tune_positive_source_recall_at_hold": 0.004807692307692308,
+        "tune_positive_source_recall_at_warn": 0.9038461538461539,
+        "tune_safe_warn_or_hold_rate": 0.9776536312849162,
         "feasible": true,
         "reason": null
       },
       "held_out_test": {
-        "positive_query_count": 32,
-        "safe_query_count": 119,
-        "positive_expected_source_top1_rate": 0.78125,
-        "positive_expected_source_top3_rate": 0.875,
-        "positive_expected_source_top5_rate": 0.90625,
-        "positive_expected_source_score_median": 0.954412966966629,
-        "safe_top1_score_median": 0.896754264831543,
+        "positive_query_count": 132,
+        "positive_by_transformation": {
+          "synthetic_same_recording_excerpt": {
+            "query_count": 33,
+            "independent_source_count": 11,
+            "expected_source_top5_rate": 0.696969696969697,
+            "source_macro_top5_rate": 0.6969696969696969,
+            "expected_source_warn_or_hold_rate": 0.9393939393939394
+          },
+          "room_rerecord_simulation": {
+            "query_count": 33,
+            "independent_source_count": 11,
+            "expected_source_top5_rate": 0.696969696969697,
+            "source_macro_top5_rate": 0.6969696969696969,
+            "expected_source_warn_or_hold_rate": 0.696969696969697
+          },
+          "local_tempo_warp": {
+            "query_count": 33,
+            "independent_source_count": 11,
+            "expected_source_top5_rate": 0.8484848484848485,
+            "source_macro_top5_rate": 0.8484848484848485,
+            "expected_source_warn_or_hold_rate": 0.9696969696969697
+          },
+          "synthetic_arrangement_or_audio_transform": {
+            "query_count": 27,
+            "independent_source_count": 9,
+            "expected_source_top5_rate": 0.8148148148148148,
+            "source_macro_top5_rate": 0.8148148148148148,
+            "expected_source_warn_or_hold_rate": 0.7407407407407407
+          },
+          "synthetic_instrument_layer_overlay": {
+            "query_count": 6,
+            "independent_source_count": 6,
+            "expected_source_top5_rate": 1.0,
+            "source_macro_top5_rate": 1.0,
+            "expected_source_warn_or_hold_rate": 1.0
+          }
+        },
+        "safe_query_count": 121,
+        "positive_expected_source_top1_rate": 0.553030303030303,
+        "positive_expected_source_top3_rate": 0.6893939393939394,
+        "positive_expected_source_top5_rate": 0.7727272727272727,
+        "positive_expected_source_score_median": 0.9334668517112732,
+        "safe_top1_score_median": 0.9427531957626343,
         "hold_policy_test": {
-          "threshold": 0.952926516532898,
-          "positive_query_recall": 0.53125,
-          "positive_expected_source_recall": 0.53125,
-          "safe_query_false_positive_rate": 0.08403361344537816,
-          "positive_query_count": 32,
-          "safe_query_count": 119
+          "threshold": 0.9797983169555664,
+          "positive_query_recall": 0.007575757575757576,
+          "positive_expected_source_recall": 0.007575757575757576,
+          "safe_query_false_positive_rate": 0.049586776859504134,
+          "positive_query_count": 132,
+          "safe_query_count": 121
         },
         "warn_policy_test": {
-          "threshold": 0.910382866859436,
-          "positive_query_recall": 0.84375,
-          "positive_expected_source_recall": 0.78125,
-          "safe_query_false_positive_rate": 0.3949579831932773,
-          "positive_query_count": 32,
-          "safe_query_count": 119
+          "threshold": 0.863761305809021,
+          "positive_query_recall": 0.946969696969697,
+          "positive_expected_source_recall": 0.8484848484848485,
+          "safe_query_false_positive_rate": 0.9917355371900827,
+          "positive_query_count": 132,
+          "safe_query_count": 121
         },
         "synthetic_instrument_overlay_test": {
-          "query_count": 5,
+          "query_count": 6,
           "source_top1_rate": 1.0,
           "source_top3_rate": 1.0,
-          "source_at_hold_rate": 0.8,
+          "source_at_hold_rate": 0.0,
           "source_at_warn_rate": 1.0
         },
-        "unverified_safe_arranged_top_score_median": 0.7603383958339691
+        "unverified_safe_arranged_top_score_median": 0.8733664155006409
       },
       "tune_group_counts": {
-        "positive_queries": 41,
-        "positive_sources": 11,
-        "safe_queries": 180,
-        "safe_source_groups": 180
+        "positive_queries": 208,
+        "positive_sources": 30,
+        "safe_queries": 179,
+        "safe_source_groups": 179
       }
     },
     "seg_top3_centered": {
       "thresholds_from_tune_split": {
-        "hold_threshold": 0.8944060206413269,
-        "warn_threshold": 0.8566381335258484,
+        "hold_threshold": 0.9668390154838562,
+        "warn_threshold": 0.707587718963623,
         "target_safe_hold_rate": 0.05,
         "target_positive_source_recall_for_warn": 0.9,
-        "tune_safe_hold_rate": 0.05,
-        "tune_positive_source_recall_at_hold": 0.7317073170731707,
-        "tune_positive_source_recall_at_warn": 0.9024390243902439,
-        "tune_safe_warn_or_hold_rate": 0.17222222222222222,
+        "tune_safe_hold_rate": 0.0446927374301676,
+        "tune_positive_source_recall_at_hold": 0.04326923076923077,
+        "tune_positive_source_recall_at_warn": 0.9038461538461539,
+        "tune_safe_warn_or_hold_rate": 0.994413407821229,
         "feasible": true,
         "reason": null
       },
       "held_out_test": {
-        "positive_query_count": 32,
-        "safe_query_count": 119,
-        "positive_expected_source_top1_rate": 0.9375,
-        "positive_expected_source_top3_rate": 0.96875,
-        "positive_expected_source_top5_rate": 0.96875,
-        "positive_expected_source_score_median": 0.9347794055938721,
-        "safe_top1_score_median": 0.8050503730773926,
+        "positive_query_count": 132,
+        "positive_by_transformation": {
+          "synthetic_same_recording_excerpt": {
+            "query_count": 33,
+            "independent_source_count": 11,
+            "expected_source_top5_rate": 0.8787878787878788,
+            "source_macro_top5_rate": 0.8787878787878788,
+            "expected_source_warn_or_hold_rate": 0.9393939393939394
+          },
+          "room_rerecord_simulation": {
+            "query_count": 33,
+            "independent_source_count": 11,
+            "expected_source_top5_rate": 0.8181818181818182,
+            "source_macro_top5_rate": 0.8181818181818182,
+            "expected_source_warn_or_hold_rate": 0.7272727272727273
+          },
+          "local_tempo_warp": {
+            "query_count": 33,
+            "independent_source_count": 11,
+            "expected_source_top5_rate": 1.0,
+            "source_macro_top5_rate": 1.0,
+            "expected_source_warn_or_hold_rate": 1.0
+          },
+          "synthetic_arrangement_or_audio_transform": {
+            "query_count": 27,
+            "independent_source_count": 9,
+            "expected_source_top5_rate": 0.7777777777777778,
+            "source_macro_top5_rate": 0.7777777777777777,
+            "expected_source_warn_or_hold_rate": 0.9259259259259259
+          },
+          "synthetic_instrument_layer_overlay": {
+            "query_count": 6,
+            "independent_source_count": 6,
+            "expected_source_top5_rate": 1.0,
+            "source_macro_top5_rate": 1.0,
+            "expected_source_warn_or_hold_rate": 1.0
+          }
+        },
+        "safe_query_count": 121,
+        "positive_expected_source_top1_rate": 0.7348484848484849,
+        "positive_expected_source_top3_rate": 0.8484848484848485,
+        "positive_expected_source_top5_rate": 0.8787878787878788,
+        "positive_expected_source_score_median": 0.8802572190761566,
+        "safe_top1_score_median": 0.8762714266777039,
         "hold_policy_test": {
-          "threshold": 0.8944060206413269,
-          "positive_query_recall": 0.78125,
-          "positive_expected_source_recall": 0.78125,
-          "safe_query_false_positive_rate": 0.05042016806722689,
-          "positive_query_count": 32,
-          "safe_query_count": 119
+          "threshold": 0.9668390154838562,
+          "positive_query_recall": 0.0,
+          "positive_expected_source_recall": 0.0,
+          "safe_query_false_positive_rate": 0.024793388429752067,
+          "positive_query_count": 132,
+          "safe_query_count": 121
         },
         "warn_policy_test": {
-          "threshold": 0.8566381335258484,
-          "positive_query_recall": 0.875,
-          "positive_expected_source_recall": 0.875,
-          "safe_query_false_positive_rate": 0.18487394957983194,
-          "positive_query_count": 32,
-          "safe_query_count": 119
+          "threshold": 0.707587718963623,
+          "positive_query_recall": 0.9696969696969697,
+          "positive_expected_source_recall": 0.9015151515151515,
+          "safe_query_false_positive_rate": 1.0,
+          "positive_query_count": 132,
+          "safe_query_count": 121
         },
         "synthetic_instrument_overlay_test": {
-          "query_count": 5,
+          "query_count": 6,
           "source_top1_rate": 1.0,
           "source_top3_rate": 1.0,
-          "source_at_hold_rate": 1.0,
+          "source_at_hold_rate": 0.0,
           "source_at_warn_rate": 1.0
         },
-        "unverified_safe_arranged_top_score_median": 0.8295497894287109
+        "unverified_safe_arranged_top_score_median": 0.8274900913238525
       },
       "tune_group_counts": {
-        "positive_queries": 41,
-        "positive_sources": 11,
-        "safe_queries": 180,
-        "safe_source_groups": 180
+        "positive_queries": 208,
+        "positive_sources": 30,
+        "safe_queries": 179,
+        "safe_source_groups": 179
       }
     },
     "seg_top3_raw": {
       "thresholds_from_tune_split": {
-        "hold_threshold": 0.9591357111930847,
-        "warn_threshold": 0.9395511150360107,
+        "hold_threshold": 0.9829798340797424,
+        "warn_threshold": 0.8988834023475647,
         "target_safe_hold_rate": 0.05,
         "target_positive_source_recall_for_warn": 0.9,
-        "tune_safe_hold_rate": 0.05,
-        "tune_positive_source_recall_at_hold": 0.7560975609756098,
-        "tune_positive_source_recall_at_warn": 0.9024390243902439,
-        "tune_safe_warn_or_hold_rate": 0.28888888888888886,
+        "tune_safe_hold_rate": 0.0446927374301676,
+        "tune_positive_source_recall_at_hold": 0.052884615384615384,
+        "tune_positive_source_recall_at_warn": 0.9038461538461539,
+        "tune_safe_warn_or_hold_rate": 0.9832402234636871,
         "feasible": true,
         "reason": null
       },
       "held_out_test": {
-        "positive_query_count": 32,
-        "safe_query_count": 119,
-        "positive_expected_source_top1_rate": 0.90625,
-        "positive_expected_source_top3_rate": 0.96875,
-        "positive_expected_source_top5_rate": 0.96875,
-        "positive_expected_source_score_median": 0.9710653722286224,
-        "safe_top1_score_median": 0.9251711964607239,
+        "positive_query_count": 132,
+        "positive_by_transformation": {
+          "synthetic_same_recording_excerpt": {
+            "query_count": 33,
+            "independent_source_count": 11,
+            "expected_source_top5_rate": 0.8787878787878788,
+            "source_macro_top5_rate": 0.8787878787878788,
+            "expected_source_warn_or_hold_rate": 1.0
+          },
+          "room_rerecord_simulation": {
+            "query_count": 33,
+            "independent_source_count": 11,
+            "expected_source_top5_rate": 0.8181818181818182,
+            "source_macro_top5_rate": 0.8181818181818182,
+            "expected_source_warn_or_hold_rate": 0.7878787878787878
+          },
+          "local_tempo_warp": {
+            "query_count": 33,
+            "independent_source_count": 11,
+            "expected_source_top5_rate": 1.0,
+            "source_macro_top5_rate": 1.0,
+            "expected_source_warn_or_hold_rate": 1.0
+          },
+          "synthetic_arrangement_or_audio_transform": {
+            "query_count": 27,
+            "independent_source_count": 9,
+            "expected_source_top5_rate": 0.7037037037037037,
+            "source_macro_top5_rate": 0.7037037037037037,
+            "expected_source_warn_or_hold_rate": 0.6296296296296297
+          },
+          "synthetic_instrument_layer_overlay": {
+            "query_count": 6,
+            "independent_source_count": 6,
+            "expected_source_top5_rate": 1.0,
+            "source_macro_top5_rate": 1.0,
+            "expected_source_warn_or_hold_rate": 1.0
+          }
+        },
+        "safe_query_count": 121,
+        "positive_expected_source_top1_rate": 0.7045454545454546,
+        "positive_expected_source_top3_rate": 0.8333333333333334,
+        "positive_expected_source_top5_rate": 0.8636363636363636,
+        "positive_expected_source_score_median": 0.9531491994857788,
+        "safe_top1_score_median": 0.9530107378959656,
         "hold_policy_test": {
-          "threshold": 0.9591357111930847,
-          "positive_query_recall": 0.71875,
-          "positive_expected_source_recall": 0.71875,
-          "safe_query_false_positive_rate": 0.025210084033613446,
-          "positive_query_count": 32,
-          "safe_query_count": 119
+          "threshold": 0.9829798340797424,
+          "positive_query_recall": 0.045454545454545456,
+          "positive_expected_source_recall": 0.045454545454545456,
+          "safe_query_false_positive_rate": 0.04132231404958678,
+          "positive_query_count": 132,
+          "safe_query_count": 121
         },
         "warn_policy_test": {
-          "threshold": 0.9395511150360107,
-          "positive_query_recall": 0.875,
-          "positive_expected_source_recall": 0.84375,
-          "safe_query_false_positive_rate": 0.31932773109243695,
-          "positive_query_count": 32,
-          "safe_query_count": 119
+          "threshold": 0.8988834023475647,
+          "positive_query_recall": 0.9545454545454546,
+          "positive_expected_source_recall": 0.8712121212121212,
+          "safe_query_false_positive_rate": 0.9834710743801653,
+          "positive_query_count": 132,
+          "safe_query_count": 121
         },
         "synthetic_instrument_overlay_test": {
-          "query_count": 5,
+          "query_count": 6,
           "source_top1_rate": 1.0,
           "source_top3_rate": 1.0,
-          "source_at_hold_rate": 1.0,
+          "source_at_hold_rate": 0.0,
           "source_at_warn_rate": 1.0
         },
-        "unverified_safe_arranged_top_score_median": 0.8710469901561737
+        "unverified_safe_arranged_top_score_median": 0.9116069674491882
       },
       "tune_group_counts": {
-        "positive_queries": 41,
-        "positive_sources": 11,
-        "safe_queries": 180,
-        "safe_source_groups": 180
+        "positive_queries": 208,
+        "positive_sources": 30,
+        "safe_queries": 179,
+        "safe_source_groups": 179
       }
     }
   },
-  "skipped_queries": [
-    "C:\\블록체인\\music\\track_01.wav"
-  ]
+  "skipped_queries": []
 }

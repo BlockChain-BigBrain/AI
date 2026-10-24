@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-23",
+  "method": "selective_top20",
+  "candidate_score_rule": "expanded-square-v1",
+  "score_rule": "Keep tonal score for CLAP ranks 1-5; square [0,1] tonal score for ranks 6-20 before reranking.",
+  "warn_rule": "Lowest inclusive threshold meeting original tune normal FPR<=10%.",
+  "hold_rule": "Tune normal FPR<=2% and confirmed tune-positive lower quartile, whichever is higher.",
+  "selection_status": "Engineering revision after observing round-1 and round-2 diagnostic failures; not blind validation.",
+  "reason": "Margin policy lost new-transform recall; unpenalized Top-20 added weak normal warnings. Require stronger sequence evidence for expanded candidates.",
+  "new_replication": "Freeze before new +2-semitone/0.94-tempo/AAC96k and alternate-splice/1.08-tempo queries, same 14 previously seen works.",
+  "acceptance": "Audited test WARN<=10%, HOLD<=2%; source WARN Top3 recall>=90% on old test, round1 stress and new replication."
+}

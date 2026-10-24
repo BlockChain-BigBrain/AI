@@ -1,0 +1,142 @@
+{
+  "protocol": {
+    "date": "2026-10-23",
+    "method": "clap20-union-pitch-fourier20",
+    "candidate_only_index": "pitch-fourier-crosspower-v1",
+    "decision_score_rule": "expanded-square-v1",
+    "limits": "All existing queries observed. Diagnostic comparison, no blind validation or automatic activation.",
+    "selection": "Tune source recall and normal targets; keep active AI policy if no positive source-recall gain.",
+    "candidates": {
+      "clap": 20,
+      "pitch_sequence": 20,
+      "union_max": 40
+    }
+  },
+  "signature": "e81ca1c3f8b899d0e6b352ba04fe90ece82b99ed260aa4ebb77ff0a7ca31029c",
+  "profiles": {
+    "ai_labeled_catalog": {
+      "warn_threshold": 0.34748932160579077,
+      "hold_threshold": 0.8337449399145463,
+      "normal_boundary": 0.34748932160579077,
+      "positive_fifth_percentile": 0.7779891458239694,
+      "feasible_margin": 0.4304998242181786,
+      "tune": {
+        "positive_queries": 40,
+        "correct_source_warn_top3_count": 40,
+        "correct_source_warn_top3_recall": 1.0,
+        "normal_candidates": 18,
+        "normal_warn_count": 1,
+        "normal_hold_count": 0,
+        "normal_warn_rate": 0.05555555555555555,
+        "normal_hold_rate": 0.0
+      },
+      "test_raw": {
+        "positive_queries": 28,
+        "correct_source_warn_top3_count": 28,
+        "correct_source_warn_top3_recall": 1.0,
+        "normal_candidates": 12,
+        "normal_warn_count": 2,
+        "normal_hold_count": 1,
+        "normal_warn_rate": 0.16666666666666666,
+        "normal_hold_rate": 0.08333333333333333
+      },
+      "test_audited": {
+        "positive_queries": 28,
+        "correct_source_warn_top3_count": 28,
+        "correct_source_warn_top3_recall": 1.0,
+        "normal_candidates": 11,
+        "normal_warn_count": 1,
+        "normal_hold_count": 0,
+        "normal_warn_rate": 0.09090909090909091,
+        "normal_hold_rate": 0.0
+      },
+      "first_stress": {
+        "positive_queries": 28,
+        "correct_source_warn_top3_count": 26,
+        "correct_source_warn_top3_recall": 0.9285714285714286,
+        "normal_candidates": 0,
+        "normal_warn_count": 0,
+        "normal_hold_count": 0,
+        "normal_warn_rate": null,
+        "normal_hold_rate": null
+      },
+      "replication": {
+        "positive_queries": 28,
+        "correct_source_warn_top3_count": 27,
+        "correct_source_warn_top3_recall": 0.9642857142857143,
+        "normal_candidates": 0,
+        "normal_warn_count": 0,
+        "normal_hold_count": 0,
+        "normal_warn_rate": null,
+        "normal_hold_rate": null
+      },
+      "source_candidate_recall": 1.0,
+      "mean_candidates": 27.58974358974359,
+      "secondary_search_p95_seconds": 0.026002474995038938
+    },
+    "full_catalog": {
+      "warn_threshold": 0.4465660772393432,
+      "hold_threshold": 0.8308894988579246,
+      "normal_boundary": 0.4465660772393432,
+      "positive_fifth_percentile": 0.6663686068037609,
+      "feasible_margin": 0.21980252956441765,
+      "tune": {
+        "positive_queries": 40,
+        "correct_source_warn_top3_count": 40,
+        "correct_source_warn_top3_recall": 1.0,
+        "normal_candidates": 18,
+        "normal_warn_count": 1,
+        "normal_hold_count": 0,
+        "normal_warn_rate": 0.05555555555555555,
+        "normal_hold_rate": 0.0
+      },
+      "test_raw": {
+        "positive_queries": 28,
+        "correct_source_warn_top3_count": 28,
+        "correct_source_warn_top3_recall": 1.0,
+        "normal_candidates": 12,
+        "normal_warn_count": 2,
+        "normal_hold_count": 1,
+        "normal_warn_rate": 0.16666666666666666,
+        "normal_hold_rate": 0.08333333333333333
+      },
+      "test_audited": {
+        "positive_queries": 28,
+        "correct_source_warn_top3_count": 28,
+        "correct_source_warn_top3_recall": 1.0,
+        "normal_candidates": 11,
+        "normal_warn_count": 1,
+        "normal_hold_count": 0,
+        "normal_warn_rate": 0.09090909090909091,
+        "normal_hold_rate": 0.0
+      },
+      "first_stress": {
+        "positive_queries": 28,
+        "correct_source_warn_top3_count": 19,
+        "correct_source_warn_top3_recall": 0.6785714285714286,
+        "normal_candidates": 0,
+        "normal_warn_count": 0,
+        "normal_hold_count": 0,
+        "normal_warn_rate": null,
+        "normal_hold_rate": null
+      },
+      "replication": {
+        "positive_queries": 28,
+        "correct_source_warn_top3_count": 24,
+        "correct_source_warn_top3_recall": 0.8571428571428571,
+        "normal_candidates": 0,
+        "normal_warn_count": 0,
+        "normal_hold_count": 0,
+        "normal_warn_rate": null,
+        "normal_hold_rate": null
+      },
+      "source_candidate_recall": 0.9838709677419355,
+      "mean_candidates": 38.52564102564103,
+      "secondary_search_p95_seconds": 0.025569875004293863
+    }
+  },
+  "active_policy_changed": false,
+  "index_descriptors": 87712,
+  "index_dimension": 60,
+  "index_sha256": "fbad48af9f3411aa247e4f0653c84724f2d82ec0cd9d93aaddb2efdc4a5323c2"
+}

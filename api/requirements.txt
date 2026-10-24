@@ -1,4 +1,5 @@
 fastapi==0.142.2
 uvicorn==0.54.0
 python-multipart==0.0.32
+librosa==1.0.0
 # Uses the existing Anaconda CLAP/PyTorch/transformers environment.

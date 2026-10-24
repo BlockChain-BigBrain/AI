@@ -1,0 +1,62 @@
+{
+  "date": "2026-10-23",
+  "status": "completed_local_experimental",
+  "active_scope": "ai_labeled",
+  "reference_tracks": 34,
+  "policy_file": "ai_improvement_policy.json",
+  "score_version": "clap-top20+tonal-local-v1+expanded-square-v1",
+  "thresholds": {
+    "warn": 0.34748932160579077,
+    "hold": 0.8337449399145463
+  },
+  "test_raw": {
+    "positive_queries": 28,
+    "correct_source_warn_top3_count": 28,
+    "correct_source_warn_top3_recall": 1.0,
+    "normal_candidates": 12,
+    "normal_warn_count": 2,
+    "normal_hold_count": 1,
+    "normal_warn_rate": 0.16666666666666666,
+    "normal_hold_rate": 0.08333333333333333
+  },
+  "test_audited": {
+    "positive_queries": 28,
+    "correct_source_warn_top3_count": 28,
+    "correct_source_warn_top3_recall": 1.0,
+    "normal_candidates": 11,
+    "normal_warn_count": 1,
+    "normal_hold_count": 0,
+    "normal_warn_rate": 0.09090909090909091,
+    "normal_hold_rate": 0.0
+  },
+  "round1_stress": {
+    "positive_queries": 28,
+    "correct_source_warn_top3_count": 26,
+    "correct_source_warn_top3_recall": 0.9285714285714286,
+    "normal_candidates": 0,
+    "normal_warn_count": 0,
+    "normal_hold_count": 0,
+    "normal_warn_rate": null,
+    "normal_hold_rate": null
+  },
+  "replication": {
+    "positive_queries": 28,
+    "correct_source_warn_top3_count": 27,
+    "correct_source_warn_top3_recall": 0.9642857142857143,
+    "normal_candidates": 0,
+    "normal_warn_count": 0,
+    "normal_hold_count": 0,
+    "normal_warn_rate": null,
+    "normal_hold_rate": null
+  },
+  "production_readiness": false,
+  "remaining": [
+    "Fresh independent AI normal and source validation",
+    "Pure AI creation provenance",
+    "Scale-up dual retrieval validation"
+  ],
+  "report": "AI_IMPROVEMENT_20261023.md",
+  "report_sha256": "c0e9ea5954c8e1aa7ef10c797e205cb0088106a4303ff45732c80fc1f5e0d1d3",
+  "original_report_sha256": "7beb4a870f2676037d3dfbcbe7a8ab97c7349343641c068b0cbc706c30637208",
+  "superseded_by": "MENTORING_FINAL_STATUS_20261023.md"
+}

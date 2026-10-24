@@ -1,0 +1,10 @@
+{
+  "date": "2026-10-23",
+  "method": "clap-cqt-three-fragment-v1",
+  "trigger": "Baseline score<.60; original CLAP Top3.",
+  "score_rule": "max(baseline, min(.80, (max(0,CLAP)*max(CQT_whole, valid_3fragment_mean))^2)).",
+  "fragment_guard": "Three separated >=8s reference spans, each CQT score>=.65; query>=45s.",
+  "threshold_rule": "Original tune groups only; normal WARN<=10%, HOLD<=2% plus tune positive lower quartile.",
+  "limits": "Engineering revision after observed prototypes. No blind-validation claim.",
+  "acceptance": "No old source-recall regression, tune/audited-test normal targets, aggregate five-family recall>=90%."
+}

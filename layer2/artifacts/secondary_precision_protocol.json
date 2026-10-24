@@ -1,0 +1,11 @@
+{
+  "date": "2026-10-23",
+  "method": "secondary-clap-cqt-fragments-v1",
+  "primary_policy_sha256": "a5be467eea8cb5aada665b248ba015485b118b661bd55c0fe532544cb9e4b309",
+  "route_score": "min(.80, (max(0,CLAP)*max(CQT whole, three valid fragment mean))^2).",
+  "secondary_cutoff": "1.05 * maximum secondary evidence on primary-PASS tune normals; minimum .05.",
+  "mapping": "max(primary score, min(.80, primary_WARN * secondary evidence / secondary cutoff)).",
+  "purpose": "Preserve primary decisions while adding no new tune-normal warnings. Tune-only residual cutoff with fixed 5% margin.",
+  "limits": "Development engineering after observed prototypes; no independent blind claim.",
+  "acceptance": "Tune and audited-test normal targets, no old source-recall regression, aggregate five-family >=90%."
+}

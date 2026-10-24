@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-23",
+  "method": "ambiguous-cqt3-fragment-rescue",
+  "precision_features": "cqt36-centered-0.5s-v1",
+  "trigger": "Current selective score <0.60; evaluate only original CLAP Top3 candidates.",
+  "score_rule": "Keep original scores; max with 0.5*CQT_whole_score^2 or 0.5*mean(3 separated CQT fragments)^2.",
+  "fragment_rule": "Query>=45s; up to twelve nonoverlapping 10s windows; each>=8s alignment, three distinct reference spans, each score>=.65.",
+  "thresholds": {
+    "warn": 0.34748932160579077,
+    "hold": 0.8337449399145463
+  },
+  "status": "Development diagnostics after observed five-family failures; no blind-validation claim.",
+  "deployment": "Not automatic. Reject if tune normal target or old source recall regresses."
+}
