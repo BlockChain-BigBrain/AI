@@ -8,6 +8,32 @@ ROOT=Path(__file__).resolve().parents[1];ART=ROOT/'layer2/artifacts'
 def read(name):return json.loads((ART/name).read_text(encoding='utf-8'))
 
 
+def sample_accounting():
+    manifests={name:json.loads((ROOT/'layer2/test_data'/name/'manifest.json').read_text(encoding='utf-8'))['rows']
+        for name in ('ai_labeled_positive','ai_improvement_stress','ai_selective_replication','five_family_ai','duration_matched_normal_20261024')}
+    original=manifests['ai_labeled_positive']
+    test_sources={r['expected_track_id'] for r in original if r['dataset']=='positive' and r['split']=='test'}
+    tune_sources={r['expected_track_id'] for r in original if r['dataset']=='positive' and r['split']=='tune'}
+    assert not test_sources&tune_sources
+    evaluations={}
+    for label,rows in [('existing_test',[r for r in original if r['dataset']=='positive' and r['split']=='test']),
+        ('stress',manifests['ai_improvement_stress']),('replication',manifests['ai_selective_replication']),('five_family',manifests['five_family_ai'])]:
+        positives=[r for r in rows if r['dataset']=='positive']
+        assert {r['expected_track_id'] for r in positives}==test_sources
+        evaluations[label]={'queries':len(positives),'source_works':len(test_sources)}
+    tune=[r for r in original if r['dataset']=='positive' and r['split']=='tune']
+    crops=manifests['duration_matched_normal_20261024'];normal={}
+    for split in ('tune','test','external_diagnostic'):
+        part=[r for r in crops if r['split']==split]
+        normal[split]={'works':len({r['group_id'] for r in part}),'crops':len(part)}
+        assert normal[split]['crops']==3*normal[split]['works']
+    total=sum(v['queries'] for v in evaluations.values())
+    return {'normal':normal,'normal_total_works':sum(v['works'] for v in normal.values()),'normal_total_crops':len(crops),
+        'positive_evaluations':evaluations,'evaluation_positive_queries':total,
+        'tune_positive_queries':len(tune),'tune_source_works':len(tune_sources),'all_positive_queries':total+len(tune),
+        'evaluation_sets_reuse_same_source_works':True,'independent_fresh_validation':False}
+
+
 def main():
     active=read('mentoring_final_completion_status.json')
     normal=read('duration_normal_evaluation.json');prototype=read('duration_fusion_evaluation.json')
@@ -18,6 +44,11 @@ def main():
     assert not prototype['acceptance_met'] and not prototype['active_policy_changed']
     assert front['production_deployed'] is False
     short=normal['summary']['test'];p=prototype['summary'];q=prototype['normal_crops']['test']
+    accounting=sample_accounting()
+    assert accounting['normal']=={'tune':{'works':18,'crops':54},'test':{'works':11,'crops':33},'external_diagnostic':{'works':2,'crops':6}}
+    assert [v['queries'] for v in accounting['positive_evaluations'].values()]==[28,28,28,70]
+    assert {v['source_works'] for v in accounting['positive_evaluations'].values()}=={14}
+    assert accounting['tune_source_works']==20 and accounting['tune_positive_queries']==40 and accounting['all_positive_queries']==194
     family_names={'basic':'기본 변형','instrument_layer':'악기 레이어','long_auto_edit':'긴 자동 변형','room_effect':'잔향·공간 효과','local_tempo':'구간별 속도 변형'}
     family_table='\n'.join(f"| {label} | {active['by_family'][key]['correct_source_warn_top3_count']}/14 | {prototype['by_family'][key]['correct_source_count']}/14 |" for key,label in family_names.items())
     regressions='\n'.join('- `'+str(Path(path).relative_to(ROOT)).replace('\\','/')+'`' for path in prototype['per_query_source_regressions'])
@@ -29,6 +60,31 @@ def main():
 **데이터 감사·평가·실패 분석과 최신 팀 코드의 로컬 AI·DB 연동은 완료했습니다. 운영 배포와 성능 목표 전체 달성은 아직 아닙니다.** 이번에는 정상곡의 길이를 맞춰 재평가했고, 기존에 보이지 않던 짧은 업로드의 오탐 문제를 확인했습니다. 새 모델 후보는 일부 개선에도 기존 양성을 놓쳐 적용하지 않았습니다. GitHub에는 코드·결과와 검토용 PR을 올렸으며 main 병합·서비스 배포는 하지 않았습니다.
 
 검색 범위는 **Pixabay AI 표시 원곡 34곡**입니다. 보관 중인 원곡 1,000곡 전체의 성능이나 순수 AI 생성 검증 결과로 해석하면 안 됩니다. 사람 연주·커버 확보는 이번 범위에서 제외합니다.
+
+## 표본 수를 읽는 기준
+
+**정상 31작품은 튜닝 18 + 라벨 격리 후 테스트 11 + premusic 진단 2작품의 합계이며, 93개는 각 작품에서 시작·중간·끝 30초를 자른 조각 수입니다. 평가표의 11작품은 31작품 중 테스트 부분입니다.** 원래 테스트 12작품 중 원곡과 거의 동일한 녹음 1작품의 정상 라벨을 격리해 11작품이 됐습니다. 조각 33개를 독립 33작품으로 세지 않습니다.
+
+| 정상 자료 구분 | 작품 수 | 30초 조각 수 | 용도 |
+|---|---:|---:|---|
+| 튜닝 | 18 | 54 | 임계값 보정용 |
+| 테스트, 중복 라벨 격리 후 | 11 | 33 | 경고율 평가표의 분모 |
+| premusic 진단 | 2 | 6 | 별도 진단 |
+| 조각 생성·검사 전체 | 31 | 93 | 위 세 그룹의 합계 |
+
+**양성 28+28+28=84개와 5종 변형 70개는 별도 평가 세트입니다. 70개는 앞의 84개를 합친 종합 수치가 아닙니다.**
+
+| 양성 자료 구분 | 평가 쿼리 수 | 원곡 작품 수 | 구성 |
+|---|---:|---:|---|
+| 기존 테스트 | 28 | 14 | 원곡별 2개 변형 |
+| 스트레스 변형 | 28 | 같은 14 | 원곡별 별도 2개 변형 |
+| 반복 변형 | 28 | 같은 14 | 원곡별 별도 2개 변형 |
+| 별도 5종 변형 세트 | 70 | 같은 14 | 원곡별 5종, 14×5=70 |
+| 위 네 평가 세트 합계 | 154 | 14 | 84+70; 독립 원곡 154곡이 아님 |
+| 별도 튜닝 양성 | 40 | 다른 20 | 테스트 원곡과 분리 |
+| 튜닝 포함 AI 범위 양성 전체 | 194 | 34 | 40+154; 독립 신규 검증이 아님 |
+
+위 개수와 원곡 재사용 관계는 각 세트의 manifest로 확인하며, 정리본 생성 시 원곡 그룹과 조각 수를 검사합니다. 역사적 혼합 DB의 합성 양성 340개는 별도 평가 범위이므로 이 표의 194개와 합쳐 독립 표본 수로 주장하지 않습니다.
 
 ## 목표와 실제 결과
 
@@ -69,6 +125,21 @@ def main():
 {regressions}
 
 현재 적용 임계값은 WARN **0.3474893216**, HOLD **0.8337449399**이며 `ai_precision_policy.json`을 유지합니다. 새 후보의 보정값은 `duration_fusion_evaluation.json`에만 있으며 실행 판정기에는 연결하지 않았습니다. 현재 판정기도 실험용이며 짧은 정상 업로드의 오탐 목표가 미달이므로 운영 자동 판정에 충분하다고 권고하지 않습니다.
+
+## AI 판정과 화면의 민팅·정산 상태
+
+현재 AI 표시군의 API 확인 점수는 PASS `<0.3474893216`, WARN `0.3474893216 이상·0.8337449399 미만`, HOLD `0.8337449399 이상`입니다. 최종 판정은 반올림한 화면 숫자가 아니라 API의 `decision`과 정책 메타데이터를 기준으로 합니다. `0.70/0.85`는 현재 AI 확인 점수의 기준이 아닙니다. 서비스가 별도 Risk Score를 사용한다면 두 척도의 매핑과 버전을 명시해야 합니다.
+
+| 상태 예시 | 현재 AI API에서의 의미 | 구분할 서비스 상태 |
+|---|---|---|
+| 검증 중 | 작업 `PENDING`/`RUNNING`; 아직 최종 판정 없음 | IPFS 업로드·지갑 서명·체인 확정은 별도 단계 |
+| PASS 0.31 | 현재 확인 점수 기준 통과, `ALLOW` | 민팅 성공·권리 안전을 확정하지 않음 |
+| WARN 0.84 | **0.84가 현재 AI 확인 점수라면 HOLD** | 별도 Risk Score라면 매핑 확인 필요 |
+| HOLD 0.93 | 추가 검토 필요, `HUMAN_REVIEW` | 민팅 성공·정산 잠금은 체인 상태로 별도 확인 |
+| BLOCK | 업로드 전체 지문 시퀀스가 등록 지문 안에 정확히 존재, `AUTO_BLOCK` | 불법 복제·권리 침해를 확정하는 판정은 아님 |
+| 분석 실패 | 작업 `FAILED`; PASS로 대체하지 않음 | IPFS 실패·지갑 거부·컨트랙트 오류와 구분 |
+
+현재 AI API는 IPFS 업로드·NFT 민팅·정산 잠금을 실행하거나 지분 서명을 검증하지 않습니다. WARN과 HOLD는 모두 `reviewRequired=true`입니다. 서명 검증 실패만으로 사용자의 조작을 단정할 수 없으며, 서명 대상·형식·서명자·도메인 불일치 등 서비스 원인 확인이 필요합니다. 지갑 거부와 컨트랙트 revert도 AI 유사도 판정과 별도 오류입니다. 전송 전 실패와 체인에 포함된 실패 거래의 가스 사용도 구분해야 합니다.
 
 ## 멘토링 기준 완료·미완료
 
@@ -129,7 +200,7 @@ def main():
         'source_regressions':len(prototype['per_query_source_regressions']),
         'fresh_independent_ai_validation':False,'pure_ai_creation_verified':False,'production_deployed':False,
         'github':publication,'report':report_path.name,'report_sha256':hashlib.sha256(report_path.read_bytes()).hexdigest(),
-        'mentor_questions':'MENTORING_QUESTIONS_20261025.md'}
+        'mentor_questions':'MENTORING_QUESTIONS_20261025.md','sample_accounting':accounting}
     (ART/'mentoring_release_status_20261025.json').write_text(json.dumps(status,indent=2),encoding='utf-8')
     print('Published '+report_path.name)
 

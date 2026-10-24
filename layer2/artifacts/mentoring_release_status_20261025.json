@@ -65,6 +65,48 @@
     }
   },
   "report": "MENTORING_FINAL_STATUS_20261025.md",
-  "report_sha256": "cb19a8ecd45a73ed528af43a323bfc6842f33980a782ee7772924359dfaad1ed",
-  "mentor_questions": "MENTORING_QUESTIONS_20261025.md"
+  "report_sha256": "ba68e12f4393d7767a95d05a0fa778585b323eede281ea0ef21530d76fa35721",
+  "mentor_questions": "MENTORING_QUESTIONS_20261025.md",
+  "sample_accounting": {
+    "normal": {
+      "tune": {
+        "works": 18,
+        "crops": 54
+      },
+      "test": {
+        "works": 11,
+        "crops": 33
+      },
+      "external_diagnostic": {
+        "works": 2,
+        "crops": 6
+      }
+    },
+    "normal_total_works": 31,
+    "normal_total_crops": 93,
+    "positive_evaluations": {
+      "existing_test": {
+        "queries": 28,
+        "source_works": 14
+      },
+      "stress": {
+        "queries": 28,
+        "source_works": 14
+      },
+      "replication": {
+        "queries": 28,
+        "source_works": 14
+      },
+      "five_family": {
+        "queries": 70,
+        "source_works": 14
+      }
+    },
+    "evaluation_positive_queries": 154,
+    "tune_positive_queries": 40,
+    "tune_source_works": 20,
+    "all_positive_queries": 194,
+    "evaluation_sets_reuse_same_source_works": true,
+    "independent_fresh_validation": false
+  }
 }
