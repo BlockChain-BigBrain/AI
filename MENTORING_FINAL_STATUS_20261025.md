@@ -81,7 +81,7 @@
 
 ## GitHub 업데이트
 
-- [AI](https://github.com/BlockChain-BigBrain/AI/compare/branch1...codex/mentoring-20261024): `codex/mentoring-20261024` → `branch1`; pending publication.
+- [AI](https://github.com/BlockChain-BigBrain/AI/pull/1): `codex/mentoring-20261024` → `branch1`; open, not merged.
 - [Frontend](https://github.com/BlockChain-BigBrain/Frontend/pull/9): `codex/ai-evidence-20261024` → `main`; open, mergeable, not merged.
 - [Backend](https://github.com/BlockChain-BigBrain/Backend/pull/10): `codex/ai-evidence-20261024` → `main`; open, mergeable, not merged.
 

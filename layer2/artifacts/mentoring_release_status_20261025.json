@@ -39,14 +39,14 @@
   "pure_ai_creation_verified": false,
   "production_deployed": false,
   "github": {
-    "status": "review_branches_and_pull_requests",
+    "status": "published_three_review_pull_requests",
     "production_deployed": false,
     "repositories": {
       "AI": {
-        "url": "https://github.com/BlockChain-BigBrain/AI/compare/branch1...codex/mentoring-20261024",
+        "url": "https://github.com/BlockChain-BigBrain/AI/pull/1",
         "branch": "codex/mentoring-20261024",
         "base": "branch1",
-        "state": "pending publication"
+        "state": "open, not merged"
       },
       "Frontend": {
         "url": "https://github.com/BlockChain-BigBrain/Frontend/pull/9",
@@ -65,6 +65,6 @@
     }
   },
   "report": "MENTORING_FINAL_STATUS_20261025.md",
-  "report_sha256": "34e3c0e159bff6f0556acff0d352d0f38a025aa6ef1b1ad0681638e1663004ba",
+  "report_sha256": "cb19a8ecd45a73ed528af43a323bfc6842f33980a782ee7772924359dfaad1ed",
   "mentor_questions": "MENTORING_QUESTIONS_20261025.md"
 }

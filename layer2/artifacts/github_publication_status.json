@@ -1,12 +1,12 @@
 {
-  "status": "review_branches_and_pull_requests",
+  "status": "published_three_review_pull_requests",
   "production_deployed": false,
   "repositories": {
     "AI": {
-      "url": "https://github.com/BlockChain-BigBrain/AI/compare/branch1...codex/mentoring-20261024",
+      "url": "https://github.com/BlockChain-BigBrain/AI/pull/1",
       "branch": "codex/mentoring-20261024",
       "base": "branch1",
-      "state": "pending publication"
+      "state": "open, not merged"
     },
     "Frontend": {
       "url": "https://github.com/BlockChain-BigBrain/Frontend/pull/9",
