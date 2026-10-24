@@ -41,3 +41,25 @@ node api\node-client.mjs "C:\음원\test.mp3" track-123 request-123
 ## 응답에서 반드시 저장할 필드
 
 `audioHash`, `decision`, `similarityScore`, `similarTracks`, `thresholds`, `modelVersion`, `scoreVersion`, `corpusVersion`, `processingSeconds`를 저장해야 나중에 어떤 파일과 모델로 나온 결과인지 재현할 수 있습니다.
+# 내부 API 인증
+
+`POST /verify`는 백엔드와 FastAPI 사이의 내부 호출만 허용하도록
+`X-Internal-API-Key` 헤더를 검사합니다. 프로젝트 루트 `.env`에
+`TRACK_AI_API_KEY`를 설정하면 서버가 이를 사용합니다. `/health`는 모니터링을
+위해 인증 없이 사용할 수 있습니다. `.env`는 Git에 커밋하지 말고 `.env.example`을
+복사해 각 개발 환경에서 별도로 설정하세요.
+
+검증 결과에는 `decision`, `decisionReason`, `disposition`, `reviewRequired`가 함께
+포함됩니다. `BLOCK`만 자동 차단이고, `HOLD`와 `WARN`은 사람이 확인하는 상태이며,
+`PASS`는 Layer 2 위험 기준을 넘지 않았다는 뜻입니다. Layer 2 결과는 법적 표절
+확정이 아니라 위험 신호입니다.
+
+## 현재 로컬 AI 표시군 모드
+
+현재 정책은 `ai_precision_policy.json`입니다. 기존 Top-20 확인 점수가 0.60보다 낮을 때 원래 CLAP Top-3에 정밀 CQT와 세 구간 확인을 추가합니다. 주 WARN/HOLD는 유지하고 보조 경로 원시 증거 기준은 별도로 보정했습니다. 추가 경로의 점수는 기존 WARN 척도로 변환하고 0.80으로 제한합니다. 참고 구현 환경은 `librosa==1.0.0`이며 정책이 라이브러리 버전과 구현 해시를 검사합니다. 현재 목표 대비 결과는 [멘토링 최종 현황](../MENTORING_FINAL_STATUS_20261023.md)을 보세요.
+
+팀 서비스는 루트에서 `python local_team.py --serve`로 실행합니다. 이 명령은 `TRACK_AI_SCOPE=ai_labeled`를 적용하며 Pixabay 곡별 페이지의 AI 표시가 관찰된 원본 34곡으로 지문·벡터 검색을 제한합니다. 활성 임계값과 한계는 [최신 검색 개선](../AI_IMPROVEMENT_20261023.md)을 보세요. 이는 순수 AI 생성 여부의 확정이 아닙니다.
+
+`ai_improvement_policy.json`이 있으면 검증된 후보 Top-20 정책을 사용합니다. CLAP 1–5위의 음높이 흐름 점수는 유지하고 6–20위는 제곱해 약한 추가 후보를 낮춘 뒤 화면 Top-3를 정합니다. 점수 버전은 `clap-top20+tonal-local-v1+expanded-square-v1`입니다. 정책을 출처·DB·평가·추가 시험·감사·점수 구현 해시와 대조하며, 맞지 않으면 시작을 거절합니다. `/health`는 실제 `decisionPolicyVersion`, `thresholds`, `referenceTracks`를 반환합니다. 이 점수는 확률이 아닙니다.
+
+`TRACK_AI_SCOPE=all`은 종전 혼합·미확인 1,000곡 DB와 기존 `tonal_confirmation_evaluation.json` 보정값을 유지하는 과거 실험 모드입니다. AI 질의로 1,000곡을 별도 비교한 오프라인 재평가 값은 `ai_labeled_recalibration.json`에 있으며 이 모드의 기존 보정값과 구분합니다. 결과·health의 `evaluationScope`와 결과의 `referenceTracks`로 실제 범위를 확인할 수 있습니다.

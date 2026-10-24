@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "checks": [
+    "two local audio metadata loaded",
+    "review save/restore",
+    "JSON export",
+    "mobile layout"
+  ],
+  "human_listening": "not_performed",
+  "test_records": "isolated browser only, not applied to dataset"
+}

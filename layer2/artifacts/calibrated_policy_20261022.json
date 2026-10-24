@@ -1,0 +1,95 @@
+{
+  "status": "calibrated_experimental",
+  "calibrated_at_utc": "2026-10-22T08:37:36.158529+00:00",
+  "score_version": "seg_top3_centered-v1",
+  "warn_threshold": 0.707587718963623,
+  "hold_threshold": 0.9668390154838562,
+  "reference_tracks": 1000,
+  "positive_queries": 340,
+  "normal_queries": 300,
+  "threshold_selection": "tune groups only; held-out test never used for fitting",
+  "tune": {
+    "hold_threshold": 0.9668390154838562,
+    "warn_threshold": 0.707587718963623,
+    "target_safe_hold_rate": 0.05,
+    "target_positive_source_recall_for_warn": 0.9,
+    "tune_safe_hold_rate": 0.0446927374301676,
+    "tune_positive_source_recall_at_hold": 0.04326923076923077,
+    "tune_positive_source_recall_at_warn": 0.9038461538461539,
+    "tune_safe_warn_or_hold_rate": 0.994413407821229,
+    "feasible": true,
+    "reason": null
+  },
+  "test": {
+    "positive_query_count": 132,
+    "positive_by_transformation": {
+      "synthetic_same_recording_excerpt": {
+        "query_count": 33,
+        "independent_source_count": 11,
+        "expected_source_top5_rate": 0.8787878787878788,
+        "source_macro_top5_rate": 0.8787878787878788,
+        "expected_source_warn_or_hold_rate": 0.9393939393939394
+      },
+      "room_rerecord_simulation": {
+        "query_count": 33,
+        "independent_source_count": 11,
+        "expected_source_top5_rate": 0.8181818181818182,
+        "source_macro_top5_rate": 0.8181818181818182,
+        "expected_source_warn_or_hold_rate": 0.7272727272727273
+      },
+      "local_tempo_warp": {
+        "query_count": 33,
+        "independent_source_count": 11,
+        "expected_source_top5_rate": 1.0,
+        "source_macro_top5_rate": 1.0,
+        "expected_source_warn_or_hold_rate": 1.0
+      },
+      "synthetic_arrangement_or_audio_transform": {
+        "query_count": 27,
+        "independent_source_count": 9,
+        "expected_source_top5_rate": 0.7777777777777778,
+        "source_macro_top5_rate": 0.7777777777777777,
+        "expected_source_warn_or_hold_rate": 0.9259259259259259
+      },
+      "synthetic_instrument_layer_overlay": {
+        "query_count": 6,
+        "independent_source_count": 6,
+        "expected_source_top5_rate": 1.0,
+        "source_macro_top5_rate": 1.0,
+        "expected_source_warn_or_hold_rate": 1.0
+      }
+    },
+    "safe_query_count": 121,
+    "positive_expected_source_top1_rate": 0.7348484848484849,
+    "positive_expected_source_top3_rate": 0.8484848484848485,
+    "positive_expected_source_top5_rate": 0.8787878787878788,
+    "positive_expected_source_score_median": 0.8802572190761566,
+    "safe_top1_score_median": 0.8762714266777039,
+    "hold_policy_test": {
+      "threshold": 0.9668390154838562,
+      "positive_query_recall": 0.0,
+      "positive_expected_source_recall": 0.0,
+      "safe_query_false_positive_rate": 0.024793388429752067,
+      "positive_query_count": 132,
+      "safe_query_count": 121
+    },
+    "warn_policy_test": {
+      "threshold": 0.707587718963623,
+      "positive_query_recall": 0.9696969696969697,
+      "positive_expected_source_recall": 0.9015151515151515,
+      "safe_query_false_positive_rate": 1.0,
+      "positive_query_count": 132,
+      "safe_query_count": 121
+    },
+    "synthetic_instrument_overlay_test": {
+      "query_count": 6,
+      "source_top1_rate": 1.0,
+      "source_top3_rate": 1.0,
+      "source_at_hold_rate": 0.0,
+      "source_at_warn_rate": 1.0
+    },
+    "unverified_safe_arranged_top_score_median": 0.8274900913238525
+  },
+  "evaluation_sha256": "4bd45697673e4f510631e7d161a1e6e464c4d60bf046b16d661566744fa21afc",
+  "legal_plagiarism_probability": false
+}

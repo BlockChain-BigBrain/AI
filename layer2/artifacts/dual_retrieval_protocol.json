@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-23",
+  "method": "clap20-union-pitch-fourier20",
+  "candidate_only_index": "pitch-fourier-crosspower-v1",
+  "decision_score_rule": "expanded-square-v1",
+  "limits": "All existing queries observed. Diagnostic comparison, no blind validation or automatic activation.",
+  "selection": "Tune source recall and normal targets; keep active AI policy if no positive source-recall gain.",
+  "candidates": {
+    "clap": 20,
+    "pitch_sequence": 20,
+    "union_max": 40
+  }
+}

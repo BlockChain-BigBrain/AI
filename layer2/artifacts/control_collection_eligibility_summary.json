@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-23",
+  "files_reviewed": 500,
+  "files_deleted_or_moved": 0,
+  "counts": {
+    "music": {
+      "ai_creation_provenance_unverified": 267,
+      "ai_label_candidate_not_pure_ai_verified": 29,
+      "audio_quality_quarantine": 1,
+      "near_identical_recording_quarantine": 3
+    },
+    "premusic": {
+      "ai_creation_provenance_unverified": 123,
+      "ai_label_candidate_not_pure_ai_verified": 2,
+      "audio_quality_quarantine": 0,
+      "near_identical_recording_quarantine": 75
+    }
+  },
+  "candidate_pure_ai_creation_verified": false,
+  "fresh_validation_completed": false,
+  "note": "AI label candidates have already been observed; these counts are not a fresh blind validation sample."
+}

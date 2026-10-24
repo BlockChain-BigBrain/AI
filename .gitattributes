@@ -1,0 +1,13 @@
+# These files are bound by exact-byte SHA-256 in evaluation policies.
+# Keep the recorded bytes on checkout regardless of core.autocrlf.
+layer2/artifacts/** -text
+layer2/test_data/**/manifest.* -text
+layer2/selective_retrieval.py -text
+layer2/secondary_precision.py -text
+layer2/precision_chroma.py -text
+layer2/fragment_confirmation.py -text
+layer2/spectral_sequence.py -text
+layer2/spectral_fusion.py -text
+/AI_IMPROVEMENT_*.md -text
+/MENTORING_FINAL_STATUS_*.md -text
+/MENTORING_QUESTIONS_*.md -text

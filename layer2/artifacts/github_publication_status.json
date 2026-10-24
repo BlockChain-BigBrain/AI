@@ -1,0 +1,26 @@
+{
+  "status": "published_three_review_pull_requests",
+  "production_deployed": false,
+  "repositories": {
+    "AI": {
+      "url": "https://github.com/BlockChain-BigBrain/AI/pull/1",
+      "branch": "codex/mentoring-20261024",
+      "base": "branch1",
+      "state": "open, not merged"
+    },
+    "Frontend": {
+      "url": "https://github.com/BlockChain-BigBrain/Frontend/pull/9",
+      "branch": "codex/ai-evidence-20261024",
+      "base": "main",
+      "state": "open, mergeable, not merged",
+      "commit": "93fb78c685f312d030fb7a6245e274318d28bc11"
+    },
+    "Backend": {
+      "url": "https://github.com/BlockChain-BigBrain/Backend/pull/10",
+      "branch": "codex/ai-evidence-20261024",
+      "base": "main",
+      "state": "open, mergeable, not merged",
+      "commit": "aa2cbbd939991de30fccafea4d86f416640be9eb"
+    }
+  }
+}

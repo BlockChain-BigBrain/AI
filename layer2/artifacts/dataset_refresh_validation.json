@@ -1,0 +1,14 @@
+{
+  "checks": "passed",
+  "original_tracks": 1000,
+  "normal_tracks": 300,
+  "premusic_tracks": 200,
+  "removed_duplicates": 17,
+  "replacement_tracks": 17,
+  "extended_generated_and_validated": 180,
+  "total_synthetic_positives": 340,
+  "source_track_ids": 49,
+  "loader_source_exclusion": "passed",
+  "family_macro_metric_check": "passed",
+  "clap_full_reevaluation": "not_run"
+}

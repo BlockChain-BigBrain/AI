@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "unit_tests": 13,
+  "unit_failures": 0,
+  "unit_errors": 0,
+  "empty_manifest_rejected": true,
+  "actual_fresh_ai_validation_performed": false,
+  "checks": [
+    "Pitch-key invariance with retained relative motion",
+    "Silence zero signature",
+    "Correct one-sided sample bounds",
+    "Previously observed audio rejected",
+    "Same generation not counted twice",
+    "Reordered sections recovered",
+    "Single excerpt not triple-counted",
+    "Empty intake cannot fabricate a completed evaluation",
+    "Supplemental cutoff maps to existing WARN",
+    "Supplemental evidence cannot reach HOLD",
+    "Negative semantic agreement cannot trigger fallback",
+    "No per-query regression on previous positive queries"
+  ],
+  "old_positive_source_regressions": 0
+}

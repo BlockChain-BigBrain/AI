@@ -1,0 +1,142 @@
+{
+  "protocol": {
+    "date": "2026-10-23",
+    "round": 2,
+    "method": "recall_guard_top20",
+    "retrieval_top_k": 20,
+    "reason": "Round-1 midpoint thresholds rejected: 17/28 vs baseline 25/28 on new-transform diagnostic.",
+    "warn_rule": "Lowest inclusive threshold meeting tune normal FPR<=10%, unchanged from original calibration recipe.",
+    "hold_rule": "Maximum of tune normal FPR<=2% boundary and tune confirmed-positive source 25th percentile.",
+    "selection_status": "Round-1 test/stress observed; engineering revision, not blind method selection.",
+    "replication": "Freeze this policy, then run +2-semitone/0.94-tempo/AAC96k and alternate splicing/1.08-tempo queries on same 14 works.",
+    "acceptance": "Tune and audited existing-test normal WARN<=10%, HOLD<=2%; source recall >=90% on existing test, old stress and new replication."
+  },
+  "signature": "455d23eed6fc1f0e042c3a36cd7f4acf4ccb1d62e5ac81915f6a36cd082bc58e",
+  "original_policy_sha256": "f8e117f8ec617761fc028b1a56bd6812b96dfb309d404cb41d1991c0b812ae73",
+  "comparison_sha256": "86260beace57d9ac29f0ad692b4e819682380a70863cd20363e52a472d9f8748",
+  "profiles": {
+    "ai_labeled_catalog": {
+      "warn_threshold": 0.3491146464366466,
+      "hold_threshold": 0.8337449399145463,
+      "normal_boundary": 0.3491146464366466,
+      "positive_fifth_percentile": 0.7779891458239694,
+      "feasible_margin": 0.4288744993873228,
+      "score_version": "tonal-local-v1",
+      "retrieval_top_k": 20,
+      "method": "recall_guard_top20",
+      "tune": {
+        "positive_queries": 40,
+        "correct_source_warn_top3_count": 40,
+        "correct_source_warn_top3_recall": 1.0,
+        "normal_candidates": 18,
+        "normal_warn_count": 1,
+        "normal_hold_count": 0,
+        "normal_warn_rate": 0.05555555555555555,
+        "normal_hold_rate": 0.0
+      },
+      "test_raw": {
+        "positive_queries": 28,
+        "correct_source_warn_top3_count": 28,
+        "correct_source_warn_top3_recall": 1.0,
+        "normal_candidates": 12,
+        "normal_warn_count": 3,
+        "normal_hold_count": 1,
+        "normal_warn_rate": 0.25,
+        "normal_hold_rate": 0.08333333333333333
+      },
+      "test_audited": {
+        "positive_queries": 28,
+        "correct_source_warn_top3_count": 28,
+        "correct_source_warn_top3_recall": 1.0,
+        "normal_candidates": 11,
+        "normal_warn_count": 2,
+        "normal_hold_count": 0,
+        "normal_warn_rate": 0.18181818181818182,
+        "normal_hold_rate": 0.0
+      },
+      "premusic_diagnostic": {
+        "positive_queries": 0,
+        "correct_source_warn_top3_count": 0,
+        "correct_source_warn_top3_recall": null,
+        "normal_candidates": 2,
+        "normal_warn_count": 0,
+        "normal_hold_count": 0,
+        "normal_warn_rate": 0.0,
+        "normal_hold_rate": 0.0
+      },
+      "round1_stress": {
+        "positive_queries": 28,
+        "correct_source_warn_top3_count": 26,
+        "correct_source_warn_top3_recall": 0.9285714285714286,
+        "normal_candidates": 0,
+        "normal_warn_count": 0,
+        "normal_hold_count": 0,
+        "normal_warn_rate": null,
+        "normal_hold_rate": null
+      }
+    },
+    "full_catalog": {
+      "warn_threshold": 0.3828562220926231,
+      "hold_threshold": 0.8339591339660378,
+      "normal_boundary": 0.3828562220926231,
+      "positive_fifth_percentile": 0.774078044086838,
+      "feasible_margin": 0.3912218219942149,
+      "score_version": "tonal-local-v1",
+      "retrieval_top_k": 20,
+      "method": "recall_guard_top20",
+      "tune": {
+        "positive_queries": 40,
+        "correct_source_warn_top3_count": 37,
+        "correct_source_warn_top3_recall": 0.925,
+        "normal_candidates": 18,
+        "normal_warn_count": 1,
+        "normal_hold_count": 0,
+        "normal_warn_rate": 0.05555555555555555,
+        "normal_hold_rate": 0.0
+      },
+      "test_raw": {
+        "positive_queries": 28,
+        "correct_source_warn_top3_count": 28,
+        "correct_source_warn_top3_recall": 1.0,
+        "normal_candidates": 12,
+        "normal_warn_count": 2,
+        "normal_hold_count": 1,
+        "normal_warn_rate": 0.16666666666666666,
+        "normal_hold_rate": 0.08333333333333333
+      },
+      "test_audited": {
+        "positive_queries": 28,
+        "correct_source_warn_top3_count": 28,
+        "correct_source_warn_top3_recall": 1.0,
+        "normal_candidates": 11,
+        "normal_warn_count": 1,
+        "normal_hold_count": 0,
+        "normal_warn_rate": 0.09090909090909091,
+        "normal_hold_rate": 0.0
+      },
+      "premusic_diagnostic": {
+        "positive_queries": 0,
+        "correct_source_warn_top3_count": 0,
+        "correct_source_warn_top3_recall": null,
+        "normal_candidates": 2,
+        "normal_warn_count": 0,
+        "normal_hold_count": 0,
+        "normal_warn_rate": 0.0,
+        "normal_hold_rate": 0.0
+      },
+      "round1_stress": {
+        "positive_queries": 28,
+        "correct_source_warn_top3_count": 23,
+        "correct_source_warn_top3_recall": 0.8214285714285714,
+        "normal_candidates": 0,
+        "normal_warn_count": 0,
+        "normal_hold_count": 0,
+        "normal_warn_rate": null,
+        "normal_hold_rate": null
+      }
+    }
+  },
+  "excluded_normal_filenames": [
+    "alex-morgan-dramatic-548632.mp3"
+  ]
+}

@@ -3,6 +3,16 @@ __pycache__/
 *.py[cod]
 api/.deps/
 api/.tools/
+.tools/
+layer2/external_data/
+layer2/artifacts/*.log
+layer2/artifacts/query_checkpoint_*.jsonl
+layer2/artifacts/*checkpoint.jsonl
+layer2/artifacts/fresh_audit_results.json
+layer2/artifacts/tonal_cover_results.json
+review_workbench/
+.runtime-tests/
+integrations/
 api/runtime/
 backend/node_modules/
 backend/runtime/
@@ -10,6 +20,7 @@ backend/runtime/
 # Local audio collections and generated segments are not source code.
 original_music/
 music/
+premusic/
 segments/
 layer2/test_data/**/*.mp3
 layer2/test_data/**/*.wav
@@ -40,6 +51,14 @@ layer2/artifacts/**/*_scores.csv
 layer2/artifacts/music_duplicate_report.csv
 layer1/fingerprints_db.json
 
+# Audio backups are data, including copies kept beside audit reports.
+layer2/artifacts/**/*.mp3
+layer2/artifacts/**/*.wav
+layer2/artifacts/**/*.flac
+layer2/artifacts/**/*.m4a
+layer2/artifacts/**/*.ogg
+layer2/artifacts/**/*.webm
+
 # Handoff archives are shared separately from the source repository.
 review_handoff/
 
@@ -47,3 +66,6 @@ review_handoff/
 .env
 .env.*
 !.env.example
+
+# Local archive of removed experiments and caches (never upload)
+_archive/

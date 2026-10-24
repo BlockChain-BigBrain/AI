@@ -1,0 +1,30 @@
+{
+  "files": 1500,
+  "folders": {
+    "original_music": {
+      "page_no_ai_label_observed": 555,
+      "no_matched_page": 367,
+      "pixabay_ai_label_observed": 34,
+      "page_fetch_unavailable": 44
+    },
+    "music": {
+      "page_no_ai_label_observed": 161,
+      "no_matched_page": 109,
+      "pixabay_ai_label_observed": 30
+    },
+    "premusic": {
+      "page_no_ai_label_observed": 140,
+      "no_matched_page": 50,
+      "pixabay_ai_label_observed": 7,
+      "page_fetch_unavailable": 3
+    }
+  },
+  "unique_media_ids_searched": 1227,
+  "unique_music_pages_attempted": 917,
+  "unique_music_pages_observed": 871,
+  "pure_ai_creation_verified": 0,
+  "ai_label_means": "Platform-labelled AI involvement, including generated or modified; not verified pure generation.",
+  "missing_label_means": "Unknown, never classified as human-made.",
+  "evidence_binding": "Local SHA256 and filename media ID; no server-side download hash available.",
+  "official_guideline": "https://pixabay.com/blog/posts/audio-quality-guidelines-182/"
+}

@@ -9,6 +9,9 @@ class HealthResponse(BaseModel):
     referenceWindows: int
     modelVersion: str
     scoreVersion: str
+    evaluationScope: str = 'all'
+    decisionPolicyVersion: str | None = None
+    thresholds: dict[Literal['warn', 'hold'], float] | None = None
 
 
 class JobAccepted(BaseModel):
@@ -32,6 +35,7 @@ class MatchedSegment(BaseModel):
 class SimilarTrack(BaseModel):
     trackId: str
     score: float
+    retrievalScore: float | None = None
     matchedSegments: list[MatchedSegment]
 
 
@@ -39,11 +43,18 @@ class VerificationResult(BaseModel):
     audioHash: str
     modelVersion: str
     scoreVersion: str
+    evaluationScope: str = 'all'
+    referenceTracks: int | None = None
+    pureAiCreationVerified: bool = False
     corpusVersion: str
     thresholds: dict[Literal['warn', 'hold'], float]
     provisional: bool
     durationSeconds: float
     decision: Literal['PASS', 'WARN', 'HOLD', 'BLOCK']
+    decisionPolicyVersion: str
+    decisionReason: str
+    disposition: Literal['ALLOW', 'HUMAN_REVIEW', 'AUTO_BLOCK']
+    reviewRequired: bool
     duplicate: DuplicateEvidence
     similarityScore: float | None
     similarTracks: list[SimilarTrack]

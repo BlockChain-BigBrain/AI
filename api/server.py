@@ -14,12 +14,30 @@ import os
 import sqlite3
 import time
 import uuid
-from fastapi import FastAPI, UploadFile, File, Form, HTTPException
+import secrets
+from fastapi import FastAPI, UploadFile, File, Form, HTTPException, Header, Depends
 from engine import Engine
 from schemas import HealthResponse, JobAccepted, VerificationJob
 
-DATA = BASE / 'runtime'
-DATA.mkdir(exist_ok=True)
+
+def load_local_env() -> None:
+    """Load simple KEY=VALUE entries without adding a dotenv dependency."""
+    env_path = BASE.parent / ".env"
+    if not env_path.is_file():
+        return
+    for line in env_path.read_text(encoding="utf-8").splitlines():
+        line = line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        key, value = line.split("=", 1)
+        os.environ.setdefault(key.strip(), value.strip().strip('"').strip("'"))
+
+
+load_local_env()
+INTERNAL_API_KEY = os.environ.get("TRACK_AI_API_KEY", "")
+
+DATA = Path(os.environ.get('TRACK_AI_RUNTIME', str(BASE / 'runtime')))
+DATA.mkdir(parents=True, exist_ok=True)
 DB = DATA / 'jobs.sqlite3'
 POOL = ThreadPoolExecutor(max_workers=1)
 engine = None
@@ -67,13 +85,22 @@ async def lifespan(app):
 app = FastAPI(title='Track-AI Verification', version='1.0.0', lifespan=lifespan)
 
 
+def require_internal_api_key(x_internal_api_key: str | None = Header(default=None)) -> None:
+    """Allow only the trusted Node backend to submit audio for analysis."""
+    if not INTERNAL_API_KEY:
+        raise HTTPException(status_code=503, detail="TRACK_AI_API_KEY_NOT_CONFIGURED")
+    if not x_internal_api_key or not secrets.compare_digest(x_internal_api_key, INTERNAL_API_KEY):
+        raise HTTPException(status_code=401, detail="INVALID_INTERNAL_API_KEY")
+
+
 @app.get('/health', response_model=HealthResponse)
 def health():
     return dict(status='ready', referenceTracks=len(engine.groups), referenceWindows=len(engine.ids),
-                modelVersion='laion/clap-htsat-unfused', scoreVersion='seg_top3_centered-v1')
+                modelVersion='laion/clap-htsat-unfused', scoreVersion=engine.score_version, evaluationScope=engine.evaluation_scope,
+                decisionPolicyVersion=engine.policy_version, thresholds=engine.thresholds)
 
 
-@app.post('/verify', status_code=202, response_model=JobAccepted)
+@app.post('/verify', status_code=202, response_model=JobAccepted, dependencies=[Depends(require_internal_api_key)])
 async def verify(file: UploadFile = File(...), trackId: str = Form(..., min_length=1, max_length=200),
                  requestId: str = Form(..., min_length=1, max_length=200)):
     """Multipart contract. Reusing a requestId for different input returns 409."""
@@ -117,7 +144,8 @@ async def verify(file: UploadFile = File(...), trackId: str = Form(..., min_leng
             path.unlink(missing_ok=True)
 
 
-@app.get('/verify/{job_id}', response_model=VerificationJob)
+@app.get('/verify/{job_id}', response_model=VerificationJob,
+         dependencies=[Depends(require_internal_api_key)])
 def result(job_id: str):
     with connection() as db:
         row = db.execute('SELECT track_id,state,result,error FROM jobs WHERE id=?', (job_id,)).fetchone()

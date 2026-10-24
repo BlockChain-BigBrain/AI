@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "decision": "WARN",
+  "scoreVersion": "clap-top20+tonal-local-v1+expanded-square-v1+secondary-clap-cqt-fragments-v1",
+  "storedSegments": 3,
+  "verificationRows": 2,
+  "realAiSuccess": true,
+  "explicitFailureFixture": true,
+  "reviewGatePreserved": true,
+  "ownerCheck": true,
+  "scope": "latest upstream Backend HTTP provider + real calibrated AI + fresh isolated MySQL",
+  "runtime": "C:\\\ube14\ub85d\uccb4\uc778\\.runtime-tests\\release-live-1792854318289333400",
+  "production_database": "not_accessed",
+  "owned_services_stopped": true
+}

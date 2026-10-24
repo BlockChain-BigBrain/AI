@@ -1,0 +1,322 @@
+{
+  "protocol": {
+    "date": "2026-10-23",
+    "candidates": [
+      "margin_top5",
+      "contrast_top5",
+      "margin_top20"
+    ],
+    "warn_rule": "Midpoint between tune normal FPR<=10% boundary and tune positive source 5th percentile, if feasible.",
+    "hold_rule": "Maximum of strict tune normal FPR<=2% boundary and tune positive source 25th percentile.",
+    "selection": "Tune only: maximize correct-source WARN recall in display Top3; then prefer margin_top5, margin_top20, contrast_top5. No test-driven selection.",
+    "test_status": "Previously observed source-disjoint test; not fresh blind validation.",
+    "normal_exclusion": "Only independently audited near-identical recording; report both raw and audited counts.",
+    "new_stress": "After selection: all 14 test works, pitch+tempo+codec and spliced-section variants; not unseen works.",
+    "targets": {
+      "normal_warn_max": 0.1,
+      "normal_hold_max": 0.02,
+      "correct_source_warn_min": 0.9
+    }
+  },
+  "original_policy_sha256": "f8e117f8ec617761fc028b1a56bd6812b96dfb309d404cb41d1991c0b812ae73",
+  "manifest_sha256": "9d1873148d7e36d0c8bac0a87eb61a1ead956ff49621372010afba1b52d80507",
+  "signature": "271ee07f6e4c074d6e7af89e54be6ebe8f92c12c3e5a6e091f3472db2369a98c",
+  "excluded_normal_filenames": [
+    "alex-morgan-dramatic-548632.mp3"
+  ],
+  "profiles": {
+    "ai_labeled_catalog": {
+      "selected_method": "margin_top5",
+      "methods": {
+        "margin_top5": {
+          "warn_threshold": 0.5627392337148801,
+          "hold_threshold": 0.8337449399145463,
+          "normal_boundary": 0.34748932160579077,
+          "positive_fifth_percentile": 0.7779891458239694,
+          "feasible_margin": 0.4304998242181786,
+          "tune": {
+            "positive_queries": 40,
+            "correct_source_warn_top3_count": 40,
+            "correct_source_warn_top3_recall": 1.0,
+            "normal_candidates": 18,
+            "normal_warn_count": 0,
+            "normal_hold_count": 0,
+            "normal_warn_rate": 0.0,
+            "normal_hold_rate": 0.0
+          },
+          "test_raw": {
+            "positive_queries": 28,
+            "correct_source_warn_top3_count": 28,
+            "correct_source_warn_top3_recall": 1.0,
+            "normal_candidates": 12,
+            "normal_warn_count": 1,
+            "normal_hold_count": 1,
+            "normal_warn_rate": 0.08333333333333333,
+            "normal_hold_rate": 0.08333333333333333
+          },
+          "test_audited": {
+            "positive_queries": 28,
+            "correct_source_warn_top3_count": 28,
+            "correct_source_warn_top3_recall": 1.0,
+            "normal_candidates": 11,
+            "normal_warn_count": 0,
+            "normal_hold_count": 0,
+            "normal_warn_rate": 0.0,
+            "normal_hold_rate": 0.0
+          },
+          "premusic_diagnostic": {
+            "positive_queries": 0,
+            "correct_source_warn_top3_count": 0,
+            "correct_source_warn_top3_recall": null,
+            "normal_candidates": 2,
+            "normal_warn_count": 0,
+            "normal_hold_count": 0,
+            "normal_warn_rate": 0.0,
+            "normal_hold_rate": 0.0
+          }
+        },
+        "contrast_top5": {
+          "warn_threshold": 0.3745024680745197,
+          "hold_threshold": 0.6783445307335989,
+          "normal_boundary": 0.11513003416341515,
+          "positive_fifth_percentile": 0.6338749019856242,
+          "feasible_margin": 0.5187448678222091,
+          "tune": {
+            "positive_queries": 40,
+            "correct_source_warn_top3_count": 40,
+            "correct_source_warn_top3_recall": 1.0,
+            "normal_candidates": 18,
+            "normal_warn_count": 0,
+            "normal_hold_count": 0,
+            "normal_warn_rate": 0.0,
+            "normal_hold_rate": 0.0
+          },
+          "test_raw": {
+            "positive_queries": 28,
+            "correct_source_warn_top3_count": 27,
+            "correct_source_warn_top3_recall": 0.9642857142857143,
+            "normal_candidates": 12,
+            "normal_warn_count": 1,
+            "normal_hold_count": 1,
+            "normal_warn_rate": 0.08333333333333333,
+            "normal_hold_rate": 0.08333333333333333
+          },
+          "test_audited": {
+            "positive_queries": 28,
+            "correct_source_warn_top3_count": 27,
+            "correct_source_warn_top3_recall": 0.9642857142857143,
+            "normal_candidates": 11,
+            "normal_warn_count": 0,
+            "normal_hold_count": 0,
+            "normal_warn_rate": 0.0,
+            "normal_hold_rate": 0.0
+          },
+          "premusic_diagnostic": {
+            "positive_queries": 0,
+            "correct_source_warn_top3_count": 0,
+            "correct_source_warn_top3_recall": null,
+            "normal_candidates": 2,
+            "normal_warn_count": 0,
+            "normal_hold_count": 0,
+            "normal_warn_rate": 0.0,
+            "normal_hold_rate": 0.0
+          }
+        },
+        "margin_top20": {
+          "warn_threshold": 0.563551896130308,
+          "hold_threshold": 0.8337449399145463,
+          "normal_boundary": 0.3491146464366466,
+          "positive_fifth_percentile": 0.7779891458239694,
+          "feasible_margin": 0.4288744993873228,
+          "tune": {
+            "positive_queries": 40,
+            "correct_source_warn_top3_count": 40,
+            "correct_source_warn_top3_recall": 1.0,
+            "normal_candidates": 18,
+            "normal_warn_count": 0,
+            "normal_hold_count": 0,
+            "normal_warn_rate": 0.0,
+            "normal_hold_rate": 0.0
+          },
+          "test_raw": {
+            "positive_queries": 28,
+            "correct_source_warn_top3_count": 28,
+            "correct_source_warn_top3_recall": 1.0,
+            "normal_candidates": 12,
+            "normal_warn_count": 1,
+            "normal_hold_count": 1,
+            "normal_warn_rate": 0.08333333333333333,
+            "normal_hold_rate": 0.08333333333333333
+          },
+          "test_audited": {
+            "positive_queries": 28,
+            "correct_source_warn_top3_count": 28,
+            "correct_source_warn_top3_recall": 1.0,
+            "normal_candidates": 11,
+            "normal_warn_count": 0,
+            "normal_hold_count": 0,
+            "normal_warn_rate": 0.0,
+            "normal_hold_rate": 0.0
+          },
+          "premusic_diagnostic": {
+            "positive_queries": 0,
+            "correct_source_warn_top3_count": 0,
+            "correct_source_warn_top3_recall": null,
+            "normal_candidates": 2,
+            "normal_warn_count": 0,
+            "normal_hold_count": 0,
+            "normal_warn_rate": 0.0,
+            "normal_hold_rate": 0.0
+          }
+        }
+      }
+    },
+    "full_catalog": {
+      "selected_method": "margin_top20",
+      "methods": {
+        "margin_top5": {
+          "warn_threshold": 0.553038469855476,
+          "hold_threshold": 0.8393063860271538,
+          "normal_boundary": 0.3132369039210908,
+          "positive_fifth_percentile": 0.7928400357898612,
+          "feasible_margin": 0.47960313186877035,
+          "tune": {
+            "positive_queries": 40,
+            "correct_source_warn_top3_count": 35,
+            "correct_source_warn_top3_recall": 0.875,
+            "normal_candidates": 18,
+            "normal_warn_count": 0,
+            "normal_hold_count": 0,
+            "normal_warn_rate": 0.0,
+            "normal_hold_rate": 0.0
+          },
+          "test_raw": {
+            "positive_queries": 28,
+            "correct_source_warn_top3_count": 24,
+            "correct_source_warn_top3_recall": 0.8571428571428571,
+            "normal_candidates": 12,
+            "normal_warn_count": 1,
+            "normal_hold_count": 1,
+            "normal_warn_rate": 0.08333333333333333,
+            "normal_hold_rate": 0.08333333333333333
+          },
+          "test_audited": {
+            "positive_queries": 28,
+            "correct_source_warn_top3_count": 24,
+            "correct_source_warn_top3_recall": 0.8571428571428571,
+            "normal_candidates": 11,
+            "normal_warn_count": 0,
+            "normal_hold_count": 0,
+            "normal_warn_rate": 0.0,
+            "normal_hold_rate": 0.0
+          },
+          "premusic_diagnostic": {
+            "positive_queries": 0,
+            "correct_source_warn_top3_count": 0,
+            "correct_source_warn_top3_recall": null,
+            "normal_candidates": 2,
+            "normal_warn_count": 0,
+            "normal_hold_count": 0,
+            "normal_warn_rate": 0.0,
+            "normal_hold_rate": 0.0
+          }
+        },
+        "contrast_top5": {
+          "warn_threshold": 0.38916123586562884,
+          "hold_threshold": 0.6901420847423232,
+          "normal_boundary": 0.1403821564075192,
+          "positive_fifth_percentile": 0.6379403153237385,
+          "feasible_margin": 0.49755815891621935,
+          "tune": {
+            "positive_queries": 40,
+            "correct_source_warn_top3_count": 35,
+            "correct_source_warn_top3_recall": 0.875,
+            "normal_candidates": 18,
+            "normal_warn_count": 0,
+            "normal_hold_count": 0,
+            "normal_warn_rate": 0.0,
+            "normal_hold_rate": 0.0
+          },
+          "test_raw": {
+            "positive_queries": 28,
+            "correct_source_warn_top3_count": 23,
+            "correct_source_warn_top3_recall": 0.8214285714285714,
+            "normal_candidates": 12,
+            "normal_warn_count": 1,
+            "normal_hold_count": 1,
+            "normal_warn_rate": 0.08333333333333333,
+            "normal_hold_rate": 0.08333333333333333
+          },
+          "test_audited": {
+            "positive_queries": 28,
+            "correct_source_warn_top3_count": 23,
+            "correct_source_warn_top3_recall": 0.8214285714285714,
+            "normal_candidates": 11,
+            "normal_warn_count": 0,
+            "normal_hold_count": 0,
+            "normal_warn_rate": 0.0,
+            "normal_hold_rate": 0.0
+          },
+          "premusic_diagnostic": {
+            "positive_queries": 0,
+            "correct_source_warn_top3_count": 0,
+            "correct_source_warn_top3_recall": null,
+            "normal_candidates": 2,
+            "normal_warn_count": 0,
+            "normal_hold_count": 0,
+            "normal_warn_rate": 0.0,
+            "normal_hold_rate": 0.0
+          }
+        },
+        "margin_top20": {
+          "warn_threshold": 0.5784671330897305,
+          "hold_threshold": 0.8339591339660378,
+          "normal_boundary": 0.3828562220926231,
+          "positive_fifth_percentile": 0.774078044086838,
+          "feasible_margin": 0.3912218219942149,
+          "tune": {
+            "positive_queries": 40,
+            "correct_source_warn_top3_count": 37,
+            "correct_source_warn_top3_recall": 0.925,
+            "normal_candidates": 18,
+            "normal_warn_count": 0,
+            "normal_hold_count": 0,
+            "normal_warn_rate": 0.0,
+            "normal_hold_rate": 0.0
+          },
+          "test_raw": {
+            "positive_queries": 28,
+            "correct_source_warn_top3_count": 28,
+            "correct_source_warn_top3_recall": 1.0,
+            "normal_candidates": 12,
+            "normal_warn_count": 1,
+            "normal_hold_count": 1,
+            "normal_warn_rate": 0.08333333333333333,
+            "normal_hold_rate": 0.08333333333333333
+          },
+          "test_audited": {
+            "positive_queries": 28,
+            "correct_source_warn_top3_count": 28,
+            "correct_source_warn_top3_recall": 1.0,
+            "normal_candidates": 11,
+            "normal_warn_count": 0,
+            "normal_hold_count": 0,
+            "normal_warn_rate": 0.0,
+            "normal_hold_rate": 0.0
+          },
+          "premusic_diagnostic": {
+            "positive_queries": 0,
+            "correct_source_warn_top3_count": 0,
+            "correct_source_warn_top3_recall": null,
+            "normal_candidates": 2,
+            "normal_warn_count": 0,
+            "normal_hold_count": 0,
+            "normal_warn_rate": 0.0,
+            "normal_hold_rate": 0.0
+          }
+        }
+      }
+    }
+  },
+  "test_status": "Previously observed source-disjoint test; not fresh blind validation."
+}
