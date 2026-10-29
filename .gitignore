@@ -21,6 +21,12 @@ backend/runtime/
 original_music/
 music/
 premusic/
+premusic_used/**/*.mp3
+premusic_used/**/*.wav
+premusic_used/**/*.webm
+premusic_used/**/*.flac
+premusic_used/**/*.m4a
+premusic_used/**/*.ogg
 segments/
 layer2/test_data/**/*.mp3
 layer2/test_data/**/*.wav

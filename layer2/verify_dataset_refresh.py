@@ -29,7 +29,19 @@ def main():
     assert len(normal) == 300 and all(r['status']=='NO_EXACT_MATCH' for r in normal)
     assert len(baseline.audio_files(ROOT/'original_music')) == 1000
     assert len(baseline.audio_files(ROOT/'music')) == 300
-    assert len(baseline.audio_files(ROOT/'premusic')) == 200
+    reorganization_path=ART/'premusic_reorganization_20261029.json'
+    if reorganization_path.exists():
+        reorganization=json.loads(reorganization_path.read_text(encoding='utf-8'))
+        premusic_current=len(baseline.audio_files(ROOT/'premusic'))
+        premusic_used=len(list((ROOT/'premusic_used').rglob('*.mp3')))
+        assert reorganization['status']=='completed'
+        assert premusic_current==41 and premusic_used==81
+        assert premusic_current+premusic_used+reorganization['exact_duplicates_deleted']==200
+    else:
+        reorganization=None
+        premusic_current=len(baseline.audio_files(ROOT/'premusic'))
+        premusic_used=0
+        assert premusic_current==200
     extended = list(csv.DictReader((ROOT/'layer2/test_data/extended_positive/manifest.csv').open(encoding='utf-8-sig')))
     assert len(extended)==180
     assert Counter(r['case_type'] for r in extended)=={'room_rerecord_simulation':90,'local_tempo_warp':90}
@@ -51,7 +63,9 @@ def main():
                for g,hit,score in [('a',True,.9),('a',False,.2),('b',True,.95)]]
     m=top3.positive_family_metrics(test_rows,.8)['test']
     assert m['independent_source_count']==2 and m['source_macro_top5_rate']==.75
-    summary={'checks':'passed','original_tracks':1000,'normal_tracks':300,'premusic_tracks':200,
+    summary={'checks':'passed','original_tracks':1000,'normal_tracks':300,'premusic_tracks':premusic_current,
+             'premusic_original_snapshot_tracks':200,'premusic_used_archived_tracks':premusic_used,
+             'premusic_exact_duplicates_removed':reorganization['exact_duplicates_deleted'] if reorganization else 0,
              'removed_duplicates':17,'replacement_tracks':17,'extended_generated_and_validated':180,
              'total_synthetic_positives':340,'source_track_ids':len({q['expected_track_id'] for q in positive}),
              'loader_source_exclusion':'passed','family_macro_metric_check':'passed','clap_full_reevaluation':'not_run'}

@@ -43,9 +43,14 @@ def main() -> None:
 
     test_root = ROOT / "layer2" / "test_data"
     duplicate_report = ROOT / "layer2" / "artifacts" / "music_duplicate_report.csv"
+    premusic_reorganization = ROOT / "layer2" / "artifacts" / "premusic_reorganization_20261029.json"
+    reorganization = json.loads(premusic_reorganization.read_text(encoding="utf-8")) if premusic_reorganization.exists() else None
     result = {
         "reference_tracks": count_audio(ROOT / "original_music"),
         "normal_audio_files": count_audio(ROOT / "music"),
+        "premusic_available_audio_files": count_audio(ROOT / "premusic"),
+        "premusic_used_audio_files": count_audio(ROOT / "premusic_used"),
+        "premusic_exact_duplicates_removed": reorganization["exact_duplicates_deleted"] if reorganization else 0,
         "normal_verified_no_exact_duplicate": count_duplicate_status(duplicate_report, "NO_EXACT_MATCH"),
         "normal_exact_duplicates_excluded": count_duplicate_status(duplicate_report, "DUPLICATE_PREVIEW"),
         "synthetic_positive": count_manifest(test_root / "plagiarism_positive" / "manifest.csv"),

@@ -1,11 +1,14 @@
 # Track-AI 프로젝트 안내
 
+> 2026-10-29: [premusic 50곡 신규 진단·중복 정리 결과](PREMUSIC_HOLDOUT_20261029.md). 완곡 6/50, 30초 작품 23/50 경고입니다. 사용곡 81곡은 [용도별 보관 폴더](premusic_used/README.md)로 이동했고, 동일 SHA 보존본이 있는 중복 78개를 제거했습니다. 이 50곡의 순수 AI 생성 출처는 확인되지 않았습니다.
+
 > 2026-10-25: [최신 완료·미완료와 목표 비교](MENTORING_FINAL_STATUS_20261025.md) / [다음 멘토링 질문](MENTORING_QUESTIONS_20261025.md). 정상 30초 평가에서 경고율 목표 미달을 확인했으며, 98.57% 실험 후보는 회귀 때문에 미채택입니다.
 
 음원 파일의 완전 중복을 찾아 업로드를 거절하는 Layer 1과, 유사 음원을 검색해 검토를 돕는 Layer 2를 개발합니다.
 
 ## 먼저 읽을 문서
 
+- [premusic 50곡 신규 진단·정리](PREMUSIC_HOLDOUT_20261029.md): 전체 해시·녹음 중복 대조, 완곡과 30초 작품 경고율, AI 출처의 한계
 - [멘토링 기준 최종 현황·목표 비교](MENTORING_FINAL_STATUS_20261023.md): 500곡 감사, 새 5종 70개 평가, 긴 편집 복원, 완료·미완료와 다음 준비물
 - [2026-10-23 검색 개선 결과](AI_IMPROVEMENT_20261023.md): 후보 확대·추가 후보 감점, 복합 변형 원곡 확인 개선과 정상 경고율의 정확한 분모
 - [최신 Pixabay AI 표시군 재평가](PIXABAY_AI_RECALIBRATION.md): AI 표시 34곡 검색 범위·정상 경고율·원곡 재현율·새 임계값
@@ -31,6 +34,8 @@
 | layer2/artifacts/ | 평가 JSON/CSV, 임베딩과 캐시 |
 | original_music/ | 기준 원본 음원 1,000곡 |
 | music/ | 정상 대조 후보 음원 300곡 |
+| premusic/ | 아직 평가에 사용하지 않은 premusic 41곡 |
+| premusic_used/ | 사용한 premusic 원본 81곡, 용도·이전 경로·SHA-256 대응표 |
 | segments/ | 10초·5초 간격 분할 파일 15,699개 |
 | .vscode/ | IDE 설정 |
 | fpcalc.exe | Chromaprint 실행 파일 |

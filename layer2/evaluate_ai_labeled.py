@@ -26,6 +26,20 @@ sys.path.insert(0,str(ROOT/'layer1'))
 import upload_guard_api as gate
 
 
+def resolved_evaluation_audio(row):
+    """Honor later premusic relocation without rewriting frozen manifest rows."""
+    path=Path(row['file'])
+    if path.is_file():return path
+    relocation=ROOT/'premusic_used/reorganization_plan_20261029.json'
+    if relocation.is_file():
+        plan=json.loads(relocation.read_text(encoding='utf-8'))
+        for move in plan['moves']:
+            if move['original_path']==row['file'] and move['sha256']==row['sha256']:
+                moved=Path(move['new_path'])
+                if moved.is_file():return moved
+    raise FileNotFoundError(row['file'])
+
+
 def digest_catalog(vectors,ids,offsets):
     return hashlib.sha256(vectors.tobytes()+ids.tobytes()+offsets.tobytes()).hexdigest()
 
@@ -154,7 +168,7 @@ def main():
     results=[]
     with checkpoint.open('a',encoding='utf-8') as log:
         for n,row in enumerate(manifest['rows'],1):
-            path=Path(row['file']);assert hashlib.sha256(path.read_bytes()).hexdigest()==row['sha256']
+            path=resolved_evaluation_audio(row);assert hashlib.sha256(path.read_bytes()).hexdigest()==row['sha256']
             if all((scope,row['file']) in saved_rows for scope in catalogs):
                 results.extend(saved_rows[(scope,row['file'])] for scope in catalogs);continue
             q,starts=base.embed_file(path,model,processor,device,False,all_query_windows=True)

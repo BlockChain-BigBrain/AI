@@ -1,0 +1,1097 @@
+{
+  "date": "2026-10-29",
+  "status": "reviewed_before_mutation",
+  "original_premusic_count": 200,
+  "move_count": 81,
+  "delete_exact_duplicate_count": 78,
+  "remain_count": 41,
+  "all_deletes_have_identical_surviving_copy": true,
+  "moves": [
+    {
+      "original_path": "C:\\블록체인\\premusic\\atlasaudio-nature-621587.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\premusic_holdout_20261029\\atlasaudio-nature-621587.mp3",
+      "sha256": "8307a0110c40ca779133ed32f522a79daa892283e7888a4499d4c2ffd8abbc35",
+      "used_in": [
+        "premusic_holdout_20261029"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\atlasaudio-nature-piano-519619.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\premusic_holdout_20261029\\atlasaudio-nature-piano-519619.mp3",
+      "sha256": "bba81f1f8385c79d5ecdd05350e27db27b1c119a851efbc9eb0599f062981325",
+      "used_in": [
+        "premusic_holdout_20261029"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\atlasaudio-party-music-617594.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\premusic_holdout_20261029\\atlasaudio-party-music-617594.mp3",
+      "sha256": "8bb3aa303931306724aac917fb58339a402c0ec8ff0a3b0942068170f98fb101",
+      "used_in": [
+        "premusic_holdout_20261029"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\atlasaudio-promotion-613506.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\premusic_holdout_20261029\\atlasaudio-promotion-613506.mp3",
+      "sha256": "f39b212337024c37fa43d5326414036df2d1b2036d315ed7254b9a8550b0cc5d",
+      "used_in": [
+        "premusic_holdout_20261029"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\atlasaudio-relaxing-ambient-621592.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\premusic_holdout_20261029\\atlasaudio-relaxing-ambient-621592.mp3",
+      "sha256": "38b9706d0f239ec045c8dea252419ca9d98ae00459099147e374375e8a61b294",
+      "used_in": [
+        "premusic_holdout_20261029"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\atlasaudio-romantic-621598.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\premusic_holdout_20261029\\atlasaudio-romantic-621598.mp3",
+      "sha256": "a44c0f5a7acf03def31b3aef31a7752bd0d7c2563b7b2d3105b3e49b52b414fa",
+      "used_in": [
+        "premusic_holdout_20261029"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\atlasaudio-sad-drama-621600.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\fresh_audit_20261023\\atlasaudio-sad-drama-621600.mp3",
+      "sha256": "39379f33bb01aa42533e72438a2bc9f302207df9a8644944a73dccf9f7e5cf55",
+      "used_in": [
+        "fresh_audit_20261023"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\atlasaudio-scary-519914.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\fresh_audit_20261023\\atlasaudio-scary-519914.mp3",
+      "sha256": "4fcfbc3ae3ce469fafa74c21bc195090c4d1512f5119fc4422f0aa18092e87ca",
+      "used_in": [
+        "fresh_audit_20261023"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\atlasaudio-sleep-affirmations-613531.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\fresh_audit_20261023\\atlasaudio-sleep-affirmations-613531.mp3",
+      "sha256": "e7ef63dd48a0f7a8682a9f2af6422606a56b0563380ad34cbbd98b26bc6908b8",
+      "used_in": [
+        "fresh_audit_20261023"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\atlasaudio-soft-piano-621607.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\fresh_audit_20261023\\atlasaudio-soft-piano-621607.mp3",
+      "sha256": "58932668b601b57400560650998eadf857a64c971baab88235522d53dbefadc5",
+      "used_in": [
+        "fresh_audit_20261023"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\atlasaudio-soft-presentation-621608.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\premusic_holdout_20261029\\atlasaudio-soft-presentation-621608.mp3",
+      "sha256": "b1c2aa48d351c501b309f45205abd22de39c2435ea32766a46071d0913268737",
+      "used_in": [
+        "premusic_holdout_20261029"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\atlasaudio-spring-piano-621609.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\premusic_holdout_20261029\\atlasaudio-spring-piano-621609.mp3",
+      "sha256": "0c3de08edcf083ab1a5bfd2f4b0683070b13e73803ccdab1e83554fa58700a1a",
+      "used_in": [
+        "premusic_holdout_20261029"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\atlasaudio-suspense-613337.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\premusic_holdout_20261029\\atlasaudio-suspense-613337.mp3",
+      "sha256": "9d091405d95548574bab91dd6678b41aa3f07cd20660544a67c8172f9e62a8f0",
+      "used_in": [
+        "premusic_holdout_20261029"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\atlasaudio-tension-documentary-519912.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\premusic_holdout_20261029\\atlasaudio-tension-documentary-519912.mp3",
+      "sha256": "7b5f9e15f0cda44c7c6067f1a35aa953d6e6705f9d7ab31c842b20e1609ff883",
+      "used_in": [
+        "premusic_holdout_20261029"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\atlasaudio-thanksgiving-621614.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\fresh_audit_20261023\\atlasaudio-thanksgiving-621614.mp3",
+      "sha256": "a19826e90b9f3a1a8f0fca32bfd48032a97ebbdac22ec5404fc598e3acac190f",
+      "used_in": [
+        "fresh_audit_20261023"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\atlasaudio-thanksgiving-music-621613.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\premusic_holdout_20261029\\atlasaudio-thanksgiving-music-621613.mp3",
+      "sha256": "60009037403a0163eb94b6cd7b70a201c3e02207cd2858661d0958be3e5577a5",
+      "used_in": [
+        "premusic_holdout_20261029"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\atlasaudio-trailer-613341.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\premusic_holdout_20261029\\atlasaudio-trailer-613341.mp3",
+      "sha256": "bb0bd8811e39710f7d41a901310f73c9efddb31e9c6e41b1537a5733bd208d98",
+      "used_in": [
+        "premusic_holdout_20261029"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\atlasaudio-trailer-hit-613495.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\premusic_holdout_20261029\\atlasaudio-trailer-hit-613495.mp3",
+      "sha256": "70deaba1185280a35decd7dd930e6790e18dbdc85ba403e3ab9d27c06136bb62",
+      "used_in": [
+        "premusic_holdout_20261029"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\atlasaudio-travel-travel-music-576658.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\fresh_audit_20261023\\atlasaudio-travel-travel-music-576658.mp3",
+      "sha256": "b3d788606f782e146faf6a75e83dfd76f49369deedc7fb832df6e91de86bc8a1",
+      "used_in": [
+        "fresh_audit_20261023"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\atlasaudio-upbeat-corporate-617614.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\fresh_audit_20261023\\atlasaudio-upbeat-corporate-617614.mp3",
+      "sha256": "ad6fc7d69b873f578dbb63a4a036a717c2443f8eab9e00de885420f2242cfb6f",
+      "used_in": [
+        "fresh_audit_20261023"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\atlasaudio-upbeat-electronic-617615.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\premusic_holdout_20261029\\atlasaudio-upbeat-electronic-617615.mp3",
+      "sha256": "5de8e7519e4b37b4970087e0569d2f410f4fd03a4d735681e4fc0bca382893ab",
+      "used_in": [
+        "premusic_holdout_20261029"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\atlasaudio-upbeat-motivation-613508.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\premusic_holdout_20261029\\atlasaudio-upbeat-motivation-613508.mp3",
+      "sha256": "163a6d03f783e3329a93e207ea4e74bfbea2f2b50b0e9f1202986c1fc2d0981f",
+      "used_in": [
+        "premusic_holdout_20261029"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\atlasaudio-video-marketing-617621.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\premusic_holdout_20261029\\atlasaudio-video-marketing-617621.mp3",
+      "sha256": "762b9dde18b08f7d38e12f5285c2ae672238614560405ce94e5454971d2b5bd4",
+      "used_in": [
+        "premusic_holdout_20261029"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\atlasaudio-warm-acoustic-621617.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\premusic_holdout_20261029\\atlasaudio-warm-acoustic-621617.mp3",
+      "sha256": "c37897d74498f71b4ddb0f2535dad7e8cae4ac53dc90ebdaa163a762da328425",
+      "used_in": [
+        "premusic_holdout_20261029"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\atlasaudio-workout-song-606285.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\premusic_holdout_20261029\\atlasaudio-workout-song-606285.mp3",
+      "sha256": "190298cf8c9f16d11ab03d33389f3ed734be8ff7ee4b533c48201b623fd90229",
+      "used_in": [
+        "premusic_holdout_20261029"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\leberch-up-from-ash-slowed-reverb-616142.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\premusic_holdout_20261029\\leberch-up-from-ash-slowed-reverb-616142.mp3",
+      "sha256": "b5e97e85ef7d503dc2e8bd0f9b8854408b65d67ea118c470143367d758a9186c",
+      "used_in": [
+        "premusic_holdout_20261029"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\leberch-zeros-tension-612318.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\premusic_holdout_20261029\\leberch-zeros-tension-612318.mp3",
+      "sha256": "4461391fcaf0fe2922aa84f58dbbc0c9715be64be0619d609363514f12a7d080",
+      "used_in": [
+        "premusic_holdout_20261029"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\nastelbom-epic-piano-481664.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\premusic_holdout_20261029\\nastelbom-epic-piano-481664.mp3",
+      "sha256": "36633e46aa82b05cbb8213af50c82e850d029c0c147217429b85292faf0ca7ff",
+      "used_in": [
+        "premusic_holdout_20261029"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\nastelbom-happy-463427.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\fresh_audit_20261023\\nastelbom-happy-463427.mp3",
+      "sha256": "53e76c1132e7ad316796ebf6d6b9d6a47d805858b9b805541cd03442f498d4ca",
+      "used_in": [
+        "fresh_audit_20261023"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\nastelbom-happy-mood-463426.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\fresh_audit_20261023\\nastelbom-happy-mood-463426.mp3",
+      "sha256": "33b0ba2f480d1075202da63f9507fb926575060408961cc56141f528bb3c5d2d",
+      "used_in": [
+        "fresh_audit_20261023"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\nastelbom-house-463422.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\fresh_audit_20261023\\nastelbom-house-463422.mp3",
+      "sha256": "09f08610dfc81a379b1468b1a3bcaf26bec0af0bca656f686510c154f4e536d8",
+      "used_in": [
+        "fresh_audit_20261023"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\nastelbom-impressive-magnificent-film-437424.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\premusic_holdout_20261029\\nastelbom-impressive-magnificent-film-437424.mp3",
+      "sha256": "679adc04f34c39227c8d0c015058043cf72932946ee7eb58bd488a959c2b5a67",
+      "used_in": [
+        "premusic_holdout_20261029"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\nastelbom-inspirational-437406.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\fresh_audit_20261023\\nastelbom-inspirational-437406.mp3",
+      "sha256": "baad00617ccaf6aba6521dda5c44308629a439afac48f5ee8ced5a1271c0a999",
+      "used_in": [
+        "fresh_audit_20261023"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\nastelbom-inspirational-inspirational-music-473260.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\fresh_audit_20261023\\nastelbom-inspirational-inspirational-music-473260.mp3",
+      "sha256": "3d0f206a6eac160c2be42b4c4319e2bde615af8bbd59a6b7fcc0f8545d9f8b6a",
+      "used_in": [
+        "ai_labeled_diagnostic_20261024",
+        "fresh_audit_20261023"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\nastelbom-inspiring-456887.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\premusic_holdout_20261029\\nastelbom-inspiring-456887.mp3",
+      "sha256": "3bcc24cf5611e04a4b89f844a47b388fd4a4e572de94704ecb2a8824945a3db3",
+      "used_in": [
+        "premusic_holdout_20261029"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\nastelbom-instagram-reel-437298.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\premusic_holdout_20261029\\nastelbom-instagram-reel-437298.mp3",
+      "sha256": "2efe797639c5a8b1da756cf17cd3cd90c542cb066e3aacaebee8ca629bce3bf5",
+      "used_in": [
+        "premusic_holdout_20261029"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\nastelbom-instrumental-495889.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\premusic_holdout_20261029\\nastelbom-instrumental-495889.mp3",
+      "sha256": "7719f8f31f96c7dcf05c7ba8396010228ad0fc2efe0a400ee467a6d7c19be5f7",
+      "used_in": [
+        "premusic_holdout_20261029"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\nastelbom-intense-453507.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\premusic_holdout_20261029\\nastelbom-intense-453507.mp3",
+      "sha256": "285f5abe88e2d43f9401b112956f7720af7b56f79894bcc9b0a74444aed05d70",
+      "used_in": [
+        "premusic_holdout_20261029"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\nastelbom-kids-kids-happy-music-490163.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\premusic_holdout_20261029\\nastelbom-kids-kids-happy-music-490163.mp3",
+      "sha256": "48aff79a5573851223227bad022f4ac981afeedc992a44cf02f0f47e3d9235ed",
+      "used_in": [
+        "premusic_holdout_20261029"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\nastelbom-love-488313.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\fresh_audit_20261023\\nastelbom-love-488313.mp3",
+      "sha256": "a97bd3d88049d2172f6eb0fefdfbd954b051aeed7ebfab80c583b03a2638da50",
+      "used_in": [
+        "fresh_audit_20261023"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\nastelbom-middle-east-471479.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\fresh_audit_20261023\\nastelbom-middle-east-471479.mp3",
+      "sha256": "68e2da20bbf3d2da046d59bf7d781850b49141d626c32262b8b1d7b6b7d80a63",
+      "used_in": [
+        "fresh_audit_20261023"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\nastelbom-motivational-motivational-music-487709.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\premusic_holdout_20261029\\nastelbom-motivational-motivational-music-487709.mp3",
+      "sha256": "7c3cd22d3d79262cbe00d4db177ecd5aefc5fded69aee443556e7d331a08d9ff",
+      "used_in": [
+        "premusic_holdout_20261029"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\nastelbom-nature-444072.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\fresh_audit_20261023\\nastelbom-nature-444072.mp3",
+      "sha256": "fb90d8fd9531f9e4f145caea7ff556c81bdb34f23e49723dfaf357fac21485f9",
+      "used_in": [
+        "fresh_audit_20261023"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\nastelbom-news-501715.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\premusic_holdout_20261029\\nastelbom-news-501715.mp3",
+      "sha256": "acf2870e92b8878889ff9f46049a4e98f685c3e3533cf2692393965944ba62ad",
+      "used_in": [
+        "premusic_holdout_20261029"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\nastelbom-no-copyright-music-464358.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\premusic_holdout_20261029\\nastelbom-no-copyright-music-464358.mp3",
+      "sha256": "7b458a57321dea735e47722edefa59657f2f4a76688dde8709f2c7eb14ef3624",
+      "used_in": [
+        "premusic_holdout_20261029"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\nastelbom-no-copyright-music-485904.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\fresh_audit_20261023\\nastelbom-no-copyright-music-485904.mp3",
+      "sha256": "0abc290890ca03dca77942549adf752a3453912f4a0f157dac51b8a9cf202dde",
+      "used_in": [
+        "fresh_audit_20261023"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\nastelbom-no-copyright-music-602445.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\fresh_audit_20261023\\nastelbom-no-copyright-music-602445.mp3",
+      "sha256": "cc7bd60d739f7862919a0e311e26388e09e33ad4923857cce93a73eb629434a8",
+      "used_in": [
+        "fresh_audit_20261023"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\nastelbom-no-copyright-music-602456.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\fresh_audit_20261023\\nastelbom-no-copyright-music-602456.mp3",
+      "sha256": "07a901e623bef77c3a3108ca83f69b7c2dc2cd6dba9f65475c6bab6225f69060",
+      "used_in": [
+        "fresh_audit_20261023"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\nastelbom-no-copyright-music-617081.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\fresh_audit_20261023\\nastelbom-no-copyright-music-617081.mp3",
+      "sha256": "bdfd08ded6f61fe14974fdb3b3e46200b05e10d8809979f38ad7c7146f3a8d37",
+      "used_in": [
+        "fresh_audit_20261023"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\nastelbom-nostalgic-437414.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\premusic_holdout_20261029\\nastelbom-nostalgic-437414.mp3",
+      "sha256": "52db27256161e8750373557eb0b0391383a448ad906082240f215382f1aaa581",
+      "used_in": [
+        "premusic_holdout_20261029"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\nastelbom-nostalgic-464374.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\premusic_holdout_20261029\\nastelbom-nostalgic-464374.mp3",
+      "sha256": "868409b54b164357d61c27d3150b30d9668d28227a6583a45464153e36a71740",
+      "used_in": [
+        "premusic_holdout_20261029"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\nastelbom-orchestra-437427.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\premusic_holdout_20261029\\nastelbom-orchestra-437427.mp3",
+      "sha256": "e0ce7abcbaf192e53f08faeb3c95e69cf1ae772c12b97d07205cc77ad23399ea",
+      "used_in": [
+        "premusic_holdout_20261029"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\nastelbom-podcast-interview-intro-music-513430.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\fresh_audit_20261023\\nastelbom-podcast-interview-intro-music-513430.mp3",
+      "sha256": "375439f1bfd4c4cf48ad39c06650c001515b88caaf95bd1a2c7f02bd264fd4aa",
+      "used_in": [
+        "fresh_audit_20261023"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\nastelbom-podcast-podcast-music-617077 (1).mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\fresh_audit_20261023\\nastelbom-podcast-podcast-music-617077 (1).mp3",
+      "sha256": "3889561efd3896897f83f24413592da12f3e1c73722d1f8d8d02bfbe431f6d24",
+      "used_in": [
+        "fresh_audit_20261023"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\nastelbom-relax-463106.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\premusic_holdout_20261029\\nastelbom-relax-463106.mp3",
+      "sha256": "e0856483622d5cf2fed737d4c5ca60b02ba6ea2cf794b84801a4b273983070a6",
+      "used_in": [
+        "premusic_holdout_20261029"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\nastelbom-rock-music-439492.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\fresh_audit_20261023\\nastelbom-rock-music-439492.mp3",
+      "sha256": "9c0fe4de78b56b9e217717c5ad40df30e2218652ffc0bc58babca5827e63fc86",
+      "used_in": [
+        "fresh_audit_20261023"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\nastelbom-romantic-436840.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\premusic_holdout_20261029\\nastelbom-romantic-436840.mp3",
+      "sha256": "2837d04919f52d81b42b4c4b18554c7038074694b73309179ffde43ae7b43ac5",
+      "used_in": [
+        "premusic_holdout_20261029"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\nastelbom-royalty-free-music-501720.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\premusic_holdout_20261029\\nastelbom-royalty-free-music-501720.mp3",
+      "sha256": "42f55f51832d6409be91fe093ce10bd139b1d31ca2769125b888c74c2a4335f9",
+      "used_in": [
+        "premusic_holdout_20261029"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\nastelbom-sadness-436862.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\fresh_audit_20261023\\nastelbom-sadness-436862.mp3",
+      "sha256": "cda1100df331e96ccee95c64cc2e01df8a19cb995670ffa804983765230d20a2",
+      "used_in": [
+        "fresh_audit_20261023"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\nastelbom-soft-corporate-488309.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\premusic_holdout_20261029\\nastelbom-soft-corporate-488309.mp3",
+      "sha256": "ffac6363e3f05e5e3dd398025fe73ff07ec2db3abdd8785f7f9034393f2345c4",
+      "used_in": [
+        "premusic_holdout_20261029"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\nastelbom-soft-music-495878.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\premusic_holdout_20261029\\nastelbom-soft-music-495878.mp3",
+      "sha256": "080d2e3d3a9a39d380bd4836e361d98b5dd80b8e4bdc3570df623ce03bd04cda",
+      "used_in": [
+        "premusic_holdout_20261029"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\nastelbom-spanish-444603.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\premusic_holdout_20261029\\nastelbom-spanish-444603.mp3",
+      "sha256": "c722e9f236e10dae652b417b835f25b1ea9c15b26cbb11d5939d7fa8da5c278f",
+      "used_in": [
+        "premusic_holdout_20261029"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\nastelbom-sport-487714.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\premusic_holdout_20261029\\nastelbom-sport-487714.mp3",
+      "sha256": "498aa4f33f25d761f10133fb72e034ace8798d2234f7cf75c805027e3a94e011",
+      "used_in": [
+        "premusic_holdout_20261029"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\nastelbom-suspense-487702.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\premusic_holdout_20261029\\nastelbom-suspense-487702.mp3",
+      "sha256": "f85cca3deb38fede4e3ecbf89524a33933979683fbcffce0849c66ebc4bb7c21",
+      "used_in": [
+        "premusic_holdout_20261029"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\nastelbom-tension-tension-music-602460.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\premusic_holdout_20261029\\nastelbom-tension-tension-music-602460.mp3",
+      "sha256": "57d48afbdca693866e83b35e24aee7181e5711d69d7f5507ec72c935da4b0dbe",
+      "used_in": [
+        "premusic_holdout_20261029"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\nastelbom-thriller-451589.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\premusic_holdout_20261029\\nastelbom-thriller-451589.mp3",
+      "sha256": "2be9b3395940ddc1be56b73f52ad60b5b0b682f855eb362e1c185ba7aa075432",
+      "used_in": [
+        "premusic_holdout_20261029"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\nastelbom-thriller-466249.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\ai_labeled_diagnostic_20261024\\nastelbom-thriller-466249.mp3",
+      "sha256": "755b9fdf189b59524e70276acfbe1a40b42def1e419c6ac3a7ccfcf5e2cd2d60",
+      "used_in": [
+        "ai_labeled_diagnostic_20261024"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\nastelbom-trailer-cinematic-488314.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\premusic_holdout_20261029\\nastelbom-trailer-cinematic-488314.mp3",
+      "sha256": "c8e2b768758abd87eae94e686e37380d3e2492fe07ff680f3f68a46714ba5510",
+      "used_in": [
+        "premusic_holdout_20261029"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\nastelbom-travel-437814.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\fresh_audit_20261023\\nastelbom-travel-437814.mp3",
+      "sha256": "6c154551f3f56ffbb3af44ceb0051f97e6a8aff8e0de5c4bde4df6f31feef627",
+      "used_in": [
+        "fresh_audit_20261023"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\nastelbom-tropical-437320.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\premusic_holdout_20261029\\nastelbom-tropical-437320.mp3",
+      "sha256": "1d673ac8940f08b33dffe10da98225ceb2dabcbfcaf0cd5f88a2623449834ff5",
+      "used_in": [
+        "premusic_holdout_20261029"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\nastelbom-upbeat-495886.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\premusic_holdout_20261029\\nastelbom-upbeat-495886.mp3",
+      "sha256": "c11f1464066d8a7bdc20eff0ef86f66f1730e091c75823f14ea777d8c4d5b59d",
+      "used_in": [
+        "premusic_holdout_20261029"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\nastelbom-upbeat-rock-507935.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\fresh_audit_20261023\\nastelbom-upbeat-rock-507935.mp3",
+      "sha256": "86e186ad081c68029d29891505a6c19c65dde7ed5aca12b6c5524e07f81911e9",
+      "used_in": [
+        "fresh_audit_20261023"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\nastelbom-upbeat-upbeat-2-507939.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\fresh_audit_20261023\\nastelbom-upbeat-upbeat-2-507939.mp3",
+      "sha256": "dcfa4921aab91c88cde34943ecaf28a3c533ede901799b219c8da00e5255a2c7",
+      "used_in": [
+        "fresh_audit_20261023"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\nastelbom-upbeat-upbeat-background-2-513434.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\premusic_holdout_20261029\\nastelbom-upbeat-upbeat-background-2-513434.mp3",
+      "sha256": "909fc0cab50fef66529a4e85ff801d7a0c49497a7507d371a1b0e89d21ea4b83",
+      "used_in": [
+        "premusic_holdout_20261029"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\nastelbom-upbeat-upbeat-corporate-486989.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\premusic_holdout_20261029\\nastelbom-upbeat-upbeat-corporate-486989.mp3",
+      "sha256": "4a8f42274bda23e11f52789c8712c68004cbf34b4e82b73aae49b0ce4f915fa6",
+      "used_in": [
+        "premusic_holdout_20261029"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\nastelbom-upbeat-upbeat-music-485890.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\fresh_audit_20261023\\nastelbom-upbeat-upbeat-music-485890.mp3",
+      "sha256": "e27cc20aed164e49472c023a38e269aa7eb5c95282997b4246d801e396be724b",
+      "used_in": [
+        "fresh_audit_20261023"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\nastelbom-upbeat-upbeat-music-486998.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\premusic_holdout_20261029\\nastelbom-upbeat-upbeat-music-486998.mp3",
+      "sha256": "a89e029d01bc42fe583cb31bf5a984f32d1213fd24e6b39b2397fb46c194e7a4",
+      "used_in": [
+        "premusic_holdout_20261029"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\nastelbom-upbeat-upbeat-music-507944.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\fresh_audit_20261023\\nastelbom-upbeat-upbeat-music-507944.mp3",
+      "sha256": "1380a1727f37cb26ac2aff839f1969d3a46b0ca4ef26fa88afb639b548ecb79b",
+      "used_in": [
+        "fresh_audit_20261023"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\nastelbom-uplifting-uplifting-music-464362.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\fresh_audit_20261023\\nastelbom-uplifting-uplifting-music-464362.mp3",
+      "sha256": "5978adb571494533151372d241dbca8724adcd9e0536f1afec3f6d2cef779ff0",
+      "used_in": [
+        "fresh_audit_20261023"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\nastelbom-vibe-437341.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\premusic_holdout_20261029\\nastelbom-vibe-437341.mp3",
+      "sha256": "51258b48a4d696d17dd45220a0c83914a60bd684791b9bf4dd0021579860ce34",
+      "used_in": [
+        "premusic_holdout_20261029"
+      ]
+    },
+    {
+      "original_path": "C:\\블록체인\\premusic\\nastelbom-violin-299793.mp3",
+      "new_path": "C:\\블록체인\\premusic_used\\fresh_audit_20261023\\nastelbom-violin-299793.mp3",
+      "sha256": "4ebf9b5676a16251a5d8da13f9722827bd087c3a8ccba98feb23bce9c5a718c9",
+      "used_in": [
+        "fresh_audit_20261023"
+      ]
+    }
+  ],
+  "exact_duplicate_deletions": [
+    {
+      "deleted_path": "C:\\블록체인\\premusic\\adiiswanto-cvilni-violin-302859.mp3",
+      "sha256": "70ddd1629dc73c4cc7329c37ceeb4a44c7dea61d3d14dacf1b3b537ee021a2ab",
+      "identical_copy_retained_at": "C:\\블록체인\\original_music\\adiiswanto-cvilni-violin-302859 (1).mp3"
+    },
+    {
+      "deleted_path": "C:\\블록체인\\premusic\\alex-morgan-event-grand-opening-fanfare-578493.mp3",
+      "sha256": "ff13aeeb679824c59c874af390d817bd22d1fcadc0a02816d3f34f298c28f670",
+      "identical_copy_retained_at": "C:\\블록체인\\original_music\\alex-morgan-event-grand-opening-fanfare-578493 (1).mp3"
+    },
+    {
+      "deleted_path": "C:\\블록체인\\premusic\\alex-morgan-halloween-horror-dark-ritual-music-587400.mp3",
+      "sha256": "0cde265990883d653ff82455640a7242355dd39ee1ce4804b30a81c19991487b",
+      "identical_copy_retained_at": "C:\\블록체인\\original_music\\alex-morgan-halloween-horror-dark-ritual-music-587400 (1).mp3"
+    },
+    {
+      "deleted_path": "C:\\블록체인\\premusic\\alexgrohl-no-copyright-music-bounce-on-it-184234.mp3",
+      "sha256": "3bce7508d30d96e95a4cf9624b498eaac6dfe67cb2c685bbf3e3f7882b31eec7",
+      "identical_copy_retained_at": "C:\\블록체인\\original_music\\alexgrohl-no-copyright-music-bounce-on-it-184234 (1).mp3"
+    },
+    {
+      "deleted_path": "C:\\블록체인\\premusic\\andriih-memes-meme-sound-effects-613969.mp3",
+      "sha256": "9803bb7313a33fb79747aded0c5dec67059834c37f125a5647e78985fa1cdf40",
+      "identical_copy_retained_at": "C:\\블록체인\\original_music\\andriih-memes-meme-sound-effects-613969 (1).mp3"
+    },
+    {
+      "deleted_path": "C:\\블록체인\\premusic\\apalonbeats-finance-money-trading-investment-597086.mp3",
+      "sha256": "f45070f4cc6a8ed625efd218b1c5890d24c53e40372350079eed8dabc3679c90",
+      "identical_copy_retained_at": "C:\\블록체인\\original_music\\apalonbeats-finance-money-trading-investment-597086 (1).mp3"
+    },
+    {
+      "deleted_path": "C:\\블록체인\\premusic\\atlasaudio-autumn-621536.mp3",
+      "sha256": "97fc11c8bd940bf7ce612ea6175a97747ca13daf1c0a383f397c4a75a98c01c1",
+      "identical_copy_retained_at": "C:\\블록체인\\original_music\\atlasaudio-autumn-621536 (1).mp3"
+    },
+    {
+      "deleted_path": "C:\\블록체인\\premusic\\atlasaudio-autumn-piano-621534.mp3",
+      "sha256": "acc0e5f70508d3044bbb5d8b7058167ab42c68bb192be222620dbd6a3e48f0e8",
+      "identical_copy_retained_at": "C:\\블록체인\\original_music\\atlasaudio-autumn-piano-621534 (1).mp3"
+    },
+    {
+      "deleted_path": "C:\\블록체인\\premusic\\atlasaudio-black-friday-621539.mp3",
+      "sha256": "084e021bb9a12d826535f6e88deffef49896b40a71c5240cc6c0deaa55bda2de",
+      "identical_copy_retained_at": "C:\\블록체인\\original_music\\atlasaudio-black-friday-621539 (1).mp3"
+    },
+    {
+      "deleted_path": "C:\\블록체인\\premusic\\atlasaudio-focus-621569.mp3",
+      "sha256": "f2097517d1555da0cefa30b315460dec93c3b5b90a4ec5ef06800d7e2e25eacf",
+      "identical_copy_retained_at": "C:\\블록체인\\original_music\\atlasaudio-focus-621569 (1).mp3"
+    },
+    {
+      "deleted_path": "C:\\블록체인\\premusic\\atlasaudio-holiday-shopping-621575.mp3",
+      "sha256": "41b4fc9971f2a9f43ca51d6f7a39f531febecd32929a64fc166325f672ba1961",
+      "identical_copy_retained_at": "C:\\블록체인\\original_music\\atlasaudio-holiday-shopping-621575 (1).mp3"
+    },
+    {
+      "deleted_path": "C:\\블록체인\\premusic\\atlasaudio-inspirational-nature-621577.mp3",
+      "sha256": "adf647232b96ff6ce7c74158a2ca31deef9ef0f062478868436afe6611844d59",
+      "identical_copy_retained_at": "C:\\블록체인\\original_music\\atlasaudio-inspirational-nature-621577 (1).mp3"
+    },
+    {
+      "deleted_path": "C:\\블록체인\\premusic\\atlasaudio-relaxing-jazz-621593.mp3",
+      "sha256": "a2b4ed47d8bab52acd3c5ae532b6302ce23d7e999199d9c7ced0b6e6d350ce39",
+      "identical_copy_retained_at": "C:\\블록체인\\original_music\\atlasaudio-jazz-background-621578.mp3"
+    },
+    {
+      "deleted_path": "C:\\블록체인\\premusic\\avelinemusic-ambient-soft-615314.mp3",
+      "sha256": "b6a4a8c5b43047bcf9aebd1be439e12f66378325c4fd1c3b1804bc676c3a3563",
+      "identical_copy_retained_at": "C:\\블록체인\\original_music\\avelinemusic-ambient-soft-615314 (1).mp3"
+    },
+    {
+      "deleted_path": "C:\\블록체인\\premusic\\bhavbhaktioriginal-hanuman-sankat-nashak-467046.mp3",
+      "sha256": "2404c7eccb266c88c0d10ea79b8fc052eb1aeebfde97dcae1a7a713a8cdd2997",
+      "identical_copy_retained_at": "C:\\블록체인\\original_music\\bhavbhaktioriginal-hanuman-sankat-nashak-467046 (1).mp3"
+    },
+    {
+      "deleted_path": "C:\\블록체인\\premusic\\bombinsound-drum-energetic-gotta-go-fast-616776.mp3",
+      "sha256": "d69cc14f140ce359093c990c6ec551ecba917b861883fc2de76851a2677fbb45",
+      "identical_copy_retained_at": "C:\\블록체인\\original_music\\bombinsound-drum-energetic-gotta-go-fast-616776 (1).mp3"
+    },
+    {
+      "deleted_path": "C:\\블록체인\\premusic\\caldena-birthday-upbeat-613941.mp3",
+      "sha256": "cd2981b9e9485d7cd0f57edb6f843c220a6a789e9aee79f8022a0ceab2814b1b",
+      "identical_copy_retained_at": "C:\\블록체인\\original_music\\caldena-birthday-upbeat-613941 (1).mp3"
+    },
+    {
+      "deleted_path": "C:\\블록체인\\premusic\\dod2-pupsies-misery-589685.mp3",
+      "sha256": "99335d58e98023bca00291bc9c9bd5d4e636b70d1015353b959a4a38bd9a4ea7",
+      "identical_copy_retained_at": "C:\\블록체인\\original_music\\dod2-pupsies-misery-589685 (1).mp3"
+    },
+    {
+      "deleted_path": "C:\\블록체인\\premusic\\echoes_of_lumen-krishna-flute-596320.mp3",
+      "sha256": "84542b63ab445c16688dfa68f594a09c21e71cf820020b78db589a9a4e080100",
+      "identical_copy_retained_at": "C:\\블록체인\\original_music\\echoes_of_lumen-krishna-flute-596320 (1).mp3"
+    },
+    {
+      "deleted_path": "C:\\블록체인\\premusic\\gr0za-rap-rap-beat-beats-music-471184.mp3",
+      "sha256": "0d3b7bf07487d7dad4f275968e01e94dcb6d5d18f6f4fd6b76cf79c91fd28da1",
+      "identical_copy_retained_at": "C:\\블록체인\\original_music\\gr0za-rap-rap-beat-beats-music-471184 (1).mp3"
+    },
+    {
+      "deleted_path": "C:\\블록체인\\premusic\\iepmusic-fashion-fashion-music-615178.mp3",
+      "sha256": "b6c2251b9e2f4e9965947dee6d3927522c64372d9be2879eb8b6705ee5f4aee7",
+      "identical_copy_retained_at": "C:\\블록체인\\original_music\\iepmusic-fashion-fashion-music-615178 (1).mp3"
+    },
+    {
+      "deleted_path": "C:\\블록체인\\premusic\\ikoliks_aj-upbeat-upbeat-music-614563 (2).mp3",
+      "sha256": "94808af2dd814b5680284f9877573af5a0bdb02a17fae8f3a201b7761140b922",
+      "identical_copy_retained_at": "C:\\블록체인\\original_music\\ikoliks_aj-upbeat-upbeat-music-614563 (1).mp3"
+    },
+    {
+      "deleted_path": "C:\\블록체인\\premusic\\ikoliks_aj-upbeat-upbeat-music-614563.mp3",
+      "sha256": "94808af2dd814b5680284f9877573af5a0bdb02a17fae8f3a201b7761140b922",
+      "identical_copy_retained_at": "C:\\블록체인\\original_music\\ikoliks_aj-upbeat-upbeat-music-614563 (1).mp3"
+    },
+    {
+      "deleted_path": "C:\\블록체인\\premusic\\jonasblakewood-energetic-sports-energetic-sports-music-382682.mp3",
+      "sha256": "0b275c06ca2b64886b9998766e2fc5d15cf2c97a5cce2172295f8ad3d5f6554b",
+      "identical_copy_retained_at": "C:\\블록체인\\original_music\\jonasblakewood-energetic-sports-energetic-sports-music-382682 (1).mp3"
+    },
+    {
+      "deleted_path": "C:\\블록체인\\premusic\\jonasblakewood-fast-beat-fast-beat-music-305513.mp3",
+      "sha256": "d6ae12adf22cd7ed648b28c3c83e80ca13d10683dba3a56f1162934225578453",
+      "identical_copy_retained_at": "C:\\블록체인\\original_music\\jonasblakewood-fast-beat-fast-beat-music-305513 (1).mp3"
+    },
+    {
+      "deleted_path": "C:\\블록체인\\premusic\\jonasblakewood-indian-spiritual-indian-spiritual-music-335332.mp3",
+      "sha256": "ec0cdebba037848e25b604552094d3875d1ee732d68466a2117ca8ee84e4a380",
+      "identical_copy_retained_at": "C:\\블록체인\\original_music\\jonasblakewood-indian-spiritual-indian-spiritual-music-335332 (1).mp3"
+    },
+    {
+      "deleted_path": "C:\\블록체인\\premusic\\kiravale-instrumental-beats-593684.mp3",
+      "sha256": "d6fe69023234087d5b7b982f56cf8b97ef24ca8faaf4238a4a7f58b0876c3b0f",
+      "identical_copy_retained_at": "C:\\블록체인\\original_music\\kiravale-instrumental-beats-593684 (1).mp3"
+    },
+    {
+      "deleted_path": "C:\\블록체인\\premusic\\kulakovka-corporate-background-609167.mp3",
+      "sha256": "56d35d3f8f17a451117244dc074dbf28af8ab5adcf3ac2cd4417816b7d50d04b",
+      "identical_copy_retained_at": "C:\\블록체인\\original_music\\kulakovka-corporate-background-609167 (1).mp3"
+    },
+    {
+      "deleted_path": "C:\\블록체인\\premusic\\kulakovka-dream-big-618589.mp3",
+      "sha256": "3a4fe9013d16294d041e182ae1b899eb99c38a050a4930361f71bed4c67f0ce4",
+      "identical_copy_retained_at": "C:\\블록체인\\original_music\\kulakovka-dream-big-618589 (1).mp3"
+    },
+    {
+      "deleted_path": "C:\\블록체인\\premusic\\kulakovka-rainy-day-lofi-614883.mp3",
+      "sha256": "9e293cbd46ffdfe96b527706f2c8ddc8dfbab91b19707aeb84f58255177363a6",
+      "identical_copy_retained_at": "C:\\블록체인\\original_music\\kulakovka-rainy-day-lofi-614883 (1).mp3"
+    },
+    {
+      "deleted_path": "C:\\블록체인\\premusic\\leberch-ambient-horror-518292.mp3",
+      "sha256": "4ea22de6db0ef355551ea53671bef98d524d535f5a2671464faae61a13da123f",
+      "identical_copy_retained_at": "C:\\블록체인\\original_music\\leberch-ambient-horror-518292 (1).mp3"
+    },
+    {
+      "deleted_path": "C:\\블록체인\\premusic\\leberch-crime-piano-610572.mp3",
+      "sha256": "287b433d6987e846db8a0b97ccd8e4200484f3c9505db3e088ce82eca36a7d3e",
+      "identical_copy_retained_at": "C:\\블록체인\\original_music\\leberch-crime-piano-610572 (1).mp3"
+    },
+    {
+      "deleted_path": "C:\\블록체인\\premusic\\leberch-emotional-piano-595795.mp3",
+      "sha256": "ef13e356a71dd1d91cc61e2e1003321feeaa3e82b41f2ad1d194bb5895f74e96",
+      "identical_copy_retained_at": "C:\\블록체인\\original_music\\leberch-emotional-piano-595795 (1).mp3"
+    },
+    {
+      "deleted_path": "C:\\블록체인\\premusic\\leberch-from-the-mountain-documentary-storytelling-614348.mp3",
+      "sha256": "926ba3439ee61cc04dc83700767d63dc8c62027b150f88f771d020ca852b985e",
+      "identical_copy_retained_at": "C:\\블록체인\\original_music\\leberch-from-the-mountain-documentary-storytelling-614348 (1).mp3"
+    },
+    {
+      "deleted_path": "C:\\블록체인\\premusic\\leberch-motions-to-dark-mystery-611753.mp3",
+      "sha256": "4323682e14fe2535584aa4a4f6c87d8da346807928dcdfb6b7e925aeab31397f",
+      "identical_copy_retained_at": "C:\\블록체인\\original_music\\leberch-motions-to-dark-mystery-611753 (1).mp3"
+    },
+    {
+      "deleted_path": "C:\\블록체인\\premusic\\leberch-mysterious-585275.mp3",
+      "sha256": "1a5b3f74bd505e00ad3342ff62fe8e1219d30a93dc4e23eed9885c08bb8c37a0",
+      "identical_copy_retained_at": "C:\\블록체인\\original_music\\leberch-mysterious-585275 (1).mp3"
+    },
+    {
+      "deleted_path": "C:\\블록체인\\premusic\\leberch-sad-piano-578733.mp3",
+      "sha256": "88900d24818c72924cf769a62398daa49995f70b9d3b1e533b7db765647fb02b",
+      "identical_copy_retained_at": "C:\\블록체인\\original_music\\leberch-sad-piano-578733 (1).mp3"
+    },
+    {
+      "deleted_path": "C:\\블록체인\\premusic\\lnplusmusic-luxury-luxury-music-607795 (2).mp3",
+      "sha256": "60b2e9d71a390b3ae3858f8329f9b33e7a2571545b8a44f0b3525b2b2cdaf4f0",
+      "identical_copy_retained_at": "C:\\블록체인\\original_music\\lnplusmusic-luxury-luxury-music-607795 (1).mp3"
+    },
+    {
+      "deleted_path": "C:\\블록체인\\premusic\\lnplusmusic-luxury-luxury-music-607795.mp3",
+      "sha256": "60b2e9d71a390b3ae3858f8329f9b33e7a2571545b8a44f0b3525b2b2cdaf4f0",
+      "identical_copy_retained_at": "C:\\블록체인\\original_music\\lnplusmusic-luxury-luxury-music-607795 (1).mp3"
+    },
+    {
+      "deleted_path": "C:\\블록체인\\premusic\\maksymmalko-indian-indian-music-585642 (1).mp3",
+      "sha256": "276f2037f9ba2e3f70e9862beef45748de502ad08c19f177abb87717385710d8",
+      "identical_copy_retained_at": "C:\\블록체인\\original_music\\maksymmalko-indian-indian-music-585642.mp3"
+    },
+    {
+      "deleted_path": "C:\\블록체인\\premusic\\maksymmalko-indian-indian-music-585642.mp3",
+      "sha256": "276f2037f9ba2e3f70e9862beef45748de502ad08c19f177abb87717385710d8",
+      "identical_copy_retained_at": "C:\\블록체인\\original_music\\maksymmalko-indian-indian-music-585642.mp3"
+    },
+    {
+      "deleted_path": "C:\\블록체인\\premusic\\marlowemusic-calm-piano-603163.mp3",
+      "sha256": "3cf2a28db8c8296e8e820207ddf2da9ed75cf6335a1954a31b1e636cc27ce5aa",
+      "identical_copy_retained_at": "C:\\블록체인\\original_music\\marlowemusic-calm-piano-603163 (1).mp3"
+    },
+    {
+      "deleted_path": "C:\\블록체인\\premusic\\mondamusic-guitar-guitar-music-597220.mp3",
+      "sha256": "2d2bb0ed9144a64f4880d6cfa6df7c5505d4899f14ac3dc2cd8030dc8e71183f",
+      "identical_copy_retained_at": "C:\\블록체인\\original_music\\mondamusic-guitar-guitar-music-597220 (1).mp3"
+    },
+    {
+      "deleted_path": "C:\\블록체인\\premusic\\mondamusic-kids-kids-happy-music-597193.mp3",
+      "sha256": "dc382c4e34e29e2f5e40d65784d42b900843851f35cc6b2759a98bb743401a8f",
+      "identical_copy_retained_at": "C:\\블록체인\\original_music\\mondamusic-kids-kids-happy-music-597193 (1).mp3"
+    },
+    {
+      "deleted_path": "C:\\블록체인\\premusic\\mondamusic-no-copyright-music-2-597200.mp3",
+      "sha256": "715da8616faad5bcc66603a71bd8ac662c55323281b8d017cedb791b3982f1ad",
+      "identical_copy_retained_at": "C:\\블록체인\\original_music\\mondamusic-no-copyright-music-2-597200.mp3"
+    },
+    {
+      "deleted_path": "C:\\블록체인\\premusic\\nastelbom-adventure-adventure-music-617078 (2).mp3",
+      "sha256": "28d2051d0a839a4c55a6f5dd37fd920ca988cbc03afc99271b1013ec76b2915f",
+      "identical_copy_retained_at": "C:\\블록체인\\original_music\\nastelbom-adventure-adventure-music-617078 (1).mp3"
+    },
+    {
+      "deleted_path": "C:\\블록체인\\premusic\\nastelbom-adventure-adventure-music-617078 (3).mp3",
+      "sha256": "28d2051d0a839a4c55a6f5dd37fd920ca988cbc03afc99271b1013ec76b2915f",
+      "identical_copy_retained_at": "C:\\블록체인\\original_music\\nastelbom-adventure-adventure-music-617078 (1).mp3"
+    },
+    {
+      "deleted_path": "C:\\블록체인\\premusic\\nastelbom-adventure-adventure-music-617078.mp3",
+      "sha256": "28d2051d0a839a4c55a6f5dd37fd920ca988cbc03afc99271b1013ec76b2915f",
+      "identical_copy_retained_at": "C:\\블록체인\\original_music\\nastelbom-adventure-adventure-music-617078 (1).mp3"
+    },
+    {
+      "deleted_path": "C:\\블록체인\\premusic\\nastelbom-children-children-music-513415.mp3",
+      "sha256": "a01c4a776e34597d06ef829ec31487283beea18faa8651290f35373302bacb28",
+      "identical_copy_retained_at": "C:\\블록체인\\original_music\\nastelbom-children-children-music-513415 (1).mp3"
+    },
+    {
+      "deleted_path": "C:\\블록체인\\premusic\\nastelbom-epic-intro-487717.mp3",
+      "sha256": "0ddd5dc4b18401da8e49b9487756669ac606d61a82284f8baa3e69639af9a0ea",
+      "identical_copy_retained_at": "C:\\블록체인\\original_music\\nastelbom-cinematic-music-cinematic-music-513437.mp3"
+    },
+    {
+      "deleted_path": "C:\\블록체인\\premusic\\nastelbom-no-copyright-music-617081 (1).mp3",
+      "sha256": "bdfd08ded6f61fe14974fdb3b3e46200b05e10d8809979f38ad7c7146f3a8d37",
+      "identical_copy_retained_at": "C:\\블록체인\\premusic_used\\fresh_audit_20261023\\nastelbom-no-copyright-music-617081.mp3"
+    },
+    {
+      "deleted_path": "C:\\블록체인\\premusic\\nastelbom-podcast-podcast-music-617077.mp3",
+      "sha256": "3889561efd3896897f83f24413592da12f3e1c73722d1f8d8d02bfbe431f6d24",
+      "identical_copy_retained_at": "C:\\블록체인\\premusic_used\\fresh_audit_20261023\\nastelbom-podcast-podcast-music-617077 (1).mp3"
+    },
+    {
+      "deleted_path": "C:\\블록체인\\premusic\\nastelbom-upbeat-rock-507933 (1).mp3",
+      "sha256": "f91563c283316596c7768650b596541ecc2c74b80403932873406e96c821d1e2",
+      "identical_copy_retained_at": "C:\\블록체인\\premusic\\nastelbom-upbeat-rock-507933.mp3"
+    },
+    {
+      "deleted_path": "C:\\블록체인\\premusic\\no-copyright-music-2026-emotional-cello-611670.mp3",
+      "sha256": "9ba1394bbf69eee3e0b9fb477905dd66ce9e6ac278ed2b7da13367c804a730c0",
+      "identical_copy_retained_at": "C:\\블록체인\\original_music\\no-copyright-music-2026-emotional-cello-611670 (1).mp3"
+    },
+    {
+      "deleted_path": "C:\\블록체인\\premusic\\paulyudin-advertising-advertising-music-574007.mp3",
+      "sha256": "98c6e43bb916115c973d1fb3195a1c0730993334f891d9eba7ee4351036eeda1",
+      "identical_copy_retained_at": "C:\\블록체인\\original_music\\paulyudin-advertising-advertising-music-574007 (1).mp3"
+    },
+    {
+      "deleted_path": "C:\\블록체인\\premusic\\rahulsapkal-hindi-love-rap-song-romantic-trap-hip-hop-duet-536831.mp3",
+      "sha256": "bed98e9746a085e688542c720711c4b691d5d3a233242820162735f1b5813540",
+      "identical_copy_retained_at": "C:\\블록체인\\original_music\\rahulsapkal-hindi-love-rap-song-romantic-trap-hip-hop-duet-536831 (1).mp3"
+    },
+    {
+      "deleted_path": "C:\\블록체인\\premusic\\sigmamusicart-sad-documentary-background-music-365827.mp3",
+      "sha256": "527f23b2147ae5e85ead729cf426e061c35e68ebee600be0ac34dbb6e75e3f29",
+      "identical_copy_retained_at": "C:\\블록체인\\original_music\\sigmamusicart-sad-documentary-background-music-365827 (1).mp3"
+    },
+    {
+      "deleted_path": "C:\\블록체인\\premusic\\starostin-educational-educational-music-569134.mp3",
+      "sha256": "fa4f704bb0683545c2ab42e5bb9aad1518e2c37b637c67b0c2d9be4c251a28c8",
+      "identical_copy_retained_at": "C:\\블록체인\\original_music\\starostin-educational-educational-music-569134.mp3"
+    },
+    {
+      "deleted_path": "C:\\블록체인\\premusic\\sub_clair-afrobeat-622492.mp3",
+      "sha256": "829fcb7f612a58983abd33b8856ffca461f7fd92af870dda3c952349a78ad2c5",
+      "identical_copy_retained_at": "C:\\블록체인\\original_music\\sub_clair-afrobeat-622492 (1).mp3"
+    },
+    {
+      "deleted_path": "C:\\블록체인\\premusic\\sub_clair-dark-synthwave-622537.mp3",
+      "sha256": "23807da496ae4efb245ba2caef7c2e50560137419c21c6ae6a50546e2c192912",
+      "identical_copy_retained_at": "C:\\블록체인\\original_music\\sub_clair-dark-synthwave-622537 (1).mp3"
+    },
+    {
+      "deleted_path": "C:\\블록체인\\premusic\\sub_clair-dark-synthwave-instrumental-622540.mp3",
+      "sha256": "6f0457335051d562c3c3c6ea6821ae8626ebdfb6c6f590cde77f8beffde3a4ea",
+      "identical_copy_retained_at": "C:\\블록체인\\original_music\\sub_clair-dark-synthwave-instrumental-622540 (1).mp3"
+    },
+    {
+      "deleted_path": "C:\\블록체인\\premusic\\sub_clair-hard-techno-622404.mp3",
+      "sha256": "f0f45a86bf40a2b2c1e5237ccae0e0a346f8a2e2efa3c76be6fefaf784f28ae2",
+      "identical_copy_retained_at": "C:\\블록체인\\original_music\\sub_clair-hard-techno-622404 (1).mp3"
+    },
+    {
+      "deleted_path": "C:\\블록체인\\premusic\\sub_clair-suspense-tension-622546.mp3",
+      "sha256": "d335554b92ef234770d72fc6025692cb93b1e998316f4742b80e569888805631",
+      "identical_copy_retained_at": "C:\\블록체인\\original_music\\sub_clair-suspense-tension-622546 (1).mp3"
+    },
+    {
+      "deleted_path": "C:\\블록체인\\premusic\\tatamusic-upbeat-upbeat-music-599006.mp3",
+      "sha256": "200d7664e6b4f012722b2ffbc15816a94f4a1529c58694c4072e1629b3ef4458",
+      "identical_copy_retained_at": "C:\\블록체인\\original_music\\tatamusic-upbeat-upbeat-music-599006 (1).mp3"
+    },
+    {
+      "deleted_path": "C:\\블록체인\\premusic\\the_mountain-cinematic-489998.mp3",
+      "sha256": "063ba0812614c25c1ede437e92a12ce33c068e822f69d99129aeb890c47ac08a",
+      "identical_copy_retained_at": "C:\\블록체인\\original_music\\the_mountain-cinematic-489998 (1).mp3"
+    },
+    {
+      "deleted_path": "C:\\블록체인\\premusic\\the_mountain-dramatic-610133.mp3",
+      "sha256": "931e37dc5a45abd8a90d9fbdc50eec0832e42e71971cc306f94854470c32efd7",
+      "identical_copy_retained_at": "C:\\블록체인\\original_music\\the_mountain-dramatic-610133 (1).mp3"
+    },
+    {
+      "deleted_path": "C:\\블록체인\\premusic\\the_mountain-festive-season-622008 (2).mp3",
+      "sha256": "4cf33d3a098c58c12e431a30bed41cf2cdb150ff8d1887546c4f6e2c8bd39a8d",
+      "identical_copy_retained_at": "C:\\블록체인\\original_music\\the_mountain-festive-season-622008 (1).mp3"
+    },
+    {
+      "deleted_path": "C:\\블록체인\\premusic\\the_mountain-festive-season-622008.mp3",
+      "sha256": "4cf33d3a098c58c12e431a30bed41cf2cdb150ff8d1887546c4f6e2c8bd39a8d",
+      "identical_copy_retained_at": "C:\\블록체인\\original_music\\the_mountain-festive-season-622008 (1).mp3"
+    },
+    {
+      "deleted_path": "C:\\블록체인\\premusic\\u_wf7ekyr6qb-ambiente-minecraft-455107.mp3",
+      "sha256": "61204df17a3a6ceba7da65daf5d059c957c2f4403e4486cd636a5a85d9bd67b1",
+      "identical_copy_retained_at": "C:\\블록체인\\original_music\\u_wf7ekyr6qb-ambiente-minecraft-455107 (1).mp3"
+    },
+    {
+      "deleted_path": "C:\\블록체인\\premusic\\vaitsez-rap-rap-beat-beats-music-486586.mp3",
+      "sha256": "63064504f15f9ac3c27fa74e9f4eeda94de33e715210335a0c024afe9d907527",
+      "identical_copy_retained_at": "C:\\블록체인\\original_music\\vaitsez-rap-rap-beat-beats-music-486586 (1).mp3"
+    },
+    {
+      "deleted_path": "C:\\블록체인\\premusic\\velariomusic-calm-ambient-603158.mp3",
+      "sha256": "58300bf87225346ff12a786ded978acc8e7cc7904ab91e72c681fbd9f152f7f3",
+      "identical_copy_retained_at": "C:\\블록체인\\original_music\\velariomusic-calm-ambient-603158 (1).mp3"
+    },
+    {
+      "deleted_path": "C:\\블록체인\\premusic\\velariomusic-house-lounge-592610.mp3",
+      "sha256": "48308c162bf303905a0cd4fd4c7c10d2eee9674aa56972494d22f544dbc21621",
+      "identical_copy_retained_at": "C:\\블록체인\\original_music\\velariomusic-house-lounge-592610 (1).mp3"
+    },
+    {
+      "deleted_path": "C:\\블록체인\\premusic\\velariomusic-lounge-chill-602635.mp3",
+      "sha256": "0c5208004c092fb34814a4dabecc305edde915b47913cdf06e1b4457e23b5f3c",
+      "identical_copy_retained_at": "C:\\블록체인\\original_music\\velariomusic-lounge-chill-602635 (1).mp3"
+    },
+    {
+      "deleted_path": "C:\\블록체인\\premusic\\velariomusic-meditation-background-603870.mp3",
+      "sha256": "c329a3e044498b868f1145c76b6703736daeaebd7c7fa89b7655d124be93a115",
+      "identical_copy_retained_at": "C:\\블록체인\\original_music\\velariomusic-meditation-background-603870 (1).mp3"
+    },
+    {
+      "deleted_path": "C:\\블록체인\\premusic\\velariomusic-piano-relaxing-606301.mp3",
+      "sha256": "83e6edd3829e2c76a333f05b2f330d02246e0af689f7b6587caea0ac5cdac233",
+      "identical_copy_retained_at": "C:\\블록체인\\original_music\\velariomusic-piano-relaxing-606301 (1).mp3"
+    },
+    {
+      "deleted_path": "C:\\블록체인\\premusic\\viacheslavstarostin-chinese-lunar-new-year-465871.mp3",
+      "sha256": "f7f74e4ceda33ef1398a6c444965f9aacc166c26a9e91c9fc1afdd4e2733ca2a",
+      "identical_copy_retained_at": "C:\\블록체인\\original_music\\viacheslavstarostin-chinese-lunar-new-year-465871.mp3"
+    },
+    {
+      "deleted_path": "C:\\블록체인\\premusic\\zephiramusic-autumn-lofi-591806.mp3",
+      "sha256": "2d797c9f4b2d1c364ead5ea4bcc1b8aa7a5b125a0d07a053dd6b01eb8ab4de30",
+      "identical_copy_retained_at": "C:\\블록체인\\original_music\\zephiramusic-autumn-lofi-591806 (1).mp3"
+    },
+    {
+      "deleted_path": "C:\\블록체인\\premusic\\zephiramusic-positive-chill-hop-595886.mp3",
+      "sha256": "ea2b1a2c64c29452bd1e3e95f8673174183f9e5529b17a234bf8fa9a3a5f2691",
+      "identical_copy_retained_at": "C:\\블록체인\\original_music\\zephiramusic-positive-chill-hop-595886 (1).mp3"
+    }
+  ],
+  "remaining_filenames": [
+    "atlasaudio-new-age-617592.mp3",
+    "atlasaudio-party-pop-606271.mp3",
+    "atlasaudio-piano-621590.mp3",
+    "atlasaudio-piano-autumn-621589.mp3",
+    "atlasaudio-retro-jazz-617602.mp3",
+    "atlasaudio-romantic-606273.mp3",
+    "atlasaudio-soft-jazz-621606.mp3",
+    "atlasaudio-spa-relaxation-578927.mp3",
+    "atlasaudio-thanksgiving-day-621610.mp3",
+    "atlasaudio-trauma-healing-613533.mp3",
+    "atlasaudio-upbeat-corporate-578425.mp3",
+    "leberch-white-clouds-slowed-reverb-615223.mp3",
+    "nastelbom-epic-music-456892.mp3",
+    "nastelbom-hero-heroic-patriotic-471483.mp3",
+    "nastelbom-hip-hop-437342.mp3",
+    "nastelbom-hope-437187.mp3",
+    "nastelbom-hopeful-466200.mp3",
+    "nastelbom-inspiring-inspiring-music-507936.mp3",
+    "nastelbom-inspiring-story-606730.mp3",
+    "nastelbom-instrumental-501713.mp3",
+    "nastelbom-instrumental-epic-501719.mp3",
+    "nastelbom-ipic-intro-451103.mp3",
+    "nastelbom-meditation-463389.mp3",
+    "nastelbom-melancholic-436873.mp3",
+    "nastelbom-motivation-453514.mp3",
+    "nastelbom-motivation-motivation-music-617080.mp3",
+    "nastelbom-orchestra-436869.mp3",
+    "nastelbom-presentation-455972.mp3",
+    "nastelbom-product-436870.mp3",
+    "nastelbom-promo-448817.mp3",
+    "nastelbom-royalty-free-music-463082.mp3",
+    "nastelbom-slideshow-513435.mp3",
+    "nastelbom-soft-corporate-485896.mp3",
+    "nastelbom-soundtrack-443631.mp3",
+    "nastelbom-trailer-488307.mp3",
+    "nastelbom-travel-463381.mp3",
+    "nastelbom-upbeat-501716.mp3",
+    "nastelbom-upbeat-rock-507933.mp3",
+    "nastelbom-uplifting-uplifting-music-606716.mp3",
+    "nastelbom-vlog-495880.mp3",
+    "nastelbom-youtube-495882.mp3"
+  ],
+  "historical_manifest_paths_remain_original": true,
+  "note": "Use the relocation manifest to resolve old evaluation paths; do not rewrite frozen historical manifests."
+}

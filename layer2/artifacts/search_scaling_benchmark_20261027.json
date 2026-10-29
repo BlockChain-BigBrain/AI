@@ -1,0 +1,141 @@
+{
+  "status": "completed_local_exact_search_microbenchmark",
+  "date": "2026-10-27",
+  "scope": "CPU exact dense cosine search over cached CLAP reference windows",
+  "excluded": [
+    "audio decode",
+    "CLAP query encoding",
+    "tonal reranking",
+    "ANN/vector DB",
+    "network",
+    "API queue",
+    "database writes",
+    "concurrent load"
+  ],
+  "not_claimed": [
+    "Vector DB latency",
+    "production p95",
+    "independent recall",
+    "generalization from the single diagnostic query"
+  ],
+  "catalog_tracks": 1000,
+  "catalog_sha256": "91c904a168cf0b15156864b2356da3f3f23b1b465a6ab71c26d0cc3fe3a18723",
+  "query": {
+    "kind": "local_tempo_warp",
+    "sha256": "ffadd58de55263c72cea9196ca32304745cf325173dbd1adcb5c46cbc3ea738a",
+    "source_track_id": "absolutesound-hard-phonk-phonk-music-529766",
+    "windows": 5
+  },
+  "environment": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 154 Stepping 3, GenuineIntel",
+    "numpy": "2.1.3",
+    "torch": "2.8.0+cpu",
+    "device": "cpu",
+    "torch_threads": 4,
+    "repeats": 30,
+    "seed": 20261027
+  },
+  "results": [
+    {
+      "reference_tracks": 34,
+      "reference_windows": 1116,
+      "query_windows": 5,
+      "matrix_similarity": {
+        "p50_ms": 0.24404999567195773,
+        "p95_ms": 0.30084999743849034,
+        "min_ms": 0.1951000012923032,
+        "max_ms": 0.3136000013910234
+      },
+      "group_aggregation_and_sort_including_similarity": {
+        "p50_ms": 1.1040999961551279,
+        "p95_ms": 1.215175003017066,
+        "min_ms": 1.014599998597987,
+        "max_ms": 1.2599000037880614
+      },
+      "diagnostic_target_track": "absolutesound-hard-phonk-phonk-music-529766",
+      "diagnostic_target_rank": 1,
+      "diagnostic_target_in_top20": true
+    },
+    {
+      "reference_tracks": 100,
+      "reference_windows": 3329,
+      "query_windows": 5,
+      "matrix_similarity": {
+        "p50_ms": 0.41399999463465065,
+        "p95_ms": 0.49653499299893156,
+        "min_ms": 0.2958999975817278,
+        "max_ms": 0.5106000025989488
+      },
+      "group_aggregation_and_sort_including_similarity": {
+        "p50_ms": 2.943749997939449,
+        "p95_ms": 4.204549993301037,
+        "min_ms": 2.6840000064112246,
+        "max_ms": 6.755099995643832
+      },
+      "diagnostic_target_track": "absolutesound-hard-phonk-phonk-music-529766",
+      "diagnostic_target_rank": 1,
+      "diagnostic_target_in_top20": true
+    },
+    {
+      "reference_tracks": 250,
+      "reference_windows": 8057,
+      "query_windows": 5,
+      "matrix_similarity": {
+        "p50_ms": 0.8250500104622915,
+        "p95_ms": 1.133094997931039,
+        "min_ms": 0.6563000060850754,
+        "max_ms": 1.331100007519126
+      },
+      "group_aggregation_and_sort_including_similarity": {
+        "p50_ms": 7.517350000853185,
+        "p95_ms": 10.013560000516007,
+        "min_ms": 6.596199993509799,
+        "max_ms": 12.587299992446788
+      },
+      "diagnostic_target_track": "absolutesound-hard-phonk-phonk-music-529766",
+      "diagnostic_target_rank": 1,
+      "diagnostic_target_in_top20": true
+    },
+    {
+      "reference_tracks": 500,
+      "reference_windows": 16382,
+      "query_windows": 5,
+      "matrix_similarity": {
+        "p50_ms": 1.5609000038239174,
+        "p95_ms": 3.5622650037112136,
+        "min_ms": 1.1728000099537894,
+        "max_ms": 4.892500001005828
+      },
+      "group_aggregation_and_sort_including_similarity": {
+        "p50_ms": 18.210250011179596,
+        "p95_ms": 26.959784993960053,
+        "min_ms": 13.101299991831183,
+        "max_ms": 28.770400007488206
+      },
+      "diagnostic_target_track": "absolutesound-hard-phonk-phonk-music-529766",
+      "diagnostic_target_rank": 1,
+      "diagnostic_target_in_top20": true
+    },
+    {
+      "reference_tracks": 1000,
+      "reference_windows": 32218,
+      "query_windows": 5,
+      "matrix_similarity": {
+        "p50_ms": 2.8901000041514635,
+        "p95_ms": 5.165669997950316,
+        "min_ms": 2.2852999973110855,
+        "max_ms": 6.2433999992208555
+      },
+      "group_aggregation_and_sort_including_similarity": {
+        "p50_ms": 29.798800009302795,
+        "p95_ms": 36.795419998816215,
+        "min_ms": 27.35279999615159,
+        "max_ms": 41.69410000031348
+      },
+      "diagnostic_target_track": "absolutesound-hard-phonk-phonk-music-529766",
+      "diagnostic_target_rank": 1,
+      "diagnostic_target_in_top20": true
+    }
+  ]
+}

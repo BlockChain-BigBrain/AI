@@ -1,6 +1,9 @@
 {
   "reference_tracks": 1000,
   "normal_audio_files": 300,
+  "premusic_available_audio_files": 41,
+  "premusic_used_audio_files": 81,
+  "premusic_exact_duplicates_removed": 78,
   "normal_verified_no_exact_duplicate": 300,
   "normal_exact_duplicates_excluded": 0,
   "synthetic_positive": 90,
