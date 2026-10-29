@@ -1,5 +1,7 @@
 # Track-AI 프로젝트 안내
 
+> 2026-10-30: [추가 premusic 43곡 선별·평가 결과](layer2/artifacts/new_premusic_43_work_results_20261029.csv). 기존 사용곡·기준 음원과 SHA-256, Pixabay 미디어 ID, 제한된 음향 지문 대조에서 겹침 0곡이었고, 완곡 경고 0/43, 30초 구간 경고 9/43입니다. 43곡을 `premusic_used/new_premusic_20261029/`로 이동했으며 삭제한 겹침 파일은 0곡입니다.
+
 > 2026-10-29: [premusic 50곡 신규 진단·중복 정리 결과](PREMUSIC_HOLDOUT_20261029.md). 완곡 6/50, 30초 작품 23/50 경고입니다. 사용곡 81곡은 [용도별 보관 폴더](premusic_used/README.md)로 이동했고, 동일 SHA 보존본이 있는 중복 78개를 제거했습니다. 이 50곡의 순수 AI 생성 출처는 확인되지 않았습니다.
 
 > 2026-10-25: [최신 완료·미완료와 목표 비교](MENTORING_FINAL_STATUS_20261025.md) / [다음 멘토링 질문](MENTORING_QUESTIONS_20261025.md). 정상 30초 평가에서 경고율 목표 미달을 확인했으며, 98.57% 실험 후보는 회귀 때문에 미채택입니다.

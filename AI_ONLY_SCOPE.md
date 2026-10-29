@@ -1,5 +1,7 @@
 # 평가 범위 수정: AI 생성 음원
 
+> 2026-10-30: 추가 premusic 43곡은 기존 사용곡·기준 음원과의 중복 검사를 통과했습니다. 완곡 경고 0/43, 30초 구간 경고 9/43이며 43곡은 `premusic_used/new_premusic_20261029/`로 이동했습니다. Pixabay 출처만으로 순수 AI 생성은 입증되지 않습니다. 결과표는 [new premusic 43곡 결과](layer2/artifacts/new_premusic_43_work_results_20261029.csv)입니다.
+
 > 2026-10-29: [premusic 50곡 신규 정상후보 진단](PREMUSIC_HOLDOUT_20261029.md)은 완료했습니다. 사용 이력·동일 녹음을 제외한 50곡의 완곡 경고는 6/50, 30초 작품 경고는 23/50입니다. Pixabay 출처만 확인됐고 순수 AI 생성은 입증되지 않아 AI 전용 독립 검증은 여전히 미완료입니다. [사용곡 이동·중복 삭제 내역](premusic_used/README.md)을 확인하세요.
 
 > 2026-10-25: [최신 완료·미완료와 목표 비교](MENTORING_FINAL_STATUS_20261025.md) / [다음 멘토링 질문](MENTORING_QUESTIONS_20261025.md). 정상 30초 평가에서 경고율 목표 미달을 확인했으며, 98.57% 실험 후보는 회귀 때문에 미채택입니다.
