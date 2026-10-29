@@ -37,18 +37,22 @@ def main():
         new_reorganization_path=ART/'new_premusic_reorganization_20261029.json'
         new_reorganization=json.loads(new_reorganization_path.read_text(encoding='utf-8')) if new_reorganization_path.exists() else None
         new_audio_added=new_reorganization['new_files_screened'] if new_reorganization else 0
+        batch_reorganization_path=ART/'new_premusic_reorganization_20261030.json'
+        batch_reorganization=json.loads(batch_reorganization_path.read_text(encoding='utf-8')) if batch_reorganization_path.exists() else None
+        batch_audio_added=batch_reorganization['unique_new_files_used_and_moved'] if batch_reorganization else 0
         assert reorganization['status']=='completed'
         if new_reorganization:
             assert new_reorganization['status']=='completed'
             assert new_reorganization['new_files_used_and_moved']==new_audio_added
             assert new_reorganization['overlaps_deleted']==0
-        assert premusic_current==41 and premusic_used==81+new_audio_added
-        assert premusic_current+premusic_used+reorganization['exact_duplicates_deleted']==200+new_audio_added
+        assert premusic_current==41 and premusic_used==81+new_audio_added+batch_audio_added
+        assert premusic_current+premusic_used+reorganization['exact_duplicates_deleted']+batch_reorganization['exact_duplicates_deleted'] == 200+new_audio_added+batch_reorganization['new_files_seen']
     else:
         reorganization=None
         premusic_current=len(baseline.audio_files(ROOT/'premusic'))
         premusic_used=0
         new_audio_added=0
+        batch_audio_added=0
         assert premusic_current==200
     extended = list(csv.DictReader((ROOT/'layer2/test_data/extended_positive/manifest.csv').open(encoding='utf-8-sig')))
     assert len(extended)==180
@@ -73,6 +77,7 @@ def main():
     assert m['independent_source_count']==2 and m['source_macro_top5_rate']==.75
     summary={'checks':'passed','original_tracks':1000,'normal_tracks':300,'premusic_tracks':premusic_current,
              'premusic_original_snapshot_tracks':200,'premusic_new_tracks_added':new_audio_added,
+             'premusic_batch_20261030_tracks_added':batch_audio_added,
              'premusic_used_archived_tracks':premusic_used,
              'premusic_exact_duplicates_removed':reorganization['exact_duplicates_deleted'] if reorganization else 0,
              'removed_duplicates':17,'replacement_tracks':17,'extended_generated_and_validated':180,

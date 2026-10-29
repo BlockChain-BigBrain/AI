@@ -1,0 +1,176 @@
+{
+  "date": "2026-10-30",
+  "new_files_seen": 181,
+  "exact_duplicates_deleted": 2,
+  "unique_new_files": 179,
+  "variant_source_count": 30,
+  "selected": [
+    {
+      "path": "C:\\블록체인\\premusic\\kornevmusic-epic-emotional-adventure-624808.mp3",
+      "name": "kornevmusic-epic-emotional-adventure-624808.mp3",
+      "sha256": "3f4f39ded7c7ac26bb3312949376407f0928d162e2ffc3be19f640c517586168"
+    },
+    {
+      "path": "C:\\블록체인\\premusic\\epicmaks-award-emotional-cinematic-624764.mp3",
+      "name": "epicmaks-award-emotional-cinematic-624764.mp3",
+      "sha256": "c42566967520975aeab809fd2d3ab0861986d79174b9197a17523c4045f49e91"
+    },
+    {
+      "path": "C:\\블록체인\\premusic\\poulj-celestial-veil-624657.mp3",
+      "name": "poulj-celestial-veil-624657.mp3",
+      "sha256": "945897fe55542256ce8ae9653698c8abc4af5f2e72b54c95f45ea707e228f7e5"
+    },
+    {
+      "path": "C:\\블록체인\\premusic\\vjgalaxy-traditional-ancient-andean-ceremonial-music-01-624959.mp3",
+      "name": "vjgalaxy-traditional-ancient-andean-ceremonial-music-01-624959.mp3",
+      "sha256": "e3134972c4153503724790d1b88d9e21a984ee06af7cf468cc93c1319bd703be"
+    },
+    {
+      "path": "C:\\블록체인\\premusic\\kulakovka-lo-fi-624627.mp3",
+      "name": "kulakovka-lo-fi-624627.mp3",
+      "sha256": "2320f6dd21216600f0004a5b0a3015ebba28102e828f67ad83bc84e7f1bf1ffe"
+    },
+    {
+      "path": "C:\\블록체인\\premusic\\bearstockmusic-happy-folk-623794.mp3",
+      "name": "bearstockmusic-happy-folk-623794.mp3",
+      "sha256": "b106067386c258863140a4c6b86efadb2b93aa570da42bbaa2889b0499337566"
+    },
+    {
+      "path": "C:\\블록체인\\premusic\\kontraa-yestai-ho-hami-nepalese-trap-music-624556.mp3",
+      "name": "kontraa-yestai-ho-hami-nepalese-trap-music-624556.mp3",
+      "sha256": "66b3b6af63f610954fc354dd2ab87e5a622eb25a71f14f958554b3ce27bca771"
+    },
+    {
+      "path": "C:\\블록체인\\premusic\\turning_pages-autumn-dusk-glow-624527.mp3",
+      "name": "turning_pages-autumn-dusk-glow-624527.mp3",
+      "sha256": "6f549b8059fc361491caee3f449adab5b5d20eeffc8383145b7a02cb36554f0f"
+    },
+    {
+      "path": "C:\\블록체인\\premusic\\leberch-meditation-625071.mp3",
+      "name": "leberch-meditation-625071.mp3",
+      "sha256": "0c86f4d476e43ed9b597ffbc5f83890224a5b45e7a7c40f1d8e698c9c53ba3d2"
+    },
+    {
+      "path": "C:\\블록체인\\premusic\\meditativetiger-skandamata-maternal-lotus-pond-serene-nature-bass-623287.mp3",
+      "name": "meditativetiger-skandamata-maternal-lotus-pond-serene-nature-bass-623287.mp3",
+      "sha256": "bd5efb21d0db76480ad486a401a55477fa0545837b09dedbce8b5232918b4c76"
+    },
+    {
+      "path": "C:\\블록체인\\premusic\\epicmaks-adventure-dramatic-dubstep-624770.mp3",
+      "name": "epicmaks-adventure-dramatic-dubstep-624770.mp3",
+      "sha256": "5d243b88af2035b51903f3bff4f659028020132b8bad156a2515864caf1f3252"
+    },
+    {
+      "path": "C:\\블록체인\\premusic\\audiocopper-sport-motivational-624952.mp3",
+      "name": "audiocopper-sport-motivational-624952.mp3",
+      "sha256": "b35134ded3afd40042dbb8c9f143160d1ec9d00b83c2439772395b9199cb198e"
+    },
+    {
+      "path": "C:\\블록체인\\premusic\\kornevmusic-epic-adventure-trailer-624802.mp3",
+      "name": "kornevmusic-epic-adventure-trailer-624802.mp3",
+      "sha256": "fab1b7177f8dc37a3846bd261200c727067dfc236323bf0bee823ab09d60b380"
+    },
+    {
+      "path": "C:\\블록체인\\premusic\\purrplecat-take-me-with-you-624529.mp3",
+      "name": "purrplecat-take-me-with-you-624529.mp3",
+      "sha256": "b3436e83613e942454e05bc514d9be3a74927f7edd71bef08bb43caeab7bcf6c"
+    },
+    {
+      "path": "C:\\블록체인\\premusic\\siarhei_korbut-healing-meditation-piano-852-hz-624577.mp3",
+      "name": "siarhei_korbut-healing-meditation-piano-852-hz-624577.mp3",
+      "sha256": "2642e3ed9404b4fe71fd55bd60a5bd17b99cf0fa2a2e139f4c0fdf25d1269e29"
+    },
+    {
+      "path": "C:\\블록체인\\premusic\\leberch-interrogation-625089.mp3",
+      "name": "leberch-interrogation-625089.mp3",
+      "sha256": "99ecb0bd37e97ecadfd2e90a7e177a9f92196ce07742f095d3d670d7dc2e30ff"
+    },
+    {
+      "path": "C:\\블록체인\\premusic\\kontraa-nepalese-flow-nepalese-trap-music-624780.mp3",
+      "name": "kontraa-nepalese-flow-nepalese-trap-music-624780.mp3",
+      "sha256": "79a05fc9afc2e55b35a8b08c6839dba6e09e93564cc9eb47d17daaed45e8d19d"
+    },
+    {
+      "path": "C:\\블록체인\\premusic\\nzky-the-dead-city-624940.mp3",
+      "name": "nzky-the-dead-city-624940.mp3",
+      "sha256": "c05e2592b76f4bc62cb363f7021fb02a0090acd5a36ea6a54223d4e3704f760a"
+    },
+    {
+      "path": "C:\\블록체인\\premusic\\kulakovka-inspirational-624629.mp3",
+      "name": "kulakovka-inspirational-624629.mp3",
+      "sha256": "489253779e1ce42a753810857eb93e5f585f743f81224b9cff6188a037aecb6a"
+    },
+    {
+      "path": "C:\\블록체인\\premusic\\melatronic-disco-night-623487.mp3",
+      "name": "melatronic-disco-night-623487.mp3",
+      "sha256": "181367c57ffd70c3c73dfc8e12a4113cef8325b7c6642b491130a8c6ab78ca31"
+    },
+    {
+      "path": "C:\\블록체인\\premusic\\kontraa-mahendra-nepalese-trap-music-624689.mp3",
+      "name": "kontraa-mahendra-nepalese-trap-music-624689.mp3",
+      "sha256": "00f0e1b7d7ba7f59fbb8d938425213abb98f732463d133e13414115ec6ffc6ce"
+    },
+    {
+      "path": "C:\\블록체인\\premusic\\sub_clair-club-music-624240.mp3",
+      "name": "sub_clair-club-music-624240.mp3",
+      "sha256": "bf5b4f7bc6958ab35e6db90597db6566046c219ea53f16897ef1be9329303d63"
+    },
+    {
+      "path": "C:\\블록체인\\premusic\\kulakovka-cyberpunk-music-624631.mp3",
+      "name": "kulakovka-cyberpunk-music-624631.mp3",
+      "sha256": "de0f765d00cf765b0c6b5b281999000f6a837e5c3868fd27bfb5691f4cf6d10b"
+    },
+    {
+      "path": "C:\\블록체인\\premusic\\turning_pages-hypnotic-depth-v2-624510.mp3",
+      "name": "turning_pages-hypnotic-depth-v2-624510.mp3",
+      "sha256": "cecbbd11b4ab76c60915ec16f93923bfd2c985b26e61ef37e00b1a30b1426b6b"
+    },
+    {
+      "path": "C:\\블록체인\\premusic\\avigeiaavetian-hectic-hut-scottish-folk-623246.mp3",
+      "name": "avigeiaavetian-hectic-hut-scottish-folk-623246.mp3",
+      "sha256": "73f6d8ea481316aeceeb9c91939a14ed8402c0faf353a5171708085a816204d0"
+    },
+    {
+      "path": "C:\\블록체인\\premusic\\turning_pages-winter-oak-624569.mp3",
+      "name": "turning_pages-winter-oak-624569.mp3",
+      "sha256": "f3389f93dadc0e6209eab11c3b898f7b59d44ebce21050c83597d48f528e1b0c"
+    },
+    {
+      "path": "C:\\블록체인\\premusic\\leberch-documentary-cinematic-625091.mp3",
+      "name": "leberch-documentary-cinematic-625091.mp3",
+      "sha256": "78744e5f1093ce59dbf70cb3c52679f22287ad130e97ebad0d2da59b041f8b4f"
+    },
+    {
+      "path": "C:\\블록체인\\premusic\\masterai-happy-acoustic-ukulele-cheerful-travel-vlog-background-623476.mp3",
+      "name": "masterai-happy-acoustic-ukulele-cheerful-travel-vlog-background-623476.mp3",
+      "sha256": "200cc55408332b8798330b39555ab38cdfb127d6863fd92ce9c2ed2696ec8b42"
+    },
+    {
+      "path": "C:\\블록체인\\premusic\\kontraa-khatra-nepalese-hiphop-music-624920 (1).mp3",
+      "name": "kontraa-khatra-nepalese-hiphop-music-624920 (1).mp3",
+      "sha256": "77e41c92b1f749cbf44053343f3f821c253625844a7e76392b1c020fcfc76b18"
+    },
+    {
+      "path": "C:\\블록체인\\premusic\\epicmaks-epic-pirates-story-624774.mp3",
+      "name": "epicmaks-epic-pirates-story-624774.mp3",
+      "sha256": "b919553a194ff69c4fb4a845da6dd5e8bec8ed97c0e491b306ebf94ad6b07d8c"
+    }
+  ],
+  "selection_seed": "premusic-variants-20261030",
+  "deleted": [
+    {
+      "path": "C:\\블록체인\\premusic\\djovan-temple-gate-rain-624204.mp3",
+      "sha256": "ddbed7530a352d0d4ec67951ceafc7ac61cf4d479cd5c888645f8cd3f400ca6c",
+      "retained_copy": "C:\\블록체인\\premusic\\djovan-temple-gate-rain-624204 (1).mp3",
+      "reason": "exact_sha_match_new_batch",
+      "already_deleted": true
+    },
+    {
+      "path": "C:\\블록체인\\premusic\\kontraa-khatra-nepalese-hiphop-music-624920.mp3",
+      "sha256": "77e41c92b1f749cbf44053343f3f821c253625844a7e76392b1c020fcfc76b18",
+      "retained_copy": "C:\\블록체인\\premusic\\kontraa-khatra-nepalese-hiphop-music-624920 (1).mp3",
+      "reason": "exact_sha_match_new_batch",
+      "already_deleted": true
+    }
+  ]
+}
