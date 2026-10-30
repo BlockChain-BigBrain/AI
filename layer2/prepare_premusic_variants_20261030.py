@@ -5,6 +5,7 @@ import json
 import math
 import shutil
 import subprocess
+import argparse
 from pathlib import Path
 
 import numpy as np
@@ -81,17 +82,22 @@ def layer(x: np.ndarray, root: int, seed: int) -> np.ndarray:
 
 
 def main() -> None:
-    selection = json.loads(SEL.read_text(encoding="utf-8"))
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--selection", type=Path, default=SEL)
+    parser.add_argument("--out", type=Path, default=OUT)
+    parser.add_argument("--report", type=Path, default=REPORT)
+    args = parser.parse_args()
+    selection = json.loads(args.selection.read_text(encoding="utf-8"))
     sources = selection["selected"]
     if len(sources) != 30:
         raise RuntimeError("Expected 30 variant sources")
-    exe = ffmpeg(); OUT.mkdir(parents=True, exist_ok=True)
+    exe = ffmpeg(); args.out.mkdir(parents=True, exist_ok=True)
     rows = []
     for i, item in enumerate(sources):
         source = Path(item["path"])
         root = estimate_root(decode(source, exe))
-        basic = OUT / f"{i:02d}__basic_pitch_key_tempo.wav"
-        layered = OUT / f"{i:02d}__instrument_layer.wav"
+        basic = args.out / f"{i:02d}__basic_pitch_key_tempo.wav"
+        layered = args.out / f"{i:02d}__instrument_layer.wav"
         # +2 semitones, small tempo change, then restore a comparable duration.
         ratio = 2 ** (2 / 12)
         subprocess.run([exe, "-v", "error", "-nostdin", "-y", "-i", str(source), "-t", str(DURATION),
@@ -105,7 +111,7 @@ def main() -> None:
              "path": str(layered), "root_pitch_class": root, "parameters": {"pad": True, "bass": True, "percussion": True}},
         ])
         print(f"[variants {i + 1}/30] {source.name}", flush=True)
-    REPORT.write_text(json.dumps({"date": "2026-10-30", "source_count": 30, "variant_count": len(rows), "rows": rows}, ensure_ascii=False, indent=2), encoding="utf-8")
+    args.report.write_text(json.dumps({"date": "2026-10-30", "source_count": 30, "variant_count": len(rows), "rows": rows}, ensure_ascii=False, indent=2), encoding="utf-8")
     print(json.dumps({"source_count": 30, "variant_count": len(rows)}, ensure_ascii=False))
 
 

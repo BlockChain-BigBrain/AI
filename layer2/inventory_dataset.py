@@ -49,6 +49,8 @@ def main() -> None:
     new_audio = json.loads(new_premusic_reorganization.read_text(encoding="utf-8")) if new_premusic_reorganization.exists() else None
     batch_premusic_reorganization = ROOT / "layer2" / "artifacts" / "new_premusic_reorganization_20261030.json"
     batch_audio = json.loads(batch_premusic_reorganization.read_text(encoding="utf-8")) if batch_premusic_reorganization.exists() else None
+    latest_intake = ROOT / "layer2" / "artifacts" / "premusic_intake_20261030b.json"
+    latest_audio = json.loads(latest_intake.read_text(encoding="utf-8")) if latest_intake.exists() else None
     result = {
         "reference_tracks": count_audio(ROOT / "original_music"),
         "normal_audio_files": count_audio(ROOT / "music"),
@@ -57,6 +59,7 @@ def main() -> None:
         "premusic_exact_duplicates_removed": reorganization["exact_duplicates_deleted"] if reorganization else 0,
         "premusic_new_audio_added": new_audio["new_files_screened"] if new_audio else 0,
         "premusic_batch_20261030_audio_added": batch_audio["unique_new_files_used_and_moved"] if batch_audio else 0,
+        "premusic_batch_20261030b_audio_added": len(latest_audio["unique_files_moved"]) if latest_audio else 0,
         "normal_verified_no_exact_duplicate": count_duplicate_status(duplicate_report, "NO_EXACT_MATCH"),
         "normal_exact_duplicates_excluded": count_duplicate_status(duplicate_report, "DUPLICATE_PREVIEW"),
         "synthetic_positive": count_manifest(test_root / "plagiarism_positive" / "manifest.csv"),

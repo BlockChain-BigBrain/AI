@@ -9,6 +9,7 @@ from __future__ import annotations
 import json
 import shutil
 import subprocess
+import argparse
 from pathlib import Path
 
 import numpy as np
@@ -66,8 +67,13 @@ def recall(rows, key, k):
 
 
 def main() -> None:
-    selection = json.loads(SEL.read_text(encoding="utf-8"))
-    variants = json.loads(VARIANTS.read_text(encoding="utf-8"))["rows"]
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--selection", type=Path, default=SEL)
+    parser.add_argument("--variants", type=Path, default=VARIANTS)
+    parser.add_argument("--out", type=Path, default=OUT)
+    args = parser.parse_args()
+    selection = json.loads(args.selection.read_text(encoding="utf-8"))
+    variants = json.loads(args.variants.read_text(encoding="utf-8"))["rows"]
     sources = [Path(item["path"]) for item in selection["selected"]]
     by_source = {str(path): i for i, path in enumerate(sources)}
     exe = ffmpeg(); CACHE.mkdir(parents=True, exist_ok=True)
@@ -110,7 +116,7 @@ def main() -> None:
                             "rhythm_recall_at_1": recall(rows, "rhythm", 1), "rhythm_recall_at_3": recall(rows, "rhythm", 3), "rhythm_recall_at_5": recall(rows, "rhythm", 5),
                             "tonal_missed_names": [Path(r["path"]).name for r in rows if r["tonal_rank"] > 5],
                             "rhythm_missed_names": [Path(r["path"]).name for r in rows if r["rhythm_rank"] > 5]}
-    OUT.write_text(json.dumps({"date": "2026-10-30", "production_thresholds_changed": False,
+    args.out.write_text(json.dumps({"date": "2026-10-30", "production_thresholds_changed": False,
                                "method": "all-12-key-transposition Chroma/CQT tonal alignment plus separate onset-rhythm correlation",
                                "summary": summary, "results": results}, ensure_ascii=False, indent=2), encoding="utf-8")
     print(json.dumps(summary, ensure_ascii=False, indent=2))

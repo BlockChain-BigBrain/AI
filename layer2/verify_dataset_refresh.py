@@ -40,19 +40,23 @@ def main():
         batch_reorganization_path=ART/'new_premusic_reorganization_20261030.json'
         batch_reorganization=json.loads(batch_reorganization_path.read_text(encoding='utf-8')) if batch_reorganization_path.exists() else None
         batch_audio_added=batch_reorganization['unique_new_files_used_and_moved'] if batch_reorganization else 0
+        latest_path=ART/'premusic_intake_20261030b.json'
+        latest=json.loads(latest_path.read_text(encoding='utf-8')) if latest_path.exists() else None
+        latest_audio_added=len(latest['unique_files_moved']) if latest else 0
         assert reorganization['status']=='completed'
         if new_reorganization:
             assert new_reorganization['status']=='completed'
             assert new_reorganization['new_files_used_and_moved']==new_audio_added
             assert new_reorganization['overlaps_deleted']==0
-        assert premusic_current==41 and premusic_used==81+new_audio_added+batch_audio_added
-        assert premusic_current+premusic_used+reorganization['exact_duplicates_deleted']+batch_reorganization['exact_duplicates_deleted'] == 200+new_audio_added+batch_reorganization['new_files_seen']
+        assert premusic_current==41 and premusic_used==81+new_audio_added+batch_audio_added+latest_audio_added
+        assert premusic_current+premusic_used+reorganization['exact_duplicates_deleted']+batch_reorganization['exact_duplicates_deleted']+len(latest['exact_duplicates_deleted']) == 200+new_audio_added+batch_reorganization['new_files_seen']+latest['candidate_files_seen']
     else:
         reorganization=None
         premusic_current=len(baseline.audio_files(ROOT/'premusic'))
         premusic_used=0
         new_audio_added=0
         batch_audio_added=0
+        latest_audio_added=0
         assert premusic_current==200
     extended = list(csv.DictReader((ROOT/'layer2/test_data/extended_positive/manifest.csv').open(encoding='utf-8-sig')))
     assert len(extended)==180
