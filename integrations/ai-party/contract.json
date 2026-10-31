@@ -1,0 +1,28 @@
+{
+  "version": "ai-party-v1",
+  "ai": {
+    "submit": "POST /verify",
+    "poll": "GET /verify/{jobId}",
+    "header": "X-Internal-API-Key",
+    "states": ["PENDING", "RUNNING", "SUCCEEDED", "FAILED"],
+    "decisions": ["PASS", "WARN", "HOLD", "BLOCK"]
+  },
+  "persistence": {
+    "requiredEvidence": [
+      "audioHash",
+      "modelVersion",
+      "corpusVersion",
+      "scoreVersion",
+      "decisionPolicyVersion",
+      "thresholds",
+      "similarTracks",
+      "duplicate",
+      "provisional"
+    ]
+  },
+  "blockchain": {
+    "anchorFields": ["trackId", "audioHash", "manifestHash", "decisionPolicyVersion"],
+    "automaticActions": [],
+    "note": "AI evidence is not a legal ownership decision; existing review and settlement policy remains authoritative."
+  }
+}
