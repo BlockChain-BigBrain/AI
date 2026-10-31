@@ -43,13 +43,17 @@ def main():
         latest_path=ART/'premusic_intake_20261030b.json'
         latest=json.loads(latest_path.read_text(encoding='utf-8')) if latest_path.exists() else None
         latest_audio_added=len(latest['unique_files_moved']) if latest else 0
+        intake_20261031_path=ART/'premusic_intake_20261031.json'
+        intake_20261031=json.loads(intake_20261031_path.read_text(encoding='utf-8')) if intake_20261031_path.exists() else None
+        intake_20261031_added=len(intake_20261031['unique_new']) if intake_20261031 else 0
+        intake_20261031_deleted=len(intake_20261031['exact_duplicates']) if intake_20261031 else 0
         assert reorganization['status']=='completed'
         if new_reorganization:
             assert new_reorganization['status']=='completed'
             assert new_reorganization['new_files_used_and_moved']==new_audio_added
             assert new_reorganization['overlaps_deleted']==0
-        assert premusic_current==41 and premusic_used==81+new_audio_added+batch_audio_added+latest_audio_added
-        assert premusic_current+premusic_used+reorganization['exact_duplicates_deleted']+batch_reorganization['exact_duplicates_deleted']+len(latest['exact_duplicates_deleted']) == 200+new_audio_added+batch_reorganization['new_files_seen']+latest['candidate_files_seen']
+        assert premusic_current==41 and premusic_used==81+new_audio_added+batch_audio_added+latest_audio_added+intake_20261031_added
+        assert premusic_current+premusic_used+reorganization['exact_duplicates_deleted']+batch_reorganization['exact_duplicates_deleted']+len(latest['exact_duplicates_deleted'])+intake_20261031_deleted == 200+new_audio_added+batch_reorganization['new_files_seen']+latest['candidate_files_seen']+intake_20261031['candidates_seen']
     else:
         reorganization=None
         premusic_current=len(baseline.audio_files(ROOT/'premusic'))
@@ -82,6 +86,9 @@ def main():
     summary={'checks':'passed','original_tracks':1000,'normal_tracks':300,'premusic_tracks':premusic_current,
              'premusic_original_snapshot_tracks':200,'premusic_new_tracks_added':new_audio_added,
              'premusic_batch_20261030_tracks_added':batch_audio_added,
+             'premusic_batch_20261030b_tracks_added':latest_audio_added,
+             'premusic_batch_20261031_tracks_added':intake_20261031_added,
+             'premusic_batch_20261031_exact_duplicates_removed':intake_20261031_deleted,
              'premusic_used_archived_tracks':premusic_used,
              'premusic_exact_duplicates_removed':reorganization['exact_duplicates_deleted'] if reorganization else 0,
              'removed_duplicates':17,'replacement_tracks':17,'extended_generated_and_validated':180,

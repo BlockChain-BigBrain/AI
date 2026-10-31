@@ -10,6 +10,7 @@ import hashlib
 import json
 import sys
 import subprocess
+import argparse
 from collections import defaultdict
 from pathlib import Path
 
@@ -30,9 +31,18 @@ def sha(path: Path) -> str:
 
 
 def main():
+    global OUT, PLAN, REPORT
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--plan', type=Path, default=PLAN)
+    parser.add_argument('--selection', type=Path, default=None)
+    parser.add_argument('--out', type=Path, default=OUT)
+    parser.add_argument('--report', type=Path, default=REPORT)
+    args = parser.parse_args()
+    OUT, PLAN, REPORT = args.out, args.plan, args.report
     plan = json.loads(PLAN.read_text(encoding="utf-8"))
     queries = [q for q in plan["queries"] if q["kind"] != "full"]
-    selection = json.loads((OUT / "all_selection.json").read_text(encoding="utf-8"))
+    selection_path = args.selection or (OUT / "all_selection.json")
+    selection = json.loads(selection_path.read_text(encoding="utf-8"))
     sources = {item["sha256"]: Path(item["path"]) for item in selection["selected"]}
     sys.path.insert(0, str(ROOT / "api"))
     from engine import Engine

@@ -89,12 +89,16 @@ def summarize(plan, results):
 
 
 def main():
+    global OUT, SEL
     parser = argparse.ArgumentParser()
     parser.add_argument("--shard", type=int, default=0)
     parser.add_argument("--shards", type=int, default=1)
+    parser.add_argument("--selection", type=Path, default=SEL)
+    parser.add_argument("--out", type=Path, default=OUT)
     args = parser.parse_args()
     if args.shard < 0 or args.shard >= args.shards:
         raise ValueError("Invalid shard")
+    OUT, SEL = args.out, args.selection
     OUT.mkdir(parents=True, exist_ok=True)
     frozen = json.loads(SEL.read_text(encoding="utf-8"))
     frozen.setdefault("policy_sha256", digest(ART / "ai_precision_policy.json"))
