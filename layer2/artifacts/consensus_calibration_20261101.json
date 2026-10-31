@@ -1,0 +1,40 @@
+{
+  "date": "2026-11-01",
+  "production_thresholds_changed": false,
+  "method": "offline at-least-N-of-3 WARN consensus; no refit on final evaluation",
+  "premusic_277": {
+    "works": 277,
+    "rules": {
+      "at_least_1_windows": {
+        "works": 43,
+        "rate": 0.1552346570397112
+      },
+      "at_least_2_windows": {
+        "works": 25,
+        "rate": 0.09025270758122744
+      },
+      "at_least_3_windows": {
+        "works": 8,
+        "rate": 0.02888086642599278
+      }
+    }
+  },
+  "independent_normals": {
+    "works": 0,
+    "rules": {
+      "at_least_1_windows": {
+        "works": 0,
+        "rate": null
+      },
+      "at_least_2_windows": {
+        "works": 0,
+        "rate": null
+      },
+      "at_least_3_windows": {
+        "works": 0,
+        "rate": null
+      }
+    }
+  },
+  "recommendation": "Use at-least-2-of-3 as a calibration candidate only; validate positive recall on locked final set before any policy change."
+}
