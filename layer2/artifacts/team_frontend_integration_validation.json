@@ -1,8 +1,11 @@
 {
   "status": "passed",
   "scope": "actual team React + auth API + Prisma + isolated MySQL",
+  "ai_score_version": null,
+  "evaluation_scope": "all",
   "ai_scope": "AI unavailable: FAILED persisted and displayed; not a successful AI analysis",
   "checks": [
+    "React local account signup/login",
     "HttpOnly cookie restoration",
     "authenticated multipart upload",
     "Prisma/MySQL verification persistence",
@@ -18,5 +21,5 @@
   "google_cloud_login": "not_exercised; existing auth tests passed, live client credentials not supplied",
   "production_database": "not_accessed",
   "production_push": "not_performed",
-  "runtime": "C:\\블록체인\\.runtime-tests\\team-stack-1792663940053913900"
+  "runtime": "C:\\블록체인\\.runtime-tests\\team-stack-1793447267851181300"
 }

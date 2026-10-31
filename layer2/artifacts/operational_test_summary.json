@@ -1,75 +1,76 @@
 {
   "status": "passed",
   "reference_tracks": 1000,
+  "score_version": "clap-top5+tonal-local-v1",
   "samples": [
     {
       "file": "20886885-cateholic-lay-it-out-royalty-free-music-177843.mp3",
-      "track_id": "0ede4083-4743-44d6-9631-dc4fd3983cc9",
+      "track_id": "21c1c44f-5a69-4d2e-b706-6a0e1d09a552",
       "state": "VERIFIED",
       "decision": "BLOCK",
-      "wall_seconds": 1.67,
-      "processing_seconds": 0.437,
+      "wall_seconds": 1.64,
+      "processing_seconds": 0.543,
       "query_windows": 0
     },
     {
       "file": "normal_180s_0.wav",
-      "track_id": "62803f8a-607c-4393-b91c-1a5c28ca6d8c",
+      "track_id": "664a83d3-f826-467b-af57-b35c30139b4e",
       "state": "VERIFIED",
       "decision": "PASS",
-      "wall_seconds": 18.128,
-      "processing_seconds": 17.12,
+      "wall_seconds": 18.171,
+      "processing_seconds": 16.842,
       "query_windows": 35
     },
     {
       "file": "normal_180s_1.wav",
-      "track_id": "dab82ee6-63df-42c3-841d-443acce10207",
+      "track_id": "452f5a37-a2d2-40ad-a754-d404963acb5b",
       "state": "VERIFIED",
       "decision": "PASS",
-      "wall_seconds": 15.656,
-      "processing_seconds": 14.696,
+      "wall_seconds": 16.022,
+      "processing_seconds": 15.168,
       "query_windows": 35
     },
     {
       "file": "normal_180s_2.wav",
-      "track_id": "69dd6a1f-a8ce-40c5-a674-7921304a8169",
+      "track_id": "fb036bd8-550b-47f1-b422-470479d0891f",
       "state": "VERIFIED",
       "decision": "PASS",
-      "wall_seconds": 19.799,
-      "processing_seconds": 18.909,
+      "wall_seconds": 16.634,
+      "processing_seconds": 15.36,
       "query_windows": 35
     },
     {
       "file": "normal_180s_0.wav",
-      "track_id": "c0f2a73e-f942-4979-9f0b-1c189f484fee",
+      "track_id": "527c8b95-1011-4691-9efe-cf24b0a76392",
       "state": "VERIFIED",
       "decision": "PASS",
-      "wall_seconds": 18.401,
-      "processing_seconds": 17.202,
+      "wall_seconds": 17.093,
+      "processing_seconds": 15.739,
       "query_windows": 35
     },
     {
       "file": "normal_180s_1.wav",
-      "track_id": "ec012147-0c29-46ce-9fdb-536a17014892",
+      "track_id": "e873caf3-051c-4bf6-bad0-50e5a941e57c",
       "state": "VERIFIED",
       "decision": "PASS",
-      "wall_seconds": 31.804,
-      "processing_seconds": 13.306,
+      "wall_seconds": 32.591,
+      "processing_seconds": 15.791,
       "query_windows": 35
     },
     {
       "file": "malformed.wav",
-      "track_id": "d1316175-ecb3-4dc9-900e-a2d936080a1b",
+      "track_id": "67b5965a-4477-4d44-abf3-49d5173364a2",
       "state": "FAILED",
       "decision": null,
-      "wall_seconds": 1.614,
+      "wall_seconds": 1.601,
       "processing_seconds": null,
       "query_windows": null
     }
   ],
   "three_minute_latency": {
     "n": 5,
-    "p50_seconds": 18.401,
-    "p95_seconds": 29.402999999999995,
+    "p50_seconds": 17.093,
+    "p95_seconds": 29.706999999999997,
     "note": "Five requests from three distinct 180s controls, including two concurrent requests; not a production SLA"
   },
   "checks": {
@@ -93,5 +94,5 @@
     "mobile_overflow": "none"
   },
   "team_mysql_connection": "not_tested: connection settings not provided",
-  "runtime": "C:\\블록체인\\.runtime-tests\\20261022_191312"
+  "runtime": "C:\\블록체인\\.runtime-tests\\20261031_204407"
 }
