@@ -53,6 +53,8 @@ def main() -> None:
     latest_audio = json.loads(latest_intake.read_text(encoding="utf-8")) if latest_intake.exists() else None
     intake_20261031_path = ROOT / "layer2" / "artifacts" / "premusic_intake_20261031.json"
     intake_20261031 = json.loads(intake_20261031_path.read_text(encoding="utf-8")) if intake_20261031_path.exists() else None
+    intake_20261101_path = ROOT / "layer2" / "artifacts" / "premusic_intake_20261101.json"
+    intake_20261101 = json.loads(intake_20261101_path.read_text(encoding="utf-8")) if intake_20261101_path.exists() else None
     result = {
         "reference_tracks": count_audio(ROOT / "original_music"),
         "normal_audio_files": count_audio(ROOT / "music"),
@@ -64,6 +66,8 @@ def main() -> None:
         "premusic_batch_20261030b_audio_added": len(latest_audio["unique_files_moved"]) if latest_audio else 0,
         "premusic_batch_20261031_audio_added": len(intake_20261031["unique_new"]) if intake_20261031 else 0,
         "premusic_batch_20261031_exact_duplicates_removed": len(intake_20261031["exact_duplicates"]) if intake_20261031 else 0,
+        "premusic_batch_20261101_audio_added": len(intake_20261101["unique_new"]) if intake_20261101 else 0,
+        "premusic_batch_20261101_exact_duplicates_removed": len(intake_20261101["exact_duplicates"]) if intake_20261101 else 0,
         "normal_verified_no_exact_duplicate": count_duplicate_status(duplicate_report, "NO_EXACT_MATCH"),
         "normal_exact_duplicates_excluded": count_duplicate_status(duplicate_report, "DUPLICATE_PREVIEW"),
         "synthetic_positive": count_manifest(test_root / "plagiarism_positive" / "manifest.csv"),

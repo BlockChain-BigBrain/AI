@@ -1,0 +1,162 @@
+{
+  "date": "2026-11-01",
+  "production_thresholds_changed": false,
+  "intake": {
+    "candidates": 451,
+    "exact_duplicates_removed": 38,
+    "unique_archived": 413
+  },
+  "current_policy": {
+    "calibration": {
+      "works": 248,
+      "positions": {
+        "start30": {
+          "warnings": 30,
+          "rate": 0.12096774193548387,
+          "one_sided_95_upper": 0.16048464291572864
+        },
+        "middle30": {
+          "warnings": 26,
+          "rate": 0.10483870967741936,
+          "one_sided_95_upper": 0.14248007783624742
+        },
+        "end30": {
+          "warnings": 26,
+          "rate": 0.10483870967741936,
+          "one_sided_95_upper": 0.14248007783624742
+        }
+      },
+      "at_least_1_of_3": {
+        "warnings": 50,
+        "rate": 0.20161290322580644,
+        "one_sided_95_upper": 0.2481217758207322
+      },
+      "at_least_2_of_3": {
+        "warnings": 23,
+        "rate": 0.09274193548387097,
+        "one_sided_95_upper": 0.12882981130820007
+      },
+      "at_least_3_of_3": {
+        "warnings": 9,
+        "rate": 0.036290322580645164,
+        "one_sided_95_upper": 0.06247204735542582
+      },
+      "hold_or_block_works": 0
+    },
+    "locked_final": {
+      "works": 165,
+      "positions": {
+        "start30": {
+          "warnings": 24,
+          "rate": 0.14545454545454545,
+          "one_sided_95_upper": 0.19841922047253804
+        },
+        "middle30": {
+          "warnings": 21,
+          "rate": 0.12727272727272726,
+          "one_sided_95_upper": 0.17808171301333384
+        },
+        "end30": {
+          "warnings": 22,
+          "rate": 0.13333333333333333,
+          "one_sided_95_upper": 0.1848888651948508
+        }
+      },
+      "at_least_1_of_3": {
+        "warnings": 33,
+        "rate": 0.2,
+        "one_sided_95_upper": 0.2581566808562664
+      },
+      "at_least_2_of_3": {
+        "warnings": 24,
+        "rate": 0.14545454545454545,
+        "one_sided_95_upper": 0.19841922047253804
+      },
+      "at_least_3_of_3": {
+        "warnings": 10,
+        "rate": 0.06060606060606061,
+        "one_sided_95_upper": 0.10063280829818488
+      },
+      "hold_or_block_works": 0
+    }
+  },
+  "tune_only_candidate": {
+    "warn_threshold": 0.3580197266288675,
+    "selection": "minimum calibration-only threshold whose 2-of-3 one-sided 95% WARN upper bound is <=10%",
+    "calibration": {
+      "works": 248,
+      "positions": {
+        "start30": {
+          "warnings": 26,
+          "rate": 0.10483870967741936,
+          "one_sided_95_upper": 0.14248007783624742
+        },
+        "middle30": {
+          "warnings": 21,
+          "rate": 0.0846774193548387,
+          "one_sided_95_upper": 0.11964803423857809
+        },
+        "end30": {
+          "warnings": 23,
+          "rate": 0.09274193548387097,
+          "one_sided_95_upper": 0.12882981130820007
+        }
+      },
+      "at_least_1_of_3": {
+        "warnings": 46,
+        "rate": 0.18548387096774194,
+        "one_sided_95_upper": 0.23084926605950204
+      },
+      "at_least_2_of_3": {
+        "warnings": 16,
+        "rate": 0.06451612903225806,
+        "one_sided_95_upper": 0.09634221561322738
+      },
+      "at_least_3_of_3": {
+        "warnings": 8,
+        "rate": 0.03225806451612903,
+        "one_sided_95_upper": 0.057450174223207695
+      },
+      "hold_or_block_works": 0
+    },
+    "locked_final": {
+      "works": 165,
+      "positions": {
+        "start30": {
+          "warnings": 21,
+          "rate": 0.12727272727272726,
+          "one_sided_95_upper": 0.17808171301333384
+        },
+        "middle30": {
+          "warnings": 20,
+          "rate": 0.12121212121212122,
+          "one_sided_95_upper": 0.17124440678662325
+        },
+        "end30": {
+          "warnings": 20,
+          "rate": 0.12121212121212122,
+          "one_sided_95_upper": 0.17124440678662325
+        }
+      },
+      "at_least_1_of_3": {
+        "warnings": 30,
+        "rate": 0.18181818181818182,
+        "one_sided_95_upper": 0.2384300455319739
+      },
+      "at_least_2_of_3": {
+        "warnings": 21,
+        "rate": 0.12727272727272726,
+        "one_sided_95_upper": 0.17808171301333384
+      },
+      "at_least_3_of_3": {
+        "warnings": 10,
+        "rate": 0.06060606060606061,
+        "one_sided_95_upper": 0.10063280829818488
+      },
+      "hold_or_block_works": 0
+    },
+    "accepted": false,
+    "reason": "Locked-final 2-of-3 WARN point estimate and 95% upper bound exceed 10%; positive recall was not re-established."
+  },
+  "release_recommendation": "Freeze current AI API and evidence schema; do not change production thresholds. Treat WARN/HOLD as human-review signals and prioritize end-to-end integration."
+}
