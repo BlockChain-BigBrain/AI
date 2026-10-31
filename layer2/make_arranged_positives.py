@@ -175,6 +175,10 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--seed", type=int, default=42, help="Сонголт ба хувиргалтыг давтан гаргах үр")
     parser.add_argument("--sources", type=int, default=10, help="고를 원곡 개수 (기본값 10)")
+    parser.add_argument(
+        "--source-list", type=Path,
+        help="Optional CSV with a 'file' column; restrict source selection to these imported originals.",
+    )
     args = parser.parse_args()
     if args.sources < 1:
         raise SystemExit("--sources는 1 이상이어야 합니다.")
@@ -184,6 +188,19 @@ def main() -> None:
     ffmpeg = find_ffmpeg()
     trained_ids = read_training_ids()
     candidates = [path for path in audio_files(SOURCE_DIR) if path.stem not in trained_ids]
+    if args.source_list:
+        if not args.source_list.is_file():
+            raise SystemExit(f"Source list does not exist: {args.source_list}")
+        with args.source_list.open("r", newline="", encoding="utf-8-sig") as source_file:
+            source_rows = list(csv.DictReader(source_file))
+        if not source_rows or "file" not in source_rows[0]:
+            raise SystemExit("Source list must contain a 'file' column.")
+        selected_paths = {
+            str(Path(row["file"]).resolve())
+            for row in source_rows
+            if row.get("file")
+        }
+        candidates = [path for path in candidates if str(path.resolve()) in selected_paths]
     eligible: list[tuple[Path, float]] = []
     for index, path in enumerate(candidates, start=1):
         try:

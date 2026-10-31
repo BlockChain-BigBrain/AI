@@ -18,6 +18,9 @@ import json
 import re
 import shutil
 import subprocess
+import time
+import os
+import zipfile
 from collections import defaultdict
 from pathlib import Path
 
@@ -41,6 +44,7 @@ CACHE_DIR = ARTIFACT_DIR / "evaluation_embedding_cache"
 REPORT_JSON = ARTIFACT_DIR / "retrieval_baseline_report.json"
 REPORT_CSV = ARTIFACT_DIR / "retrieval_baseline_details.csv"
 FALSE_POSITIVE_CSV = ARTIFACT_DIR / "false_positive_diagnostics.csv"
+MUSIC_DUPLICATE_REPORT = ARTIFACT_DIR / "music_duplicate_report.csv"
 
 # CLAP 입력과 검색 창은 음악 자르기 설정과 맞춥니다.
 BASE_MODEL = "laion/clap-htsat-unfused"
@@ -63,6 +67,22 @@ def audio_files(folder: Path) -> list[Path]:
         path for path in folder.rglob("*")
         if path.is_file() and path.suffix.lower() in AUDIO_EXTENSIONS
     )
+
+
+def verified_safe_audio_files() -> list[Path]:
+    """Use only music files cleared by the current exact-duplicate report."""
+    if not MUSIC_DUPLICATE_REPORT.is_file():
+        raise SystemExit(
+            f"Normal-control duplicate report is missing: {MUSIC_DUPLICATE_REPORT}. "
+            "Run python layer2/remove_duplicate_music.py first."
+        )
+    with MUSIC_DUPLICATE_REPORT.open("r", newline="", encoding="utf-8-sig") as report:
+        clean_paths = {
+            str(Path(row["music_file"]).resolve())
+            for row in csv.DictReader(report)
+            if row.get("status") == "NO_EXACT_MATCH" and row.get("music_file")
+        }
+    return [path for path in audio_files(SAFE_QUERY_DIR) if str(path.resolve()) in clean_paths]
 
 
 def track_id_from_original(path: Path) -> str:
@@ -136,7 +156,8 @@ def extract_windows(
     duration = get_duration_seconds(path)
     window_size = WINDOW_SECONDS * SAMPLE_RATE
     if duration < WINDOW_SECONDS:
-        return np.empty((0, window_size), dtype=np.float32), []
+        # Preserve short controls in evaluation and API; decode_window zero-pads.
+        return np.stack([decode_window(path, 0.0)]), [0.0]
     last_start = duration - WINDOW_SECONDS
     if all_reference_windows or all_query_windows:
         # 기준 원곡과 전체 검사 쿼리는 5초 간격의 모든 10초 창을 만듭니다.
@@ -190,14 +211,18 @@ def embed_file(
         path, all_reference_windows, query_window_count, all_query_windows
     )
     if cache_path.exists():
-        cached = np.load(cache_path, allow_pickle=False)
-        return cached["vectors"].astype(np.float32), cached["offsets"].tolist()
+        try:
+            with np.load(cache_path, allow_pickle=False) as cached:
+                return cached["vectors"].astype(np.float32), cached["offsets"].tolist()
+        except (ValueError, OSError, EOFError, zipfile.BadZipFile):
+            print(f'[cache repair] {path.name}', flush=True)
 
     windows, offsets = extract_windows(
         path, all_reference_windows, query_window_count, all_query_windows
     )
     if len(windows) == 0:
         return np.empty((0, 512), dtype=np.float32), []
+    started = time.perf_counter()
 
     # 여러 창을 묶어 CLAP에 넣어 한 번씩 처리하는 비용을 줄입니다.
     vector_batches: list[np.ndarray] = []
@@ -216,7 +241,10 @@ def embed_file(
 
     vectors = np.concatenate(vector_batches, axis=0).astype(np.float32)
     CACHE_DIR.mkdir(parents=True, exist_ok=True)
-    np.savez_compressed(cache_path, vectors=vectors, offsets=np.asarray(offsets, dtype=np.float32))
+    temporary = cache_path.with_name(cache_path.stem + f'.{os.getpid()}.tmp.npz')
+    np.savez_compressed(temporary, vectors=vectors, offsets=np.asarray(offsets, dtype=np.float32))
+    temporary.replace(cache_path)
+    print(f'[embedded] {path.name}: {len(vectors)} windows in {time.perf_counter()-started:.1f}s', flush=True)
     return vectors, offsets
 
 
@@ -244,6 +272,18 @@ def read_positive_queries(
                         "query_kind": "synthetic_same_recording_excerpt",
                     }
                 )
+                held_out_sources.setdefault(source_id, {"path": source_path})
+    # Additional robustness variants retain the same work-level split key.
+    extended = LAYER2_DIR / "test_data" / "extended_positive" / "manifest.csv"
+    if extended.is_file():
+        with extended.open("r", newline="", encoding="utf-8-sig") as handle:
+            for row in csv.DictReader(handle):
+                source_id = row["source_track_id"]
+                query_path, source_path = Path(row["query_path"]), Path(row["source_path"])
+                if source_id in train_track_ids or not query_path.is_file() or not source_path.is_file():
+                    continue
+                queries.append({"path": str(query_path), "label": "positive",
+                                "expected_track_id": source_id, "query_kind": row["case_type"]})
                 held_out_sources.setdefault(source_id, {"path": source_path})
     return queries, held_out_sources
 
@@ -457,7 +497,7 @@ def main() -> None:
             "expected_track_id": "",
             "query_kind": "safe_music_excerpt",
         }
-        for path in audio_files(SAFE_QUERY_DIR)
+        for path in verified_safe_audio_files()
     ]
     if args.max_safe:
         negative_queries = negative_queries[: args.max_safe]

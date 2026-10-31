@@ -1,0 +1,50 @@
+{
+  "status": "passed",
+  "scope": "actual team React + auth API + Prisma + isolated MySQL",
+  "ai_score_version": "clap-top20+tonal-local-v1+expanded-square-v1+secondary-clap-cqt-fragments-v1",
+  "evaluation_scope": "ai_labeled",
+  "ai_scope": "actual long-edit supplemental WARN with three reference/query fragments",
+  "checks": [
+    "React local account signup/login",
+    "HttpOnly cookie restoration",
+    "authenticated multipart upload",
+    "Prisma/MySQL verification persistence",
+    "actual result displayed",
+    "refresh restores result",
+    "no tokens in web storage",
+    "no fabricated Mint completion",
+    "owner-only verification/retry/delete",
+    "desktop and mobile browser checks",
+    "logout clears cookie session and saved track lookup",
+    "improved WARN/HOLD thresholds persisted in actual MySQL result JSON",
+    "previously missed 120s edit recovered as WARN, three matching fragments persisted and displayed"
+  ],
+  "retry_test": "same track verified in failure-path test",
+  "google_cloud_login": "not_exercised; existing auth tests passed, live client credentials not supplied",
+  "production_database": "not_accessed",
+  "production_push": "not_performed",
+  "runtime": "C:\\블록체인\\.runtime-tests\\team-stack-1792752480924407700",
+  "active_policy_file": "ai_precision_policy.json",
+  "thresholds": {
+    "warn": 0.34748932160579077,
+    "hold": 0.8337449399145463
+  },
+  "persisted_thresholds": {
+    "hold": 0.8337449399145463,
+    "warn": 0.3474893216057908
+  },
+  "database_float_comparison_tolerance": 1e-12,
+  "precision_rescue_e2e": true,
+  "parallel_precision_api_jobs": [
+    {
+      "decision": "WARN",
+      "elapsed_seconds": 14.051,
+      "processing_seconds": 13.313
+    },
+    {
+      "decision": "WARN",
+      "elapsed_seconds": 26.355,
+      "processing_seconds": 12.775
+    }
+  ]
+}

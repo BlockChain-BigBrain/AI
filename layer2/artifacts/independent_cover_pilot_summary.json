@@ -1,0 +1,22 @@
+{
+  "dataset": "Covers80",
+  "acquired_annotated_pairs": 80,
+  "pilot_pairs": 20,
+  "reference_tracks": 20,
+  "query_tracks": 20,
+  "clip_protocol": "center 30 seconds; all 10s windows at 5s stride",
+  "selection_seed": 20261022,
+  "score": "seg_top3_centered; mean of pilot reference vectors",
+  "recall_at_1": 0.15,
+  "recall_at_3": 0.5,
+  "recall_at_5": 0.5,
+  "mrr": 0.34219081572022747,
+  "different_work_review_candidates": 380,
+  "limitations": [
+    "20-work pilot, not the 1000-work production catalog",
+    "No production thresholds fitted on this pilot",
+    "Different work IDs are benchmark labels; expert musical review remains pending",
+    "No commercial redistribution license asserted"
+  ],
+  "source_url": "https://www.labrosa.org/projects/coversongs/covers80/"
+}

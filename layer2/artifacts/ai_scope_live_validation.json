@@ -1,0 +1,47 @@
+{
+  "status": "passed",
+  "scope": "ai_labeled",
+  "reference_tracks": 34,
+  "policy_version": "layer2-risk-67ce43c6a616",
+  "thresholds": {
+    "warn": 0.34748932160579077,
+    "hold": 0.8337449399145463
+  },
+  "policy_file": "ai_precision_policy.json",
+  "score_version": "clap-top20+tonal-local-v1+expanded-square-v1+secondary-clap-cqt-fragments-v1",
+  "checks": [
+    "matching policy/catalog/provenance binding",
+    "noneligible fingerprint records excluded",
+    "exact duplicate BLOCK",
+    "live/offline score, ranking and decision parity",
+    "weak expanded normal match PASS",
+    "source beyond CLAP Top5 recovered"
+  ],
+  "cases": [
+    {
+      "file": "000__room_rerecord_simulation.wav",
+      "decision": "HOLD",
+      "score": 0.8888646376175949
+    },
+    {
+      "file": "alex-morgan-dramatic-548632.mp3",
+      "decision": "HOLD",
+      "score": 0.9921493782907294
+    },
+    {
+      "file": "turtlebeats-dark-synthwave-spectral-251688.mp3",
+      "decision": "PASS",
+      "score": 0.2481007736794737
+    },
+    {
+      "file": "006__pitch_tempo_codec.m4a",
+      "decision": "WARN",
+      "score": 0.4717720858378933
+    },
+    {
+      "file": "001__long_auto_edit.wav",
+      "decision": "WARN",
+      "score": 0.4504272573653358
+    }
+  ]
+}

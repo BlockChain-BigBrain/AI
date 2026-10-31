@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-23",
+  "method": "cqt-consensus-fragments-v1",
+  "trigger": "Baseline score<.60, original CLAP Top3 only.",
+  "score_rule": "max(baseline, sqrt(FFT_whole*CQT_whole), .75*mean(three time-centered CQT fragments)^2).",
+  "fragment_rule": "Same separated-fragment guards; minimum 45s query, 3 distinct reference spans, each >=8s and score>=.65.",
+  "thresholds": {
+    "warn": 0.34748932160579077,
+    "hold": 0.8337449399145463
+  },
+  "limits": "Revised after observed prototype errors; all data are reused development diagnostics, no blind claim.",
+  "acceptance": "Tune WARN<=10%, HOLD<=2%; no old source-recall regression; >=90% aggregate five-family recall and audited normal test targets."
+}

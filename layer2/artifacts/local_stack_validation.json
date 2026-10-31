@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "score_version": "clap-top20+tonal-local-v1+expanded-square-v1+secondary-clap-cqt-fragments-v1",
+  "thresholds": {
+    "warn": 0.34748932160579077,
+    "hold": 0.8337449399145463
+  },
+  "decision_policy_version": "layer2-risk-67ce43c6a616",
+  "evaluation_scope": "ai_labeled",
+  "reference_tracks": 34,
+  "local_frontend_backend_ai_mysql": true,
+  "owned_processes_stopped_after_check": true,
+  "production_database": "not_accessed"
+}

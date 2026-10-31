@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-29",
+  "status": "completed",
+  "moved": 81,
+  "exact_duplicates_deleted": 78,
+  "premusic_remaining": 41,
+  "deleted_audio_has_identical_retained_copy": true,
+  "used_folder_counts": {
+    "fresh_audit_20261023": 30,
+    "ai_labeled_diagnostic_20261024": 1,
+    "premusic_holdout_20261029": 50
+  },
+  "historical_usage_relocations": "C:\\블록체인\\premusic_used\\reorganization_plan_20261029.json",
+  "pure_ai_creation_verified_by_this_operation": false
+}

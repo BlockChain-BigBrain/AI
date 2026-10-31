@@ -36,8 +36,8 @@ def load_local_env() -> None:
 load_local_env()
 INTERNAL_API_KEY = os.environ.get("TRACK_AI_API_KEY", "")
 
-DATA = BASE / 'runtime'
-DATA.mkdir(exist_ok=True)
+DATA = Path(os.environ.get('TRACK_AI_RUNTIME', str(BASE / 'runtime')))
+DATA.mkdir(parents=True, exist_ok=True)
 DB = DATA / 'jobs.sqlite3'
 POOL = ThreadPoolExecutor(max_workers=1)
 engine = None
@@ -96,7 +96,8 @@ def require_internal_api_key(x_internal_api_key: str | None = Header(default=Non
 @app.get('/health', response_model=HealthResponse)
 def health():
     return dict(status='ready', referenceTracks=len(engine.groups), referenceWindows=len(engine.ids),
-                modelVersion='laion/clap-htsat-unfused', scoreVersion='seg_top3_centered-v1')
+                modelVersion='laion/clap-htsat-unfused', scoreVersion=engine.score_version, evaluationScope=engine.evaluation_scope,
+                decisionPolicyVersion=engine.policy_version, thresholds=engine.thresholds)
 
 
 @app.post('/verify', status_code=202, response_model=JobAccepted, dependencies=[Depends(require_internal_api_key)])

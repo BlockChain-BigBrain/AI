@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-23",
+  "method": "dual-route-guard",
+  "powers": [
+    2,
+    3
+  ],
+  "score_rule": "CLAP ranks 1-5 unchanged; ranks 6-20 squared; ranks >20 use compared second-route power.",
+  "selection": "Tune correct-source recall, then prefer cube when tied; normal tune targets calibrated independently.",
+  "limits": "Engineering follow-up after dual-route diagnostics; existing test/stress observed, not blind validation.",
+  "deployment": "No active AI-only policy change without added recall in its own 34-track scope."
+}

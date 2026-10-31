@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "reference_files": 34,
+  "normal_files": 30,
+  "fingerprint_window": "full files up to fpcalc 1800s bound",
+  "comparison": "complete shorter fingerprint inside longer, both directions",
+  "issues": [],
+  "musical_independence_verified": false
+}

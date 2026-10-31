@@ -1,0 +1,112 @@
+{
+  "date": "2026-10-25",
+  "status": "local_release_work_completed_with_unmet_research_and_production_goals",
+  "active_policy": "ai_precision_policy.json",
+  "active_policy_changed_this_release": false,
+  "active_five_family": {
+    "positive_queries": 70,
+    "correct_source_warn_top3_count": 63,
+    "correct_source_warn_top3_recall": 0.9,
+    "normal_candidates": 0,
+    "normal_warn_count": 0,
+    "normal_hold_count": 0,
+    "normal_warn_rate": null,
+    "normal_hold_rate": null
+  },
+  "duration_matched_normal_test": {
+    "queries": 33,
+    "works": 11,
+    "warn_works": 2,
+    "hold_works": 0,
+    "block_queries": 0,
+    "warn_rate": 0.18181818181818182,
+    "hold_rate": 0.0
+  },
+  "prototype_five_family": {
+    "positive_queries": 70,
+    "correct_source_count": 69,
+    "recall": 0.9857142857142858,
+    "normal_queries": 0,
+    "normal_works": 0,
+    "warn_works": 0,
+    "hold_works": 0,
+    "warn_rate": null,
+    "hold_rate": null
+  },
+  "prototype_accepted": false,
+  "source_regressions": 5,
+  "fresh_independent_ai_validation": false,
+  "pure_ai_creation_verified": false,
+  "production_deployed": false,
+  "github": {
+    "status": "published_three_review_pull_requests",
+    "production_deployed": false,
+    "repositories": {
+      "AI": {
+        "url": "https://github.com/BlockChain-BigBrain/AI/pull/1",
+        "branch": "codex/mentoring-20261024",
+        "base": "branch1",
+        "state": "open, not merged"
+      },
+      "Frontend": {
+        "url": "https://github.com/BlockChain-BigBrain/Frontend/pull/9",
+        "branch": "codex/ai-evidence-20261024",
+        "base": "main",
+        "state": "open, mergeable, not merged",
+        "commit": "93fb78c685f312d030fb7a6245e274318d28bc11"
+      },
+      "Backend": {
+        "url": "https://github.com/BlockChain-BigBrain/Backend/pull/10",
+        "branch": "codex/ai-evidence-20261024",
+        "base": "main",
+        "state": "open, mergeable, not merged",
+        "commit": "aa2cbbd939991de30fccafea4d86f416640be9eb"
+      }
+    }
+  },
+  "report": "MENTORING_FINAL_STATUS_20261025.md",
+  "report_sha256": "ba68e12f4393d7767a95d05a0fa778585b323eede281ea0ef21530d76fa35721",
+  "mentor_questions": "MENTORING_QUESTIONS_20261025.md",
+  "sample_accounting": {
+    "normal": {
+      "tune": {
+        "works": 18,
+        "crops": 54
+      },
+      "test": {
+        "works": 11,
+        "crops": 33
+      },
+      "external_diagnostic": {
+        "works": 2,
+        "crops": 6
+      }
+    },
+    "normal_total_works": 31,
+    "normal_total_crops": 93,
+    "positive_evaluations": {
+      "existing_test": {
+        "queries": 28,
+        "source_works": 14
+      },
+      "stress": {
+        "queries": 28,
+        "source_works": 14
+      },
+      "replication": {
+        "queries": 28,
+        "source_works": 14
+      },
+      "five_family": {
+        "queries": 70,
+        "source_works": 14
+      }
+    },
+    "evaluation_positive_queries": 154,
+    "tune_positive_queries": 40,
+    "tune_source_works": 20,
+    "all_positive_queries": 194,
+    "evaluation_sets_reuse_same_source_works": true,
+    "independent_fresh_validation": false
+  }
+}

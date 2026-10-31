@@ -15,6 +15,9 @@ import csv
 import json
 import math
 import random
+import hashlib
+import time
+import os
 import subprocess
 from collections import defaultdict
 from pathlib import Path
@@ -145,6 +148,27 @@ def score_all_tracks(
     return outputs
 
 
+def positive_family_metrics(rows: list[dict[str, Any]], warn: float | None) -> dict[str, Any]:
+    """Report each transformation separately; variants do not create new works."""
+    families: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    for row in rows:
+        families[row["query_kind"]].append(row)
+    result = {}
+    for kind, part in families.items():
+        source_hits: dict[str, list[bool]] = defaultdict(list)
+        for row in part:
+            source_hits[row["group_id"]].append(bool(row["expected_source_in_top5"]))
+        result[kind] = {
+            "query_count": len(part), "independent_source_count": len(source_hits),
+            "expected_source_top5_rate": float(np.mean([r["expected_source_in_top5"] for r in part])),
+            "source_macro_top5_rate": float(np.mean([np.mean(hits) for hits in source_hits.values()])),
+            "expected_source_warn_or_hold_rate": float(np.mean([
+                r["expected_source_score"] is not None and r["expected_source_score"] >= warn
+                for r in part])) if warn is not None else None,
+        }
+    return result
+
+
 def build_queries(train_track_ids: set[str], include_reperformed: bool = False) -> tuple[list[dict[str, str]], dict[str, dict[str, Any]]]:
     """Load synthetic positives by default; optionally add reperformances."""
     positives, held_out = baseline.read_positive_queries(train_track_ids)
@@ -169,7 +193,7 @@ def build_queries(train_track_ids: set[str], include_reperformed: bool = False) 
         group = "positive:" + row["expected_track_id"]
         queries.append({**row, "group_id": group, "dataset": "positive"})
 
-    for path in baseline.audio_files(baseline.SAFE_QUERY_DIR):
+    for path in baseline.verified_safe_audio_files():
         group = "safe:" + path.stem
         queries.append({
             "path": str(path), "label": "safe", "expected_track_id": "",
@@ -198,6 +222,17 @@ def load_reference_catalog(
     held_out: dict[str, dict[str, Any]],
 ) -> tuple[np.ndarray, np.ndarray, np.ndarray]:
     """Build the catalog from cached training vectors plus held-out originals."""
+    signature_files = baseline.audio_files(baseline.ORIGINAL_DIR) + [
+        ARTIFACT_DIR / 'clap_embeddings.npz', ARTIFACT_DIR / 'segment_manifest.csv']
+    signature = hashlib.sha256('\n'.join(
+        f'{p.resolve()}|{p.stat().st_size}|{p.stat().st_mtime_ns}' for p in signature_files
+    ).encode('utf-8')).hexdigest()
+    ready_path = ARTIFACT_DIR / 'current_reference_catalog.npz'
+    if ready_path.is_file():
+        with np.load(ready_path, allow_pickle=False) as ready:
+            if 'signature' in ready and str(ready['signature']) == signature:
+                print('[catalog] using verified current catalog cache', flush=True)
+                return ready['vectors'], ready['ids'], ready['offsets']
     cache_path = ARTIFACT_DIR / "clap_embeddings.npz"
     manifest_path = ARTIFACT_DIR / "segment_manifest.csv"
     raw_cache = np.load(cache_path, allow_pickle=False)
@@ -227,6 +262,7 @@ def load_reference_catalog(
         track_id = baseline.track_id_from_original(path)
         if track_id in present:
             continue
+        print(f"[reference {len(present) + 1}] {path.name}", flush=True)
         embedded, starts = baseline.embed_file(
             path, model, processor, device, all_reference_windows=True
         )
@@ -235,7 +271,13 @@ def load_reference_catalog(
             track_ids.append(np.full(len(embedded), track_id, dtype=f"<U{max(1, len(track_id))}"))
             offsets.append(np.asarray(starts, dtype=np.float32))
             present.add(track_id)
-    return np.concatenate(vectors), np.concatenate(track_ids), np.concatenate(offsets)
+    result = np.concatenate(vectors), np.concatenate(track_ids), np.concatenate(offsets)
+    print(f"[catalog ready] {len(np.unique(result[1]))} tracks; {len(result[1])} windows", flush=True)
+    temporary_catalog = ARTIFACT_DIR / f'current_reference_catalog.{os.getpid()}.tmp.npz'
+    np.savez_compressed(temporary_catalog,
+                        vectors=result[0], ids=result[1], offsets=result[2], signature=signature)
+    temporary_catalog.replace(ARTIFACT_DIR / 'current_reference_catalog.npz')
+    return result
 
 
 def choose_thresholds(
@@ -337,6 +379,8 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--include-reperformed", action="store_true",
                         help="재연주형 manifest를 포함합니다. 기본값은 합성 변형만 평가합니다.")
+    parser.add_argument("--full-synthetic", action="store_true",
+                        help="Frozen pretrained CLAP: include all synthetic works, including legacy MetricHead sources.")
     args = parser.parse_args()
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     if device.type == "cpu":
@@ -351,7 +395,9 @@ def main() -> None:
         raise SystemExit("ffmpeg was not found in PATH or imageio-ffmpeg.")
 
     train_ids = set(row["track_id"] for row in read_csv(ARTIFACT_DIR / "segment_manifest.csv"))
-    queries, held_out = build_queries(train_ids, include_reperformed=args.include_reperformed)
+    queries, held_out = build_queries(set() if args.full_synthetic else train_ids,
+                                     include_reperformed=args.include_reperformed)
+    print(f"[evaluation] device={device}; queries={len(queries)}; positives={sum(q['label']=='positive' for q in queries)}", flush=True)
     all_groups = {row["group_id"] for row in queries if row["dataset"] != "safe_arranged_unverified"}
     # Keep safe-arranged examples in the same partition as their unmodified
     # source query without letting them affect the positive/safe split counts.
@@ -362,10 +408,30 @@ def main() -> None:
     )
     center_mean = reference_vectors.mean(axis=0)
 
+    # Resume scored queries only when both catalog and all query assets match.
+    run_signature = hashlib.sha256(reference_vectors.tobytes() + reference_ids.tobytes()
+        + reference_offsets.tobytes() + json.dumps([
+            (q, Path(q['path']).stat().st_size, Path(q['path']).stat().st_mtime_ns)
+            for q in queries], sort_keys=True).encode('utf-8') + b'full-window-v3').hexdigest()
+    checkpoint = ARTIFACT_DIR / f'query_checkpoint_{run_signature}.jsonl'
+    completed = {}
+    if checkpoint.is_file():
+        for line in checkpoint.read_text(encoding='utf-8').splitlines():
+            try:
+                item = json.loads(line)
+                completed[item['path']] = item['rows']
+            except (ValueError, KeyError):
+                continue
+
     by_mode: dict[str, list[dict[str, Any]]] = defaultdict(list)
     skipped: list[str] = []
     for number, query in enumerate(queries, start=1):
         path = Path(query["path"])
+        if str(path.resolve()) in completed:
+            for row in completed[str(path.resolve())]:
+                by_mode[row['aggregation']].append(row)
+            print(f'[resume {number}/{len(queries)}] {path.name}', flush=True)
+            continue
         try:
             query_vectors, offsets = baseline.embed_file(
                 path, model, processor, device,
@@ -383,6 +449,7 @@ def main() -> None:
             reference_offsets, center_mean,
         )
         expected = query["expected_track_id"]
+        query_rows = []
         for mode, matches in matches_by_mode.items():
             source = next((row for row in matches if row["track_id"] == expected), None) if expected else None
             row = {
@@ -403,6 +470,9 @@ def main() -> None:
                 "window_count": len(offsets),
             }
             by_mode[mode].append(row)
+            query_rows.append(row)
+        with checkpoint.open('a', encoding='utf-8') as handle:
+            handle.write(json.dumps({'path': str(path.resolve()), 'rows': query_rows}, ensure_ascii=False)+'\n')
         print(f"[{number}/{len(queries)}] {path.name}", flush=True)
 
     report: dict[str, Any] = {
@@ -411,6 +481,7 @@ def main() -> None:
                   "seed": SEED, "groups": {"tune": sum(v == "tune" for v in splits.values()),
                                             "test": sum(v == "test" for v in splits.values())}},
         "corpus": {"reference_tracks": int(len(np.unique(reference_ids)),),
+                   "embedding_sha256": hashlib.sha256(reference_vectors.tobytes() + reference_ids.tobytes() + reference_offsets.tobytes()).hexdigest(),
                    "reference_windows": int(len(reference_ids)),
                    "train_reference_tracks": len(train_ids),
                    "positive_source_groups": len({q["group_id"] for q in queries if q["dataset"] == "positive"}),
@@ -424,6 +495,7 @@ def main() -> None:
                      "positive_split_group": "source_track_id", "safe_split_group": "source/origin work",
                      "safe_arranged_controls_in_threshold_fit": False,
                      "thresholds_are_model_tuning_only": True,
+                     "full_synthetic_frozen_clap": args.full_synthetic,
                      "score_interpretation": "cosine similarity, not a plagiarism probability or legal finding"},
         "models": {}, "skipped_queries": skipped,
     }
@@ -442,6 +514,7 @@ def main() -> None:
             "thresholds_from_tune_split": thresholds,
             "held_out_test": {
                 "positive_query_count": len(test_positives),
+                "positive_by_transformation": positive_family_metrics(test_positives, test_w),
                 "safe_query_count": len(test_safes),
                 "positive_expected_source_top1_rate": float(np.mean([r["expected_source_rank"] == 1 for r in test_positives])) if test_positives else None,
                 "positive_expected_source_top3_rate": float(np.mean([r["expected_source_rank"] is not None and r["expected_source_rank"] <= 3 for r in test_positives])) if test_positives else None,

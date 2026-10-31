@@ -1,0 +1,52 @@
+{
+  "date": "2026-10-23",
+  "selection": "Known highest-tonal-score normal and another warned normal as negative control; not exhaustive collection deduplication.",
+  "rule": {
+    "fingerprint_mean_bit_error_max_exclusive": 0.1,
+    "waveform_correlation_min_exclusive": 0.98,
+    "excerpt_seconds": 20,
+    "excerpt_starts_seconds": [
+      5,
+      40,
+      80
+    ],
+    "waveform_lag_search_seconds": 1,
+    "fingerprint_lag_search_frames": 40
+  },
+  "effect": "Evaluation normal-label quarantine only. Audio preserved. No automatic BLOCK change; no copyright conclusion.",
+  "pairs": [
+    {
+      "normal": "C:\\\ube14\ub85d\uccb4\uc778\\music\\alex-morgan-dramatic-548632.mp3",
+      "reference": "C:\\\ube14\ub85d\uccb4\uc778\\original_music\\alex-morgan-cinematic-591327.mp3",
+      "normal_sha256": "4c031c7cd23f9b6d7f3289a2071aa00d053c4882595b596537399243b494127e",
+      "reference_sha256": "85a3b2977cc1bc13a654e0395b7a1ffe3c710455178c85f1b43b5da3e4f26e39",
+      "fingerprint_mean_bit_error": 0.038232037401574805,
+      "fingerprint_offset_frames": 0,
+      "waveform_correlations": [
+        0.9950763360383135,
+        0.9916913988762575,
+        0.9927576889200945
+      ],
+      "quarantine_normal_label": true,
+      "status": "near_identical_recording_evidence"
+    },
+    {
+      "normal": "C:\\\ube14\ub85d\uccb4\uc778\\music\\oceanframemusic-music-no-copyright-motivation-463767.mp3",
+      "reference": "C:\\\ube14\ub85d\uccb4\uc778\\original_music\\the_mountain-dramatic-610133 (1).mp3",
+      "normal_sha256": "7af6e428cfe2637bc4d4b1ae9848ca1cb0ede353c758c9b8c5a6c73b78ad20e0",
+      "reference_sha256": "931e37dc5a45abd8a90d9fbdc50eec0832e42e71971cc306f94854470c32efd7",
+      "fingerprint_mean_bit_error": 0.46159253578732107,
+      "fingerprint_offset_frames": -24,
+      "waveform_correlations": [
+        0.02943880820205342,
+        0.034347826227618915,
+        0.031581986076423034
+      ],
+      "quarantine_normal_label": false,
+      "status": "not_confirmed"
+    }
+  ],
+  "excluded_normal_filenames": [
+    "alex-morgan-dramatic-548632.mp3"
+  ]
+}

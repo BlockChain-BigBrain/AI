@@ -1,0 +1,1095 @@
+{
+  "date": "2026-10-30",
+  "policy": {
+    "production_thresholds_changed": false,
+    "variant_sources_excluded_from_final_evaluation": true,
+    "split_method": "sha256 deterministic hash; 60% calibration / 40% final evaluation",
+    "final_evaluation_must_remain_unseen_until_lock": true
+  },
+  "counts": {
+    "total_unique_new": 179,
+    "variant_diagnostic": 30,
+    "threshold_calibration": 89,
+    "final_evaluation": 60
+  },
+  "variant_diagnostic": [
+    {
+      "name": "kornevmusic-epic-emotional-adventure-624808.mp3",
+      "sha256": "3f4f39ded7c7ac26bb3312949376407f0928d162e2ffc3be19f640c517586168",
+      "archived_path": "premusic_used/new_premusic_20261030/kornevmusic-epic-emotional-adventure-624808.mp3",
+      "partition": "variant_diagnostic"
+    },
+    {
+      "name": "epicmaks-award-emotional-cinematic-624764.mp3",
+      "sha256": "c42566967520975aeab809fd2d3ab0861986d79174b9197a17523c4045f49e91",
+      "archived_path": "premusic_used/new_premusic_20261030/epicmaks-award-emotional-cinematic-624764.mp3",
+      "partition": "variant_diagnostic"
+    },
+    {
+      "name": "poulj-celestial-veil-624657.mp3",
+      "sha256": "945897fe55542256ce8ae9653698c8abc4af5f2e72b54c95f45ea707e228f7e5",
+      "archived_path": "premusic_used/new_premusic_20261030/poulj-celestial-veil-624657.mp3",
+      "partition": "variant_diagnostic"
+    },
+    {
+      "name": "vjgalaxy-traditional-ancient-andean-ceremonial-music-01-624959.mp3",
+      "sha256": "e3134972c4153503724790d1b88d9e21a984ee06af7cf468cc93c1319bd703be",
+      "archived_path": "premusic_used/new_premusic_20261030/vjgalaxy-traditional-ancient-andean-ceremonial-music-01-624959.mp3",
+      "partition": "variant_diagnostic"
+    },
+    {
+      "name": "kulakovka-lo-fi-624627.mp3",
+      "sha256": "2320f6dd21216600f0004a5b0a3015ebba28102e828f67ad83bc84e7f1bf1ffe",
+      "archived_path": "premusic_used/new_premusic_20261030/kulakovka-lo-fi-624627.mp3",
+      "partition": "variant_diagnostic"
+    },
+    {
+      "name": "bearstockmusic-happy-folk-623794.mp3",
+      "sha256": "b106067386c258863140a4c6b86efadb2b93aa570da42bbaa2889b0499337566",
+      "archived_path": "premusic_used/new_premusic_20261030/bearstockmusic-happy-folk-623794.mp3",
+      "partition": "variant_diagnostic"
+    },
+    {
+      "name": "kontraa-yestai-ho-hami-nepalese-trap-music-624556.mp3",
+      "sha256": "66b3b6af63f610954fc354dd2ab87e5a622eb25a71f14f958554b3ce27bca771",
+      "archived_path": "premusic_used/new_premusic_20261030/kontraa-yestai-ho-hami-nepalese-trap-music-624556.mp3",
+      "partition": "variant_diagnostic"
+    },
+    {
+      "name": "turning_pages-autumn-dusk-glow-624527.mp3",
+      "sha256": "6f549b8059fc361491caee3f449adab5b5d20eeffc8383145b7a02cb36554f0f",
+      "archived_path": "premusic_used/new_premusic_20261030/turning_pages-autumn-dusk-glow-624527.mp3",
+      "partition": "variant_diagnostic"
+    },
+    {
+      "name": "leberch-meditation-625071.mp3",
+      "sha256": "0c86f4d476e43ed9b597ffbc5f83890224a5b45e7a7c40f1d8e698c9c53ba3d2",
+      "archived_path": "premusic_used/new_premusic_20261030/leberch-meditation-625071.mp3",
+      "partition": "variant_diagnostic"
+    },
+    {
+      "name": "meditativetiger-skandamata-maternal-lotus-pond-serene-nature-bass-623287.mp3",
+      "sha256": "bd5efb21d0db76480ad486a401a55477fa0545837b09dedbce8b5232918b4c76",
+      "archived_path": "premusic_used/new_premusic_20261030/meditativetiger-skandamata-maternal-lotus-pond-serene-nature-bass-623287.mp3",
+      "partition": "variant_diagnostic"
+    },
+    {
+      "name": "epicmaks-adventure-dramatic-dubstep-624770.mp3",
+      "sha256": "5d243b88af2035b51903f3bff4f659028020132b8bad156a2515864caf1f3252",
+      "archived_path": "premusic_used/new_premusic_20261030/epicmaks-adventure-dramatic-dubstep-624770.mp3",
+      "partition": "variant_diagnostic"
+    },
+    {
+      "name": "audiocopper-sport-motivational-624952.mp3",
+      "sha256": "b35134ded3afd40042dbb8c9f143160d1ec9d00b83c2439772395b9199cb198e",
+      "archived_path": "premusic_used/new_premusic_20261030/audiocopper-sport-motivational-624952.mp3",
+      "partition": "variant_diagnostic"
+    },
+    {
+      "name": "kornevmusic-epic-adventure-trailer-624802.mp3",
+      "sha256": "fab1b7177f8dc37a3846bd261200c727067dfc236323bf0bee823ab09d60b380",
+      "archived_path": "premusic_used/new_premusic_20261030/kornevmusic-epic-adventure-trailer-624802.mp3",
+      "partition": "variant_diagnostic"
+    },
+    {
+      "name": "purrplecat-take-me-with-you-624529.mp3",
+      "sha256": "b3436e83613e942454e05bc514d9be3a74927f7edd71bef08bb43caeab7bcf6c",
+      "archived_path": "premusic_used/new_premusic_20261030/purrplecat-take-me-with-you-624529.mp3",
+      "partition": "variant_diagnostic"
+    },
+    {
+      "name": "siarhei_korbut-healing-meditation-piano-852-hz-624577.mp3",
+      "sha256": "2642e3ed9404b4fe71fd55bd60a5bd17b99cf0fa2a2e139f4c0fdf25d1269e29",
+      "archived_path": "premusic_used/new_premusic_20261030/siarhei_korbut-healing-meditation-piano-852-hz-624577.mp3",
+      "partition": "variant_diagnostic"
+    },
+    {
+      "name": "leberch-interrogation-625089.mp3",
+      "sha256": "99ecb0bd37e97ecadfd2e90a7e177a9f92196ce07742f095d3d670d7dc2e30ff",
+      "archived_path": "premusic_used/new_premusic_20261030/leberch-interrogation-625089.mp3",
+      "partition": "variant_diagnostic"
+    },
+    {
+      "name": "kontraa-nepalese-flow-nepalese-trap-music-624780.mp3",
+      "sha256": "79a05fc9afc2e55b35a8b08c6839dba6e09e93564cc9eb47d17daaed45e8d19d",
+      "archived_path": "premusic_used/new_premusic_20261030/kontraa-nepalese-flow-nepalese-trap-music-624780.mp3",
+      "partition": "variant_diagnostic"
+    },
+    {
+      "name": "nzky-the-dead-city-624940.mp3",
+      "sha256": "c05e2592b76f4bc62cb363f7021fb02a0090acd5a36ea6a54223d4e3704f760a",
+      "archived_path": "premusic_used/new_premusic_20261030/nzky-the-dead-city-624940.mp3",
+      "partition": "variant_diagnostic"
+    },
+    {
+      "name": "kulakovka-inspirational-624629.mp3",
+      "sha256": "489253779e1ce42a753810857eb93e5f585f743f81224b9cff6188a037aecb6a",
+      "archived_path": "premusic_used/new_premusic_20261030/kulakovka-inspirational-624629.mp3",
+      "partition": "variant_diagnostic"
+    },
+    {
+      "name": "melatronic-disco-night-623487.mp3",
+      "sha256": "181367c57ffd70c3c73dfc8e12a4113cef8325b7c6642b491130a8c6ab78ca31",
+      "archived_path": "premusic_used/new_premusic_20261030/melatronic-disco-night-623487.mp3",
+      "partition": "variant_diagnostic"
+    },
+    {
+      "name": "kontraa-mahendra-nepalese-trap-music-624689.mp3",
+      "sha256": "00f0e1b7d7ba7f59fbb8d938425213abb98f732463d133e13414115ec6ffc6ce",
+      "archived_path": "premusic_used/new_premusic_20261030/kontraa-mahendra-nepalese-trap-music-624689.mp3",
+      "partition": "variant_diagnostic"
+    },
+    {
+      "name": "sub_clair-club-music-624240.mp3",
+      "sha256": "bf5b4f7bc6958ab35e6db90597db6566046c219ea53f16897ef1be9329303d63",
+      "archived_path": "premusic_used/new_premusic_20261030/sub_clair-club-music-624240.mp3",
+      "partition": "variant_diagnostic"
+    },
+    {
+      "name": "kulakovka-cyberpunk-music-624631.mp3",
+      "sha256": "de0f765d00cf765b0c6b5b281999000f6a837e5c3868fd27bfb5691f4cf6d10b",
+      "archived_path": "premusic_used/new_premusic_20261030/kulakovka-cyberpunk-music-624631.mp3",
+      "partition": "variant_diagnostic"
+    },
+    {
+      "name": "turning_pages-hypnotic-depth-v2-624510.mp3",
+      "sha256": "cecbbd11b4ab76c60915ec16f93923bfd2c985b26e61ef37e00b1a30b1426b6b",
+      "archived_path": "premusic_used/new_premusic_20261030/turning_pages-hypnotic-depth-v2-624510.mp3",
+      "partition": "variant_diagnostic"
+    },
+    {
+      "name": "avigeiaavetian-hectic-hut-scottish-folk-623246.mp3",
+      "sha256": "73f6d8ea481316aeceeb9c91939a14ed8402c0faf353a5171708085a816204d0",
+      "archived_path": "premusic_used/new_premusic_20261030/avigeiaavetian-hectic-hut-scottish-folk-623246.mp3",
+      "partition": "variant_diagnostic"
+    },
+    {
+      "name": "turning_pages-winter-oak-624569.mp3",
+      "sha256": "f3389f93dadc0e6209eab11c3b898f7b59d44ebce21050c83597d48f528e1b0c",
+      "archived_path": "premusic_used/new_premusic_20261030/turning_pages-winter-oak-624569.mp3",
+      "partition": "variant_diagnostic"
+    },
+    {
+      "name": "leberch-documentary-cinematic-625091.mp3",
+      "sha256": "78744e5f1093ce59dbf70cb3c52679f22287ad130e97ebad0d2da59b041f8b4f",
+      "archived_path": "premusic_used/new_premusic_20261030/leberch-documentary-cinematic-625091.mp3",
+      "partition": "variant_diagnostic"
+    },
+    {
+      "name": "masterai-happy-acoustic-ukulele-cheerful-travel-vlog-background-623476.mp3",
+      "sha256": "200cc55408332b8798330b39555ab38cdfb127d6863fd92ce9c2ed2696ec8b42",
+      "archived_path": "premusic_used/new_premusic_20261030/masterai-happy-acoustic-ukulele-cheerful-travel-vlog-background-623476.mp3",
+      "partition": "variant_diagnostic"
+    },
+    {
+      "name": "kontraa-khatra-nepalese-hiphop-music-624920 (1).mp3",
+      "sha256": "77e41c92b1f749cbf44053343f3f821c253625844a7e76392b1c020fcfc76b18",
+      "archived_path": "premusic_used/new_premusic_20261030/kontraa-khatra-nepalese-hiphop-music-624920 (1).mp3",
+      "partition": "variant_diagnostic"
+    },
+    {
+      "name": "epicmaks-epic-pirates-story-624774.mp3",
+      "sha256": "b919553a194ff69c4fb4a845da6dd5e8bec8ed97c0e491b306ebf94ad6b07d8c",
+      "archived_path": "premusic_used/new_premusic_20261030/epicmaks-epic-pirates-story-624774.mp3",
+      "partition": "variant_diagnostic"
+    }
+  ],
+  "threshold_calibration": [
+    {
+      "name": "holodr3ams-signal-to-signal-624986.mp3",
+      "sha256": "9ae651690e67e0ee355196834ddb24b4f8362af5cee3bd0c3385db4d5e264d61",
+      "archived_path": "premusic_used/new_premusic_20261030/holodr3ams-signal-to-signal-624986.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "audiocopper-award-corporate-624934.mp3",
+      "sha256": "856b50a3705f761cb62484a7a20b590fa181252c10a68dfdf0c12c0a5967c040",
+      "archived_path": "premusic_used/new_premusic_20261030/audiocopper-award-corporate-624934.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "olivermp3-dream-purple-624414.mp3",
+      "sha256": "5d6a74ef1200d59164f5fb64423839e22698a1baca02d635def010c616d23fb6",
+      "archived_path": "premusic_used/new_premusic_20261030/olivermp3-dream-purple-624414.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "fayette35-funk-radio-624250.mp3",
+      "sha256": "ef07d8b515574fd581ce8755c71078de6fc8ad1a64983570b5734d962fe0dca3",
+      "archived_path": "premusic_used/new_premusic_20261030/fayette35-funk-radio-624250.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "openmindaudio-chinese-cinematic-drama-erhu-and-guzheng-dialogue-624363.mp3",
+      "sha256": "97aa1c0dc74b002df7a779f90cb1735f68b0d03cca665f6cfb0d94128aa592d4",
+      "archived_path": "premusic_used/new_premusic_20261030/openmindaudio-chinese-cinematic-drama-erhu-and-guzheng-dialogue-624363.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "epicmaks-hard-rock-sport-trailer-624776.mp3",
+      "sha256": "61ef2cd98d54ec27eadd19de565848a2a9e12768aace6c05b872f9d4a720b0f7",
+      "archived_path": "premusic_used/new_premusic_20261030/epicmaks-hard-rock-sport-trailer-624776.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "kontraa-rollie-nepalese-drill-music-624688.mp3",
+      "sha256": "791685999fcb02dfc70400bebf733bb9473b1dc8e891bf5f3710b3cbf18cf64e",
+      "archived_path": "premusic_used/new_premusic_20261030/kontraa-rollie-nepalese-drill-music-624688.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "strawberry_candy-contemplation-piano-northern-lights-623929.mp3",
+      "sha256": "d1c64f9c20603290fe854561a224f260c9c5f8e902350d3315bf899cc3a9bee4",
+      "archived_path": "premusic_used/new_premusic_20261030/strawberry_candy-contemplation-piano-northern-lights-623929.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "epicmaks-emotional-elegant-piano-624765.mp3",
+      "sha256": "418e0ec5aeecc6133cdbfee14950e6447cc37631c641cd539191e8398754bdbe",
+      "archived_path": "premusic_used/new_premusic_20261030/epicmaks-emotional-elegant-piano-624765.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "epicmaks-epic-emotional-trailer-624773.mp3",
+      "sha256": "7fa531ab4b8a591f92e5bce2e7b16929d7ac579386d6b34d73370d9571abd8c4",
+      "archived_path": "premusic_used/new_premusic_20261030/epicmaks-epic-emotional-trailer-624773.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "epicmaks-nature-cinematic-background-624772.mp3",
+      "sha256": "2869507ef04c88c4c2a4ae4e354f36367c164a6f5cff9dd026f307d1fb140eed",
+      "archived_path": "premusic_used/new_premusic_20261030/epicmaks-nature-cinematic-background-624772.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "kontraa-ram-nam-satye-nepalese-trap-music-624697.mp3",
+      "sha256": "e8a574749d87740688ec5fcc24057933ae7bde41a29083db1c3faf0da78491b0",
+      "archived_path": "premusic_used/new_premusic_20261030/kontraa-ram-nam-satye-nepalese-trap-music-624697.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "kulakovka-action-trailer-624648.mp3",
+      "sha256": "7131e146f3ec672dd20da2acea0e2a0967e146b7459bf456d0f9ebd127f5ee0d",
+      "archived_path": "premusic_used/new_premusic_20261030/kulakovka-action-trailer-624648.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "kulakovka-retro-music-624647.mp3",
+      "sha256": "b5be815b2174b8afab1e728ca7f69fa20ed3855d1175db4a970733cc8f2b5fd4",
+      "archived_path": "premusic_used/new_premusic_20261030/kulakovka-retro-music-624647.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "kontraa-herana-nepalese-rampb-music-624694.mp3",
+      "sha256": "85e0fe725e17d58d819b3b96aa0869c104e3dafe3b3d7c9fa48a9d893f0e6901",
+      "archived_path": "premusic_used/new_premusic_20261030/kontraa-herana-nepalese-rampb-music-624694.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "epicmaks-orchestral-award-ceremony-624763.mp3",
+      "sha256": "870e566563bb03c1d4e6c6843e4c21041d537132e7dea5752b3df9ccb89b83fd",
+      "archived_path": "premusic_used/new_premusic_20261030/epicmaks-orchestral-award-ceremony-624763.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "siarhei_korbut-healing-meditation-piano-loop-624578.mp3",
+      "sha256": "86023ffdf5cdeea5da70b8a56a86369d4b33a5e43597b3faa2b8b36b36aed89b",
+      "archived_path": "premusic_used/new_premusic_20261030/siarhei_korbut-healing-meditation-piano-loop-624578.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "greenrocketaudio-running-everyday-623783.mp3",
+      "sha256": "927300b8529647ee27d70e8119684a81d6d6d81828a5728f17a9499870345687",
+      "archived_path": "premusic_used/new_premusic_20261030/greenrocketaudio-running-everyday-623783.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "turning_pages-fading-sunset-glow-624526.mp3",
+      "sha256": "412284d57561802638cc69e0957f1ff90d3b23552a955b5b15cad62679babe9f",
+      "archived_path": "premusic_used/new_premusic_20261030/turning_pages-fading-sunset-glow-624526.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "nastynewfie-melancholy-lofi-night-624452.mp3",
+      "sha256": "3b7ac7b2b24c6656d2bf7ed172cd5030a30404df6cef31204b9e427b1313d26f",
+      "archived_path": "premusic_used/new_premusic_20261030/nastynewfie-melancholy-lofi-night-624452.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "adamklimt-itch-horror-musicambience-624790.mp3",
+      "sha256": "28202c514593be190843e9513b73a1551252119ad8dad57d5eef1bc1dfb2a7db",
+      "archived_path": "premusic_used/new_premusic_20261030/adamklimt-itch-horror-musicambience-624790.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "playsound-motivational-synth-pop-623499.mp3",
+      "sha256": "0660c2ca2f5164e910acc468b480a8f7bbf8f5ebe45923e7db6f647babc957ea",
+      "archived_path": "premusic_used/new_premusic_20261030/playsound-motivational-synth-pop-623499.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "turning_pages-critical-momentum-624540.mp3",
+      "sha256": "87033e310046d1d1212f0ab01b35ae59f3f7368d03f34a25e2c1c8a78e00245c",
+      "archived_path": "premusic_used/new_premusic_20261030/turning_pages-critical-momentum-624540.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "wordygirl-autumn-song-for-children-625006.mp3",
+      "sha256": "bb5d91dd19eef26286aab4ec002c066e0a0d23cb9cfea7498c28086101cb221f",
+      "archived_path": "premusic_used/new_premusic_20261030/wordygirl-autumn-song-for-children-625006.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "jonasblakewood-sports-sport-rock-622907.mp3",
+      "sha256": "85d597d1847a6ff7d5516680712110e646db2b14dc4185a1f1e2918d170b8cc9",
+      "archived_path": "premusic_used/new_premusic_20261030/jonasblakewood-sports-sport-rock-622907.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "greenrocketaudio-no-rules-623780.mp3",
+      "sha256": "b0ea3c9340be995b3ad0a0ce486b5ad1407e848da27d7b835332a7172acb1e84",
+      "archived_path": "premusic_used/new_premusic_20261030/greenrocketaudio-no-rules-623780.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "polytunes-heroes-time-624592.mp3",
+      "sha256": "c942f6dd7ddeedf58404e766e049acff6b33fc99588e5b77b7e3090a1c56df9e",
+      "archived_path": "premusic_used/new_premusic_20261030/polytunes-heroes-time-624592.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "mykola_shtipler-witches-halloween-i-halloween-background-music-624349.mp3",
+      "sha256": "8a229dfc13a4990aaaa63d280d0a721b5b4223c10835b736b43e3f2fbdea61e2",
+      "archived_path": "premusic_used/new_premusic_20261030/mykola_shtipler-witches-halloween-i-halloween-background-music-624349.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "audioknap-a-epic-624922.mp3",
+      "sha256": "7397e0354b48cfd24e7405f1843c8b709d8aa710c69ebaffdc2eebf07f048130",
+      "archived_path": "premusic_used/new_premusic_20261030/audioknap-a-epic-624922.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "epicmaks-uplifting-cinematic-intro-epic-624754.mp3",
+      "sha256": "450d5161a9d7196ba7db38b855cb1dd3ed30c1de5dc435934792c5d275610a3c",
+      "archived_path": "premusic_used/new_premusic_20261030/epicmaks-uplifting-cinematic-intro-epic-624754.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "electroanimals-blooming-spring-623805.mp3",
+      "sha256": "2e6c6545a14bfca5c744baaadcc643f383fb2d4f37bde37f68e0cecffdbf0015",
+      "archived_path": "premusic_used/new_premusic_20261030/electroanimals-blooming-spring-623805.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "adamklimt-rising-to-the-surface-musicambience-624789.mp3",
+      "sha256": "2d2af2072465a329b89a9ec199e9007d17c5a2a9d7e56e9c2070c333b090f074",
+      "archived_path": "premusic_used/new_premusic_20261030/adamklimt-rising-to-the-surface-musicambience-624789.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "mykola_shtipler-burning-pumpkins-i-halloween-background-music-624356.mp3",
+      "sha256": "e1ed1c070d75a5f284c1d6b09f966c83b3bf65b01c2054bc1c140954d1bf00bc",
+      "archived_path": "premusic_used/new_premusic_20261030/mykola_shtipler-burning-pumpkins-i-halloween-background-music-624356.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "echobrainz-space-624235.mp3",
+      "sha256": "7a51ee538873d098cacf5cd98dc32ee07d54ab104a655986d6df450f2de5cf5c",
+      "archived_path": "premusic_used/new_premusic_20261030/echobrainz-space-624235.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "soundoffreedom-atmospheric-hi-tach-624425.mp3",
+      "sha256": "e4b9e38092b6f3785406a320caf31e6c79825b66ea910d6162b5229488d77074",
+      "archived_path": "premusic_used/new_premusic_20261030/soundoffreedom-atmospheric-hi-tach-624425.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "kulakovka-calm-lo-fi-624643.mp3",
+      "sha256": "ef03f0bacca24342231c8c806dc1e18040653f8186f37b164764dc676bf0f213",
+      "archived_path": "premusic_used/new_premusic_20261030/kulakovka-calm-lo-fi-624643.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "epicmaks-cinematic-intro-epicness-624741.mp3",
+      "sha256": "625f8bede864ce9a8a16c697d3ff4d0861bc820b12225057faf6f962065e3406",
+      "archived_path": "premusic_used/new_premusic_20261030/epicmaks-cinematic-intro-epicness-624741.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "kornevmusic-epic-motivational-624799.mp3",
+      "sha256": "8d043489f12bc2cab5fdb665a1618996c95877f7e8d16ac2ae85025b727ac27c",
+      "archived_path": "premusic_used/new_premusic_20261030/kornevmusic-epic-motivational-624799.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "epicmaks-inspiring-peaceful-piano-624768.mp3",
+      "sha256": "a811995d4cfff19dd8172c5e77cc8c2330f5239316291d6abda64acfe73cf4be",
+      "archived_path": "premusic_used/new_premusic_20261030/epicmaks-inspiring-peaceful-piano-624768.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "greenrocketaudio-funky-groove-energetic-retro-dance-background-music-623781.mp3",
+      "sha256": "6611862537afef7800dafe888570ba6115903bcc2859efad3e09935dd696a0bc",
+      "archived_path": "premusic_used/new_premusic_20261030/greenrocketaudio-funky-groove-energetic-retro-dance-background-music-623781.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "kulakovka-epic-624630.mp3",
+      "sha256": "85eed34a206a2726557cf6540bd74ae9fcbf19119f87a51ec5b919b87bd4baa4",
+      "archived_path": "premusic_used/new_premusic_20261030/kulakovka-epic-624630.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "eve_red-haunted-cathedral-organ-623766.mp3",
+      "sha256": "655081761f01a353aa0fe182c5e02fd61c80eec1245e2f1595bbdc42f02604fe",
+      "archived_path": "premusic_used/new_premusic_20261030/eve_red-haunted-cathedral-organ-623766.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "leberch-investigation-625069.mp3",
+      "sha256": "83818520c32717132ecb97a77a40728391423e1b519d4e500a6c2f903ac7fdc3",
+      "archived_path": "premusic_used/new_premusic_20261030/leberch-investigation-625069.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "track_alley-bossa-nova-elevator-music-for-10-minutes-credit-track-alley-624778.mp3",
+      "sha256": "2794705a9c428d12dc6236ac402c19de66a41075107fc4c02decde1b942460e7",
+      "archived_path": "premusic_used/new_premusic_20261030/track_alley-bossa-nova-elevator-music-for-10-minutes-credit-track-alley-624778.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "sunset-energy-funk-rock-623360.mp3",
+      "sha256": "2529fdd99589cb2d62f19a077edaaeeede7b54ceb03972217b7d6a2e01364eb9",
+      "archived_path": "premusic_used/new_premusic_20261030/sunset-energy-funk-rock-623360.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "echobrainz-explainers-624214.mp3",
+      "sha256": "03f0bde07f084c0c7e816f04e8dc6f95cb61e6f07f75f6d50f9ce080b58ec854",
+      "archived_path": "premusic_used/new_premusic_20261030/echobrainz-explainers-624214.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "pydim-byte-knight-624087.mp3",
+      "sha256": "a7ff83ff24691f166c82940163dfa4683beaa94c834166fffb85653d7853289a",
+      "archived_path": "premusic_used/new_premusic_20261030/pydim-byte-knight-624087.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "kornevmusic-documentary-epic-trailer-624803.mp3",
+      "sha256": "83f92b0c48b5ffe486be35963b2ed6cc5dd3951c76d97d98568b9e669257fbca",
+      "archived_path": "premusic_used/new_premusic_20261030/kornevmusic-documentary-epic-trailer-624803.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "audioknap-upbeat-drums-622710.mp3",
+      "sha256": "ead0d51f4a6f70a614ba4c6a2657530ef3de21e564119082c74ecda07ec6f8ad",
+      "archived_path": "premusic_used/new_premusic_20261030/audioknap-upbeat-drums-622710.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "cintermon-background-music-623995.mp3",
+      "sha256": "89b7141417787d837975be29f243d32c31af744244b12928e3aed714790f51be",
+      "archived_path": "premusic_used/new_premusic_20261030/cintermon-background-music-623995.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "the_mountain-autumn-vibes-621995.mp3",
+      "sha256": "17795dc58b9bf5782b2a269f102bf2b0762ed67b2e45040304d9b26aece25c74",
+      "archived_path": "premusic_used/new_premusic_20261030/the_mountain-autumn-vibes-621995.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "9jackjack8-desert-rose-arabic-trap-dark-624705.mp3",
+      "sha256": "b7e355a4e5978214615cc74577964f16ba9dc956cc57916f823b9d63f4107e0b",
+      "archived_path": "premusic_used/new_premusic_20261030/9jackjack8-desert-rose-arabic-trap-dark-624705.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "openmindaudio-cuban-cha-cha-cha-dance-music-624671.mp3",
+      "sha256": "5b66b7ad2ccc07ae4d352759a0eb1b851c543bc5cd319255c67b616547c49b3d",
+      "archived_path": "premusic_used/new_premusic_20261030/openmindaudio-cuban-cha-cha-cha-dance-music-624671.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "turning_pages-controlled-burn-624543.mp3",
+      "sha256": "d60f8c522cc6575128c1c8f556fc3b0e6dbba8834a870e842a3801222b247e0b",
+      "archived_path": "premusic_used/new_premusic_20261030/turning_pages-controlled-burn-624543.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "siarhei_korbut-meditation-with-piano-624588.mp3",
+      "sha256": "bc02c20f57e36e91dc33acb115049cb10a863cb925dad2b5585b8b570dbcf6f7",
+      "archived_path": "premusic_used/new_premusic_20261030/siarhei_korbut-meditation-with-piano-624588.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "electroanimals-sport-lifestyle-623801.mp3",
+      "sha256": "0e10b00435bc662c72106cb204e95a5fa179c34663aaeb96ae9d3f41c787e867",
+      "archived_path": "premusic_used/new_premusic_20261030/electroanimals-sport-lifestyle-623801.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "turning_pages-cabin-lofi-624528.mp3",
+      "sha256": "d95ba3a901890c48385d013d5d2e13bff6cab4ba428fe6ba1a03312261e88bfe",
+      "archived_path": "premusic_used/new_premusic_20261030/turning_pages-cabin-lofi-624528.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "turning_pages-wool-sweater-624565.mp3",
+      "sha256": "52614a954686811ed5fc7086a0a29db74ef2c1b0ba78cd984efa38273c8fa612",
+      "archived_path": "premusic_used/new_premusic_20261030/turning_pages-wool-sweater-624565.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "adamklimt-safer-in-the-boot-music-624787.mp3",
+      "sha256": "51c5687788572ff11eacfea2b4d9e2ceab781652c695f518c9a27ad84745ca36",
+      "archived_path": "premusic_used/new_premusic_20261030/adamklimt-safer-in-the-boot-music-624787.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "epicmaks-epic-fighting-trailer-624769.mp3",
+      "sha256": "70dd49fb803f582db44b038a353e5ca05d7976c5c4c2c1aca24c16ae691485fe",
+      "archived_path": "premusic_used/new_premusic_20261030/epicmaks-epic-fighting-trailer-624769.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "mlvr-exosphere-625120.mp3",
+      "sha256": "f9d110691226fd2ed1e939b9b6ea3bc51286178f0e15000de87eb4d6b20f081e",
+      "archived_path": "premusic_used/new_premusic_20261030/mlvr-exosphere-625120.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "kontraa-samriddhi-ko-parikalpana-nepalese-hiphop-music-624690.mp3",
+      "sha256": "30abbaf552d7be13d7705df9580a7a42cb9cc7ce0a9e418486e9672c95479996",
+      "archived_path": "premusic_used/new_premusic_20261030/kontraa-samriddhi-ko-parikalpana-nepalese-hiphop-music-624690.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "kontraa-toxic-nepalese-trap-music-624685.mp3",
+      "sha256": "c71456ba17f32bfe0865fc3646bf799fc7b5e47fda463ddfdb2b55994a764437",
+      "archived_path": "premusic_used/new_premusic_20261030/kontraa-toxic-nepalese-trap-music-624685.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "leberch-true-crime-625090.mp3",
+      "sha256": "42ac559066b6cec6e27cf1779bd4d278bc94b2177866adc0f2ceb16f1315fe71",
+      "archived_path": "premusic_used/new_premusic_20261030/leberch-true-crime-625090.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "echobrainz-upbeat-fun-pop-624237.mp3",
+      "sha256": "05440eb4bef8ebd2aa4383d9edf5880d081ace035683d629fe902a8108b96508",
+      "archived_path": "premusic_used/new_premusic_20261030/echobrainz-upbeat-fun-pop-624237.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "leberch-dark-cinematic-625070.mp3",
+      "sha256": "a18b888d7400db85117ebdfb9cda886c7a566782901c7d1e56dd6d8223ba6cea",
+      "archived_path": "premusic_used/new_premusic_20261030/leberch-dark-cinematic-625070.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "kornevmusic-epic-trailer-dramatic-624800.mp3",
+      "sha256": "404691d55c5b21df295d01526022651f4ea6bc3a4ea2677a274dfbb6641a7980",
+      "archived_path": "premusic_used/new_premusic_20261030/kornevmusic-epic-trailer-dramatic-624800.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "kawaiiwork-stardust-618888.mp3",
+      "sha256": "b7468d58e470c18f34d2a9b73e1cd9120fe619701699c31ffe6be3e0dab9614a",
+      "archived_path": "premusic_used/new_premusic_20261030/kawaiiwork-stardust-618888.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "kontraa-monkey-temple-cypher-nepalese-trap-music-624559.mp3",
+      "sha256": "9ffab4a6bedf6985412133f8302211239893c50fc9a3051aa4c4cc3ba58991e3",
+      "archived_path": "premusic_used/new_premusic_20261030/kontraa-monkey-temple-cypher-nepalese-trap-music-624559.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "melatronic-stylish-hip-hop-623495.mp3",
+      "sha256": "e99681a9592ef8684bc64fe34da06367f5ebf08e5ce13c2792c81b6035b870be",
+      "archived_path": "premusic_used/new_premusic_20261030/melatronic-stylish-hip-hop-623495.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "melodigne-lofi-winter-night-624903.mp3",
+      "sha256": "b44b823bb65cb17b8dfa4851bd4bd33c9fae6bf0909d042e5ffec18d041bb9cb",
+      "archived_path": "premusic_used/new_premusic_20261030/melodigne-lofi-winter-night-624903.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "kornevmusic-epic-adventure-dramatic-624798.mp3",
+      "sha256": "0b40c4b98063412a6734fc2414d1ef750d6bb8c08437f677f4fec2716b88cb94",
+      "archived_path": "premusic_used/new_premusic_20261030/kornevmusic-epic-adventure-dramatic-624798.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "openmindaudio-japanese-gaming-boss-battle-music-624650.mp3",
+      "sha256": "82e79790cb2b6bc5689a56af1f938b0b294074c2a3d1479b96d1208797af8959",
+      "archived_path": "premusic_used/new_premusic_20261030/openmindaudio-japanese-gaming-boss-battle-music-624650.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "kontraa-death-wish-nepalese-trap-music-624684.mp3",
+      "sha256": "eb82dc8eb109ef55ea971d5bc9982941f9fe945b8443c0c9377593a1275b529a",
+      "archived_path": "premusic_used/new_premusic_20261030/kontraa-death-wish-nepalese-trap-music-624684.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "turning_pages-quiet-room-624563.mp3",
+      "sha256": "e4bffd5a0d1a9a8a4948aaffed79d777a0561fde1838c5dda6fd1c29f4a584b8",
+      "archived_path": "premusic_used/new_premusic_20261030/turning_pages-quiet-room-624563.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "sub_clair-phonk-hard-624946.mp3",
+      "sha256": "9e686ecee48e027443cdceb8904c514c52a296dbc72e46f1101beab1c659740c",
+      "archived_path": "premusic_used/new_premusic_20261030/sub_clair-phonk-hard-624946.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "turning_pages-all-systems-go-624537.mp3",
+      "sha256": "31a02e331282643067a1b108dcb6ba7f535ae7e714d03e65353cec29d2430c46",
+      "archived_path": "premusic_used/new_premusic_20261030/turning_pages-all-systems-go-624537.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "kontraa-baal-dey-nepalese-trap-music-624560.mp3",
+      "sha256": "26c17180bda01c3895b527995d5662a49135149c77b9e16ae60448665c8ce38d",
+      "archived_path": "premusic_used/new_premusic_20261030/kontraa-baal-dey-nepalese-trap-music-624560.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "wizzykeyz-beat-raw-savage-dancehall-riddim-instrumental-caribbean-beat-2026-624535.mp3",
+      "sha256": "72a4457aeb24725db25046eab704ec414c81821fa47a19584c8355ab8dea994c",
+      "archived_path": "premusic_used/new_premusic_20261030/wizzykeyz-beat-raw-savage-dancehall-riddim-instrumental-caribbean-beat-2026-624535.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "kornevmusic-epic-intro-cinematic-624805.mp3",
+      "sha256": "07f1be3d052bcc80ba00f2b0acf4a76c4aa8a9611ea64de3cfc5c491dc427f27",
+      "archived_path": "premusic_used/new_premusic_20261030/kornevmusic-epic-intro-cinematic-624805.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "melodigne-photos-of-nostalgia-624904.mp3",
+      "sha256": "39ceb83eb057af80349256436b342214e04e106ebddc81b6a666421d8be32519",
+      "archived_path": "premusic_used/new_premusic_20261030/melodigne-photos-of-nostalgia-624904.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "audioknap-a-dubstep-624921.mp3",
+      "sha256": "0ddc933adf16c1604d1523805fd64c9fd8dc67c6abebadc7fac6d79caa595826",
+      "archived_path": "premusic_used/new_premusic_20261030/audioknap-a-dubstep-624921.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "openmindaudio-cuban-salsa-dance-music-salsa-cubana-624673.mp3",
+      "sha256": "a8518d2ea69e81fb48534ec392f5f28ad969989c622bc8c400f8ef4f9d79318b",
+      "archived_path": "premusic_used/new_premusic_20261030/openmindaudio-cuban-salsa-dance-music-salsa-cubana-624673.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "electroanimals-corporate-music-623804.mp3",
+      "sha256": "88a9eed9247fa6c68cdc7792ba2ab55dc3a8a09cb3afb1e1e20de219fede243b",
+      "archived_path": "premusic_used/new_premusic_20261030/electroanimals-corporate-music-623804.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "megisss-happy-pop-corporate-623550.mp3",
+      "sha256": "50b1e12c803241e6f396cf7110bce45a28451fb975a7e4ee95d2ca8a7dc1d534",
+      "archived_path": "premusic_used/new_premusic_20261030/megisss-happy-pop-corporate-623550.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "epicmaks-commercial-advertising-rock-trailer-624779.mp3",
+      "sha256": "1eecbc64d9f172d2e3ad4e2868efa99c19f9a870888b9570f6e1cd0c9ad00f4b",
+      "archived_path": "premusic_used/new_premusic_20261030/epicmaks-commercial-advertising-rock-trailer-624779.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "zenostudio-midnight-rainfall-624794.mp3",
+      "sha256": "03e375d9839bea5f4a3177865d463aea2c2d7571627699c0f4c22150d9204627",
+      "archived_path": "premusic_used/new_premusic_20261030/zenostudio-midnight-rainfall-624794.mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "djovan-temple-gate-rain-624204 (1).mp3",
+      "sha256": "ddbed7530a352d0d4ec67951ceafc7ac61cf4d479cd5c888645f8cd3f400ca6c",
+      "archived_path": "premusic_used/new_premusic_20261030/djovan-temple-gate-rain-624204 (1).mp3",
+      "partition": "threshold_calibration"
+    },
+    {
+      "name": "turning_pages-sacred-canopy-pure-ambient-624514.mp3",
+      "sha256": "ea2b67d2ebbe3166ed1ac3e61be1807d43f8907a242802551b5dbdf0b6c14a95",
+      "archived_path": "premusic_used/new_premusic_20261030/turning_pages-sacred-canopy-pure-ambient-624514.mp3",
+      "partition": "threshold_calibration"
+    }
+  ],
+  "final_evaluation": [
+    {
+      "name": "pulsebox-halloween-623206.mp3",
+      "sha256": "ba0d64aed1419a7deaaccc58b4de98d9bf69697b8716ede862608b729c40f559",
+      "archived_path": "premusic_used/new_premusic_20261030/pulsebox-halloween-623206.mp3",
+      "partition": "final_evaluation"
+    },
+    {
+      "name": "megisss-angelic-ambient-background-music-623554.mp3",
+      "sha256": "91ba8adf16955493a52c708c9bec16f115be20250aac9a5d6c6e55ab23babed1",
+      "archived_path": "premusic_used/new_premusic_20261030/megisss-angelic-ambient-background-music-623554.mp3",
+      "partition": "final_evaluation"
+    },
+    {
+      "name": "kontraa-marijuana-nepalese-trap-music-624558.mp3",
+      "sha256": "aca841779880a90bb3083803ea69c619fc1f8f7f82790bba1b5be44adf67617e",
+      "archived_path": "premusic_used/new_premusic_20261030/kontraa-marijuana-nepalese-trap-music-624558.mp3",
+      "partition": "final_evaluation"
+    },
+    {
+      "name": "electroanimals-uplifting-motivation-623803.mp3",
+      "sha256": "022df7a7bfb2656bc8bd8facc32b42ed92112500d2e5e4a5b971fa562ce77efc",
+      "archived_path": "premusic_used/new_premusic_20261030/electroanimals-uplifting-motivation-623803.mp3",
+      "partition": "final_evaluation"
+    },
+    {
+      "name": "epicmaks-documentary-piano-cinematic-624724.mp3",
+      "sha256": "ff2b6e9b47e79340b687812145b2d7938fa1da83806137b1625b612742d2ba86",
+      "archived_path": "premusic_used/new_premusic_20261030/epicmaks-documentary-piano-cinematic-624724.mp3",
+      "partition": "final_evaluation"
+    },
+    {
+      "name": "megisss-432hz-zen-meditation-623553.mp3",
+      "sha256": "02a4c9983139b3b8fa531470cd0642924a93cd0d3589ecdefcc3b44c295db49a",
+      "archived_path": "premusic_used/new_premusic_20261030/megisss-432hz-zen-meditation-623553.mp3",
+      "partition": "final_evaluation"
+    },
+    {
+      "name": "turning_pages-saxophone-in-the-snow-624508.mp3",
+      "sha256": "c0538e4b6fc7cf2c83a5b309af35aa3b55fa9d42d6f5678b72463bc527f6fe7b",
+      "archived_path": "premusic_used/new_premusic_20261030/turning_pages-saxophone-in-the-snow-624508.mp3",
+      "partition": "final_evaluation"
+    },
+    {
+      "name": "adamklimt-voices-musicambience-624785.mp3",
+      "sha256": "4d607cf0452d6cf8a66e47c155f20d2705f254e51677350776ed009bce98cab6",
+      "archived_path": "premusic_used/new_premusic_20261030/adamklimt-voices-musicambience-624785.mp3",
+      "partition": "final_evaluation"
+    },
+    {
+      "name": "openmindaudio-cuban-noir-mystery-underscore-havana-noir-mystery-624659.mp3",
+      "sha256": "d88f635c8d027e61b8ad0fe4827d05b540f52b85d16d09346fe94d0482c0c482",
+      "archived_path": "premusic_used/new_premusic_20261030/openmindaudio-cuban-noir-mystery-underscore-havana-noir-mystery-624659.mp3",
+      "partition": "final_evaluation"
+    },
+    {
+      "name": "sub_clair-documentary-624919.mp3",
+      "sha256": "9dd9dd30d7c07e9644989361e7e89903bbe053b38964bc699b3aa66d7948b375",
+      "archived_path": "premusic_used/new_premusic_20261030/sub_clair-documentary-624919.mp3",
+      "partition": "final_evaluation"
+    },
+    {
+      "name": "sosimpleaudio-scream-624090.mp3",
+      "sha256": "6d2852f991ff333b6a99c777827982bc2c1641777dcbecfdd6ea63892b3036d2",
+      "archived_path": "premusic_used/new_premusic_20261030/sosimpleaudio-scream-624090.mp3",
+      "partition": "final_evaluation"
+    },
+    {
+      "name": "epicmaks-cinematic-rock-action-trailer-624721.mp3",
+      "sha256": "196ca023c22f4233423bed585c8a1c7c4f2ec274bf08f17e96eb7bae5040bcc0",
+      "archived_path": "premusic_used/new_premusic_20261030/epicmaks-cinematic-rock-action-trailer-624721.mp3",
+      "partition": "final_evaluation"
+    },
+    {
+      "name": "epicmaks-sport-energetic-rock-trailer-624777.mp3",
+      "sha256": "4391782cf3496e8175d32200079c323bf48d8b31d8f87063e2b0d9e9b4bd1ba3",
+      "archived_path": "premusic_used/new_premusic_20261030/epicmaks-sport-energetic-rock-trailer-624777.mp3",
+      "partition": "final_evaluation"
+    },
+    {
+      "name": "openmindaudio-cuban-travel-music-sightseeing-vlog-624660.mp3",
+      "sha256": "fd03271a71e051245669ac5414adbe771b9c6c001005da7e0e5a40782689171e",
+      "archived_path": "premusic_used/new_premusic_20261030/openmindaudio-cuban-travel-music-sightseeing-vlog-624660.mp3",
+      "partition": "final_evaluation"
+    },
+    {
+      "name": "sonican-inspirational-optimistic-motivation-corporate-music-624873.mp3",
+      "sha256": "d6dd66b86eabb6e29ceb9f400a0eaef82308a478d3d7ded5de325748a4da2d52",
+      "archived_path": "premusic_used/new_premusic_20261030/sonican-inspirational-optimistic-motivation-corporate-music-624873.mp3",
+      "partition": "final_evaluation"
+    },
+    {
+      "name": "playsound-wall-of-ambience-623500.mp3",
+      "sha256": "d0f8aded2908339ca4efd298007a7955c01a62d5c3f8f9e214c8d4d0ee10ebbd",
+      "archived_path": "premusic_used/new_premusic_20261030/playsound-wall-of-ambience-623500.mp3",
+      "partition": "final_evaluation"
+    },
+    {
+      "name": "mykola_shtipler-halloween-festivities-i-halloween-background-music-624352.mp3",
+      "sha256": "772c0de44089503b3543f7528bc45eef43687cad8397f190574249b59db340de",
+      "archived_path": "premusic_used/new_premusic_20261030/mykola_shtipler-halloween-festivities-i-halloween-background-music-624352.mp3",
+      "partition": "final_evaluation"
+    },
+    {
+      "name": "epicmaks-emotional-piano-story-624727.mp3",
+      "sha256": "7312d82610f24b914502e3b2abb8abff15fd6e13037b041967506d1bc74aa47c",
+      "archived_path": "premusic_used/new_premusic_20261030/epicmaks-emotional-piano-story-624727.mp3",
+      "partition": "final_evaluation"
+    },
+    {
+      "name": "gmbdecibel-the-peak-of-the-first-day-624812.mp3",
+      "sha256": "603eeb426ad5bc1b65d5fb4fcd332023767ab0789b01d8da2c4f0ad46f113da6",
+      "archived_path": "premusic_used/new_premusic_20261030/gmbdecibel-the-peak-of-the-first-day-624812.mp3",
+      "partition": "final_evaluation"
+    },
+    {
+      "name": "electroanimals-real-life-623802.mp3",
+      "sha256": "6e60f23eb0c270e3af9505feebcba11726d60b94a20b63373dea6b512f25a6ba",
+      "archived_path": "premusic_used/new_premusic_20261030/electroanimals-real-life-623802.mp3",
+      "partition": "final_evaluation"
+    },
+    {
+      "name": "greenrocketaudio-good-times-623782.mp3",
+      "sha256": "2243658f0df766e1c0bfc416f7b1ff2c4995f36447da07bebf4c719add3731b3",
+      "archived_path": "premusic_used/new_premusic_20261030/greenrocketaudio-good-times-623782.mp3",
+      "partition": "final_evaluation"
+    },
+    {
+      "name": "adamklimt-passing-ambiencemusic-624788.mp3",
+      "sha256": "95b605f4ce407dc4d42802780d9283e3ad8946ee886bbaf4e9049d03b0b80442",
+      "archived_path": "premusic_used/new_premusic_20261030/adamklimt-passing-ambiencemusic-624788.mp3",
+      "partition": "final_evaluation"
+    },
+    {
+      "name": "kulakovka-ambient-house-624653.mp3",
+      "sha256": "65f25e2305e1cf116ea3c7e8e5fc3ccb89361dd2fb1500428207e05f304bdd31",
+      "archived_path": "premusic_used/new_premusic_20261030/kulakovka-ambient-house-624653.mp3",
+      "partition": "final_evaluation"
+    },
+    {
+      "name": "jonasblakewood-rock-622903.mp3",
+      "sha256": "ef71f7bdecc502a994633273c95a189598401ba73be178c0e239902db14905b2",
+      "archived_path": "premusic_used/new_premusic_20261030/jonasblakewood-rock-622903.mp3",
+      "partition": "final_evaluation"
+    },
+    {
+      "name": "kornevmusic-epic-trailer-futuristic-624809.mp3",
+      "sha256": "1f81792f19ee524e740f2e988e24a4b974ecd6c32205f02fd93728edb97c4e14",
+      "archived_path": "premusic_used/new_premusic_20261030/kornevmusic-epic-trailer-futuristic-624809.mp3",
+      "partition": "final_evaluation"
+    },
+    {
+      "name": "emand_edroff-altea-vera-punto-e-a-capo-624486.mp3",
+      "sha256": "40e1974168a7fc85efd76be46fdbd96c579ef9a94f0038a8131492b15161e200",
+      "archived_path": "premusic_used/new_premusic_20261030/emand_edroff-altea-vera-punto-e-a-capo-624486.mp3",
+      "partition": "final_evaluation"
+    },
+    {
+      "name": "melodigne-tokyo-beats-624907.mp3",
+      "sha256": "34d6213dd103b8e0b7a4323b503be8e693bf8303749f7510f906d4de3d5619b8",
+      "archived_path": "premusic_used/new_premusic_20261030/melodigne-tokyo-beats-624907.mp3",
+      "partition": "final_evaluation"
+    },
+    {
+      "name": "artur_aravidi_music-one-fall-lofi-beat-624597.mp3",
+      "sha256": "3fd422a6b246ac132bce067971b96c8a75fb91e2634aa880bcdee8a76302d18a",
+      "archived_path": "premusic_used/new_premusic_20261030/artur_aravidi_music-one-fall-lofi-beat-624597.mp3",
+      "partition": "final_evaluation"
+    },
+    {
+      "name": "openmindaudio-japanese-cinematic-empire-music-rising-empire-624382.mp3",
+      "sha256": "450de8fd211a016bd4be01647db8a3c0f23bf60336fa5566919b7a1beca64005",
+      "archived_path": "premusic_used/new_premusic_20261030/openmindaudio-japanese-cinematic-empire-music-rising-empire-624382.mp3",
+      "partition": "final_evaluation"
+    },
+    {
+      "name": "ahedarexia-on-wings-of-fire-625088.mp3",
+      "sha256": "dc5acc0ce9713b1e83285dbc884f85e2efb68dd662ec6e8b17cc1cc65316d374",
+      "archived_path": "premusic_used/new_premusic_20261030/ahedarexia-on-wings-of-fire-625088.mp3",
+      "partition": "final_evaluation"
+    },
+    {
+      "name": "deepflow_music-carefree-happy-life-short-version-623336.mp3",
+      "sha256": "f0af231d0988ad08aa4560f64eecb81f535aa934e80c4cd1824d5bc06c2e60c6",
+      "archived_path": "premusic_used/new_premusic_20261030/deepflow_music-carefree-happy-life-short-version-623336.mp3",
+      "partition": "final_evaluation"
+    },
+    {
+      "name": "sosimpleaudio-babylon-624092.mp3",
+      "sha256": "1b2a2534c84fc7018ac9390070a4717394aff20e8f2abbbdde6c8853f1d9a645",
+      "archived_path": "premusic_used/new_premusic_20261030/sosimpleaudio-babylon-624092.mp3",
+      "partition": "final_evaluation"
+    },
+    {
+      "name": "kornevmusic-emotional-inspiring-motivational-trailer-624801.mp3",
+      "sha256": "3b59e9a15d96d90cb8dc275ea428e126c99e6c5f0053f455ed1e550c4004653d",
+      "archived_path": "premusic_used/new_premusic_20261030/kornevmusic-emotional-inspiring-motivational-trailer-624801.mp3",
+      "partition": "final_evaluation"
+    },
+    {
+      "name": "fayette35-once-upon-a-time-in-the-east-624249.mp3",
+      "sha256": "6f28fca0f02d7a85e2cae4266d8946c47c8c11641a922c2a372cfa704bd8189c",
+      "archived_path": "premusic_used/new_premusic_20261030/fayette35-once-upon-a-time-in-the-east-624249.mp3",
+      "partition": "final_evaluation"
+    },
+    {
+      "name": "jonasblakewood-uplifting-action-sport-energetic-rock-622906.mp3",
+      "sha256": "d1a912aa2d52fa0af3ff866f2fafde6510bdf346221b7a0ce251292cd5e0fa34",
+      "archived_path": "premusic_used/new_premusic_20261030/jonasblakewood-uplifting-action-sport-energetic-rock-622906.mp3",
+      "partition": "final_evaluation"
+    },
+    {
+      "name": "kornevmusic-epic-emotional-trailer-624804.mp3",
+      "sha256": "26f96f698b12223ecd7bdb2719c09598d89b2ddee873580a1bcbbe6651c9b892",
+      "archived_path": "premusic_used/new_premusic_20261030/kornevmusic-epic-emotional-trailer-624804.mp3",
+      "partition": "final_evaluation"
+    },
+    {
+      "name": "mlvr-rampd-625119.mp3",
+      "sha256": "c0271f3560c17705e3d433e2dc4b21bfa5432238fbf9c0d95886f3291e707d3c",
+      "archived_path": "premusic_used/new_premusic_20261030/mlvr-rampd-625119.mp3",
+      "partition": "final_evaluation"
+    },
+    {
+      "name": "kontraa-g-town-nepalese-trap-music-624698.mp3",
+      "sha256": "662a7d52385905b8e26a027b2c13a97d96877b7daf95b4d0dead31c93c508c04",
+      "archived_path": "premusic_used/new_premusic_20261030/kontraa-g-town-nepalese-trap-music-624698.mp3",
+      "partition": "final_evaluation"
+    },
+    {
+      "name": "kulakovka-ambient-inspiration-624652.mp3",
+      "sha256": "e6e5e4652391947c2515a890a85f6aed3620e9b982d13147f4ffc897c1dac6d5",
+      "archived_path": "premusic_used/new_premusic_20261030/kulakovka-ambient-inspiration-624652.mp3",
+      "partition": "final_evaluation"
+    },
+    {
+      "name": "openmindaudio-japanese-epic-cinematic-underscore-624379.mp3",
+      "sha256": "167d5236990a9f86523489afcb85be0f94e0223ef0b221a28684f78fa8732de9",
+      "archived_path": "premusic_used/new_premusic_20261030/openmindaudio-japanese-epic-cinematic-underscore-624379.mp3",
+      "partition": "final_evaluation"
+    },
+    {
+      "name": "nastynewfie-lofi-memories-of-you-624451.mp3",
+      "sha256": "f140806ad63bc47954c533be27a9280cbb56d3a1b602c9efd77c7cde4ed7f972",
+      "archived_path": "premusic_used/new_premusic_20261030/nastynewfie-lofi-memories-of-you-624451.mp3",
+      "partition": "final_evaluation"
+    },
+    {
+      "name": "kontraa-himalayan-nepalese-trap-music-624691.mp3",
+      "sha256": "2fea82537079faf9608ba72ccaabc263e292dbc6f74433b0ef17137ea380eeae",
+      "archived_path": "premusic_used/new_premusic_20261030/kontraa-himalayan-nepalese-trap-music-624691.mp3",
+      "partition": "final_evaluation"
+    },
+    {
+      "name": "kulakovka-party-pop-624646.mp3",
+      "sha256": "432ac56fecde5b7f07edfff5c000e512b7c126186062cfbdf6a5c4a6a03984aa",
+      "archived_path": "premusic_used/new_premusic_20261030/kulakovka-party-pop-624646.mp3",
+      "partition": "final_evaluation"
+    },
+    {
+      "name": "synthezx-witch-creak-624606.mp3",
+      "sha256": "c07b592fbae30279c87c87f9c8579232d85cc1b51ae8dee23acc7cca3ff220fc",
+      "archived_path": "premusic_used/new_premusic_20261030/synthezx-witch-creak-624606.mp3",
+      "partition": "final_evaluation"
+    },
+    {
+      "name": "epicmaks-rock-promo-sport-624757.mp3",
+      "sha256": "4fb7cfbd7b8c71086da63ebb89823e847d730e8cab192095c87979c3b735aeb5",
+      "archived_path": "premusic_used/new_premusic_20261030/epicmaks-rock-promo-sport-624757.mp3",
+      "partition": "final_evaluation"
+    },
+    {
+      "name": "turning_pages-rainy-city-lights-624512.mp3",
+      "sha256": "a24aeaedf088dc6729d47aad3485f625552eee05b46c246f9836cb3a4f9f435e",
+      "archived_path": "premusic_used/new_premusic_20261030/turning_pages-rainy-city-lights-624512.mp3",
+      "partition": "final_evaluation"
+    },
+    {
+      "name": "kornevmusic-epic-motivational-trailer-624806.mp3",
+      "sha256": "4c443fc3e9d11a8ef82e1cfb23803af22c8091117a6e10e6992abf4bba7f8075",
+      "archived_path": "premusic_used/new_premusic_20261030/kornevmusic-epic-motivational-trailer-624806.mp3",
+      "partition": "final_evaluation"
+    },
+    {
+      "name": "audioknap-a-epicness-624923.mp3",
+      "sha256": "62c9a618265498d3319003327a7368f13588115d563f31115f87e600db128a03",
+      "archived_path": "premusic_used/new_premusic_20261030/audioknap-a-epicness-624923.mp3",
+      "partition": "final_evaluation"
+    },
+    {
+      "name": "kontraa-niyudha-nepalese-hiphop-music-624696.mp3",
+      "sha256": "9ac73bab909f57453e362243bfd87c0f1d48bc91e3a5e6f04461be44e07f4f91",
+      "archived_path": "premusic_used/new_premusic_20261030/kontraa-niyudha-nepalese-hiphop-music-624696.mp3",
+      "partition": "final_evaluation"
+    },
+    {
+      "name": "melodigne-chill-station-624906.mp3",
+      "sha256": "9a919efff800a0bc041931c346dcb36215e9de9c674404ae714b17f8fe13b85f",
+      "archived_path": "premusic_used/new_premusic_20261030/melodigne-chill-station-624906.mp3",
+      "partition": "final_evaluation"
+    },
+    {
+      "name": "openmindaudio-cuban-wedding-celebration-music-624667.mp3",
+      "sha256": "93723835b4547bf77b08ba17fa6dc27e54e0d938fdcc5927f46537ff42bdc8fa",
+      "archived_path": "premusic_used/new_premusic_20261030/openmindaudio-cuban-wedding-celebration-music-624667.mp3",
+      "partition": "final_evaluation"
+    },
+    {
+      "name": "mykola_shtipler-trick-or-treat-tonight-i-halloween-background-music-624351.mp3",
+      "sha256": "e055402775553ba16aa16c66df0d5ca1d99d5e83376da7d80c36086d31d4210a",
+      "archived_path": "premusic_used/new_premusic_20261030/mykola_shtipler-trick-or-treat-tonight-i-halloween-background-music-624351.mp3",
+      "partition": "final_evaluation"
+    },
+    {
+      "name": "kulakovka-dark-synthwave-624644.mp3",
+      "sha256": "9f0837a8708aee39372027236969adf4ca07df93729e07febf732b53797c0adf",
+      "archived_path": "premusic_used/new_premusic_20261030/kulakovka-dark-synthwave-624644.mp3",
+      "partition": "final_evaluation"
+    },
+    {
+      "name": "echobrainz-presentation-music-624219.mp3",
+      "sha256": "39689134c8260a4e6d40af0c3d59f0d0bf45e2f46ebce5b438e6c97ae181d121",
+      "archived_path": "premusic_used/new_premusic_20261030/echobrainz-presentation-music-624219.mp3",
+      "partition": "final_evaluation"
+    },
+    {
+      "name": "openmindaudio-chinese-cinematic-music-echoes-of-the-empty-mountain-624362.mp3",
+      "sha256": "c81cf1639581df84ef548b28c2313fb7812c928ae5050af7721031e41f56c7b9",
+      "archived_path": "premusic_used/new_premusic_20261030/openmindaudio-chinese-cinematic-music-echoes-of-the-empty-mountain-624362.mp3",
+      "partition": "final_evaluation"
+    },
+    {
+      "name": "audiocopper-charity-624932.mp3",
+      "sha256": "b3b99d6fd6262b7063dc384842411f432e8675a4bb549b2eafbdb30069ce0d4d",
+      "archived_path": "premusic_used/new_premusic_20261030/audiocopper-charity-624932.mp3",
+      "partition": "final_evaluation"
+    },
+    {
+      "name": "kontraa-looking-like-bee-nepalese-hiphop-music-624687.mp3",
+      "sha256": "c850525a298a681bf6b58d213e07bf7b51e0c8d14e5f5344428780644c2b102b",
+      "archived_path": "premusic_used/new_premusic_20261030/kontraa-looking-like-bee-nepalese-hiphop-music-624687.mp3",
+      "partition": "final_evaluation"
+    },
+    {
+      "name": "kontraa-manakamana-nepalese-trap-music-624557.mp3",
+      "sha256": "b5e9a35291712744daa23a2e149518f0ea74d69372d0ead464bd5034dfd4ade4",
+      "archived_path": "premusic_used/new_premusic_20261030/kontraa-manakamana-nepalese-trap-music-624557.mp3",
+      "partition": "final_evaluation"
+    },
+    {
+      "name": "kornevmusic-epic-dramatic-624807.mp3",
+      "sha256": "1c99dd022513fc91f912d9aba58435892bb3eb6efe2bd24f649b1614c8388725",
+      "archived_path": "premusic_used/new_premusic_20261030/kornevmusic-epic-dramatic-624807.mp3",
+      "partition": "final_evaluation"
+    },
+    {
+      "name": "djovan-kinko-scrolls-624188.mp3",
+      "sha256": "e782d82d08d48988a398ec56f12571ab10fa3a0333be78d1ec615b8b2cbf25d5",
+      "archived_path": "premusic_used/new_premusic_20261030/djovan-kinko-scrolls-624188.mp3",
+      "partition": "final_evaluation"
+    }
+  ]
+}

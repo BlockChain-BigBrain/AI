@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "command": "python -m unittest discover -s layer2 -p 'test_*.py' -v",
+  "tests": 25,
+  "passed": 25,
+  "failed": 0,
+  "includes": [
+    "transposition and offset alignment",
+    "silence and unrelated sequence rejection",
+    "fragment separation",
+    "tune-only calibration",
+    "fresh intake contamination and independent-work checks"
+  ]
+}

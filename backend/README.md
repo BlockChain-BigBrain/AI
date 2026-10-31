@@ -1,5 +1,9 @@
 # Track-AI Node 백엔드 MVP
 
+2026-10-22 추가: `http://127.0.0.1:3000/`에서 실제 업로드·결과 조회 화면을 제공합니다. SQLite 기본 저장과 선택형 MySQL 저장소를 지원합니다. 프로젝트 루트 `.env`에 `DATABASE_URL=mysql://...`을 설정하면 MySQL로 연결하며, 연결 실패 시 SQLite로 조용히 대체하지 않습니다. 비밀번호에 URL 특수문자가 있으면 URL 인코딩하세요. MySQL 스키마는 `schema.mysql.sql`입니다. 기존 팀 스키마와 다르면 먼저 매핑이 필요합니다. 실제 팀 DB 접속 검증은 접속 설정 제공 후 가능합니다.
+
+최신 진행 상태는 `layer2/artifacts/mentoring_workflow_status.json`을 확인하세요. 전체 평가 완료 후 임계값·실패 분석과 격리된 실제 운영 시험이 자동 실행됩니다. 운영 시험은 팀 MySQL을 수정하지 않고 별도 SQLite 런타임을 사용합니다.
+
 브라우저 업로드를 받고 Python FastAPI에 분석을 맡긴 뒤 결과를 로컬 SQLite에 저장하는 연결 서버입니다. 프론트엔드는 Python API를 직접 호출하지 않습니다.
 
 ## 실행 순서
@@ -15,7 +19,7 @@
 
 `VERIFIED` 결과의 `decision`은 `PASS`, `WARN`, `HOLD`, `BLOCK`입니다. 업로드 임시 파일은 성공·실패와 관계없이 분석 후 삭제됩니다. AI가 실패한 경우 정상 처리하지 않고 `FAILED`로 저장합니다.
 
-SQLite는 로컬 통합 확인용입니다. 팀 MySQL 서버가 준비되면 `tracks` 테이블 필드를 Prisma 모델로 옮기고, 현재 SQL 호출 부분만 저장소 모듈로 교체하면 됩니다.
+SQLite는 로컬 통합 확인용 기본값입니다. MySQL 어댑터와 스키마를 추가했으며, 팀 MySQL 서버가 준비되면 `.env`의 `DATABASE_URL`로 선택합니다. 팀에 기존 Prisma 스키마가 있다면 `schema.mysql.sql`과 테이블·필드를 먼저 대조해야 합니다. 기존 SQLite 데이터를 팀 DB로 자동 이관하지 않습니다.
 
 두 서버를 실행한 상태에서 원본 중복 시나리오를 자동 확인할 수 있습니다.
 

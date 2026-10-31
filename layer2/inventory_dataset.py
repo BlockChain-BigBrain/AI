@@ -28,18 +28,44 @@ def count_manifest(path: Path) -> int:
         return sum(1 for _ in csv.DictReader(handle))
 
 
+def count_duplicate_status(path: Path, status: str) -> int | None:
+    """Count one status in the current music-vs-reference duplicate report."""
+    if not path.is_file():
+        return None
+    with path.open("r", encoding="utf-8-sig", newline="") as handle:
+        return sum(1 for row in csv.DictReader(handle) if row.get("status") == status)
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output", type=Path, default=ROOT / "layer2" / "artifacts" / "dataset_inventory.json")
     args = parser.parse_args()
 
     test_root = ROOT / "layer2" / "test_data"
+    duplicate_report = ROOT / "layer2" / "artifacts" / "music_duplicate_report.csv"
+    premusic_reorganization = ROOT / "layer2" / "artifacts" / "premusic_reorganization_20261029.json"
+    reorganization = json.loads(premusic_reorganization.read_text(encoding="utf-8")) if premusic_reorganization.exists() else None
+    new_premusic_reorganization = ROOT / "layer2" / "artifacts" / "new_premusic_reorganization_20261029.json"
+    new_audio = json.loads(new_premusic_reorganization.read_text(encoding="utf-8")) if new_premusic_reorganization.exists() else None
+    batch_premusic_reorganization = ROOT / "layer2" / "artifacts" / "new_premusic_reorganization_20261030.json"
+    batch_audio = json.loads(batch_premusic_reorganization.read_text(encoding="utf-8")) if batch_premusic_reorganization.exists() else None
+    latest_intake = ROOT / "layer2" / "artifacts" / "premusic_intake_20261030b.json"
+    latest_audio = json.loads(latest_intake.read_text(encoding="utf-8")) if latest_intake.exists() else None
     result = {
         "reference_tracks": count_audio(ROOT / "original_music"),
         "normal_audio_files": count_audio(ROOT / "music"),
+        "premusic_available_audio_files": count_audio(ROOT / "premusic"),
+        "premusic_used_audio_files": count_audio(ROOT / "premusic_used"),
+        "premusic_exact_duplicates_removed": reorganization["exact_duplicates_deleted"] if reorganization else 0,
+        "premusic_new_audio_added": new_audio["new_files_screened"] if new_audio else 0,
+        "premusic_batch_20261030_audio_added": batch_audio["unique_new_files_used_and_moved"] if batch_audio else 0,
+        "premusic_batch_20261030b_audio_added": len(latest_audio["unique_files_moved"]) if latest_audio else 0,
+        "normal_verified_no_exact_duplicate": count_duplicate_status(duplicate_report, "NO_EXACT_MATCH"),
+        "normal_exact_duplicates_excluded": count_duplicate_status(duplicate_report, "DUPLICATE_PREVIEW"),
         "synthetic_positive": count_manifest(test_root / "plagiarism_positive" / "manifest.csv"),
         "synthetic_layered_positive": count_manifest(test_root / "synthetic_layered_positive" / "manifest.csv"),
-        "reperformed_positive_excluded_by_default": count_manifest(test_root / "reperformed_positive" / "manifest.csv"),
+        "synthetic_extended_positive": count_manifest(test_root / "extended_positive" / "manifest.csv"),
+        "synthetic_arrangement_positive_excluded_by_default": count_manifest(test_root / "reperformed_positive" / "manifest.csv"),
         "safe_arranged_controls": count_manifest(test_root / "safe_arranged" / "manifest.csv"),
         "policy": {
             "primary_positive_scope": "synthetic_transformations_only",

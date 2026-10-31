@@ -1,0 +1,16 @@
+{
+  "status": "diagnostic_probe_not_adopted",
+  "query": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\ai_improvement_stress\\000__pitch_tempo_codec.m4a",
+  "reference": "C:\\\ube14\ub85d\uccb4\uc778\\original_music\\absolutesound-hard-phonk-phonk-music-529766.mp3",
+  "feature_version": "cqt36-centered-0.5s-v1",
+  "evidence": {
+    "tonalScore": 0.14122917594280668,
+    "queryStartSec": 0.0,
+    "queryEndSec": 5.108390022675737,
+    "refStartSec": 45.51111111111111,
+    "refEndSec": 51.08390022675737,
+    "pitchShift": 9
+  },
+  "active_warn": 0.34748932160579077,
+  "scope_limit": "One previously observed hard example; not full CQT evaluation."
+}

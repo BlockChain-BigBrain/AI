@@ -1,0 +1,1491 @@
+{
+  "date": "2026-10-30",
+  "production_thresholds_changed": false,
+  "method": "all-12-key-transposition Chroma/CQT tonal alignment plus separate onset-rhythm correlation",
+  "summary": {
+    "basic_pitch_key_tempo": {
+      "count": 30,
+      "tonal_recall_at_1": 1.0,
+      "tonal_recall_at_3": 1.0,
+      "tonal_recall_at_5": 1.0,
+      "rhythm_recall_at_1": 0.1,
+      "rhythm_recall_at_3": 0.3,
+      "rhythm_recall_at_5": 0.36666666666666664,
+      "tonal_missed_names": [],
+      "rhythm_missed_names": [
+        "00__basic_pitch_key_tempo.wav",
+        "01__basic_pitch_key_tempo.wav",
+        "02__basic_pitch_key_tempo.wav",
+        "03__basic_pitch_key_tempo.wav",
+        "04__basic_pitch_key_tempo.wav",
+        "05__basic_pitch_key_tempo.wav",
+        "06__basic_pitch_key_tempo.wav",
+        "07__basic_pitch_key_tempo.wav",
+        "08__basic_pitch_key_tempo.wav",
+        "09__basic_pitch_key_tempo.wav",
+        "10__basic_pitch_key_tempo.wav",
+        "15__basic_pitch_key_tempo.wav",
+        "19__basic_pitch_key_tempo.wav",
+        "20__basic_pitch_key_tempo.wav",
+        "22__basic_pitch_key_tempo.wav",
+        "23__basic_pitch_key_tempo.wav",
+        "25__basic_pitch_key_tempo.wav",
+        "26__basic_pitch_key_tempo.wav",
+        "27__basic_pitch_key_tempo.wav"
+      ]
+    },
+    "instrument_layer": {
+      "count": 30,
+      "tonal_recall_at_1": 1.0,
+      "tonal_recall_at_3": 1.0,
+      "tonal_recall_at_5": 1.0,
+      "rhythm_recall_at_1": 1.0,
+      "rhythm_recall_at_3": 1.0,
+      "rhythm_recall_at_5": 1.0,
+      "tonal_missed_names": [],
+      "rhythm_missed_names": []
+    }
+  },
+  "results": [
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-1-aleksandr-koshylev-_-a-world-without-dreams-615600.mp3",
+      "variant": "basic_pitch_key_tempo",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\00__basic_pitch_key_tempo.wav",
+      "source_index": 0,
+      "tonal_score": 0.7948662246908685,
+      "rhythm_score": 0.08553797006607056,
+      "tonal_rank": 1,
+      "rhythm_rank": 16,
+      "tonal_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-1-aleksandr-koshylev-_-a-world-without-dreams-615600.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-15-aleksandr-koshylev-the-edge-is-inevitable-605029.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-progress-615932 (1).mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-2-aleksandr-koshylev-_-my-soul-beats-for-you-615601.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-21-aleksandr-koshylev-we-are-all-different-605030.mp3"
+      ],
+      "rhythm_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-21-aleksandr-koshylev-we-are-all-different-605030.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-17-aleksandr-koshylev-there-is-darkness-in-the-eyes-605024.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-16-aleksandr-koshylev-_-the-choice-is-ours-615599.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-daydream-615930.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-barefoot-on-the-beach-616029.mp3"
+      ]
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-1-aleksandr-koshylev-_-a-world-without-dreams-615600.mp3",
+      "variant": "instrument_layer",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\00__instrument_layer.wav",
+      "source_index": 0,
+      "tonal_score": 0.9963083555801896,
+      "rhythm_score": 0.9999101161956787,
+      "tonal_rank": 1,
+      "rhythm_rank": 1,
+      "tonal_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-1-aleksandr-koshylev-_-a-world-without-dreams-615600.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-2-aleksandr-koshylev-_-my-soul-beats-for-you-615601.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-progress-615932 (1).mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-21-aleksandr-koshylev-we-are-all-different-605030.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-15-aleksandr-koshylev-the-edge-is-inevitable-605029.mp3"
+      ],
+      "rhythm_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-1-aleksandr-koshylev-_-a-world-without-dreams-615600.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-lonely-city-lights-616028.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-jazz-piano-bar-lounge-615446.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-jazz-lounge-cafe-615441.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiodollar-epic-hollywood-612183.mp3"
+      ]
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-11-aleksandr-koshylev-night-life-605028.mp3",
+      "variant": "basic_pitch_key_tempo",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\01__basic_pitch_key_tempo.wav",
+      "source_index": 1,
+      "tonal_score": 0.46716027774742425,
+      "rhythm_score": 0.06148703023791313,
+      "tonal_rank": 1,
+      "rhythm_rank": 18,
+      "tonal_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-11-aleksandr-koshylev-night-life-605028.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-17-aleksandr-koshylev-there-is-darkness-in-the-eyes-605024.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-21-aleksandr-koshylev-we-are-all-different-605030.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-2-aleksandr-koshylev-_-my-soul-beats-for-you-615601.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-jazz-lounge-cafe-615441.mp3"
+      ],
+      "rhythm_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-progress-615932 (1).mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-classical-cinematic-piano-615470 (1).mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-when-stars-align-616032.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-jazz-lounge-cafe-615441.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-21-aleksandr-koshylev-we-are-all-different-605030.mp3"
+      ]
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-11-aleksandr-koshylev-night-life-605028.mp3",
+      "variant": "instrument_layer",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\01__instrument_layer.wav",
+      "source_index": 1,
+      "tonal_score": 0.9973551814255939,
+      "rhythm_score": 0.9999686479568481,
+      "tonal_rank": 1,
+      "rhythm_rank": 1,
+      "tonal_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-11-aleksandr-koshylev-night-life-605028.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-17-aleksandr-koshylev-there-is-darkness-in-the-eyes-605024.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-2-aleksandr-koshylev-_-my-soul-beats-for-you-615601.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-15-aleksandr-koshylev-the-edge-is-inevitable-605029.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-progress-615932 (1).mp3"
+      ],
+      "rhythm_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-11-aleksandr-koshylev-night-life-605028.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-daydream-615930.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-lonely-city-lights-616028.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-15-aleksandr-koshylev-the-edge-is-inevitable-605029.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-classical-cinematic-piano-615470 (1).mp3"
+      ]
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-15-aleksandr-koshylev-the-edge-is-inevitable-605029.mp3",
+      "variant": "basic_pitch_key_tempo",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\02__basic_pitch_key_tempo.wav",
+      "source_index": 2,
+      "tonal_score": 0.5176193160148933,
+      "rhythm_score": 0.0673181414604187,
+      "tonal_rank": 1,
+      "rhythm_rank": 18,
+      "tonal_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-15-aleksandr-koshylev-the-edge-is-inevitable-605029.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-21-aleksandr-koshylev-we-are-all-different-605030.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-16-aleksandr-koshylev-_-the-choice-is-ours-615599.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-11-aleksandr-koshylev-night-life-605028.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-2-aleksandr-koshylev-_-my-soul-beats-for-you-615601.mp3"
+      ],
+      "rhythm_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-1-aleksandr-koshylev-_-a-world-without-dreams-615600.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-when-stars-align-616032.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-jazz-lounge-cafe-615441.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-barefoot-on-the-beach-616029.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiodollar-epic-hollywood-612183.mp3"
+      ]
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-15-aleksandr-koshylev-the-edge-is-inevitable-605029.mp3",
+      "variant": "instrument_layer",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\02__instrument_layer.wav",
+      "source_index": 2,
+      "tonal_score": 0.9956471515128139,
+      "rhythm_score": 0.9999823570251465,
+      "tonal_rank": 1,
+      "rhythm_rank": 1,
+      "tonal_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-15-aleksandr-koshylev-the-edge-is-inevitable-605029.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-21-aleksandr-koshylev-we-are-all-different-605030.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-2-aleksandr-koshylev-_-my-soul-beats-for-you-615601.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-1-aleksandr-koshylev-_-a-world-without-dreams-615600.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-4-aleksandr-koshylev-_-ulterior-motives-615598.mp3"
+      ],
+      "rhythm_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-15-aleksandr-koshylev-the-edge-is-inevitable-605029.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-11-aleksandr-koshylev-night-life-605028.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-jazz-piano-bar-lounge-615446.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-soft-spoken-promises-616033.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-2-aleksandr-koshylev-_-my-soul-beats-for-you-615601.mp3"
+      ]
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-16-aleksandr-koshylev-_-the-choice-is-ours-615599.mp3",
+      "variant": "basic_pitch_key_tempo",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\03__basic_pitch_key_tempo.wav",
+      "source_index": 3,
+      "tonal_score": 0.6530566252734473,
+      "rhythm_score": 0.08777247369289398,
+      "tonal_rank": 1,
+      "rhythm_rank": 12,
+      "tonal_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-16-aleksandr-koshylev-_-the-choice-is-ours-615599.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-1-aleksandr-koshylev-_-a-world-without-dreams-615600.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-jazz-lounge-cafe-615441.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-dreamer-615931.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-2-aleksandr-koshylev-_-my-soul-beats-for-you-615601.mp3"
+      ],
+      "rhythm_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-barefoot-on-the-beach-616029.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-when-stars-align-616032.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-lonely-city-lights-616028.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-borrowed-time-together-616034.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-1-aleksandr-koshylev-_-a-world-without-dreams-615600.mp3"
+      ]
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-16-aleksandr-koshylev-_-the-choice-is-ours-615599.mp3",
+      "variant": "instrument_layer",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\03__instrument_layer.wav",
+      "source_index": 3,
+      "tonal_score": 0.9990342840724693,
+      "rhythm_score": 0.999888002872467,
+      "tonal_rank": 1,
+      "rhythm_rank": 1,
+      "tonal_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-16-aleksandr-koshylev-_-the-choice-is-ours-615599.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-4-aleksandr-koshylev-_-ulterior-motives-615598.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-15-aleksandr-koshylev-the-edge-is-inevitable-605029.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-21-aleksandr-koshylev-we-are-all-different-605030.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiodollar-epic-hollywood-612183.mp3"
+      ],
+      "rhythm_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-16-aleksandr-koshylev-_-the-choice-is-ours-615599.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-16-aleksandr-koshylev-the-power-of-the-mind-605026.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-daydream-615930.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-21-aleksandr-koshylev-we-are-all-different-605030.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-11-aleksandr-koshylev-night-life-605028.mp3"
+      ]
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-16-aleksandr-koshylev-the-power-of-the-mind-605026.mp3",
+      "variant": "basic_pitch_key_tempo",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\04__basic_pitch_key_tempo.wav",
+      "source_index": 4,
+      "tonal_score": 0.49759122352451857,
+      "rhythm_score": 0.09410236775875092,
+      "tonal_rank": 1,
+      "rhythm_rank": 6,
+      "tonal_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-16-aleksandr-koshylev-the-power-of-the-mind-605026.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-11-aleksandr-koshylev-night-life-605028.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-4-aleksandr-koshylev-_-ulterior-motives-615598.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-dreamer-615931.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-1-aleksandr-koshylev-_-a-world-without-dreams-615600.mp3"
+      ],
+      "rhythm_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiocoffee-motivate-no-copyright-music-615977.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-when-stars-align-616032.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-barefoot-on-the-beach-616029.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-torn-between-two-worlds-616031.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-1-aleksandr-koshylev-_-a-world-without-dreams-615600.mp3"
+      ]
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-16-aleksandr-koshylev-the-power-of-the-mind-605026.mp3",
+      "variant": "instrument_layer",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\04__instrument_layer.wav",
+      "source_index": 4,
+      "tonal_score": 0.9981712410010436,
+      "rhythm_score": 0.9999003410339355,
+      "tonal_rank": 1,
+      "rhythm_rank": 1,
+      "tonal_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-16-aleksandr-koshylev-the-power-of-the-mind-605026.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-21-aleksandr-koshylev-we-are-all-different-605030.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-4-aleksandr-koshylev-_-ulterior-motives-615598.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-jazz-lounge-cafe-615441.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-15-aleksandr-koshylev-the-edge-is-inevitable-605029.mp3"
+      ],
+      "rhythm_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-16-aleksandr-koshylev-the-power-of-the-mind-605026.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-16-aleksandr-koshylev-_-the-choice-is-ours-615599.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-21-aleksandr-koshylev-we-are-all-different-605030.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-falling-for-you-again-616027.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-dreamer-615931.mp3"
+      ]
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-17-aleksandr-koshylev-there-is-darkness-in-the-eyes-605024.mp3",
+      "variant": "basic_pitch_key_tempo",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\05__basic_pitch_key_tempo.wav",
+      "source_index": 5,
+      "tonal_score": 0.2727355536927959,
+      "rhythm_score": 0.06339339911937714,
+      "tonal_rank": 1,
+      "rhythm_rank": 24,
+      "tonal_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-17-aleksandr-koshylev-there-is-darkness-in-the-eyes-605024.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-dreamer-615931.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-jazz-lounge-cafe-615441.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-vibe-615929.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-2-aleksandr-koshylev-_-my-soul-beats-for-you-615601.mp3"
+      ],
+      "rhythm_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-15-aleksandr-koshylev-the-edge-is-inevitable-605029.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-jazz-piano-bar-lounge-615446.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-classical-positive-piano-615469.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-vibe-615929.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-soft-spoken-promises-616033.mp3"
+      ]
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-17-aleksandr-koshylev-there-is-darkness-in-the-eyes-605024.mp3",
+      "variant": "instrument_layer",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\05__instrument_layer.wav",
+      "source_index": 5,
+      "tonal_score": 0.9912168658470505,
+      "rhythm_score": 0.9999585151672363,
+      "tonal_rank": 1,
+      "rhythm_rank": 1,
+      "tonal_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-17-aleksandr-koshylev-there-is-darkness-in-the-eyes-605024.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-2-aleksandr-koshylev-_-my-soul-beats-for-you-615601.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-jazz-lounge-cafe-615441.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiocoffee-motivate-no-copyright-music-615977.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-11-aleksandr-koshylev-night-life-605028.mp3"
+      ],
+      "rhythm_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-17-aleksandr-koshylev-there-is-darkness-in-the-eyes-605024.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-daydream-615930.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-funny-comedy-jazz-615439.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-jazz-piano-bar-lounge-615446.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-lonely-city-lights-616028.mp3"
+      ]
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-2-aleksandr-koshylev-_-my-soul-beats-for-you-615601.mp3",
+      "variant": "basic_pitch_key_tempo",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\06__basic_pitch_key_tempo.wav",
+      "source_index": 6,
+      "tonal_score": 0.48724638071264015,
+      "rhythm_score": 0.08861363679170609,
+      "tonal_rank": 1,
+      "rhythm_rank": 13,
+      "tonal_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-2-aleksandr-koshylev-_-my-soul-beats-for-you-615601.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-15-aleksandr-koshylev-the-edge-is-inevitable-605029.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-21-aleksandr-koshylev-we-are-all-different-605030.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-4-aleksandr-koshylev-_-ulterior-motives-615598.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-1-aleksandr-koshylev-_-a-world-without-dreams-615600.mp3"
+      ],
+      "rhythm_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-1-aleksandr-koshylev-_-a-world-without-dreams-615600.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-torn-between-two-worlds-616031.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-vibe-615929.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-lonely-city-lights-616028.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-17-aleksandr-koshylev-there-is-darkness-in-the-eyes-605024.mp3"
+      ]
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-2-aleksandr-koshylev-_-my-soul-beats-for-you-615601.mp3",
+      "variant": "instrument_layer",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\06__instrument_layer.wav",
+      "source_index": 6,
+      "tonal_score": 0.9986231618743274,
+      "rhythm_score": 0.9999412298202515,
+      "tonal_rank": 1,
+      "rhythm_rank": 1,
+      "tonal_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-2-aleksandr-koshylev-_-my-soul-beats-for-you-615601.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-1-aleksandr-koshylev-_-a-world-without-dreams-615600.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-jazz-lounge-cafe-615441.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-15-aleksandr-koshylev-the-edge-is-inevitable-605029.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-17-aleksandr-koshylev-there-is-darkness-in-the-eyes-605024.mp3"
+      ],
+      "rhythm_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-2-aleksandr-koshylev-_-my-soul-beats-for-you-615601.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-vibe-615929.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiodollar-epic-hollywood-612183.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-torn-between-two-worlds-616031.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-jazz-lounge-cafe-615441.mp3"
+      ]
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-21-aleksandr-koshylev-we-are-all-different-605030.mp3",
+      "variant": "basic_pitch_key_tempo",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\07__basic_pitch_key_tempo.wav",
+      "source_index": 7,
+      "tonal_score": 0.3429766248097912,
+      "rhythm_score": 0.10719341784715652,
+      "tonal_rank": 1,
+      "rhythm_rank": 6,
+      "tonal_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-21-aleksandr-koshylev-we-are-all-different-605030.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-1-aleksandr-koshylev-_-a-world-without-dreams-615600.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-vibe-615929.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-daydream-615930.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-4-aleksandr-koshylev-_-ulterior-motives-615598.mp3"
+      ],
+      "rhythm_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-15-aleksandr-koshylev-the-edge-is-inevitable-605029.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-that-is-jazzy-piano-615448.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-when-stars-align-616032.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-lonely-city-lights-616028.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiocoffee-motivate-no-copyright-music-615977.mp3"
+      ]
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-21-aleksandr-koshylev-we-are-all-different-605030.mp3",
+      "variant": "instrument_layer",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\07__instrument_layer.wav",
+      "source_index": 7,
+      "tonal_score": 0.9953093838661348,
+      "rhythm_score": 0.9999712705612183,
+      "tonal_rank": 1,
+      "rhythm_rank": 1,
+      "tonal_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-21-aleksandr-koshylev-we-are-all-different-605030.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-4-aleksandr-koshylev-_-ulterior-motives-615598.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-15-aleksandr-koshylev-the-edge-is-inevitable-605029.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-1-aleksandr-koshylev-_-a-world-without-dreams-615600.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-2-aleksandr-koshylev-_-my-soul-beats-for-you-615601.mp3"
+      ],
+      "rhythm_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-21-aleksandr-koshylev-we-are-all-different-605030.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-dreamer-615931.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-falling-for-you-again-616027.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-progress-615932 (1).mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-16-aleksandr-koshylev-_-the-choice-is-ours-615599.mp3"
+      ]
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-4-aleksandr-koshylev-_-ulterior-motives-615598.mp3",
+      "variant": "basic_pitch_key_tempo",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\08__basic_pitch_key_tempo.wav",
+      "source_index": 8,
+      "tonal_score": 0.5715017757548341,
+      "rhythm_score": 0.02724805846810341,
+      "tonal_rank": 1,
+      "rhythm_rank": 30,
+      "tonal_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-4-aleksandr-koshylev-_-ulterior-motives-615598.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-vibe-615929.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-21-aleksandr-koshylev-we-are-all-different-605030.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-16-aleksandr-koshylev-_-the-choice-is-ours-615599.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-1-aleksandr-koshylev-_-a-world-without-dreams-615600.mp3"
+      ],
+      "rhythm_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-borrowed-time-together-616034.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-classical-positive-piano-615469.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-dreamer-615931.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-jazz-piano-bar-lounge-615446.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-that-is-jazzy-piano-615448.mp3"
+      ]
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-4-aleksandr-koshylev-_-ulterior-motives-615598.mp3",
+      "variant": "instrument_layer",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\08__instrument_layer.wav",
+      "source_index": 8,
+      "tonal_score": 0.996334990337683,
+      "rhythm_score": 0.9999532699584961,
+      "tonal_rank": 1,
+      "rhythm_rank": 1,
+      "tonal_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-4-aleksandr-koshylev-_-ulterior-motives-615598.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-21-aleksandr-koshylev-we-are-all-different-605030.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-1-aleksandr-koshylev-_-a-world-without-dreams-615600.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-2-aleksandr-koshylev-_-my-soul-beats-for-you-615601.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-15-aleksandr-koshylev-the-edge-is-inevitable-605029.mp3"
+      ],
+      "rhythm_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-4-aleksandr-koshylev-_-ulterior-motives-615598.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-funny-comedy-jazz-615439.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-that-is-jazzy-piano-615448.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-when-stars-align-616032.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-17-aleksandr-koshylev-there-is-darkness-in-the-eyes-605024.mp3"
+      ]
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-daydream-615930.mp3",
+      "variant": "basic_pitch_key_tempo",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\09__basic_pitch_key_tempo.wav",
+      "source_index": 9,
+      "tonal_score": 0.6971685358817622,
+      "rhythm_score": 0.11250991374254227,
+      "tonal_rank": 1,
+      "rhythm_rank": 7,
+      "tonal_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-daydream-615930.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-vibe-615929.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-jazz-lounge-cafe-615441.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-dreamer-615931.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiocoffee-motivate-no-copyright-music-615977.mp3"
+      ],
+      "rhythm_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-15-aleksandr-koshylev-the-edge-is-inevitable-605029.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-jazz-piano-bar-lounge-615446.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-torn-between-two-worlds-616031.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-classical-positive-piano-615469.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-16-aleksandr-koshylev-the-power-of-the-mind-605026.mp3"
+      ]
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-daydream-615930.mp3",
+      "variant": "instrument_layer",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\09__instrument_layer.wav",
+      "source_index": 9,
+      "tonal_score": 0.9588375951189875,
+      "rhythm_score": 0.9999648928642273,
+      "tonal_rank": 1,
+      "rhythm_rank": 1,
+      "tonal_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-daydream-615930.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-vibe-615929.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-dreamer-615931.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-jazz-lounge-cafe-615441.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiocoffee-motivate-no-copyright-music-615977.mp3"
+      ],
+      "rhythm_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-daydream-615930.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-17-aleksandr-koshylev-there-is-darkness-in-the-eyes-605024.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-funny-comedy-jazz-615439.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-11-aleksandr-koshylev-night-life-605028.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-jazz-piano-bar-lounge-615446.mp3"
+      ]
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-dreamer-615931.mp3",
+      "variant": "basic_pitch_key_tempo",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\10__basic_pitch_key_tempo.wav",
+      "source_index": 10,
+      "tonal_score": 0.6379119000402423,
+      "rhythm_score": 0.0850047618150711,
+      "tonal_rank": 1,
+      "rhythm_rank": 10,
+      "tonal_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-dreamer-615931.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-vibe-615929.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-daydream-615930.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-classical-cinematic-piano-615470 (1).mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-that-is-jazzy-piano-615448.mp3"
+      ],
+      "rhythm_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-barefoot-on-the-beach-616029.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-lonely-city-lights-616028.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-progress-615932 (1).mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-melting-into-you-616024.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-classical-cinematic-piano-615470 (1).mp3"
+      ]
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-dreamer-615931.mp3",
+      "variant": "instrument_layer",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\10__instrument_layer.wav",
+      "source_index": 10,
+      "tonal_score": 0.9756679289256278,
+      "rhythm_score": 0.9999035596847534,
+      "tonal_rank": 1,
+      "rhythm_rank": 1,
+      "tonal_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-dreamer-615931.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-vibe-615929.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-daydream-615930.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-classical-cinematic-piano-615470 (1).mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-1-aleksandr-koshylev-_-a-world-without-dreams-615600.mp3"
+      ],
+      "rhythm_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-dreamer-615931.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-borrowed-time-together-616034.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-classical-positive-piano-615469.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-21-aleksandr-koshylev-we-are-all-different-605030.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-progress-615932 (1).mp3"
+      ]
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-progress-615932 (1).mp3",
+      "variant": "basic_pitch_key_tempo",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\11__basic_pitch_key_tempo.wav",
+      "source_index": 11,
+      "tonal_score": 0.6128515554444244,
+      "rhythm_score": 0.17696721851825714,
+      "tonal_rank": 1,
+      "rhythm_rank": 1,
+      "tonal_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-progress-615932 (1).mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-classical-cinematic-piano-615470 (1).mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-dreamer-615931.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-vibe-615929.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiocoffee-motivate-no-copyright-music-615977.mp3"
+      ],
+      "rhythm_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-progress-615932 (1).mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-dreamer-615931.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-soft-spoken-promises-616033.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-that-is-jazzy-piano-615448.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-21-aleksandr-koshylev-we-are-all-different-605030.mp3"
+      ]
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-progress-615932 (1).mp3",
+      "variant": "instrument_layer",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\11__instrument_layer.wav",
+      "source_index": 11,
+      "tonal_score": 0.9879754434901376,
+      "rhythm_score": 0.9999562501907349,
+      "tonal_rank": 1,
+      "rhythm_rank": 1,
+      "tonal_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-progress-615932 (1).mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-1-aleksandr-koshylev-_-a-world-without-dreams-615600.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-dreamer-615931.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-classical-cinematic-piano-615470 (1).mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiocoffee-motivate-no-copyright-music-615977.mp3"
+      ],
+      "rhythm_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-progress-615932 (1).mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-dreamer-615931.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-21-aleksandr-koshylev-we-are-all-different-605030.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-15-aleksandr-koshylev-the-edge-is-inevitable-605029.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-11-aleksandr-koshylev-night-life-605028.mp3"
+      ]
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-vibe-615929.mp3",
+      "variant": "basic_pitch_key_tempo",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\12__basic_pitch_key_tempo.wav",
+      "source_index": 12,
+      "tonal_score": 0.7486757946383092,
+      "rhythm_score": 0.17424628138542175,
+      "tonal_rank": 1,
+      "rhythm_rank": 2,
+      "tonal_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-vibe-615929.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-dreamer-615931.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-2-aleksandr-koshylev-_-my-soul-beats-for-you-615601.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-daydream-615930.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-jazz-lounge-cafe-615441.mp3"
+      ],
+      "rhythm_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-21-aleksandr-koshylev-we-are-all-different-605030.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-vibe-615929.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiodollar-epic-hollywood-612183.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-daydream-615930.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-borrowed-time-together-616034.mp3"
+      ]
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-vibe-615929.mp3",
+      "variant": "instrument_layer",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\12__instrument_layer.wav",
+      "source_index": 12,
+      "tonal_score": 0.995665289150528,
+      "rhythm_score": 0.9999058246612549,
+      "tonal_rank": 1,
+      "rhythm_rank": 1,
+      "tonal_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-vibe-615929.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-dreamer-615931.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-daydream-615930.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-that-is-jazzy-piano-615448.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiocoffee-motivate-no-copyright-music-615977.mp3"
+      ],
+      "rhythm_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-vibe-615929.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiodollar-epic-hollywood-612183.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-2-aleksandr-koshylev-_-my-soul-beats-for-you-615601.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-jazz-piano-bar-lounge-615446.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-lonely-city-lights-616028.mp3"
+      ]
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-classical-cinematic-piano-615470 (1).mp3",
+      "variant": "basic_pitch_key_tempo",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\13__basic_pitch_key_tempo.wav",
+      "source_index": 13,
+      "tonal_score": 0.8774580807525895,
+      "rhythm_score": 0.11836964637041092,
+      "tonal_rank": 1,
+      "rhythm_rank": 4,
+      "tonal_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-classical-cinematic-piano-615470 (1).mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-vibe-615929.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiodollar-epic-epic-trailer-cinematic-612186.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-dreamer-615931.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-that-is-jazzy-piano-615448.mp3"
+      ],
+      "rhythm_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-2-aleksandr-koshylev-_-my-soul-beats-for-you-615601.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-vibe-615929.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiodollar-epic-hollywood-612183.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-classical-cinematic-piano-615470 (1).mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-progress-615932 (1).mp3"
+      ]
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-classical-cinematic-piano-615470 (1).mp3",
+      "variant": "instrument_layer",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\13__instrument_layer.wav",
+      "source_index": 13,
+      "tonal_score": 0.9926248222311056,
+      "rhythm_score": 0.9990959167480469,
+      "tonal_rank": 1,
+      "rhythm_rank": 1,
+      "tonal_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-classical-cinematic-piano-615470 (1).mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiodollar-epic-epic-trailer-cinematic-612186.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-vibe-615929.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-dreamer-615931.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-that-is-jazzy-piano-615448.mp3"
+      ],
+      "rhythm_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-classical-cinematic-piano-615470 (1).mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-that-is-jazzy-piano-615448.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-daydream-615930.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-2-aleksandr-koshylev-_-my-soul-beats-for-you-615601.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-11-aleksandr-koshylev-night-life-605028.mp3"
+      ]
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-classical-positive-piano-615469.mp3",
+      "variant": "basic_pitch_key_tempo",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\14__basic_pitch_key_tempo.wav",
+      "source_index": 14,
+      "tonal_score": 0.8700535111225296,
+      "rhythm_score": 0.08166681975126266,
+      "tonal_rank": 1,
+      "rhythm_rank": 3,
+      "tonal_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-classical-positive-piano-615469.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiodollar-epic-epic-trailer-cinematic-612186.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiocoffee-motivate-no-copyright-music-615977.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-vibe-615929.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-classical-cinematic-piano-615470 (1).mp3"
+      ],
+      "rhythm_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-1-aleksandr-koshylev-_-a-world-without-dreams-615600.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-21-aleksandr-koshylev-we-are-all-different-605030.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-classical-positive-piano-615469.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-when-stars-align-616032.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-soft-spoken-promises-616033.mp3"
+      ]
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-classical-positive-piano-615469.mp3",
+      "variant": "instrument_layer",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\14__instrument_layer.wav",
+      "source_index": 14,
+      "tonal_score": 0.9952493809432406,
+      "rhythm_score": 0.9991223216056824,
+      "tonal_rank": 1,
+      "rhythm_rank": 1,
+      "tonal_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-classical-positive-piano-615469.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiocoffee-motivate-no-copyright-music-615977.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiodollar-epic-epic-trailer-cinematic-612186.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-vibe-615929.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-funny-comedy-jazz-615439.mp3"
+      ],
+      "rhythm_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-classical-positive-piano-615469.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-borrowed-time-together-616034.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-jazz-piano-bar-lounge-615446.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-dreamer-615931.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-soft-spoken-promises-616033.mp3"
+      ]
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-funny-comedy-jazz-615439.mp3",
+      "variant": "basic_pitch_key_tempo",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\15__basic_pitch_key_tempo.wav",
+      "source_index": 15,
+      "tonal_score": 0.720456000547088,
+      "rhythm_score": 0.09415896236896515,
+      "tonal_rank": 1,
+      "rhythm_rank": 9,
+      "tonal_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-funny-comedy-jazz-615439.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-dreamer-615931.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiodollar-epic-epic-trailer-cinematic-612186.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-vibe-615929.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-classical-positive-piano-615469.mp3"
+      ],
+      "rhythm_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-classical-positive-piano-615469.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-jazz-piano-bar-lounge-615446.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-borrowed-time-together-616034.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-dreamer-615931.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-vibe-615929.mp3"
+      ]
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-funny-comedy-jazz-615439.mp3",
+      "variant": "instrument_layer",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\15__instrument_layer.wav",
+      "source_index": 15,
+      "tonal_score": 0.994787087578797,
+      "rhythm_score": 0.9998701214790344,
+      "tonal_rank": 1,
+      "rhythm_rank": 1,
+      "tonal_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-funny-comedy-jazz-615439.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiodollar-epic-epic-trailer-cinematic-612186.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiocoffee-motivate-no-copyright-music-615977.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-classical-positive-piano-615469.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-dreamer-615931.mp3"
+      ],
+      "rhythm_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-funny-comedy-jazz-615439.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-17-aleksandr-koshylev-there-is-darkness-in-the-eyes-605024.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-daydream-615930.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-4-aleksandr-koshylev-_-ulterior-motives-615598.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-when-stars-align-616032.mp3"
+      ]
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-jazz-lounge-cafe-615441.mp3",
+      "variant": "basic_pitch_key_tempo",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\16__basic_pitch_key_tempo.wav",
+      "source_index": 16,
+      "tonal_score": 0.6227229631640324,
+      "rhythm_score": 0.14081069827079773,
+      "tonal_rank": 1,
+      "rhythm_rank": 2,
+      "tonal_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-jazz-lounge-cafe-615441.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-daydream-615930.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-vibe-615929.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-melting-into-you-616024.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-falling-for-you-again-616027.mp3"
+      ],
+      "rhythm_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-melting-into-you-616024.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-jazz-lounge-cafe-615441.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-classical-positive-piano-615469.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-11-aleksandr-koshylev-night-life-605028.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-barefoot-on-the-beach-616029.mp3"
+      ]
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-jazz-lounge-cafe-615441.mp3",
+      "variant": "instrument_layer",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\16__instrument_layer.wav",
+      "source_index": 16,
+      "tonal_score": 0.9880653718506981,
+      "rhythm_score": 0.999748706817627,
+      "tonal_rank": 1,
+      "rhythm_rank": 1,
+      "tonal_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-jazz-lounge-cafe-615441.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-daydream-615930.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-2-aleksandr-koshylev-_-my-soul-beats-for-you-615601.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiocoffee-motivate-no-copyright-music-615977.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-vibe-615929.mp3"
+      ],
+      "rhythm_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-jazz-lounge-cafe-615441.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiocoffee-motivate-no-copyright-music-615977.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-2-aleksandr-koshylev-_-my-soul-beats-for-you-615601.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-that-is-jazzy-piano-615448.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-1-aleksandr-koshylev-_-a-world-without-dreams-615600.mp3"
+      ]
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-jazz-piano-bar-lounge-615446.mp3",
+      "variant": "basic_pitch_key_tempo",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\17__basic_pitch_key_tempo.wav",
+      "source_index": 17,
+      "tonal_score": 0.8277025691662032,
+      "rhythm_score": 0.13575033843517303,
+      "tonal_rank": 1,
+      "rhythm_rank": 1,
+      "tonal_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-jazz-piano-bar-lounge-615446.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-2-aleksandr-koshylev-_-my-soul-beats-for-you-615601.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-11-aleksandr-koshylev-night-life-605028.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-progress-615932 (1).mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-4-aleksandr-koshylev-_-ulterior-motives-615598.mp3"
+      ],
+      "rhythm_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-jazz-piano-bar-lounge-615446.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-classical-positive-piano-615469.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-1-aleksandr-koshylev-_-a-world-without-dreams-615600.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-2-aleksandr-koshylev-_-my-soul-beats-for-you-615601.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-barefoot-on-the-beach-616029.mp3"
+      ]
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-jazz-piano-bar-lounge-615446.mp3",
+      "variant": "instrument_layer",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\17__instrument_layer.wav",
+      "source_index": 17,
+      "tonal_score": 0.9937773065895956,
+      "rhythm_score": 0.9998849034309387,
+      "tonal_rank": 1,
+      "rhythm_rank": 1,
+      "tonal_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-jazz-piano-bar-lounge-615446.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-2-aleksandr-koshylev-_-my-soul-beats-for-you-615601.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-progress-615932 (1).mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-11-aleksandr-koshylev-night-life-605028.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-1-aleksandr-koshylev-_-a-world-without-dreams-615600.mp3"
+      ],
+      "rhythm_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-jazz-piano-bar-lounge-615446.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-soft-spoken-promises-616033.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-classical-positive-piano-615469.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-17-aleksandr-koshylev-there-is-darkness-in-the-eyes-605024.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-daydream-615930.mp3"
+      ]
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-that-is-jazzy-piano-615448.mp3",
+      "variant": "basic_pitch_key_tempo",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\18__basic_pitch_key_tempo.wav",
+      "source_index": 18,
+      "tonal_score": 0.6694081237100241,
+      "rhythm_score": 0.10635160654783249,
+      "tonal_rank": 1,
+      "rhythm_rank": 5,
+      "tonal_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-that-is-jazzy-piano-615448.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-vibe-615929.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-dreamer-615931.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-jazz-lounge-cafe-615441.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-classical-cinematic-piano-615470 (1).mp3"
+      ],
+      "rhythm_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-progress-615932 (1).mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-dreamer-615931.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-classical-cinematic-piano-615470 (1).mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-classical-positive-piano-615469.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-that-is-jazzy-piano-615448.mp3"
+      ]
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-that-is-jazzy-piano-615448.mp3",
+      "variant": "instrument_layer",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\18__instrument_layer.wav",
+      "source_index": 18,
+      "tonal_score": 0.9835482467834228,
+      "rhythm_score": 0.9995898008346558,
+      "tonal_rank": 1,
+      "rhythm_rank": 1,
+      "tonal_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-that-is-jazzy-piano-615448.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-vibe-615929.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-classical-cinematic-piano-615470 (1).mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-dreamer-615931.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiocoffee-motivate-no-copyright-music-615977.mp3"
+      ],
+      "rhythm_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-that-is-jazzy-piano-615448.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-4-aleksandr-koshylev-_-ulterior-motives-615598.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-classical-cinematic-piano-615470 (1).mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-jazz-lounge-cafe-615441.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-11-aleksandr-koshylev-night-life-605028.mp3"
+      ]
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-barefoot-on-the-beach-616029.mp3",
+      "variant": "basic_pitch_key_tempo",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\19__basic_pitch_key_tempo.wav",
+      "source_index": 19,
+      "tonal_score": 0.6432234824526474,
+      "rhythm_score": 0.06480894237756729,
+      "tonal_rank": 1,
+      "rhythm_rank": 24,
+      "tonal_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-barefoot-on-the-beach-616029.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-2-aleksandr-koshylev-_-my-soul-beats-for-you-615601.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-melting-into-you-616024.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-21-aleksandr-koshylev-we-are-all-different-605030.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-16-aleksandr-koshylev-_-the-choice-is-ours-615599.mp3"
+      ],
+      "rhythm_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-17-aleksandr-koshylev-there-is-darkness-in-the-eyes-605024.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-funny-comedy-jazz-615439.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-4-aleksandr-koshylev-_-ulterior-motives-615598.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-daydream-615930.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiodollar-epic-hollywood-612183.mp3"
+      ]
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-barefoot-on-the-beach-616029.mp3",
+      "variant": "instrument_layer",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\19__instrument_layer.wav",
+      "source_index": 19,
+      "tonal_score": 0.9676555130581526,
+      "rhythm_score": 0.9996921420097351,
+      "tonal_rank": 1,
+      "rhythm_rank": 1,
+      "tonal_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-barefoot-on-the-beach-616029.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-soft-spoken-promises-616033.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-melting-into-you-616024.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-21-aleksandr-koshylev-we-are-all-different-605030.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-2-aleksandr-koshylev-_-my-soul-beats-for-you-615601.mp3"
+      ],
+      "rhythm_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-barefoot-on-the-beach-616029.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-lonely-city-lights-616028.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-melting-into-you-616024.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiodollar-epic-epic-trailer-cinematic-612186.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-borrowed-time-together-616034.mp3"
+      ]
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-borrowed-time-together-616034.mp3",
+      "variant": "basic_pitch_key_tempo",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\20__basic_pitch_key_tempo.wav",
+      "source_index": 20,
+      "tonal_score": 0.6843768573058865,
+      "rhythm_score": 0.06283823400735855,
+      "tonal_rank": 1,
+      "rhythm_rank": 23,
+      "tonal_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-borrowed-time-together-616034.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-2-aleksandr-koshylev-_-my-soul-beats-for-you-615601.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-soft-spoken-promises-616033.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-16-aleksandr-koshylev-the-power-of-the-mind-605026.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-21-aleksandr-koshylev-we-are-all-different-605030.mp3"
+      ],
+      "rhythm_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-barefoot-on-the-beach-616029.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-1-aleksandr-koshylev-_-a-world-without-dreams-615600.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-21-aleksandr-koshylev-we-are-all-different-605030.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-11-aleksandr-koshylev-night-life-605028.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-lonely-city-lights-616028.mp3"
+      ]
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-borrowed-time-together-616034.mp3",
+      "variant": "instrument_layer",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\20__instrument_layer.wav",
+      "source_index": 20,
+      "tonal_score": 0.9511276333708047,
+      "rhythm_score": 0.9997454881668091,
+      "tonal_rank": 1,
+      "rhythm_rank": 1,
+      "tonal_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-borrowed-time-together-616034.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-2-aleksandr-koshylev-_-my-soul-beats-for-you-615601.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-21-aleksandr-koshylev-we-are-all-different-605030.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-progress-615932 (1).mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-that-is-jazzy-piano-615448.mp3"
+      ],
+      "rhythm_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-borrowed-time-together-616034.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-classical-positive-piano-615469.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-dreamer-615931.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-jazz-piano-bar-lounge-615446.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-barefoot-on-the-beach-616029.mp3"
+      ]
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-falling-for-you-again-616027.mp3",
+      "variant": "basic_pitch_key_tempo",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\21__basic_pitch_key_tempo.wav",
+      "source_index": 21,
+      "tonal_score": 0.6728995963126978,
+      "rhythm_score": 0.11658304929733276,
+      "tonal_rank": 1,
+      "rhythm_rank": 3,
+      "tonal_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-falling-for-you-again-616027.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-borrowed-time-together-616034.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-melting-into-you-616024.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-torn-between-two-worlds-616031.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-that-is-jazzy-piano-615448.mp3"
+      ],
+      "rhythm_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-dreamer-615931.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-borrowed-time-together-616034.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-falling-for-you-again-616027.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-21-aleksandr-koshylev-we-are-all-different-605030.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiodollar-epic-epic-trailer-cinematic-612186.mp3"
+      ]
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-falling-for-you-again-616027.mp3",
+      "variant": "instrument_layer",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\21__instrument_layer.wav",
+      "source_index": 21,
+      "tonal_score": 0.9356594001268248,
+      "rhythm_score": 0.9992537498474121,
+      "tonal_rank": 1,
+      "rhythm_rank": 1,
+      "tonal_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-falling-for-you-again-616027.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-daydream-615930.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-jazz-lounge-cafe-615441.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-16-aleksandr-koshylev-_-the-choice-is-ours-615599.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-torn-between-two-worlds-616031.mp3"
+      ],
+      "rhythm_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-falling-for-you-again-616027.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-21-aleksandr-koshylev-we-are-all-different-605030.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-soft-spoken-promises-616033.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-progress-615932 (1).mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-16-aleksandr-koshylev-_-the-choice-is-ours-615599.mp3"
+      ]
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-lonely-city-lights-616028.mp3",
+      "variant": "basic_pitch_key_tempo",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\22__basic_pitch_key_tempo.wav",
+      "source_index": 22,
+      "tonal_score": 0.6529790288480671,
+      "rhythm_score": 0.0735027939081192,
+      "tonal_rank": 1,
+      "rhythm_rank": 20,
+      "tonal_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-lonely-city-lights-616028.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-barefoot-on-the-beach-616029.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-falling-for-you-again-616027.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-when-stars-align-616032.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-torn-between-two-worlds-616031.mp3"
+      ],
+      "rhythm_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-2-aleksandr-koshylev-_-my-soul-beats-for-you-615601.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-4-aleksandr-koshylev-_-ulterior-motives-615598.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-funny-comedy-jazz-615439.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-borrowed-time-together-616034.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiodollar-epic-hollywood-612183.mp3"
+      ]
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-lonely-city-lights-616028.mp3",
+      "variant": "instrument_layer",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\22__instrument_layer.wav",
+      "source_index": 22,
+      "tonal_score": 0.9675319212988096,
+      "rhythm_score": 0.9995641708374023,
+      "tonal_rank": 1,
+      "rhythm_rank": 1,
+      "tonal_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-lonely-city-lights-616028.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-falling-for-you-again-616027.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-when-stars-align-616032.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-borrowed-time-together-616034.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-melting-into-you-616024.mp3"
+      ],
+      "rhythm_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-lonely-city-lights-616028.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-barefoot-on-the-beach-616029.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiodollar-epic-epic-trailer-cinematic-612186.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-11-aleksandr-koshylev-night-life-605028.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-1-aleksandr-koshylev-_-a-world-without-dreams-615600.mp3"
+      ]
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-melting-into-you-616024.mp3",
+      "variant": "basic_pitch_key_tempo",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\23__basic_pitch_key_tempo.wav",
+      "source_index": 23,
+      "tonal_score": 0.645294189984495,
+      "rhythm_score": 0.0761931836605072,
+      "tonal_rank": 1,
+      "rhythm_rank": 9,
+      "tonal_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-melting-into-you-616024.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-barefoot-on-the-beach-616029.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-lonely-city-lights-616028.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-2-aleksandr-koshylev-_-my-soul-beats-for-you-615601.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-classical-positive-piano-615469.mp3"
+      ],
+      "rhythm_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-progress-615932 (1).mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-when-stars-align-616032.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-jazz-lounge-cafe-615441.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-2-aleksandr-koshylev-_-my-soul-beats-for-you-615601.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-falling-for-you-again-616027.mp3"
+      ]
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-melting-into-you-616024.mp3",
+      "variant": "instrument_layer",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\23__instrument_layer.wav",
+      "source_index": 23,
+      "tonal_score": 0.9752376249024255,
+      "rhythm_score": 0.9996368288993835,
+      "tonal_rank": 1,
+      "rhythm_rank": 1,
+      "tonal_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-melting-into-you-616024.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-lonely-city-lights-616028.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiodollar-epic-epic-trailer-cinematic-612186.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-17-aleksandr-koshylev-there-is-darkness-in-the-eyes-605024.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-soft-spoken-promises-616033.mp3"
+      ],
+      "rhythm_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-melting-into-you-616024.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-barefoot-on-the-beach-616029.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-lonely-city-lights-616028.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-11-aleksandr-koshylev-night-life-605028.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-16-aleksandr-koshylev-_-the-choice-is-ours-615599.mp3"
+      ]
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-soft-spoken-promises-616033.mp3",
+      "variant": "basic_pitch_key_tempo",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\24__basic_pitch_key_tempo.wav",
+      "source_index": 24,
+      "tonal_score": 0.6512575535746964,
+      "rhythm_score": 0.10693399608135223,
+      "tonal_rank": 1,
+      "rhythm_rank": 3,
+      "tonal_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-soft-spoken-promises-616033.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-lonely-city-lights-616028.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-when-stars-align-616032.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-barefoot-on-the-beach-616029.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-that-is-jazzy-piano-615448.mp3"
+      ],
+      "rhythm_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-melting-into-you-616024.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-barefoot-on-the-beach-616029.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-soft-spoken-promises-616033.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-1-aleksandr-koshylev-_-a-world-without-dreams-615600.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiodollar-epic-epic-trailer-cinematic-612186.mp3"
+      ]
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-soft-spoken-promises-616033.mp3",
+      "variant": "instrument_layer",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\24__instrument_layer.wav",
+      "source_index": 24,
+      "tonal_score": 0.9690395971158875,
+      "rhythm_score": 0.999459981918335,
+      "tonal_rank": 1,
+      "rhythm_rank": 1,
+      "tonal_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-soft-spoken-promises-616033.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-jazz-lounge-cafe-615441.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-borrowed-time-together-616034.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-falling-for-you-again-616027.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-torn-between-two-worlds-616031.mp3"
+      ],
+      "rhythm_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-soft-spoken-promises-616033.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-jazz-piano-bar-lounge-615446.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-15-aleksandr-koshylev-the-edge-is-inevitable-605029.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-falling-for-you-again-616027.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-21-aleksandr-koshylev-we-are-all-different-605030.mp3"
+      ]
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-torn-between-two-worlds-616031.mp3",
+      "variant": "basic_pitch_key_tempo",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\25__basic_pitch_key_tempo.wav",
+      "source_index": 25,
+      "tonal_score": 0.5617353301123265,
+      "rhythm_score": 0.08881807327270508,
+      "tonal_rank": 1,
+      "rhythm_rank": 9,
+      "tonal_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-torn-between-two-worlds-616031.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-falling-for-you-again-616027.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-11-aleksandr-koshylev-night-life-605028.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-borrowed-time-together-616034.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-16-aleksandr-koshylev-the-power-of-the-mind-605026.mp3"
+      ],
+      "rhythm_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-falling-for-you-again-616027.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-daydream-615930.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-16-aleksandr-koshylev-_-the-choice-is-ours-615599.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-21-aleksandr-koshylev-we-are-all-different-605030.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-jazz-piano-bar-lounge-615446.mp3"
+      ]
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-torn-between-two-worlds-616031.mp3",
+      "variant": "instrument_layer",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\25__instrument_layer.wav",
+      "source_index": 25,
+      "tonal_score": 0.9653648526213353,
+      "rhythm_score": 0.9996960759162903,
+      "tonal_rank": 1,
+      "rhythm_rank": 1,
+      "tonal_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-torn-between-two-worlds-616031.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-falling-for-you-again-616027.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-soft-spoken-promises-616033.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-2-aleksandr-koshylev-_-my-soul-beats-for-you-615601.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-jazz-lounge-cafe-615441.mp3"
+      ],
+      "rhythm_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-torn-between-two-worlds-616031.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-2-aleksandr-koshylev-_-my-soul-beats-for-you-615601.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-21-aleksandr-koshylev-we-are-all-different-605030.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-progress-615932 (1).mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-daydream-615930.mp3"
+      ]
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-when-stars-align-616032.mp3",
+      "variant": "basic_pitch_key_tempo",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\26__basic_pitch_key_tempo.wav",
+      "source_index": 26,
+      "tonal_score": 0.6862402674754045,
+      "rhythm_score": 0.08657252788543701,
+      "tonal_rank": 1,
+      "rhythm_rank": 12,
+      "tonal_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-when-stars-align-616032.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-classical-positive-piano-615469.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-borrowed-time-together-616034.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiodollar-epic-hollywood-612183.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-classical-cinematic-piano-615470 (1).mp3"
+      ],
+      "rhythm_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-17-aleksandr-koshylev-there-is-darkness-in-the-eyes-605024.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-daydream-615930.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-borrowed-time-together-616034.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-21-aleksandr-koshylev-we-are-all-different-605030.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-15-aleksandr-koshylev-the-edge-is-inevitable-605029.mp3"
+      ]
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-when-stars-align-616032.mp3",
+      "variant": "instrument_layer",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\26__instrument_layer.wav",
+      "source_index": 26,
+      "tonal_score": 0.9785862065669865,
+      "rhythm_score": 0.9996456503868103,
+      "tonal_rank": 1,
+      "rhythm_rank": 1,
+      "tonal_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-when-stars-align-616032.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-funny-comedy-jazz-615439.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-soft-spoken-promises-616033.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-that-is-jazzy-piano-615448.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-classical-positive-piano-615469.mp3"
+      ],
+      "rhythm_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-when-stars-align-616032.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-4-aleksandr-koshylev-_-ulterior-motives-615598.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-jazz-piano-bar-lounge-615446.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-2-aleksandr-koshylev-_-my-soul-beats-for-you-615601.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-15-aleksandr-koshylev-the-edge-is-inevitable-605029.mp3"
+      ]
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiocoffee-motivate-no-copyright-music-615977.mp3",
+      "variant": "basic_pitch_key_tempo",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\27__basic_pitch_key_tempo.wav",
+      "source_index": 27,
+      "tonal_score": 0.8573478868977675,
+      "rhythm_score": 0.03932274505496025,
+      "tonal_rank": 1,
+      "rhythm_rank": 27,
+      "tonal_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiocoffee-motivate-no-copyright-music-615977.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-daydream-615930.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-jazz-lounge-cafe-615441.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-dreamer-615931.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-classical-positive-piano-615469.mp3"
+      ],
+      "rhythm_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-progress-615932 (1).mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-falling-for-you-again-616027.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-4-aleksandr-koshylev-_-ulterior-motives-615598.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-torn-between-two-worlds-616031.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-when-stars-align-616032.mp3"
+      ]
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiocoffee-motivate-no-copyright-music-615977.mp3",
+      "variant": "instrument_layer",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\27__instrument_layer.wav",
+      "source_index": 27,
+      "tonal_score": 0.9912702800230766,
+      "rhythm_score": 0.9996415376663208,
+      "tonal_rank": 1,
+      "rhythm_rank": 1,
+      "tonal_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiocoffee-motivate-no-copyright-music-615977.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiodollar-epic-epic-trailer-cinematic-612186.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-classical-positive-piano-615469.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-daydream-615930.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-dreamer-615931.mp3"
+      ],
+      "rhythm_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiocoffee-motivate-no-copyright-music-615977.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-jazz-lounge-cafe-615441.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-classical-cinematic-piano-615470 (1).mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-falling-for-you-again-616027.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-torn-between-two-worlds-616031.mp3"
+      ]
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiodollar-epic-epic-trailer-cinematic-612186.mp3",
+      "variant": "basic_pitch_key_tempo",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\28__basic_pitch_key_tempo.wav",
+      "source_index": 28,
+      "tonal_score": 0.7202514232742089,
+      "rhythm_score": 0.12597504258155823,
+      "tonal_rank": 1,
+      "rhythm_rank": 1,
+      "tonal_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiodollar-epic-epic-trailer-cinematic-612186.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-dreamer-615931.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-vibe-615929.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-classical-cinematic-piano-615470 (1).mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiocoffee-motivate-no-copyright-music-615977.mp3"
+      ],
+      "rhythm_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiodollar-epic-epic-trailer-cinematic-612186.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-11-aleksandr-koshylev-night-life-605028.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-vibe-615929.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-progress-615932 (1).mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-dreamer-615931.mp3"
+      ]
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiodollar-epic-epic-trailer-cinematic-612186.mp3",
+      "variant": "instrument_layer",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\28__instrument_layer.wav",
+      "source_index": 28,
+      "tonal_score": 0.9817972215363269,
+      "rhythm_score": 0.9978145956993103,
+      "tonal_rank": 1,
+      "rhythm_rank": 1,
+      "tonal_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiodollar-epic-epic-trailer-cinematic-612186.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-classical-cinematic-piano-615470 (1).mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiodollar-epic-hollywood-612183.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiocoffee-motivate-no-copyright-music-615977.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-dreamer-615931.mp3"
+      ],
+      "rhythm_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiodollar-epic-epic-trailer-cinematic-612186.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-lonely-city-lights-616028.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-barefoot-on-the-beach-616029.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-11-aleksandr-koshylev-night-life-605028.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-soft-spoken-promises-616033.mp3"
+      ]
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiodollar-epic-hollywood-612183.mp3",
+      "variant": "basic_pitch_key_tempo",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\29__basic_pitch_key_tempo.wav",
+      "source_index": 29,
+      "tonal_score": 0.7032889963905375,
+      "rhythm_score": 0.12329556792974472,
+      "tonal_rank": 1,
+      "rhythm_rank": 2,
+      "tonal_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiodollar-epic-hollywood-612183.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiodollar-epic-epic-trailer-cinematic-612186.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-classical-cinematic-piano-615470 (1).mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-daydream-615930.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-dreamer-615931.mp3"
+      ],
+      "rhythm_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-21-aleksandr-koshylev-we-are-all-different-605030.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiodollar-epic-hollywood-612183.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-daydream-615930.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-17-aleksandr-koshylev-there-is-darkness-in-the-eyes-605024.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiodollar-epic-epic-trailer-cinematic-612186.mp3"
+      ]
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiodollar-epic-hollywood-612183.mp3",
+      "variant": "instrument_layer",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\29__instrument_layer.wav",
+      "source_index": 29,
+      "tonal_score": 0.9917541644307929,
+      "rhythm_score": 0.9997234344482422,
+      "tonal_rank": 1,
+      "rhythm_rank": 1,
+      "tonal_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiodollar-epic-hollywood-612183.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiodollar-epic-epic-trailer-cinematic-612186.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-classical-cinematic-piano-615470 (1).mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-2-aleksandr-koshylev-_-my-soul-beats-for-you-615601.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-dreamer-615931.mp3"
+      ],
+      "rhythm_top5": [
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiodollar-epic-hollywood-612183.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-vibe-615929.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-2-aleksandr-koshylev-_-my-soul-beats-for-you-615601.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-daydream-615930.mp3",
+        "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-lonely-city-lights-616028.mp3"
+      ]
+    }
+  ]
+}

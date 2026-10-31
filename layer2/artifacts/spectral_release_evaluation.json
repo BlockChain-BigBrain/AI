@@ -1,0 +1,329 @@
+{
+  "date": "2026-10-24",
+  "protocol": {
+    "date": "2026-10-24",
+    "features": "dynamic-cqt84-local-v1",
+    "short_negative_views": [
+      "start",
+      "middle",
+      "end"
+    ],
+    "normal_unit": "Maximum warning score across all available views of each normal work; crops are not independent works.",
+    "ai_candidates": "All 34 eligible references, no CLAP cutoff.",
+    "full_candidates": "Union of CLAP Top20 and pitch-sequence Top20; maximum 40 references.",
+    "fragment_rule": "For query>=45s, three separated >=8s spectral matches; each score>=.65; up to twelve 10s windows.",
+    "warn_rule": "Tune normal-work FPR<=10% with minimum .55; HOLD tune FPR<=2% and minimum .85, ordered gap>=.05.",
+    "limits": "Known works and previously observed positives; new duration-matched queries are diagnostic, not pure-AI or independent-work proof."
+  },
+  "signature": "d5e645e26461d0cd8d726eb9506df8adf2483b19dd536fd888f99d51ac739532",
+  "profiles": {
+    "ai_labeled_catalog": {
+      "warn_threshold": 0.55,
+      "hold_threshold": 0.85,
+      "enabled": false,
+      "summary": {
+        "external_diagnostic": {
+          "positive_queries": 0,
+          "positive_source_works": 0,
+          "correct_source_warn_top3_count": 0,
+          "correct_source_warn_top3_recall": null,
+          "normal_queries": 8,
+          "normal_works": 2,
+          "normal_warn_works": 0,
+          "normal_hold_works": 0,
+          "normal_warn_rate": 0.0,
+          "normal_hold_rate": 0.0
+        },
+        "new_replication": {
+          "positive_queries": 28,
+          "positive_source_works": 14,
+          "correct_source_warn_top3_count": 11,
+          "correct_source_warn_top3_recall": 0.39285714285714285,
+          "normal_queries": 0,
+          "normal_works": 0,
+          "normal_warn_works": 0,
+          "normal_hold_works": 0,
+          "normal_warn_rate": null,
+          "normal_hold_rate": null
+        },
+        "new_transform_stress": {
+          "positive_queries": 28,
+          "positive_source_works": 14,
+          "correct_source_warn_top3_count": 13,
+          "correct_source_warn_top3_recall": 0.4642857142857143,
+          "normal_queries": 0,
+          "normal_works": 0,
+          "normal_warn_works": 0,
+          "normal_hold_works": 0,
+          "normal_warn_rate": null,
+          "normal_hold_rate": null
+        },
+        "prospective_five_family": {
+          "positive_queries": 70,
+          "positive_source_works": 14,
+          "correct_source_warn_top3_count": 59,
+          "correct_source_warn_top3_recall": 0.8428571428571429,
+          "normal_queries": 0,
+          "normal_works": 0,
+          "normal_warn_works": 0,
+          "normal_hold_works": 0,
+          "normal_warn_rate": null,
+          "normal_hold_rate": null
+        },
+        "test": {
+          "positive_queries": 28,
+          "positive_source_works": 14,
+          "correct_source_warn_top3_count": 21,
+          "correct_source_warn_top3_recall": 0.75,
+          "normal_queries": 44,
+          "normal_works": 11,
+          "normal_warn_works": 0,
+          "normal_hold_works": 0,
+          "normal_warn_rate": 0.0,
+          "normal_hold_rate": 0.0
+        },
+        "tune": {
+          "positive_queries": 40,
+          "positive_source_works": 20,
+          "correct_source_warn_top3_count": 30,
+          "correct_source_warn_top3_recall": 0.75,
+          "normal_queries": 72,
+          "normal_works": 18,
+          "normal_warn_works": 0,
+          "normal_hold_works": 0,
+          "normal_warn_rate": 0.0,
+          "normal_hold_rate": 0.0
+        },
+        "five_family": {
+          "basic": {
+            "positive_queries": 14,
+            "positive_source_works": 14,
+            "correct_source_warn_top3_count": 13,
+            "correct_source_warn_top3_recall": 0.9285714285714286,
+            "normal_queries": 0,
+            "normal_works": 0,
+            "normal_warn_works": 0,
+            "normal_hold_works": 0,
+            "normal_warn_rate": null,
+            "normal_hold_rate": null
+          },
+          "instrument_layer": {
+            "positive_queries": 14,
+            "positive_source_works": 14,
+            "correct_source_warn_top3_count": 13,
+            "correct_source_warn_top3_recall": 0.9285714285714286,
+            "normal_queries": 0,
+            "normal_works": 0,
+            "normal_warn_works": 0,
+            "normal_hold_works": 0,
+            "normal_warn_rate": null,
+            "normal_hold_rate": null
+          },
+          "long_auto_edit": {
+            "positive_queries": 14,
+            "positive_source_works": 14,
+            "correct_source_warn_top3_count": 10,
+            "correct_source_warn_top3_recall": 0.7142857142857143,
+            "normal_queries": 0,
+            "normal_works": 0,
+            "normal_warn_works": 0,
+            "normal_hold_works": 0,
+            "normal_warn_rate": null,
+            "normal_hold_rate": null
+          },
+          "room_effect": {
+            "positive_queries": 14,
+            "positive_source_works": 14,
+            "correct_source_warn_top3_count": 13,
+            "correct_source_warn_top3_recall": 0.9285714285714286,
+            "normal_queries": 0,
+            "normal_works": 0,
+            "normal_warn_works": 0,
+            "normal_hold_works": 0,
+            "normal_warn_rate": null,
+            "normal_hold_rate": null
+          },
+          "local_tempo": {
+            "positive_queries": 14,
+            "positive_source_works": 14,
+            "correct_source_warn_top3_count": 10,
+            "correct_source_warn_top3_recall": 0.7142857142857143,
+            "normal_queries": 0,
+            "normal_works": 0,
+            "normal_warn_works": 0,
+            "normal_hold_works": 0,
+            "normal_warn_rate": null,
+            "normal_hold_rate": null
+          }
+        }
+      },
+      "raw_test": {
+        "positive_queries": 28,
+        "positive_source_works": 14,
+        "correct_source_warn_top3_count": 21,
+        "correct_source_warn_top3_recall": 0.75,
+        "normal_queries": 45,
+        "normal_works": 12,
+        "normal_warn_works": 1,
+        "normal_hold_works": 1,
+        "normal_warn_rate": 0.08333333333333333,
+        "normal_hold_rate": 0.08333333333333333
+      }
+    },
+    "full_catalog": {
+      "warn_threshold": 0.55,
+      "hold_threshold": 0.85,
+      "enabled": false,
+      "summary": {
+        "external_diagnostic": {
+          "positive_queries": 0,
+          "positive_source_works": 0,
+          "correct_source_warn_top3_count": 0,
+          "correct_source_warn_top3_recall": null,
+          "normal_queries": 8,
+          "normal_works": 2,
+          "normal_warn_works": 0,
+          "normal_hold_works": 0,
+          "normal_warn_rate": 0.0,
+          "normal_hold_rate": 0.0
+        },
+        "new_replication": {
+          "positive_queries": 28,
+          "positive_source_works": 14,
+          "correct_source_warn_top3_count": 11,
+          "correct_source_warn_top3_recall": 0.39285714285714285,
+          "normal_queries": 0,
+          "normal_works": 0,
+          "normal_warn_works": 0,
+          "normal_hold_works": 0,
+          "normal_warn_rate": null,
+          "normal_hold_rate": null
+        },
+        "new_transform_stress": {
+          "positive_queries": 28,
+          "positive_source_works": 14,
+          "correct_source_warn_top3_count": 12,
+          "correct_source_warn_top3_recall": 0.42857142857142855,
+          "normal_queries": 0,
+          "normal_works": 0,
+          "normal_warn_works": 0,
+          "normal_hold_works": 0,
+          "normal_warn_rate": null,
+          "normal_hold_rate": null
+        },
+        "prospective_five_family": {
+          "positive_queries": 70,
+          "positive_source_works": 14,
+          "correct_source_warn_top3_count": 59,
+          "correct_source_warn_top3_recall": 0.8428571428571429,
+          "normal_queries": 0,
+          "normal_works": 0,
+          "normal_warn_works": 0,
+          "normal_hold_works": 0,
+          "normal_warn_rate": null,
+          "normal_hold_rate": null
+        },
+        "test": {
+          "positive_queries": 28,
+          "positive_source_works": 14,
+          "correct_source_warn_top3_count": 21,
+          "correct_source_warn_top3_recall": 0.75,
+          "normal_queries": 44,
+          "normal_works": 11,
+          "normal_warn_works": 0,
+          "normal_hold_works": 0,
+          "normal_warn_rate": 0.0,
+          "normal_hold_rate": 0.0
+        },
+        "tune": {
+          "positive_queries": 40,
+          "positive_source_works": 20,
+          "correct_source_warn_top3_count": 30,
+          "correct_source_warn_top3_recall": 0.75,
+          "normal_queries": 72,
+          "normal_works": 18,
+          "normal_warn_works": 0,
+          "normal_hold_works": 0,
+          "normal_warn_rate": 0.0,
+          "normal_hold_rate": 0.0
+        },
+        "five_family": {
+          "basic": {
+            "positive_queries": 14,
+            "positive_source_works": 14,
+            "correct_source_warn_top3_count": 13,
+            "correct_source_warn_top3_recall": 0.9285714285714286,
+            "normal_queries": 0,
+            "normal_works": 0,
+            "normal_warn_works": 0,
+            "normal_hold_works": 0,
+            "normal_warn_rate": null,
+            "normal_hold_rate": null
+          },
+          "instrument_layer": {
+            "positive_queries": 14,
+            "positive_source_works": 14,
+            "correct_source_warn_top3_count": 13,
+            "correct_source_warn_top3_recall": 0.9285714285714286,
+            "normal_queries": 0,
+            "normal_works": 0,
+            "normal_warn_works": 0,
+            "normal_hold_works": 0,
+            "normal_warn_rate": null,
+            "normal_hold_rate": null
+          },
+          "long_auto_edit": {
+            "positive_queries": 14,
+            "positive_source_works": 14,
+            "correct_source_warn_top3_count": 10,
+            "correct_source_warn_top3_recall": 0.7142857142857143,
+            "normal_queries": 0,
+            "normal_works": 0,
+            "normal_warn_works": 0,
+            "normal_hold_works": 0,
+            "normal_warn_rate": null,
+            "normal_hold_rate": null
+          },
+          "room_effect": {
+            "positive_queries": 14,
+            "positive_source_works": 14,
+            "correct_source_warn_top3_count": 13,
+            "correct_source_warn_top3_recall": 0.9285714285714286,
+            "normal_queries": 0,
+            "normal_works": 0,
+            "normal_warn_works": 0,
+            "normal_hold_works": 0,
+            "normal_warn_rate": null,
+            "normal_hold_rate": null
+          },
+          "local_tempo": {
+            "positive_queries": 14,
+            "positive_source_works": 14,
+            "correct_source_warn_top3_count": 10,
+            "correct_source_warn_top3_recall": 0.7142857142857143,
+            "normal_queries": 0,
+            "normal_works": 0,
+            "normal_warn_works": 0,
+            "normal_hold_works": 0,
+            "normal_warn_rate": null,
+            "normal_hold_rate": null
+          }
+        }
+      },
+      "raw_test": {
+        "positive_queries": 28,
+        "positive_source_works": 14,
+        "correct_source_warn_top3_count": 21,
+        "correct_source_warn_top3_recall": 0.75,
+        "normal_queries": 45,
+        "normal_works": 12,
+        "normal_warn_works": 1,
+        "normal_hold_works": 1,
+        "normal_warn_rate": 0.08333333333333333,
+        "normal_hold_rate": 0.08333333333333333
+      }
+    }
+  },
+  "normal_crop_queries": 93,
+  "active_policy_changed": false
+}
