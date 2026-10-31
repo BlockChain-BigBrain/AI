@@ -20,19 +20,19 @@
     }
   },
   "independent_normals": {
-    "works": 0,
+    "works": 29,
     "rules": {
       "at_least_1_windows": {
-        "works": 0,
-        "rate": null
+        "works": 7,
+        "rate": 0.2413793103448276
       },
       "at_least_2_windows": {
-        "works": 0,
-        "rate": null
+        "works": 2,
+        "rate": 0.06896551724137931
       },
       "at_least_3_windows": {
-        "works": 0,
-        "rate": null
+        "works": 2,
+        "rate": 0.06896551724137931
       }
     }
   },
