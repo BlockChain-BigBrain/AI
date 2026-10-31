@@ -1,0 +1,165 @@
+{
+  "date": "2026-10-31",
+  "production_policy_changed": false,
+  "source": "duration_fusion_checkpoint.jsonl",
+  "selection": "tune rows only for candidate selection; test rows are report-only",
+  "current": {
+    "warn": 0.34748932160579077,
+    "hold": 0.8337449399145463
+  },
+  "tune_counts": {
+    "normal_works": 18,
+    "positive_works": 90
+  },
+  "candidate_count": 28,
+  "best_tune_candidate": {
+    "warn_candidate": 0.38706461217414717,
+    "tune_normal_warn_rate": 0.0,
+    "tune_positive_recall": 0.9888888888888889
+  },
+  "candidates": [
+    {
+      "warn_candidate": 0.08294107278536236,
+      "tune_normal_warn_rate": 1.0,
+      "tune_positive_recall": 1.0
+    },
+    {
+      "warn_candidate": 0.09346801717491213,
+      "tune_normal_warn_rate": 0.9444444444444444,
+      "tune_positive_recall": 1.0
+    },
+    {
+      "warn_candidate": 0.13008703432806407,
+      "tune_normal_warn_rate": 0.8888888888888888,
+      "tune_positive_recall": 1.0
+    },
+    {
+      "warn_candidate": 0.1678021065925143,
+      "tune_normal_warn_rate": 0.8333333333333334,
+      "tune_positive_recall": 1.0
+    },
+    {
+      "warn_candidate": 0.17943376790436966,
+      "tune_normal_warn_rate": 0.7777777777777778,
+      "tune_positive_recall": 1.0
+    },
+    {
+      "warn_candidate": 0.18044551237697168,
+      "tune_normal_warn_rate": 0.7222222222222222,
+      "tune_positive_recall": 1.0
+    },
+    {
+      "warn_candidate": 0.18109686583428872,
+      "tune_normal_warn_rate": 0.6666666666666666,
+      "tune_positive_recall": 1.0
+    },
+    {
+      "warn_candidate": 0.1821517903684897,
+      "tune_normal_warn_rate": 0.6111111111111112,
+      "tune_positive_recall": 1.0
+    },
+    {
+      "warn_candidate": 0.19414807112606908,
+      "tune_normal_warn_rate": 0.5555555555555556,
+      "tune_positive_recall": 1.0
+    },
+    {
+      "warn_candidate": 0.19486103708727,
+      "tune_normal_warn_rate": 0.5,
+      "tune_positive_recall": 1.0
+    },
+    {
+      "warn_candidate": 0.2076905670751555,
+      "tune_normal_warn_rate": 0.4444444444444444,
+      "tune_positive_recall": 1.0
+    },
+    {
+      "warn_candidate": 0.21663516205034605,
+      "tune_normal_warn_rate": 0.3888888888888889,
+      "tune_positive_recall": 1.0
+    },
+    {
+      "warn_candidate": 0.22435523941948682,
+      "tune_normal_warn_rate": 0.3333333333333333,
+      "tune_positive_recall": 1.0
+    },
+    {
+      "warn_candidate": 0.2753136597245912,
+      "tune_normal_warn_rate": 0.2777777777777778,
+      "tune_positive_recall": 1.0
+    },
+    {
+      "warn_candidate": 0.28251367406139233,
+      "tune_normal_warn_rate": 0.2777777777777778,
+      "tune_positive_recall": 0.9888888888888889
+    },
+    {
+      "warn_candidate": 0.32865857658522674,
+      "tune_normal_warn_rate": 0.2222222222222222,
+      "tune_positive_recall": 0.9888888888888889
+    },
+    {
+      "warn_candidate": 0.33094221105313404,
+      "tune_normal_warn_rate": 0.16666666666666666,
+      "tune_positive_recall": 0.9888888888888889
+    },
+    {
+      "warn_candidate": 0.3474893216057907,
+      "tune_normal_warn_rate": 0.1111111111111111,
+      "tune_positive_recall": 0.9888888888888889
+    },
+    {
+      "warn_candidate": 0.34748932160579077,
+      "tune_normal_warn_rate": 0.05555555555555555,
+      "tune_positive_recall": 0.9888888888888889
+    },
+    {
+      "warn_candidate": 0.38706461217414717,
+      "tune_normal_warn_rate": 0.0,
+      "tune_positive_recall": 0.9888888888888889
+    },
+    {
+      "warn_candidate": 0.40398312989850416,
+      "tune_normal_warn_rate": 0.0,
+      "tune_positive_recall": 0.9777777777777777
+    },
+    {
+      "warn_candidate": 0.4159353149939788,
+      "tune_normal_warn_rate": 0.0,
+      "tune_positive_recall": 0.9666666666666667
+    },
+    {
+      "warn_candidate": 0.42620888186378086,
+      "tune_normal_warn_rate": 0.0,
+      "tune_positive_recall": 0.9555555555555556
+    },
+    {
+      "warn_candidate": 0.4282030053570366,
+      "tune_normal_warn_rate": 0.0,
+      "tune_positive_recall": 0.9444444444444444
+    },
+    {
+      "warn_candidate": 0.44717647920454134,
+      "tune_normal_warn_rate": 0.0,
+      "tune_positive_recall": 0.9333333333333333
+    },
+    {
+      "warn_candidate": 0.4504272573653358,
+      "tune_normal_warn_rate": 0.0,
+      "tune_positive_recall": 0.9222222222222223
+    },
+    {
+      "warn_candidate": 0.45231557184155796,
+      "tune_normal_warn_rate": 0.0,
+      "tune_positive_recall": 0.9111111111111111
+    },
+    {
+      "warn_candidate": 0.45618861868713495,
+      "tune_normal_warn_rate": 0.0,
+      "tune_positive_recall": 0.9
+    }
+  ],
+  "hold_candidates_unchanged": true,
+  "test_positive_recall_at_best_candidate": 0.9285714285714286,
+  "independent_normal_29_not_used_for_selection": true
+}
