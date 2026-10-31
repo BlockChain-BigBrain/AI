@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "scope": "Real browser -> Node -> unavailable AI error -> SQLite FAILED; success path remains queued after full evaluation",
+  "failed_job_persisted": true,
+  "failure_not_shown_as_pass": true,
+  "retry_button_enabled": true,
+  "mobile_horizontal_overflow": false
+}

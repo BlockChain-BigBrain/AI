@@ -1,0 +1,54 @@
+{
+  "score_version": "tonal-local-v1",
+  "recipe_frozen_before_run": true,
+  "reference_tracks": 1000,
+  "positive_queries": 340,
+  "normal_queries": 300,
+  "candidate_pool": "existing CLAP seg_top3_centered top5, no expected-source injection",
+  "warn_threshold": 0.3303172208078136,
+  "hold_threshold": 0.5440137575316275,
+  "tune_normal_fpr_targets": {
+    "warn": 0.1,
+    "hold": 0.02
+  },
+  "tune": {
+    "warn": {
+      "normal_count": 179,
+      "positive_count": 208,
+      "normal_false_positive_rate": 0.09497206703910614,
+      "positive_query_recall": 0.9134615384615384,
+      "correct_source_recall": 0.8990384615384616
+    },
+    "hold": {
+      "normal_count": 179,
+      "positive_count": 208,
+      "normal_false_positive_rate": 0.01675977653631285,
+      "positive_query_recall": 0.8605769230769231,
+      "correct_source_recall": 0.8605769230769231
+    }
+  },
+  "reused_test": {
+    "warn": {
+      "normal_count": 121,
+      "positive_count": 132,
+      "normal_false_positive_rate": 0.10743801652892562,
+      "positive_query_recall": 0.8863636363636364,
+      "correct_source_recall": 0.8560606060606061
+    },
+    "hold": {
+      "normal_count": 121,
+      "positive_count": 132,
+      "normal_false_positive_rate": 0.03305785123966942,
+      "positive_query_recall": 0.803030303030303,
+      "correct_source_recall": 0.803030303030303
+    }
+  },
+  "corpus_version": "5024eab8bb046fb5506be213d1abe25a81840cdc93a66d1a51e6cd287c90e191",
+  "signature": "a7987ee439879833baf8e5483038314db606bde6b88cbcca79c0a6aaed80dfe4",
+  "limitations": [
+    "Historical test groups reused after aggregate failure was seen; not a fresh blind test.",
+    "Synthetic positives and fingerprint-unique normal candidates; no legal labels.",
+    "Sources outside CLAP Top-5 cannot be recovered by confirmation."
+  ],
+  "enabled": true
+}

@@ -1,5 +1,9 @@
 # Track-AI Node 백엔드 MVP
 
+2026-10-22 추가: `http://127.0.0.1:3000/`에서 실제 업로드·결과 조회 화면을 제공합니다. SQLite 기본 저장과 선택형 MySQL 저장소를 지원합니다. 프로젝트 루트 `.env`에 `DATABASE_URL=mysql://...`을 설정하면 MySQL로 연결하며, 연결 실패 시 SQLite로 조용히 대체하지 않습니다. 비밀번호에 URL 특수문자가 있으면 URL 인코딩하세요. MySQL 스키마는 `schema.mysql.sql`입니다. 기존 팀 스키마와 다르면 먼저 매핑이 필요합니다. 실제 팀 DB 접속 검증은 접속 설정 제공 후 가능합니다.
+
+최신 진행 상태는 `layer2/artifacts/mentoring_workflow_status.json`을 확인하세요. 전체 평가 완료 후 임계값·실패 분석과 격리된 실제 운영 시험이 자동 실행됩니다. 운영 시험은 팀 MySQL을 수정하지 않고 별도 SQLite 런타임을 사용합니다.
+
 브라우저 업로드를 받고 Python FastAPI에 분석을 맡긴 뒤 결과를 로컬 SQLite에 저장하는 연결 서버입니다. 프론트엔드는 Python API를 직접 호출하지 않습니다.
 
 ## 실행 순서
@@ -15,7 +19,7 @@
 
 `VERIFIED` 결과의 `decision`은 `PASS`, `WARN`, `HOLD`, `BLOCK`입니다. 업로드 임시 파일은 성공·실패와 관계없이 분석 후 삭제됩니다. AI가 실패한 경우 정상 처리하지 않고 `FAILED`로 저장합니다.
 
-SQLite는 로컬 통합 확인용입니다. 팀 MySQL 서버가 준비되면 `tracks` 테이블 필드를 Prisma 모델로 옮기고, 현재 SQL 호출 부분만 저장소 모듈로 교체하면 됩니다.
+SQLite는 로컬 통합 확인용 기본값입니다. MySQL 어댑터와 스키마를 추가했으며, 팀 MySQL 서버가 준비되면 `.env`의 `DATABASE_URL`로 선택합니다. 팀에 기존 Prisma 스키마가 있다면 `schema.mysql.sql`과 테이블·필드를 먼저 대조해야 합니다. 기존 SQLite 데이터를 팀 DB로 자동 이관하지 않습니다.
 
 두 서버를 실행한 상태에서 원본 중복 시나리오를 자동 확인할 수 있습니다.
 
@@ -24,3 +28,40 @@ npm run test:e2e -- "C:\블록체인\original_music\검사용.mp3" BLOCK
 ```
 
 2026-10-01 확인 결과 원본 중복은 `VERIFIED/BLOCK`, 변형 음원은 `VERIFIED/PASS`로 저장됐고 변형 음원 결과에 Top-3가 포함됐습니다. 분석 후 임시 업로드 폴더는 비어 있었습니다. 변형 양성이 `PASS`인 것은 현재 결과를 재현한 것이며, 바람직한 탐지 성공을 뜻하지 않습니다.
+# FastAPI 연결 인증
+
+Node 백엔드는 요청마다 `X-Internal-API-Key` 헤더를 넣어 FastAPI `/verify`를
+호출합니다. 프로젝트 루트 `.env`의 `TRACK_AI_API_KEY`가 두 서비스에서 같은 값이어야
+합니다. 비밀값은 커밋하지 말고 `.env.example`만 공유하세요.
+
+## 프론트·창작 이력·정산 API
+
+프론트엔드는 Node 백엔드만 호출합니다. FastAPI 키는 프론트에 노출하지 않습니다.
+
+| 요청 | 용도 |
+|---|---|
+| `POST /api/tracks` | 음원 업로드와 비동기 AI 검증 시작 |
+| `GET /api/tracks/:id` | 판정·Top-3 후보·매칭 구간·검토 상태 조회 |
+| `POST /api/tracks/:id/provenance` | 창작 manifest와 지갑 서명 저장, 해시 생성 |
+| `GET /api/tracks/:id/provenance` | 창작 이력과 manifest hash 조회 |
+| `POST /api/tracks/:id/contributors` | 참여자 지갑과 지분(bps) 등록. 합계는 10,000이어야 함 |
+| `POST /api/tracks/:id/review` | HOLD/WARN 검토 결과 기록 |
+| `GET /api/reviews/pending` | 검토 대기 목록 조회 |
+| `POST /api/tracks/:id/settlement-quote` | 수수료 차감 후 참여자별 정산 금액 계산 |
+| `POST /api/settlements/:id/anchor` | 실제 블록체인 트랜잭션 hash 기록 |
+
+정산 quote는 금액을 이동시키지 않습니다. 프론트 또는 지갑 서비스가 Polygon
+트랜잭션을 실행한 뒤 transaction hash를 anchor API로 제출하는 구조입니다. 지분은
+AI가 추정하지 않고 참여자가 서명해 제출합니다.
+
+## 프론트 호출 예시
+
+```ts
+const form = new FormData();
+form.append("file", audioFile);
+const accepted = await fetch("/api/tracks", { method: "POST", body: form }).then(r => r.json());
+const result = await fetch(`/api/tracks/${accepted.trackId}`).then(r => r.json());
+```
+
+프론트에는 `decision`, `disposition`, `reviewRequired`, `similarTracks`를 표시하고,
+`BLOCK`만 즉시 차단합니다. `HOLD`와 `WARN`은 검토 또는 위험 표시 흐름으로 보냅니다.

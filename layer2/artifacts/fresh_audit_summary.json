@@ -1,0 +1,15 @@
+{
+  "policy_sha256": "ca08644444e851055f782339ef916069c1e65d0f9ba1f3f0153b7747ccf297ad",
+  "source_works_excluded_from_existing_positives": true,
+  "policy_refit_on_audit": false,
+  "positive_queries": 40,
+  "normal_candidates": 30,
+  "positive_query_recall": 0.975,
+  "correct_source_warn_recall": 0.975,
+  "normal_warn_or_hold_rate": 0.26666666666666666,
+  "limitations": [
+    "Additional positives are synthetic, not independently performed covers.",
+    "Unused normal candidates pass fingerprint checks but lack expert musical labels.",
+    "Only 20 new positive works and 30 normal candidates; estimates are uncertain."
+  ]
+}

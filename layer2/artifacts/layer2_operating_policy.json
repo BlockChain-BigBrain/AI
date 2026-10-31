@@ -1,38 +1,160 @@
 {
-  "policy_status": "demo_recommendation_not_production_validated",
-  "evaluated_at": "2026-09-30",
-  "candidate_retrieval": {
-    "internal_top_k": 5,
-    "display_top_k": 3,
-    "positive_queries": 90,
-    "top3_source_recall": 0.8888888889,
-    "top5_source_recall": 0.9444444444,
-    "decision_reason": "Top-5 added 5 source hits over Top-3 while adding only two candidates per query."
-  },
+  "policy_status": "experimental_pixabay_ai_label_subset_not_pure_ai_verified",
+  "active_local_scope": "ai_labeled",
+  "reference_tracks": 34,
+  "full_reference_files_preserved": 1000,
+  "corpus_version": "4f3f9a269ebb15614713dc54c121f904a86ca60f0acb6f63ece6dc7b243aea12",
+  "current_evidence": "ai_precision_policy.json",
   "risk_score": {
-    "score_name": "seg_top3_centered",
-    "hold_threshold_inclusive": 0.8944060206,
-    "warn_threshold_inclusive": 0.8566381335,
-    "pass_rule": "score < warn_threshold",
-    "meaning": "Similarity/risk score, not plagiarism probability or legal finding.",
-    "hold_action": "Escrow/review hold; never automatic upload rejection by Layer 2 alone.",
-    "warn_action": "Allow registration and display risk score/candidate references.",
-    "automatic_upload_block": "Layer 1 exact fingerprint duplicate match only."
+    "score_name": "clap-top20+tonal-local-v1+expanded-square-v1+secondary-clap-cqt-fragments-v1",
+    "warn_threshold_inclusive": 0.34748932160579077,
+    "hold_threshold_inclusive": 0.8337449399145463,
+    "secondary_raw_evidence_threshold": 0.45797785462894053
+  },
+  "candidate_retrieval": {
+    "internal_top_k": 20,
+    "display_top_k": 3,
+    "positive_queries": 68,
+    "positive_source_works": 34,
+    "held_out_source_recall_at_5": 1.0
   },
   "held_out_metrics": {
-    "positive_queries": 32,
-    "safe_queries": 119,
-    "hold_positive_recall": 0.78125,
-    "hold_safe_false_positive_rate": 0.0504201681,
-    "warn_positive_recall": 0.875,
-    "warn_or_hold_safe_false_positive_rate": 0.1848739496,
-    "seg_top3_centered_source_recall_at_3": 0.96875,
-    "seg_top3_centered_source_recall_at_5": 0.96875
+    "positive_queries": 28,
+    "correct_source_warn_top3_count": 28,
+    "correct_source_warn_top3_recall": 1.0,
+    "normal_candidates": 11,
+    "normal_warn_count": 1,
+    "normal_hold_count": 0,
+    "normal_warn_rate": 0.09090909090909091,
+    "normal_hold_rate": 0.0
   },
+  "premusic_diagnostic": {
+    "positive_queries": 0,
+    "positive_source_works": 0,
+    "normal_candidates": 2,
+    "normal_warn_or_hold_rate": 0.0,
+    "normal_hold_rate": 0.0,
+    "positive_query_warn_recall": null,
+    "correct_source_warn_recall_top5": null,
+    "correct_source_warn_recall_display_top3": null,
+    "source_retrieval_at_5": null
+  },
+  "calibration": "Lowest inclusive threshold meeting original tune normal FPR<=10%.",
+  "hold_additional_rule": "At least the 25th percentile of confirmed tune positive source scores; prevents a one-ULP WARN/HOLD band.",
+  "validation_status": "Development engineering after observed prototypes; no independent blind claim.",
   "limitations": [
-    "Positive examples are mainly same-recording synthetic edits, not independent performances or human-arranged covers.",
-    "Held-out sample is small; 6 of 119 safe queries crossed HOLD, slightly above the 5% target.",
-    "WARN recall on held-out positives was 87.5%, below the 90% target.",
-    "A standalone Layer 1 upload API now returns HTTP 409 for exact fingerprint matches. The repository has no existing frontend/backend upload route, so application-level wiring is still required."
-  ]
+    "Platform AI labels include AI modification and may be inaccurate.",
+    "Only 34 labelled reference works and 30 normal candidates; test FPR has coarse resolution.",
+    "New positive queries cover two automatic transformations, not all five historical families.",
+    "Premusic labels and independent-work relationships are unverified; diagnostic only.",
+    "The full-catalog profile contains unverified reference creation methods; not AI-only."
+  ],
+  "production_readiness": false,
+  "held_out_metrics_raw": {
+    "positive_queries": 28,
+    "correct_source_warn_top3_count": 28,
+    "correct_source_warn_top3_recall": 1.0,
+    "normal_candidates": 12,
+    "normal_warn_count": 2,
+    "normal_hold_count": 1,
+    "normal_warn_rate": 0.16666666666666666,
+    "normal_hold_rate": 0.08333333333333333
+  },
+  "new_transform_stress": {
+    "all": {
+      "positive_queries": 28,
+      "correct_source_warn_top3_count": 27,
+      "correct_source_warn_top3_recall": 0.9642857142857143,
+      "normal_candidates": 0,
+      "normal_warn_count": 0,
+      "normal_hold_count": 0,
+      "normal_warn_rate": null,
+      "normal_hold_rate": null
+    },
+    "by_transformation": {
+      "pitch_tempo_codec": {
+        "positive_queries": 14,
+        "correct_source_warn_top3_count": 13,
+        "correct_source_warn_top3_recall": 0.9285714285714286,
+        "normal_candidates": 0,
+        "normal_warn_count": 0,
+        "normal_hold_count": 0,
+        "normal_warn_rate": null,
+        "normal_hold_rate": null
+      },
+      "spliced_sections": {
+        "positive_queries": 14,
+        "correct_source_warn_top3_count": 14,
+        "correct_source_warn_top3_recall": 1.0,
+        "normal_candidates": 0,
+        "normal_warn_count": 0,
+        "normal_hold_count": 0,
+        "normal_warn_rate": null,
+        "normal_hold_rate": null
+      }
+    }
+  },
+  "latest_report": "MENTORING_FINAL_STATUS_20261023.md",
+  "five_family_metrics": {
+    "positive_queries": 70,
+    "correct_source_warn_top3_count": 63,
+    "correct_source_warn_top3_recall": 0.9,
+    "normal_candidates": 0,
+    "normal_warn_count": 0,
+    "normal_hold_count": 0,
+    "normal_warn_rate": null,
+    "normal_hold_rate": null
+  },
+  "by_family": {
+    "basic": {
+      "positive_queries": 14,
+      "correct_source_warn_top3_count": 11,
+      "correct_source_warn_top3_recall": 0.7857142857142857,
+      "normal_candidates": 0,
+      "normal_warn_count": 0,
+      "normal_hold_count": 0,
+      "normal_warn_rate": null,
+      "normal_hold_rate": null
+    },
+    "instrument_layer": {
+      "positive_queries": 14,
+      "correct_source_warn_top3_count": 11,
+      "correct_source_warn_top3_recall": 0.7857142857142857,
+      "normal_candidates": 0,
+      "normal_warn_count": 0,
+      "normal_hold_count": 0,
+      "normal_warn_rate": null,
+      "normal_hold_rate": null
+    },
+    "local_tempo": {
+      "positive_queries": 14,
+      "correct_source_warn_top3_count": 14,
+      "correct_source_warn_top3_recall": 1.0,
+      "normal_candidates": 0,
+      "normal_warn_count": 0,
+      "normal_hold_count": 0,
+      "normal_warn_rate": null,
+      "normal_hold_rate": null
+    },
+    "long_auto_edit": {
+      "positive_queries": 14,
+      "correct_source_warn_top3_count": 13,
+      "correct_source_warn_top3_recall": 0.9285714285714286,
+      "normal_candidates": 0,
+      "normal_warn_count": 0,
+      "normal_hold_count": 0,
+      "normal_warn_rate": null,
+      "normal_hold_rate": null
+    },
+    "room_effect": {
+      "positive_queries": 14,
+      "correct_source_warn_top3_count": 14,
+      "correct_source_warn_top3_recall": 1.0,
+      "normal_candidates": 0,
+      "normal_warn_count": 0,
+      "normal_hold_count": 0,
+      "normal_warn_rate": null,
+      "normal_hold_rate": null
+    }
+  }
 }

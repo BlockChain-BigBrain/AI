@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "engine": "MySQL Community 8.4.13",
+  "scope": "isolated local MySQL, not team database",
+  "schema": "backend/schema.mysql.sql",
+  "checks": "Actual Node HTTP routes persisted and retrieved MySQL rows",
+  "system_service_installed": false,
+  "test_engine_stopped_after_checks": true,
+  "data_directory": "C:\\블록체인\\.runtime-tests\\mysql-engine-1792644748056738100"
+}

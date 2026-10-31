@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "base_commit": "9216133",
+  "tests": 65,
+  "passed": 60,
+  "failed": 0,
+  "skipped": 5,
+  "skip_reasons": [
+    "Four existing tests need unavailable Unix-socket database/Hardhat infrastructure.",
+    "Windows symlink creation requires an OS privilege; traversal checks still run."
+  ],
+  "log_sha256": "2222a2eb9955856f26d6c4e627bb3a678c78d196cc01c1bd86b6cfcc42ae69f2",
+  "actual_ai_mysql": "See release_integration_validation.json; isolated real MySQL and actual AI provider round trip passed."
+}

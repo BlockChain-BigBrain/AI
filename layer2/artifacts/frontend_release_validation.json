@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "tests": 19,
+  "typecheck": "passed",
+  "production_builds": 2,
+  "identical_generated_outputs": true,
+  "production_api_url_preserved": true,
+  "production_deployed": false,
+  "base_commit": "25fdf3a",
+  "component_browser_layout": {
+    "status": "passed",
+    "scope": "Isolated current React evidence component with real saved AI metadata, not a production login flow.",
+    "observations": [
+      {
+        "viewport_width": 1440,
+        "no_horizontal_overflow": true,
+        "matching_segments_rendered": 5
+      },
+      {
+        "viewport_width": 390,
+        "no_horizontal_overflow": true,
+        "matching_segments_rendered": 5
+      }
+    ]
+  }
+}

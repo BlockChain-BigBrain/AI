@@ -1,0 +1,9 @@
+{
+  "generator": "REPLACE_WITH_ACTUAL_SERVICE",
+  "model": "REPLACE_WITH_ACTUAL_MODEL",
+  "generation_id": "REPLACE_WITH_ACTUAL_GENERATION_ID",
+  "generated_at": "REPLACE_WITH_ACTUAL_TIMESTAMP",
+  "human_performance": false,
+  "source_record_url": "REPLACE_WITH_RECORD_URL_IF_AVAILABLE",
+  "notes": "Template only. Replace with a real creation record; this is not evidence."
+}

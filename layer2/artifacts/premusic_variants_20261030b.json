@@ -1,0 +1,697 @@
+{
+  "date": "2026-10-30",
+  "source_count": 30,
+  "variant_count": 60,
+  "rows": [
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-1-aleksandr-koshylev-_-a-world-without-dreams-615600.mp3",
+      "source_sha256": "e70e4784d44de188fe9ec9bf8ece466a08f64f95b58bebb1ec53bc277fc7f555",
+      "variant": "basic_pitch_key_tempo",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\00__basic_pitch_key_tempo.wav",
+      "root_pitch_class": 2,
+      "parameters": {
+        "semitones": 2,
+        "tempo_scale": 0.96
+      }
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-1-aleksandr-koshylev-_-a-world-without-dreams-615600.mp3",
+      "source_sha256": "e70e4784d44de188fe9ec9bf8ece466a08f64f95b58bebb1ec53bc277fc7f555",
+      "variant": "instrument_layer",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\00__instrument_layer.wav",
+      "root_pitch_class": 2,
+      "parameters": {
+        "pad": true,
+        "bass": true,
+        "percussion": true
+      }
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-11-aleksandr-koshylev-night-life-605028.mp3",
+      "source_sha256": "8c5f2619d94780fc526394db3a8e1762ed0b9d4a565a53b2a96e337558be1351",
+      "variant": "basic_pitch_key_tempo",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\01__basic_pitch_key_tempo.wav",
+      "root_pitch_class": 11,
+      "parameters": {
+        "semitones": 2,
+        "tempo_scale": 0.96
+      }
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-11-aleksandr-koshylev-night-life-605028.mp3",
+      "source_sha256": "8c5f2619d94780fc526394db3a8e1762ed0b9d4a565a53b2a96e337558be1351",
+      "variant": "instrument_layer",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\01__instrument_layer.wav",
+      "root_pitch_class": 11,
+      "parameters": {
+        "pad": true,
+        "bass": true,
+        "percussion": true
+      }
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-15-aleksandr-koshylev-the-edge-is-inevitable-605029.mp3",
+      "source_sha256": "20c3dd1e733ff7e3a18a38feb3b4973a922627f07c65304920d1a9bc0e0d8135",
+      "variant": "basic_pitch_key_tempo",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\02__basic_pitch_key_tempo.wav",
+      "root_pitch_class": 11,
+      "parameters": {
+        "semitones": 2,
+        "tempo_scale": 0.96
+      }
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-15-aleksandr-koshylev-the-edge-is-inevitable-605029.mp3",
+      "source_sha256": "20c3dd1e733ff7e3a18a38feb3b4973a922627f07c65304920d1a9bc0e0d8135",
+      "variant": "instrument_layer",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\02__instrument_layer.wav",
+      "root_pitch_class": 11,
+      "parameters": {
+        "pad": true,
+        "bass": true,
+        "percussion": true
+      }
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-16-aleksandr-koshylev-_-the-choice-is-ours-615599.mp3",
+      "source_sha256": "adec5379ac2e559e6cd5fd16392d44e3338230f79314b0d2d3cdf9a33425db4b",
+      "variant": "basic_pitch_key_tempo",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\03__basic_pitch_key_tempo.wav",
+      "root_pitch_class": 8,
+      "parameters": {
+        "semitones": 2,
+        "tempo_scale": 0.96
+      }
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-16-aleksandr-koshylev-_-the-choice-is-ours-615599.mp3",
+      "source_sha256": "adec5379ac2e559e6cd5fd16392d44e3338230f79314b0d2d3cdf9a33425db4b",
+      "variant": "instrument_layer",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\03__instrument_layer.wav",
+      "root_pitch_class": 8,
+      "parameters": {
+        "pad": true,
+        "bass": true,
+        "percussion": true
+      }
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-16-aleksandr-koshylev-the-power-of-the-mind-605026.mp3",
+      "source_sha256": "fd74762c076e14f941d8de7281be17b20d1c1ebecd9a8e362a08c77510990813",
+      "variant": "basic_pitch_key_tempo",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\04__basic_pitch_key_tempo.wav",
+      "root_pitch_class": 0,
+      "parameters": {
+        "semitones": 2,
+        "tempo_scale": 0.96
+      }
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-16-aleksandr-koshylev-the-power-of-the-mind-605026.mp3",
+      "source_sha256": "fd74762c076e14f941d8de7281be17b20d1c1ebecd9a8e362a08c77510990813",
+      "variant": "instrument_layer",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\04__instrument_layer.wav",
+      "root_pitch_class": 0,
+      "parameters": {
+        "pad": true,
+        "bass": true,
+        "percussion": true
+      }
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-17-aleksandr-koshylev-there-is-darkness-in-the-eyes-605024.mp3",
+      "source_sha256": "060854505dac136f913f1ae86a9af1d1e0e11010df361704e9bba8feb375fc00",
+      "variant": "basic_pitch_key_tempo",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\05__basic_pitch_key_tempo.wav",
+      "root_pitch_class": 8,
+      "parameters": {
+        "semitones": 2,
+        "tempo_scale": 0.96
+      }
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-17-aleksandr-koshylev-there-is-darkness-in-the-eyes-605024.mp3",
+      "source_sha256": "060854505dac136f913f1ae86a9af1d1e0e11010df361704e9bba8feb375fc00",
+      "variant": "instrument_layer",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\05__instrument_layer.wav",
+      "root_pitch_class": 8,
+      "parameters": {
+        "pad": true,
+        "bass": true,
+        "percussion": true
+      }
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-2-aleksandr-koshylev-_-my-soul-beats-for-you-615601.mp3",
+      "source_sha256": "945ee65ae8938740c356010f80856cc891d175bddf3c0e19eb7e87d30a2890ae",
+      "variant": "basic_pitch_key_tempo",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\06__basic_pitch_key_tempo.wav",
+      "root_pitch_class": 9,
+      "parameters": {
+        "semitones": 2,
+        "tempo_scale": 0.96
+      }
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-2-aleksandr-koshylev-_-my-soul-beats-for-you-615601.mp3",
+      "source_sha256": "945ee65ae8938740c356010f80856cc891d175bddf3c0e19eb7e87d30a2890ae",
+      "variant": "instrument_layer",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\06__instrument_layer.wav",
+      "root_pitch_class": 9,
+      "parameters": {
+        "pad": true,
+        "bass": true,
+        "percussion": true
+      }
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-21-aleksandr-koshylev-we-are-all-different-605030.mp3",
+      "source_sha256": "fbaeb25e386e9664ad73d22bac4e48b1baca77fa65e5da3a2fc587a74065c3f4",
+      "variant": "basic_pitch_key_tempo",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\07__basic_pitch_key_tempo.wav",
+      "root_pitch_class": 2,
+      "parameters": {
+        "semitones": 2,
+        "tempo_scale": 0.96
+      }
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-21-aleksandr-koshylev-we-are-all-different-605030.mp3",
+      "source_sha256": "fbaeb25e386e9664ad73d22bac4e48b1baca77fa65e5da3a2fc587a74065c3f4",
+      "variant": "instrument_layer",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\07__instrument_layer.wav",
+      "root_pitch_class": 2,
+      "parameters": {
+        "pad": true,
+        "bass": true,
+        "percussion": true
+      }
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-4-aleksandr-koshylev-_-ulterior-motives-615598.mp3",
+      "source_sha256": "5fc75cd7cbe3faca96c3f81a5687dbe456e018b7d1d2a976cc3e62fe364cfdee",
+      "variant": "basic_pitch_key_tempo",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\08__basic_pitch_key_tempo.wav",
+      "root_pitch_class": 2,
+      "parameters": {
+        "semitones": 2,
+        "tempo_scale": 0.96
+      }
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\aleksandr_koshylev-4-aleksandr-koshylev-_-ulterior-motives-615598.mp3",
+      "source_sha256": "5fc75cd7cbe3faca96c3f81a5687dbe456e018b7d1d2a976cc3e62fe364cfdee",
+      "variant": "instrument_layer",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\08__instrument_layer.wav",
+      "root_pitch_class": 2,
+      "parameters": {
+        "pad": true,
+        "bass": true,
+        "percussion": true
+      }
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-daydream-615930.mp3",
+      "source_sha256": "db95fcb90a2a466470192693a63a4a810847a7a2cfc6db8805a424dd89c009cf",
+      "variant": "basic_pitch_key_tempo",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\09__basic_pitch_key_tempo.wav",
+      "root_pitch_class": 2,
+      "parameters": {
+        "semitones": 2,
+        "tempo_scale": 0.96
+      }
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-daydream-615930.mp3",
+      "source_sha256": "db95fcb90a2a466470192693a63a4a810847a7a2cfc6db8805a424dd89c009cf",
+      "variant": "instrument_layer",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\09__instrument_layer.wav",
+      "root_pitch_class": 2,
+      "parameters": {
+        "pad": true,
+        "bass": true,
+        "percussion": true
+      }
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-dreamer-615931.mp3",
+      "source_sha256": "2c85ac6ed050ea3330a6b5dbeade2dd56fc153f9329e9f106920277d8f5205e1",
+      "variant": "basic_pitch_key_tempo",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\10__basic_pitch_key_tempo.wav",
+      "root_pitch_class": 10,
+      "parameters": {
+        "semitones": 2,
+        "tempo_scale": 0.96
+      }
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-dreamer-615931.mp3",
+      "source_sha256": "2c85ac6ed050ea3330a6b5dbeade2dd56fc153f9329e9f106920277d8f5205e1",
+      "variant": "instrument_layer",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\10__instrument_layer.wav",
+      "root_pitch_class": 10,
+      "parameters": {
+        "pad": true,
+        "bass": true,
+        "percussion": true
+      }
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-progress-615932 (1).mp3",
+      "source_sha256": "229bd6d74cecc71ffc8367af7467928c173ac9171b65beb9a1c748c6ee9f5dde",
+      "variant": "basic_pitch_key_tempo",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\11__basic_pitch_key_tempo.wav",
+      "root_pitch_class": 2,
+      "parameters": {
+        "semitones": 2,
+        "tempo_scale": 0.96
+      }
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-progress-615932 (1).mp3",
+      "source_sha256": "229bd6d74cecc71ffc8367af7467928c173ac9171b65beb9a1c748c6ee9f5dde",
+      "variant": "instrument_layer",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\11__instrument_layer.wav",
+      "root_pitch_class": 2,
+      "parameters": {
+        "pad": true,
+        "bass": true,
+        "percussion": true
+      }
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-vibe-615929.mp3",
+      "source_sha256": "179d7c5e21d70ab94eb1d7e6f5632515e6f230b1558cd09e68cdb7b1c4c1b944",
+      "variant": "basic_pitch_key_tempo",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\12__basic_pitch_key_tempo.wav",
+      "root_pitch_class": 4,
+      "parameters": {
+        "semitones": 2,
+        "tempo_scale": 0.96
+      }
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\alexgrohl-vibe-615929.mp3",
+      "source_sha256": "179d7c5e21d70ab94eb1d7e6f5632515e6f230b1558cd09e68cdb7b1c4c1b944",
+      "variant": "instrument_layer",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\12__instrument_layer.wav",
+      "root_pitch_class": 4,
+      "parameters": {
+        "pad": true,
+        "bass": true,
+        "percussion": true
+      }
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-classical-cinematic-piano-615470 (1).mp3",
+      "source_sha256": "fc8c5303eba865b55b7c037cc24e111324de7300689d78dd46f8bdab57f7703c",
+      "variant": "basic_pitch_key_tempo",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\13__basic_pitch_key_tempo.wav",
+      "root_pitch_class": 2,
+      "parameters": {
+        "semitones": 2,
+        "tempo_scale": 0.96
+      }
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-classical-cinematic-piano-615470 (1).mp3",
+      "source_sha256": "fc8c5303eba865b55b7c037cc24e111324de7300689d78dd46f8bdab57f7703c",
+      "variant": "instrument_layer",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\13__instrument_layer.wav",
+      "root_pitch_class": 2,
+      "parameters": {
+        "pad": true,
+        "bass": true,
+        "percussion": true
+      }
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-classical-positive-piano-615469.mp3",
+      "source_sha256": "c5f0928b2f852c75cc35bd40990e316ab924f8a604c6ffc58915261ece87e129",
+      "variant": "basic_pitch_key_tempo",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\14__basic_pitch_key_tempo.wav",
+      "root_pitch_class": 5,
+      "parameters": {
+        "semitones": 2,
+        "tempo_scale": 0.96
+      }
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-classical-positive-piano-615469.mp3",
+      "source_sha256": "c5f0928b2f852c75cc35bd40990e316ab924f8a604c6ffc58915261ece87e129",
+      "variant": "instrument_layer",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\14__instrument_layer.wav",
+      "root_pitch_class": 5,
+      "parameters": {
+        "pad": true,
+        "bass": true,
+        "percussion": true
+      }
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-funny-comedy-jazz-615439.mp3",
+      "source_sha256": "90a95b8c374dccf0fcca9929902cb4af0f6cce6836aeca7b86be5452f05633ff",
+      "variant": "basic_pitch_key_tempo",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\15__basic_pitch_key_tempo.wav",
+      "root_pitch_class": 2,
+      "parameters": {
+        "semitones": 2,
+        "tempo_scale": 0.96
+      }
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-funny-comedy-jazz-615439.mp3",
+      "source_sha256": "90a95b8c374dccf0fcca9929902cb4af0f6cce6836aeca7b86be5452f05633ff",
+      "variant": "instrument_layer",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\15__instrument_layer.wav",
+      "root_pitch_class": 2,
+      "parameters": {
+        "pad": true,
+        "bass": true,
+        "percussion": true
+      }
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-jazz-lounge-cafe-615441.mp3",
+      "source_sha256": "cafaf9c33ea569477f57e46ea3a2402e68e212b876f5b35ed92ef3c75ee85f1f",
+      "variant": "basic_pitch_key_tempo",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\16__basic_pitch_key_tempo.wav",
+      "root_pitch_class": 2,
+      "parameters": {
+        "semitones": 2,
+        "tempo_scale": 0.96
+      }
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-jazz-lounge-cafe-615441.mp3",
+      "source_sha256": "cafaf9c33ea569477f57e46ea3a2402e68e212b876f5b35ed92ef3c75ee85f1f",
+      "variant": "instrument_layer",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\16__instrument_layer.wav",
+      "root_pitch_class": 2,
+      "parameters": {
+        "pad": true,
+        "bass": true,
+        "percussion": true
+      }
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-jazz-piano-bar-lounge-615446.mp3",
+      "source_sha256": "78bd8c83fa91d9e4c49496a00249a308f63cc01ebe562865b2fa135656874f21",
+      "variant": "basic_pitch_key_tempo",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\17__basic_pitch_key_tempo.wav",
+      "root_pitch_class": 3,
+      "parameters": {
+        "semitones": 2,
+        "tempo_scale": 0.96
+      }
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-jazz-piano-bar-lounge-615446.mp3",
+      "source_sha256": "78bd8c83fa91d9e4c49496a00249a308f63cc01ebe562865b2fa135656874f21",
+      "variant": "instrument_layer",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\17__instrument_layer.wav",
+      "root_pitch_class": 3,
+      "parameters": {
+        "pad": true,
+        "bass": true,
+        "percussion": true
+      }
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-that-is-jazzy-piano-615448.mp3",
+      "source_sha256": "5d739e7a6b9474c099fc20f86ca2f08a67348dde21d00c350ebfcbf64615c1b7",
+      "variant": "basic_pitch_key_tempo",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\18__basic_pitch_key_tempo.wav",
+      "root_pitch_class": 7,
+      "parameters": {
+        "semitones": 2,
+        "tempo_scale": 0.96
+      }
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\art_roseman-that-is-jazzy-piano-615448.mp3",
+      "source_sha256": "5d739e7a6b9474c099fc20f86ca2f08a67348dde21d00c350ebfcbf64615c1b7",
+      "variant": "instrument_layer",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\18__instrument_layer.wav",
+      "root_pitch_class": 7,
+      "parameters": {
+        "pad": true,
+        "bass": true,
+        "percussion": true
+      }
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-barefoot-on-the-beach-616029.mp3",
+      "source_sha256": "b622f131ccb45ef4a7849eeb59eed3cf57e6808c10a821c43ab9bd71a6b3ed81",
+      "variant": "basic_pitch_key_tempo",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\19__basic_pitch_key_tempo.wav",
+      "root_pitch_class": 5,
+      "parameters": {
+        "semitones": 2,
+        "tempo_scale": 0.96
+      }
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-barefoot-on-the-beach-616029.mp3",
+      "source_sha256": "b622f131ccb45ef4a7849eeb59eed3cf57e6808c10a821c43ab9bd71a6b3ed81",
+      "variant": "instrument_layer",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\19__instrument_layer.wav",
+      "root_pitch_class": 5,
+      "parameters": {
+        "pad": true,
+        "bass": true,
+        "percussion": true
+      }
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-borrowed-time-together-616034.mp3",
+      "source_sha256": "03dcecebbdb5bc899bea876b74a8bee0485863be486759f4b4080844377ce75d",
+      "variant": "basic_pitch_key_tempo",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\20__basic_pitch_key_tempo.wav",
+      "root_pitch_class": 2,
+      "parameters": {
+        "semitones": 2,
+        "tempo_scale": 0.96
+      }
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-borrowed-time-together-616034.mp3",
+      "source_sha256": "03dcecebbdb5bc899bea876b74a8bee0485863be486759f4b4080844377ce75d",
+      "variant": "instrument_layer",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\20__instrument_layer.wav",
+      "root_pitch_class": 2,
+      "parameters": {
+        "pad": true,
+        "bass": true,
+        "percussion": true
+      }
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-falling-for-you-again-616027.mp3",
+      "source_sha256": "2e0d674611609dab84bca5809ccb58e07839eaefcd41dd2ec227d5747300bc41",
+      "variant": "basic_pitch_key_tempo",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\21__basic_pitch_key_tempo.wav",
+      "root_pitch_class": 4,
+      "parameters": {
+        "semitones": 2,
+        "tempo_scale": 0.96
+      }
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-falling-for-you-again-616027.mp3",
+      "source_sha256": "2e0d674611609dab84bca5809ccb58e07839eaefcd41dd2ec227d5747300bc41",
+      "variant": "instrument_layer",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\21__instrument_layer.wav",
+      "root_pitch_class": 4,
+      "parameters": {
+        "pad": true,
+        "bass": true,
+        "percussion": true
+      }
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-lonely-city-lights-616028.mp3",
+      "source_sha256": "1b73f446d4740f47ae20d9fc60ec0790549289fed1a951c82b86759a2cfce1b7",
+      "variant": "basic_pitch_key_tempo",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\22__basic_pitch_key_tempo.wav",
+      "root_pitch_class": 1,
+      "parameters": {
+        "semitones": 2,
+        "tempo_scale": 0.96
+      }
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-lonely-city-lights-616028.mp3",
+      "source_sha256": "1b73f446d4740f47ae20d9fc60ec0790549289fed1a951c82b86759a2cfce1b7",
+      "variant": "instrument_layer",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\22__instrument_layer.wav",
+      "root_pitch_class": 1,
+      "parameters": {
+        "pad": true,
+        "bass": true,
+        "percussion": true
+      }
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-melting-into-you-616024.mp3",
+      "source_sha256": "58576d575e9b37a4c2067a715050c311d4bacaefba2fbf48e6cec5592aa648cb",
+      "variant": "basic_pitch_key_tempo",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\23__basic_pitch_key_tempo.wav",
+      "root_pitch_class": 11,
+      "parameters": {
+        "semitones": 2,
+        "tempo_scale": 0.96
+      }
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-melting-into-you-616024.mp3",
+      "source_sha256": "58576d575e9b37a4c2067a715050c311d4bacaefba2fbf48e6cec5592aa648cb",
+      "variant": "instrument_layer",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\23__instrument_layer.wav",
+      "root_pitch_class": 11,
+      "parameters": {
+        "pad": true,
+        "bass": true,
+        "percussion": true
+      }
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-soft-spoken-promises-616033.mp3",
+      "source_sha256": "d768e74304bd79bb63ada0a263dde54f66cdfaaf1d352d335f74e92f54b3acee",
+      "variant": "basic_pitch_key_tempo",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\24__basic_pitch_key_tempo.wav",
+      "root_pitch_class": 4,
+      "parameters": {
+        "semitones": 2,
+        "tempo_scale": 0.96
+      }
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-soft-spoken-promises-616033.mp3",
+      "source_sha256": "d768e74304bd79bb63ada0a263dde54f66cdfaaf1d352d335f74e92f54b3acee",
+      "variant": "instrument_layer",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\24__instrument_layer.wav",
+      "root_pitch_class": 4,
+      "parameters": {
+        "pad": true,
+        "bass": true,
+        "percussion": true
+      }
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-torn-between-two-worlds-616031.mp3",
+      "source_sha256": "4b36cbac715fc804d380708c4af375051507daf81ef774cd0db017d6428fa09f",
+      "variant": "basic_pitch_key_tempo",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\25__basic_pitch_key_tempo.wav",
+      "root_pitch_class": 1,
+      "parameters": {
+        "semitones": 2,
+        "tempo_scale": 0.96
+      }
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-torn-between-two-worlds-616031.mp3",
+      "source_sha256": "4b36cbac715fc804d380708c4af375051507daf81ef774cd0db017d6428fa09f",
+      "variant": "instrument_layer",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\25__instrument_layer.wav",
+      "root_pitch_class": 1,
+      "parameters": {
+        "pad": true,
+        "bass": true,
+        "percussion": true
+      }
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-when-stars-align-616032.mp3",
+      "source_sha256": "15f52feaae7eb218c0774b37ce02096a9af40f77fc39eaf24d0e5a217d59d4ab",
+      "variant": "basic_pitch_key_tempo",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\26__basic_pitch_key_tempo.wav",
+      "root_pitch_class": 2,
+      "parameters": {
+        "semitones": 2,
+        "tempo_scale": 0.96
+      }
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiobay_bgm-when-stars-align-616032.mp3",
+      "source_sha256": "15f52feaae7eb218c0774b37ce02096a9af40f77fc39eaf24d0e5a217d59d4ab",
+      "variant": "instrument_layer",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\26__instrument_layer.wav",
+      "root_pitch_class": 2,
+      "parameters": {
+        "pad": true,
+        "bass": true,
+        "percussion": true
+      }
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiocoffee-motivate-no-copyright-music-615977.mp3",
+      "source_sha256": "f91d0b86c6e22360568ff595d7d07f9f35f94d70d90077e19f0c97cfe3949b61",
+      "variant": "basic_pitch_key_tempo",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\27__basic_pitch_key_tempo.wav",
+      "root_pitch_class": 7,
+      "parameters": {
+        "semitones": 2,
+        "tempo_scale": 0.96
+      }
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiocoffee-motivate-no-copyright-music-615977.mp3",
+      "source_sha256": "f91d0b86c6e22360568ff595d7d07f9f35f94d70d90077e19f0c97cfe3949b61",
+      "variant": "instrument_layer",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\27__instrument_layer.wav",
+      "root_pitch_class": 7,
+      "parameters": {
+        "pad": true,
+        "bass": true,
+        "percussion": true
+      }
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiodollar-epic-epic-trailer-cinematic-612186.mp3",
+      "source_sha256": "1b338e1fe3799e161390729f1b9f39bba4fc669483103b4c7af342004a9aae4a",
+      "variant": "basic_pitch_key_tempo",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\28__basic_pitch_key_tempo.wav",
+      "root_pitch_class": 7,
+      "parameters": {
+        "semitones": 2,
+        "tempo_scale": 0.96
+      }
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiodollar-epic-epic-trailer-cinematic-612186.mp3",
+      "source_sha256": "1b338e1fe3799e161390729f1b9f39bba4fc669483103b4c7af342004a9aae4a",
+      "variant": "instrument_layer",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\28__instrument_layer.wav",
+      "root_pitch_class": 7,
+      "parameters": {
+        "pad": true,
+        "bass": true,
+        "percussion": true
+      }
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiodollar-epic-hollywood-612183.mp3",
+      "source_sha256": "fee1b0cbe9abe158a003ba93b405921e63ef23b785805d660e477de28688983a",
+      "variant": "basic_pitch_key_tempo",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\29__basic_pitch_key_tempo.wav",
+      "root_pitch_class": 9,
+      "parameters": {
+        "semitones": 2,
+        "tempo_scale": 0.96
+      }
+    },
+    {
+      "source": "C:\\블록체인\\premusic_used\\new_premusic_20261030b\\audiodollar-epic-hollywood-612183.mp3",
+      "source_sha256": "fee1b0cbe9abe158a003ba93b405921e63ef23b785805d660e477de28688983a",
+      "variant": "instrument_layer",
+      "path": ".runtime-tests\\new-premusic-20261030b\\variants\\29__instrument_layer.wav",
+      "root_pitch_class": 9,
+      "parameters": {
+        "pad": true,
+        "bass": true,
+        "percussion": true
+      }
+    }
+  ]
+}

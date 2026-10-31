@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-24",
+  "features": "dynamic-cqt84-local-v1",
+  "short_negative_views": [
+    "start",
+    "middle",
+    "end"
+  ],
+  "normal_unit": "Maximum warning score across all available views of each normal work; crops are not independent works.",
+  "ai_candidates": "All 34 eligible references, no CLAP cutoff.",
+  "full_candidates": "Union of CLAP Top20 and pitch-sequence Top20; maximum 40 references.",
+  "fragment_rule": "For query>=45s, three separated >=8s spectral matches; each score>=.65; up to twelve 10s windows.",
+  "warn_rule": "Tune normal-work FPR<=10% with minimum .55; HOLD tune FPR<=2% and minimum .85, ordered gap>=.05.",
+  "limits": "Known works and previously observed positives; new duration-matched queries are diagnostic, not pure-AI or independent-work proof."
+}

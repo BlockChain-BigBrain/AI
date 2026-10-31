@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-23",
+  "round": 2,
+  "method": "recall_guard_top20",
+  "retrieval_top_k": 20,
+  "reason": "Round-1 midpoint thresholds rejected: 17/28 vs baseline 25/28 on new-transform diagnostic.",
+  "warn_rule": "Lowest inclusive threshold meeting tune normal FPR<=10%, unchanged from original calibration recipe.",
+  "hold_rule": "Maximum of tune normal FPR<=2% boundary and tune confirmed-positive source 25th percentile.",
+  "selection_status": "Round-1 test/stress observed; engineering revision, not blind method selection.",
+  "replication": "Freeze this policy, then run +2-semitone/0.94-tempo/AAC96k and alternate splicing/1.08-tempo queries on same 14 works.",
+  "acceptance": "Tune and audited existing-test normal WARN<=10%, HOLD<=2%; source recall >=90% on existing test, old stress and new replication."
+}

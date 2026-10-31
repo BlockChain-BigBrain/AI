@@ -1,0 +1,97 @@
+{
+  "status": "passed",
+  "reference_tracks": 1000,
+  "samples": [
+    {
+      "file": "20886885-cateholic-lay-it-out-royalty-free-music-177843.mp3",
+      "track_id": "0ede4083-4743-44d6-9631-dc4fd3983cc9",
+      "state": "VERIFIED",
+      "decision": "BLOCK",
+      "wall_seconds": 1.67,
+      "processing_seconds": 0.437,
+      "query_windows": 0
+    },
+    {
+      "file": "normal_180s_0.wav",
+      "track_id": "62803f8a-607c-4393-b91c-1a5c28ca6d8c",
+      "state": "VERIFIED",
+      "decision": "PASS",
+      "wall_seconds": 18.128,
+      "processing_seconds": 17.12,
+      "query_windows": 35
+    },
+    {
+      "file": "normal_180s_1.wav",
+      "track_id": "dab82ee6-63df-42c3-841d-443acce10207",
+      "state": "VERIFIED",
+      "decision": "PASS",
+      "wall_seconds": 15.656,
+      "processing_seconds": 14.696,
+      "query_windows": 35
+    },
+    {
+      "file": "normal_180s_2.wav",
+      "track_id": "69dd6a1f-a8ce-40c5-a674-7921304a8169",
+      "state": "VERIFIED",
+      "decision": "PASS",
+      "wall_seconds": 19.799,
+      "processing_seconds": 18.909,
+      "query_windows": 35
+    },
+    {
+      "file": "normal_180s_0.wav",
+      "track_id": "c0f2a73e-f942-4979-9f0b-1c189f484fee",
+      "state": "VERIFIED",
+      "decision": "PASS",
+      "wall_seconds": 18.401,
+      "processing_seconds": 17.202,
+      "query_windows": 35
+    },
+    {
+      "file": "normal_180s_1.wav",
+      "track_id": "ec012147-0c29-46ce-9fdb-536a17014892",
+      "state": "VERIFIED",
+      "decision": "PASS",
+      "wall_seconds": 31.804,
+      "processing_seconds": 13.306,
+      "query_windows": 35
+    },
+    {
+      "file": "malformed.wav",
+      "track_id": "d1316175-ecb3-4dc9-900e-a2d936080a1b",
+      "state": "FAILED",
+      "decision": null,
+      "wall_seconds": 1.614,
+      "processing_seconds": null,
+      "query_windows": null
+    }
+  ],
+  "three_minute_latency": {
+    "n": 5,
+    "p50_seconds": 18.401,
+    "p95_seconds": 29.402999999999995,
+    "note": "Five requests from three distinct 180s controls, including two concurrent requests; not a production SLA"
+  },
+  "checks": {
+    "sqlite_persistence": "passed",
+    "node_restart_persistence": "passed",
+    "interrupted_job_recovery": "passed",
+    "api_restart_persistence": "passed",
+    "api_interrupted_job_recovery": "passed",
+    "concurrent_uploads": "passed (two 180s nonduplicate controls)",
+    "malformed_audio": "FAILED as expected",
+    "unsupported_extension": "rejected",
+    "idempotency": "passed",
+    "request_conflict": "409",
+    "unauthorized": "401",
+    "temporary_upload_cleanup": "passed"
+  },
+  "browser": {
+    "status": "passed",
+    "upload_decision": "BLOCK",
+    "reload_lookup": "passed",
+    "mobile_overflow": "none"
+  },
+  "team_mysql_connection": "not_tested: connection settings not provided",
+  "runtime": "C:\\블록체인\\.runtime-tests\\20261022_191312"
+}

@@ -5,9 +5,12 @@
 | 폴더 | 쿼리 수 | 내용 | 한계 |
 |---|---:|---|---|
 | plagiarism_positive/ | 90 | 동일 녹음 발췌·재인코딩·속도·피치·효과 변형 | 독립 연주 아님 |
-| reperformed_positive/ | 30 | 10개 원곡의 section edit, tempo/pitch/EQ, remix FX 자동 변형 | 이름과 달리 사람이 재연주하지 않음 |
+| reperformed_positive/ | 60 | 20개 원곡의 section edit, tempo/pitch/EQ, remix FX 자동 변형 | 이름과 달리 사람이 재연주하지 않음 |
 | safe_arranged/ | 30 | 10개 출처의 편집/효과 정상 대조 후보 | 전문가 검증된 비표절 라벨 아님 |
 | synthetic_layered_positive/ | 10 | 원곡 위에 합성 패드·베이스·퍼커션 추가 | 원곡이 계속 들리는 인공 믹스 |
+| extended_positive/ | 180 | 30개 원곡의 재녹음 시뮬레이션·구간별 비균일 템포, 각 3단계 | 합성 강인성 실험이며 독립 연주 아님 |
+
+합성 양성은 총 340개입니다. 최신 현황과 평가 범위는 [현재 상태 정리](../../STATUS_SUMMARY_20261022.md)를 우선 참고하세요.
 
 ## 평가 시 유의사항
 

@@ -1,0 +1,1251 @@
+{
+  "protocol_sha256": "b98e1eb3d97edee19bd90cd991b60fe27c3afd7f55895711f6d452c8ebb49cd5",
+  "rows": [
+    {
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\five_family_ai\\000__basic.wav",
+      "dataset": "positive",
+      "split": "prospective_five_family",
+      "query_kind": "basic",
+      "expected_track_id": "absolutesound-hard-phonk-phonk-music-529766",
+      "source_sha256": "b1b57cfacc556b878e9d650af66f5d5eeaf8d71f71aab99a37f824c8c55c0973",
+      "sha256": "f44fbd102979c59832b6923ad0bf943b3e47df2fd8c5e31fb386c105473ecdfa",
+      "parameters": {
+        "source_offset": 35.235,
+        "pitch_semitones": -1,
+        "speed": 1.07
+      }
+    },
+    {
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\five_family_ai\\000__instrument_layer.wav",
+      "dataset": "positive",
+      "split": "prospective_five_family",
+      "query_kind": "instrument_layer",
+      "expected_track_id": "absolutesound-hard-phonk-phonk-music-529766",
+      "source_sha256": "b1b57cfacc556b878e9d650af66f5d5eeaf8d71f71aab99a37f824c8c55c0973",
+      "sha256": "59ca6fe2f95bdb3f567626ccb2743ab2ecec6f315756c36ef466f0a41e295243",
+      "parameters": {
+        "source_offset": 35.235,
+        "added_layer": "deterministic_synthetic_pad_and_pulse",
+        "layer_relative_rms": 0.35
+      }
+    },
+    {
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\five_family_ai\\000__long_auto_edit.wav",
+      "dataset": "positive",
+      "split": "prospective_five_family",
+      "query_kind": "long_auto_edit",
+      "expected_track_id": "absolutesound-hard-phonk-phonk-music-529766",
+      "source_sha256": "b1b57cfacc556b878e9d650af66f5d5eeaf8d71f71aab99a37f824c8c55c0973",
+      "sha256": "178c42c89b74c0a72017e33dba924bbe4e11163f917fe4a49bb5637ea37e0d70",
+      "parameters": {
+        "source_offset": 35.235,
+        "section_order": [
+          2,
+          0,
+          3,
+          1,
+          0,
+          2,
+          1,
+          3
+        ],
+        "resample_rates": [
+          1.03,
+          0.97,
+          1.05,
+          0.95,
+          1.03,
+          0.97,
+          1.05,
+          0.95
+        ],
+        "pitch_and_speed_joint_change": true
+      }
+    },
+    {
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\five_family_ai\\000__room_effect.wav",
+      "dataset": "positive",
+      "split": "prospective_five_family",
+      "query_kind": "room_effect",
+      "expected_track_id": "absolutesound-hard-phonk-phonk-music-529766",
+      "source_sha256": "b1b57cfacc556b878e9d650af66f5d5eeaf8d71f71aab99a37f824c8c55c0973",
+      "sha256": "1ae8ea288179f910d574323a029e73c7d7ef85c2137a9017acb800674093d4da",
+      "parameters": {
+        "source_offset": 35.235,
+        "synthetic_rt60": 0.8,
+        "noise_snr_db": 18
+      }
+    },
+    {
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\five_family_ai\\000__local_tempo.wav",
+      "dataset": "positive",
+      "split": "prospective_five_family",
+      "query_kind": "local_tempo",
+      "expected_track_id": "absolutesound-hard-phonk-phonk-music-529766",
+      "source_sha256": "b1b57cfacc556b878e9d650af66f5d5eeaf8d71f71aab99a37f824c8c55c0973",
+      "sha256": "b1d0ad52ee7ebfd7f1f23dd95b6adba9ccf55393e64cce2024da3e385e2f96a1",
+      "parameters": {
+        "source_offset": 35.235,
+        "first_rate": 1.18,
+        "second_rate": 0.86
+      }
+    },
+    {
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\five_family_ai\\001__basic.wav",
+      "dataset": "positive",
+      "split": "prospective_five_family",
+      "query_kind": "basic",
+      "expected_track_id": "alex-morgan-arabic-islam-islamic-music-545530",
+      "source_sha256": "d5ce884c111a136988026068f1f7d17292eae36dfff736f39faf20828d2b9644",
+      "sha256": "944338171c0b6bb812a0630007b3becb3a5db057de27478db021b772f78b694c",
+      "parameters": {
+        "source_offset": 51.150000000000006,
+        "pitch_semitones": -1,
+        "speed": 1.07
+      }
+    },
+    {
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\five_family_ai\\001__instrument_layer.wav",
+      "dataset": "positive",
+      "split": "prospective_five_family",
+      "query_kind": "instrument_layer",
+      "expected_track_id": "alex-morgan-arabic-islam-islamic-music-545530",
+      "source_sha256": "d5ce884c111a136988026068f1f7d17292eae36dfff736f39faf20828d2b9644",
+      "sha256": "9842b548a23a4f3ccf8411b078e47eea7df5b1815b77bdec410cc8645befc129",
+      "parameters": {
+        "source_offset": 51.150000000000006,
+        "added_layer": "deterministic_synthetic_pad_and_pulse",
+        "layer_relative_rms": 0.35
+      }
+    },
+    {
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\five_family_ai\\001__long_auto_edit.wav",
+      "dataset": "positive",
+      "split": "prospective_five_family",
+      "query_kind": "long_auto_edit",
+      "expected_track_id": "alex-morgan-arabic-islam-islamic-music-545530",
+      "source_sha256": "d5ce884c111a136988026068f1f7d17292eae36dfff736f39faf20828d2b9644",
+      "sha256": "fe53922fcaf745e822edb34bdd38ce6a45a63edbde03baed4725664be15a5892",
+      "parameters": {
+        "source_offset": 51.150000000000006,
+        "section_order": [
+          2,
+          0,
+          3,
+          1,
+          0,
+          2,
+          1,
+          3
+        ],
+        "resample_rates": [
+          1.03,
+          0.97,
+          1.05,
+          0.95,
+          1.03,
+          0.97,
+          1.05,
+          0.95
+        ],
+        "pitch_and_speed_joint_change": true
+      }
+    },
+    {
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\five_family_ai\\001__room_effect.wav",
+      "dataset": "positive",
+      "split": "prospective_five_family",
+      "query_kind": "room_effect",
+      "expected_track_id": "alex-morgan-arabic-islam-islamic-music-545530",
+      "source_sha256": "d5ce884c111a136988026068f1f7d17292eae36dfff736f39faf20828d2b9644",
+      "sha256": "e3c6c84082a10cb1d31d558ae8cad63600453eac0630573e32b5350e6a95a3a9",
+      "parameters": {
+        "source_offset": 51.150000000000006,
+        "synthetic_rt60": 0.8,
+        "noise_snr_db": 18
+      }
+    },
+    {
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\five_family_ai\\001__local_tempo.wav",
+      "dataset": "positive",
+      "split": "prospective_five_family",
+      "query_kind": "local_tempo",
+      "expected_track_id": "alex-morgan-arabic-islam-islamic-music-545530",
+      "source_sha256": "d5ce884c111a136988026068f1f7d17292eae36dfff736f39faf20828d2b9644",
+      "sha256": "9392a23b08a111e08569120a68c426ba29ec11a2069b632b08c321ca8013309b",
+      "parameters": {
+        "source_offset": 51.150000000000006,
+        "first_rate": 1.18,
+        "second_rate": 0.86
+      }
+    },
+    {
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\five_family_ai\\002__basic.wav",
+      "dataset": "positive",
+      "split": "prospective_five_family",
+      "query_kind": "basic",
+      "expected_track_id": "alex-morgan-background-music-545525",
+      "source_sha256": "4eb9fcfd68823b73a1fff5bf599025258bfd5a59acc57e536aa359f47739b4b1",
+      "sha256": "227fe869083061556fbacad81f85fce50cfaa9e124634f18273f42e335a2bc2d",
+      "parameters": {
+        "source_offset": 47.370000000000005,
+        "pitch_semitones": -1,
+        "speed": 1.07
+      }
+    },
+    {
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\five_family_ai\\002__instrument_layer.wav",
+      "dataset": "positive",
+      "split": "prospective_five_family",
+      "query_kind": "instrument_layer",
+      "expected_track_id": "alex-morgan-background-music-545525",
+      "source_sha256": "4eb9fcfd68823b73a1fff5bf599025258bfd5a59acc57e536aa359f47739b4b1",
+      "sha256": "d840f4df8cfd8ba94a777e50ac07c48158938fa16013743f4cdc54e87c2a9fd5",
+      "parameters": {
+        "source_offset": 47.370000000000005,
+        "added_layer": "deterministic_synthetic_pad_and_pulse",
+        "layer_relative_rms": 0.35
+      }
+    },
+    {
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\five_family_ai\\002__long_auto_edit.wav",
+      "dataset": "positive",
+      "split": "prospective_five_family",
+      "query_kind": "long_auto_edit",
+      "expected_track_id": "alex-morgan-background-music-545525",
+      "source_sha256": "4eb9fcfd68823b73a1fff5bf599025258bfd5a59acc57e536aa359f47739b4b1",
+      "sha256": "ba1071cf0ab1942c7b72624ae6192309162818e420a44731bab11c10742f8555",
+      "parameters": {
+        "source_offset": 47.370000000000005,
+        "section_order": [
+          2,
+          0,
+          3,
+          1,
+          0,
+          2,
+          1,
+          3
+        ],
+        "resample_rates": [
+          1.03,
+          0.97,
+          1.05,
+          0.95,
+          1.03,
+          0.97,
+          1.05,
+          0.95
+        ],
+        "pitch_and_speed_joint_change": true
+      }
+    },
+    {
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\five_family_ai\\002__room_effect.wav",
+      "dataset": "positive",
+      "split": "prospective_five_family",
+      "query_kind": "room_effect",
+      "expected_track_id": "alex-morgan-background-music-545525",
+      "source_sha256": "4eb9fcfd68823b73a1fff5bf599025258bfd5a59acc57e536aa359f47739b4b1",
+      "sha256": "86ca7a98fb2a0db4b4d34fde089106a3adb1ccaefca7020b2357bdda98ddd3b4",
+      "parameters": {
+        "source_offset": 47.370000000000005,
+        "synthetic_rt60": 0.8,
+        "noise_snr_db": 18
+      }
+    },
+    {
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\five_family_ai\\002__local_tempo.wav",
+      "dataset": "positive",
+      "split": "prospective_five_family",
+      "query_kind": "local_tempo",
+      "expected_track_id": "alex-morgan-background-music-545525",
+      "source_sha256": "4eb9fcfd68823b73a1fff5bf599025258bfd5a59acc57e536aa359f47739b4b1",
+      "sha256": "61d2dbfad179379bee70b1ff00cfc928bc00fd979e555f6ac2e6ed91cbc5340e",
+      "parameters": {
+        "source_offset": 47.370000000000005,
+        "first_rate": 1.18,
+        "second_rate": 0.86
+      }
+    },
+    {
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\five_family_ai\\003__basic.wav",
+      "dataset": "positive",
+      "split": "prospective_five_family",
+      "query_kind": "basic",
+      "expected_track_id": "alex-morgan-cinematic-591327",
+      "source_sha256": "85a3b2977cc1bc13a654e0395b7a1ffe3c710455178c85f1b43b5da3e4f26e39",
+      "sha256": "26d8979e04792abd60cb2b7790020b684258ed37a100fe9fba5780771772064b",
+      "parameters": {
+        "source_offset": 31.709999999999994,
+        "pitch_semitones": -1,
+        "speed": 1.07
+      }
+    },
+    {
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\five_family_ai\\003__instrument_layer.wav",
+      "dataset": "positive",
+      "split": "prospective_five_family",
+      "query_kind": "instrument_layer",
+      "expected_track_id": "alex-morgan-cinematic-591327",
+      "source_sha256": "85a3b2977cc1bc13a654e0395b7a1ffe3c710455178c85f1b43b5da3e4f26e39",
+      "sha256": "91d3cb88c18581269d69ec29876b53939adf9a6a44863b7a2fc8c1095fb27dd9",
+      "parameters": {
+        "source_offset": 31.709999999999994,
+        "added_layer": "deterministic_synthetic_pad_and_pulse",
+        "layer_relative_rms": 0.35
+      }
+    },
+    {
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\five_family_ai\\003__long_auto_edit.wav",
+      "dataset": "positive",
+      "split": "prospective_five_family",
+      "query_kind": "long_auto_edit",
+      "expected_track_id": "alex-morgan-cinematic-591327",
+      "source_sha256": "85a3b2977cc1bc13a654e0395b7a1ffe3c710455178c85f1b43b5da3e4f26e39",
+      "sha256": "3c3c4d9e88b752052e4beed4e3f7fbf19318c90845ab8191c3fe749a21301ac3",
+      "parameters": {
+        "source_offset": 31.709999999999994,
+        "section_order": [
+          2,
+          0,
+          3,
+          1,
+          0,
+          2,
+          1,
+          3
+        ],
+        "resample_rates": [
+          1.03,
+          0.97,
+          1.05,
+          0.95,
+          1.03,
+          0.97,
+          1.05,
+          0.95
+        ],
+        "pitch_and_speed_joint_change": true
+      }
+    },
+    {
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\five_family_ai\\003__room_effect.wav",
+      "dataset": "positive",
+      "split": "prospective_five_family",
+      "query_kind": "room_effect",
+      "expected_track_id": "alex-morgan-cinematic-591327",
+      "source_sha256": "85a3b2977cc1bc13a654e0395b7a1ffe3c710455178c85f1b43b5da3e4f26e39",
+      "sha256": "93d41a39fa7c37ed8436119e983e887caee8871c890529ba3b6036ab4bd2e26a",
+      "parameters": {
+        "source_offset": 31.709999999999994,
+        "synthetic_rt60": 0.8,
+        "noise_snr_db": 18
+      }
+    },
+    {
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\five_family_ai\\003__local_tempo.wav",
+      "dataset": "positive",
+      "split": "prospective_five_family",
+      "query_kind": "local_tempo",
+      "expected_track_id": "alex-morgan-cinematic-591327",
+      "source_sha256": "85a3b2977cc1bc13a654e0395b7a1ffe3c710455178c85f1b43b5da3e4f26e39",
+      "sha256": "c1a11a5591f7e7575365ba710fd1b48609e623358f3a6de22500c04f0f16a5ff",
+      "parameters": {
+        "source_offset": 31.709999999999994,
+        "first_rate": 1.18,
+        "second_rate": 0.86
+      }
+    },
+    {
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\five_family_ai\\004__basic.wav",
+      "dataset": "positive",
+      "split": "prospective_five_family",
+      "query_kind": "basic",
+      "expected_track_id": "alex-morgan-documentary-nature-528316",
+      "source_sha256": "090070f7202e7e8bc1da943c0c44cd031e9136a5520cbb15b92c431a17cae164",
+      "sha256": "b904aa500107a4a3c6b9ce03a941dd1b99df50d9f2627a8bd21db895ab2030fc",
+      "parameters": {
+        "source_offset": 52.28,
+        "pitch_semitones": -1,
+        "speed": 1.07
+      }
+    },
+    {
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\five_family_ai\\004__instrument_layer.wav",
+      "dataset": "positive",
+      "split": "prospective_five_family",
+      "query_kind": "instrument_layer",
+      "expected_track_id": "alex-morgan-documentary-nature-528316",
+      "source_sha256": "090070f7202e7e8bc1da943c0c44cd031e9136a5520cbb15b92c431a17cae164",
+      "sha256": "9f5c9aaa58bce62a5d24346abaa52d51c2d8690bc51f08289dd541330735712f",
+      "parameters": {
+        "source_offset": 52.28,
+        "added_layer": "deterministic_synthetic_pad_and_pulse",
+        "layer_relative_rms": 0.35
+      }
+    },
+    {
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\five_family_ai\\004__long_auto_edit.wav",
+      "dataset": "positive",
+      "split": "prospective_five_family",
+      "query_kind": "long_auto_edit",
+      "expected_track_id": "alex-morgan-documentary-nature-528316",
+      "source_sha256": "090070f7202e7e8bc1da943c0c44cd031e9136a5520cbb15b92c431a17cae164",
+      "sha256": "c0a28c8d6943fe14c5b9f690e48cd03ef0737bb35bb351ef6c8c0fea505af989",
+      "parameters": {
+        "source_offset": 52.28,
+        "section_order": [
+          2,
+          0,
+          3,
+          1,
+          0,
+          2,
+          1,
+          3
+        ],
+        "resample_rates": [
+          1.03,
+          0.97,
+          1.05,
+          0.95,
+          1.03,
+          0.97,
+          1.05,
+          0.95
+        ],
+        "pitch_and_speed_joint_change": true
+      }
+    },
+    {
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\five_family_ai\\004__room_effect.wav",
+      "dataset": "positive",
+      "split": "prospective_five_family",
+      "query_kind": "room_effect",
+      "expected_track_id": "alex-morgan-documentary-nature-528316",
+      "source_sha256": "090070f7202e7e8bc1da943c0c44cd031e9136a5520cbb15b92c431a17cae164",
+      "sha256": "ab237485959fdfaad1baa01acce5d3c37d16a68f12b6e18ffdbf22573630d02c",
+      "parameters": {
+        "source_offset": 52.28,
+        "synthetic_rt60": 0.8,
+        "noise_snr_db": 18
+      }
+    },
+    {
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\five_family_ai\\004__local_tempo.wav",
+      "dataset": "positive",
+      "split": "prospective_five_family",
+      "query_kind": "local_tempo",
+      "expected_track_id": "alex-morgan-documentary-nature-528316",
+      "source_sha256": "090070f7202e7e8bc1da943c0c44cd031e9136a5520cbb15b92c431a17cae164",
+      "sha256": "82481523a121c79b404b70a390dc000f378244eae426836ada2bd833cd9e80dd",
+      "parameters": {
+        "source_offset": 52.28,
+        "first_rate": 1.18,
+        "second_rate": 0.86
+      }
+    },
+    {
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\five_family_ai\\005__basic.wav",
+      "dataset": "positive",
+      "split": "prospective_five_family",
+      "query_kind": "basic",
+      "expected_track_id": "alex-morgan-lounge-chill-nu-jazz-restaurant-587425",
+      "source_sha256": "295d7c10653cf1dfe5bbdea17b46dddff7f2ecdb9a797ed985807c4e22a7503c",
+      "sha256": "d8392d047b7379d9015bed301b3a338087005ce196550cd845ef604a146d38b1",
+      "parameters": {
+        "source_offset": 62.31,
+        "pitch_semitones": -1,
+        "speed": 1.07
+      }
+    },
+    {
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\five_family_ai\\005__instrument_layer.wav",
+      "dataset": "positive",
+      "split": "prospective_five_family",
+      "query_kind": "instrument_layer",
+      "expected_track_id": "alex-morgan-lounge-chill-nu-jazz-restaurant-587425",
+      "source_sha256": "295d7c10653cf1dfe5bbdea17b46dddff7f2ecdb9a797ed985807c4e22a7503c",
+      "sha256": "3acf8d45c7eb185caaabe02a7cf2ddc5f0d0fcc920cb704d40d529083d68c4d5",
+      "parameters": {
+        "source_offset": 62.31,
+        "added_layer": "deterministic_synthetic_pad_and_pulse",
+        "layer_relative_rms": 0.35
+      }
+    },
+    {
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\five_family_ai\\005__long_auto_edit.wav",
+      "dataset": "positive",
+      "split": "prospective_five_family",
+      "query_kind": "long_auto_edit",
+      "expected_track_id": "alex-morgan-lounge-chill-nu-jazz-restaurant-587425",
+      "source_sha256": "295d7c10653cf1dfe5bbdea17b46dddff7f2ecdb9a797ed985807c4e22a7503c",
+      "sha256": "6223495d6890d54e9abec6e3f05075289674fef0b611927819aead7e49dca5c1",
+      "parameters": {
+        "source_offset": 62.31,
+        "section_order": [
+          2,
+          0,
+          3,
+          1,
+          0,
+          2,
+          1,
+          3
+        ],
+        "resample_rates": [
+          1.03,
+          0.97,
+          1.05,
+          0.95,
+          1.03,
+          0.97,
+          1.05,
+          0.95
+        ],
+        "pitch_and_speed_joint_change": true
+      }
+    },
+    {
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\five_family_ai\\005__room_effect.wav",
+      "dataset": "positive",
+      "split": "prospective_five_family",
+      "query_kind": "room_effect",
+      "expected_track_id": "alex-morgan-lounge-chill-nu-jazz-restaurant-587425",
+      "source_sha256": "295d7c10653cf1dfe5bbdea17b46dddff7f2ecdb9a797ed985807c4e22a7503c",
+      "sha256": "f8981293b264c635a7c5dc036058ebd5befd3bc8ec1bed166179f77ec6f28d18",
+      "parameters": {
+        "source_offset": 62.31,
+        "synthetic_rt60": 0.8,
+        "noise_snr_db": 18
+      }
+    },
+    {
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\five_family_ai\\005__local_tempo.wav",
+      "dataset": "positive",
+      "split": "prospective_five_family",
+      "query_kind": "local_tempo",
+      "expected_track_id": "alex-morgan-lounge-chill-nu-jazz-restaurant-587425",
+      "source_sha256": "295d7c10653cf1dfe5bbdea17b46dddff7f2ecdb9a797ed985807c4e22a7503c",
+      "sha256": "d4f990404bfd664e0e3df5fce6474aeb393ba02692a2798d418ee19662dc8a32",
+      "parameters": {
+        "source_offset": 62.31,
+        "first_rate": 1.18,
+        "second_rate": 0.86
+      }
+    },
+    {
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\five_family_ai\\006__basic.wav",
+      "dataset": "positive",
+      "split": "prospective_five_family",
+      "query_kind": "basic",
+      "expected_track_id": "alex-morgan-video-background-music-591338",
+      "source_sha256": "fccd6ac21c99c6d446b6113ec4b5e87b4df82a2ad4e5e868923d9c4248f1e7e6",
+      "sha256": "f29b2f271c84560e79660cfcca5416d1061e497ef8cf54a6a8981b08befdc6be",
+      "parameters": {
+        "source_offset": 52.349999999999994,
+        "pitch_semitones": -1,
+        "speed": 1.07
+      }
+    },
+    {
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\five_family_ai\\006__instrument_layer.wav",
+      "dataset": "positive",
+      "split": "prospective_five_family",
+      "query_kind": "instrument_layer",
+      "expected_track_id": "alex-morgan-video-background-music-591338",
+      "source_sha256": "fccd6ac21c99c6d446b6113ec4b5e87b4df82a2ad4e5e868923d9c4248f1e7e6",
+      "sha256": "a5c30d0e5e1daafa4e0860f5d465c277470eff949952b22ff9c040b5b531b907",
+      "parameters": {
+        "source_offset": 52.349999999999994,
+        "added_layer": "deterministic_synthetic_pad_and_pulse",
+        "layer_relative_rms": 0.35
+      }
+    },
+    {
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\five_family_ai\\006__long_auto_edit.wav",
+      "dataset": "positive",
+      "split": "prospective_five_family",
+      "query_kind": "long_auto_edit",
+      "expected_track_id": "alex-morgan-video-background-music-591338",
+      "source_sha256": "fccd6ac21c99c6d446b6113ec4b5e87b4df82a2ad4e5e868923d9c4248f1e7e6",
+      "sha256": "bc1f6af6baf509db52b1910b2e4584c3bac66683037181c822b6ac488ab13a62",
+      "parameters": {
+        "source_offset": 52.349999999999994,
+        "section_order": [
+          2,
+          0,
+          3,
+          1,
+          0,
+          2,
+          1,
+          3
+        ],
+        "resample_rates": [
+          1.03,
+          0.97,
+          1.05,
+          0.95,
+          1.03,
+          0.97,
+          1.05,
+          0.95
+        ],
+        "pitch_and_speed_joint_change": true
+      }
+    },
+    {
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\five_family_ai\\006__room_effect.wav",
+      "dataset": "positive",
+      "split": "prospective_five_family",
+      "query_kind": "room_effect",
+      "expected_track_id": "alex-morgan-video-background-music-591338",
+      "source_sha256": "fccd6ac21c99c6d446b6113ec4b5e87b4df82a2ad4e5e868923d9c4248f1e7e6",
+      "sha256": "878e9e4505190f0266ac3b7005cdbaba568d5c9a6d46b531986c1f0a8670423a",
+      "parameters": {
+        "source_offset": 52.349999999999994,
+        "synthetic_rt60": 0.8,
+        "noise_snr_db": 18
+      }
+    },
+    {
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\five_family_ai\\006__local_tempo.wav",
+      "dataset": "positive",
+      "split": "prospective_five_family",
+      "query_kind": "local_tempo",
+      "expected_track_id": "alex-morgan-video-background-music-591338",
+      "source_sha256": "fccd6ac21c99c6d446b6113ec4b5e87b4df82a2ad4e5e868923d9c4248f1e7e6",
+      "sha256": "6cb166eaab1700a297e402ef7827287a8ec56915f561e29e904aade4a2626d76",
+      "parameters": {
+        "source_offset": 52.349999999999994,
+        "first_rate": 1.18,
+        "second_rate": 0.86
+      }
+    },
+    {
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\five_family_ai\\007__basic.wav",
+      "dataset": "positive",
+      "split": "prospective_five_family",
+      "query_kind": "basic",
+      "expected_track_id": "marlowemusic-snowfall-608469",
+      "source_sha256": "49556954f13c555c94a09ece1443f43fa17a0682e4aadcff29478dff43777a5f",
+      "sha256": "4ed4356ae285a57ca010b2f7e8216d579302ca9636053acb1204414c9bd36f43",
+      "parameters": {
+        "source_offset": 51.39,
+        "pitch_semitones": -1,
+        "speed": 1.07
+      }
+    },
+    {
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\five_family_ai\\007__instrument_layer.wav",
+      "dataset": "positive",
+      "split": "prospective_five_family",
+      "query_kind": "instrument_layer",
+      "expected_track_id": "marlowemusic-snowfall-608469",
+      "source_sha256": "49556954f13c555c94a09ece1443f43fa17a0682e4aadcff29478dff43777a5f",
+      "sha256": "28f9a105f545e05b9a76ed0da160e9bf75499efa8b2fa0e7c85f314476ac1afd",
+      "parameters": {
+        "source_offset": 51.39,
+        "added_layer": "deterministic_synthetic_pad_and_pulse",
+        "layer_relative_rms": 0.35
+      }
+    },
+    {
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\five_family_ai\\007__long_auto_edit.wav",
+      "dataset": "positive",
+      "split": "prospective_five_family",
+      "query_kind": "long_auto_edit",
+      "expected_track_id": "marlowemusic-snowfall-608469",
+      "source_sha256": "49556954f13c555c94a09ece1443f43fa17a0682e4aadcff29478dff43777a5f",
+      "sha256": "d7e1cbfe056e7decdfb35daa516b2d661163dea023841bdb2f067025be9a020a",
+      "parameters": {
+        "source_offset": 51.39,
+        "section_order": [
+          2,
+          0,
+          3,
+          1,
+          0,
+          2,
+          1,
+          3
+        ],
+        "resample_rates": [
+          1.03,
+          0.97,
+          1.05,
+          0.95,
+          1.03,
+          0.97,
+          1.05,
+          0.95
+        ],
+        "pitch_and_speed_joint_change": true
+      }
+    },
+    {
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\five_family_ai\\007__room_effect.wav",
+      "dataset": "positive",
+      "split": "prospective_five_family",
+      "query_kind": "room_effect",
+      "expected_track_id": "marlowemusic-snowfall-608469",
+      "source_sha256": "49556954f13c555c94a09ece1443f43fa17a0682e4aadcff29478dff43777a5f",
+      "sha256": "2ff4e1a390836a0d8cb14546e392c9ffeb8202237c31c1ec2f37c286ca2edf5f",
+      "parameters": {
+        "source_offset": 51.39,
+        "synthetic_rt60": 0.8,
+        "noise_snr_db": 18
+      }
+    },
+    {
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\five_family_ai\\007__local_tempo.wav",
+      "dataset": "positive",
+      "split": "prospective_five_family",
+      "query_kind": "local_tempo",
+      "expected_track_id": "marlowemusic-snowfall-608469",
+      "source_sha256": "49556954f13c555c94a09ece1443f43fa17a0682e4aadcff29478dff43777a5f",
+      "sha256": "b27bf0bb82178d0c0ff143c155eff02fcc3c44a711a5f2a4785b021b990c158a",
+      "parameters": {
+        "source_offset": 51.39,
+        "first_rate": 1.18,
+        "second_rate": 0.86
+      }
+    },
+    {
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\five_family_ai\\008__basic.wav",
+      "dataset": "positive",
+      "split": "prospective_five_family",
+      "query_kind": "basic",
+      "expected_track_id": "nastelbom-action-action-music-473266",
+      "source_sha256": "df5bffa490ef939c95225bd4b049503a814145b405d9e74e3e0354c14d0d4f27",
+      "sha256": "6e07a0c4e1a39cb0054c46e78f2fd91a877b95704a68fb13f488759ac068bf6b",
+      "parameters": {
+        "source_offset": 30.025,
+        "pitch_semitones": -1,
+        "speed": 1.07
+      }
+    },
+    {
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\five_family_ai\\008__instrument_layer.wav",
+      "dataset": "positive",
+      "split": "prospective_five_family",
+      "query_kind": "instrument_layer",
+      "expected_track_id": "nastelbom-action-action-music-473266",
+      "source_sha256": "df5bffa490ef939c95225bd4b049503a814145b405d9e74e3e0354c14d0d4f27",
+      "sha256": "bbb03762aa94485df22eacf261558ea5cdff5a392efd72a9a55872856c0c206f",
+      "parameters": {
+        "source_offset": 30.025,
+        "added_layer": "deterministic_synthetic_pad_and_pulse",
+        "layer_relative_rms": 0.35
+      }
+    },
+    {
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\five_family_ai\\008__long_auto_edit.wav",
+      "dataset": "positive",
+      "split": "prospective_five_family",
+      "query_kind": "long_auto_edit",
+      "expected_track_id": "nastelbom-action-action-music-473266",
+      "source_sha256": "df5bffa490ef939c95225bd4b049503a814145b405d9e74e3e0354c14d0d4f27",
+      "sha256": "304f790985afee1502b6c7574bcc48e5bc35629245a5a0a6b9a18a4781db76a1",
+      "parameters": {
+        "source_offset": 30.025,
+        "section_order": [
+          2,
+          0,
+          3,
+          1,
+          0,
+          2,
+          1,
+          3
+        ],
+        "resample_rates": [
+          1.03,
+          0.97,
+          1.05,
+          0.95,
+          1.03,
+          0.97,
+          1.05,
+          0.95
+        ],
+        "pitch_and_speed_joint_change": true
+      }
+    },
+    {
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\five_family_ai\\008__room_effect.wav",
+      "dataset": "positive",
+      "split": "prospective_five_family",
+      "query_kind": "room_effect",
+      "expected_track_id": "nastelbom-action-action-music-473266",
+      "source_sha256": "df5bffa490ef939c95225bd4b049503a814145b405d9e74e3e0354c14d0d4f27",
+      "sha256": "05b16a96fd9c23d5baa327a7ae131ee40ab44265ef97f21eaf9654b483c280e3",
+      "parameters": {
+        "source_offset": 30.025,
+        "synthetic_rt60": 0.8,
+        "noise_snr_db": 18
+      }
+    },
+    {
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\five_family_ai\\008__local_tempo.wav",
+      "dataset": "positive",
+      "split": "prospective_five_family",
+      "query_kind": "local_tempo",
+      "expected_track_id": "nastelbom-action-action-music-473266",
+      "source_sha256": "df5bffa490ef939c95225bd4b049503a814145b405d9e74e3e0354c14d0d4f27",
+      "sha256": "0c6d9cfcbe1623c653e4ffe843f84bc3cb88e999b411726032c25f45b9dd82f9",
+      "parameters": {
+        "source_offset": 30.025,
+        "first_rate": 1.18,
+        "second_rate": 0.86
+      }
+    },
+    {
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\five_family_ai\\009__basic.wav",
+      "dataset": "positive",
+      "split": "prospective_five_family",
+      "query_kind": "basic",
+      "expected_track_id": "sunset-house-grooves-deep-house-sunset-538759",
+      "source_sha256": "fea1ba951012fb16bea1aa3b3bc8d321b8a2b19bbd86437a87dcefd9beec99df",
+      "sha256": "6ca951297c90341d42c57f74afaaa13d3d46d8b99de68548b3b21d9fc3fc3ec5",
+      "parameters": {
+        "source_offset": 63.09,
+        "pitch_semitones": -1,
+        "speed": 1.07
+      }
+    },
+    {
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\five_family_ai\\009__instrument_layer.wav",
+      "dataset": "positive",
+      "split": "prospective_five_family",
+      "query_kind": "instrument_layer",
+      "expected_track_id": "sunset-house-grooves-deep-house-sunset-538759",
+      "source_sha256": "fea1ba951012fb16bea1aa3b3bc8d321b8a2b19bbd86437a87dcefd9beec99df",
+      "sha256": "61b80e8e7881a644c1239da7f62f1978b08d70e0d20727b215980ee039f15996",
+      "parameters": {
+        "source_offset": 63.09,
+        "added_layer": "deterministic_synthetic_pad_and_pulse",
+        "layer_relative_rms": 0.35
+      }
+    },
+    {
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\five_family_ai\\009__long_auto_edit.wav",
+      "dataset": "positive",
+      "split": "prospective_five_family",
+      "query_kind": "long_auto_edit",
+      "expected_track_id": "sunset-house-grooves-deep-house-sunset-538759",
+      "source_sha256": "fea1ba951012fb16bea1aa3b3bc8d321b8a2b19bbd86437a87dcefd9beec99df",
+      "sha256": "0d19c42775668f3572821057f10cf7d86011e6a059485e40688542b7b05bbf2a",
+      "parameters": {
+        "source_offset": 63.09,
+        "section_order": [
+          2,
+          0,
+          3,
+          1,
+          0,
+          2,
+          1,
+          3
+        ],
+        "resample_rates": [
+          1.03,
+          0.97,
+          1.05,
+          0.95,
+          1.03,
+          0.97,
+          1.05,
+          0.95
+        ],
+        "pitch_and_speed_joint_change": true
+      }
+    },
+    {
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\five_family_ai\\009__room_effect.wav",
+      "dataset": "positive",
+      "split": "prospective_five_family",
+      "query_kind": "room_effect",
+      "expected_track_id": "sunset-house-grooves-deep-house-sunset-538759",
+      "source_sha256": "fea1ba951012fb16bea1aa3b3bc8d321b8a2b19bbd86437a87dcefd9beec99df",
+      "sha256": "74d15c84ee6e62e49b116efb328839f8a0031aea189c615c8fed8ff628ac6369",
+      "parameters": {
+        "source_offset": 63.09,
+        "synthetic_rt60": 0.8,
+        "noise_snr_db": 18
+      }
+    },
+    {
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\five_family_ai\\009__local_tempo.wav",
+      "dataset": "positive",
+      "split": "prospective_five_family",
+      "query_kind": "local_tempo",
+      "expected_track_id": "sunset-house-grooves-deep-house-sunset-538759",
+      "source_sha256": "fea1ba951012fb16bea1aa3b3bc8d321b8a2b19bbd86437a87dcefd9beec99df",
+      "sha256": "76119bc1345e2ddda0ab839589c898a3d5240b2a594eed2804fe189c5114faee",
+      "parameters": {
+        "source_offset": 63.09,
+        "first_rate": 1.18,
+        "second_rate": 0.86
+      }
+    },
+    {
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\five_family_ai\\010__basic.wav",
+      "dataset": "positive",
+      "split": "prospective_five_family",
+      "query_kind": "basic",
+      "expected_track_id": "the_mountain-cinematic-489998 (1)",
+      "source_sha256": "063ba0812614c25c1ede437e92a12ce33c068e822f69d99129aeb890c47ac08a",
+      "sha256": "88e3cfb1be10cd0c0eda81688a3dcdd0a47b59d9ef89ed556a4a08118eb13f1f",
+      "parameters": {
+        "source_offset": 31.799999999999997,
+        "pitch_semitones": -1,
+        "speed": 1.07
+      }
+    },
+    {
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\five_family_ai\\010__instrument_layer.wav",
+      "dataset": "positive",
+      "split": "prospective_five_family",
+      "query_kind": "instrument_layer",
+      "expected_track_id": "the_mountain-cinematic-489998 (1)",
+      "source_sha256": "063ba0812614c25c1ede437e92a12ce33c068e822f69d99129aeb890c47ac08a",
+      "sha256": "c9ac3c04b60a887dee469ea06be77066d18a6d62c76c2f8033c85f5be4ba556f",
+      "parameters": {
+        "source_offset": 31.799999999999997,
+        "added_layer": "deterministic_synthetic_pad_and_pulse",
+        "layer_relative_rms": 0.35
+      }
+    },
+    {
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\five_family_ai\\010__long_auto_edit.wav",
+      "dataset": "positive",
+      "split": "prospective_five_family",
+      "query_kind": "long_auto_edit",
+      "expected_track_id": "the_mountain-cinematic-489998 (1)",
+      "source_sha256": "063ba0812614c25c1ede437e92a12ce33c068e822f69d99129aeb890c47ac08a",
+      "sha256": "ae05159f11d1bc3bf2e00c0bce39a4afaf031f5202191ebb685f8558b8257890",
+      "parameters": {
+        "source_offset": 31.799999999999997,
+        "section_order": [
+          2,
+          0,
+          3,
+          1,
+          0,
+          2,
+          1,
+          3
+        ],
+        "resample_rates": [
+          1.03,
+          0.97,
+          1.05,
+          0.95,
+          1.03,
+          0.97,
+          1.05,
+          0.95
+        ],
+        "pitch_and_speed_joint_change": true
+      }
+    },
+    {
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\five_family_ai\\010__room_effect.wav",
+      "dataset": "positive",
+      "split": "prospective_five_family",
+      "query_kind": "room_effect",
+      "expected_track_id": "the_mountain-cinematic-489998 (1)",
+      "source_sha256": "063ba0812614c25c1ede437e92a12ce33c068e822f69d99129aeb890c47ac08a",
+      "sha256": "4e3b4ef41f881b778973b0c509ea0ff6231d4723f632313b617dd2e399c0caa0",
+      "parameters": {
+        "source_offset": 31.799999999999997,
+        "synthetic_rt60": 0.8,
+        "noise_snr_db": 18
+      }
+    },
+    {
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\five_family_ai\\010__local_tempo.wav",
+      "dataset": "positive",
+      "split": "prospective_five_family",
+      "query_kind": "local_tempo",
+      "expected_track_id": "the_mountain-cinematic-489998 (1)",
+      "source_sha256": "063ba0812614c25c1ede437e92a12ce33c068e822f69d99129aeb890c47ac08a",
+      "sha256": "994fb693afc43be6d40b230132a48e4c9a04422b64f913354be708d2f17c97cb",
+      "parameters": {
+        "source_offset": 31.799999999999997,
+        "first_rate": 1.18,
+        "second_rate": 0.86
+      }
+    },
+    {
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\five_family_ai\\011__basic.wav",
+      "dataset": "positive",
+      "split": "prospective_five_family",
+      "query_kind": "basic",
+      "expected_track_id": "the_mountain-instrumental-508025",
+      "source_sha256": "e38e2dbebbd780a1f33a592c052b0a05a6d1a63bb718a293fbe3f5ebe8ba34f5",
+      "sha256": "eb0f4ea67cb1b33836b28664bf687327739ed0f2d27410fc1d23d5c9c4b23e29",
+      "parameters": {
+        "source_offset": 37.114999999999995,
+        "pitch_semitones": -1,
+        "speed": 1.07
+      }
+    },
+    {
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\five_family_ai\\011__instrument_layer.wav",
+      "dataset": "positive",
+      "split": "prospective_five_family",
+      "query_kind": "instrument_layer",
+      "expected_track_id": "the_mountain-instrumental-508025",
+      "source_sha256": "e38e2dbebbd780a1f33a592c052b0a05a6d1a63bb718a293fbe3f5ebe8ba34f5",
+      "sha256": "97941b564b1fd8cc54c5207bd19c173988e5aaa0980dd52f07f48ca5b08ea72b",
+      "parameters": {
+        "source_offset": 37.114999999999995,
+        "added_layer": "deterministic_synthetic_pad_and_pulse",
+        "layer_relative_rms": 0.35
+      }
+    },
+    {
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\five_family_ai\\011__long_auto_edit.wav",
+      "dataset": "positive",
+      "split": "prospective_five_family",
+      "query_kind": "long_auto_edit",
+      "expected_track_id": "the_mountain-instrumental-508025",
+      "source_sha256": "e38e2dbebbd780a1f33a592c052b0a05a6d1a63bb718a293fbe3f5ebe8ba34f5",
+      "sha256": "c8da7041df137d66899a77ecf5c85569fed240fe30014db9caf517bd3817c845",
+      "parameters": {
+        "source_offset": 37.114999999999995,
+        "section_order": [
+          2,
+          0,
+          3,
+          1,
+          0,
+          2,
+          1,
+          3
+        ],
+        "resample_rates": [
+          1.03,
+          0.97,
+          1.05,
+          0.95,
+          1.03,
+          0.97,
+          1.05,
+          0.95
+        ],
+        "pitch_and_speed_joint_change": true
+      }
+    },
+    {
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\five_family_ai\\011__room_effect.wav",
+      "dataset": "positive",
+      "split": "prospective_five_family",
+      "query_kind": "room_effect",
+      "expected_track_id": "the_mountain-instrumental-508025",
+      "source_sha256": "e38e2dbebbd780a1f33a592c052b0a05a6d1a63bb718a293fbe3f5ebe8ba34f5",
+      "sha256": "1c0ee1fa08918fbede7be87b4c9c62e4b7a2b8a55d21adac5b79f1b162886646",
+      "parameters": {
+        "source_offset": 37.114999999999995,
+        "synthetic_rt60": 0.8,
+        "noise_snr_db": 18
+      }
+    },
+    {
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\five_family_ai\\011__local_tempo.wav",
+      "dataset": "positive",
+      "split": "prospective_five_family",
+      "query_kind": "local_tempo",
+      "expected_track_id": "the_mountain-instrumental-508025",
+      "source_sha256": "e38e2dbebbd780a1f33a592c052b0a05a6d1a63bb718a293fbe3f5ebe8ba34f5",
+      "sha256": "12b4a28c18248e1a49cd90458898afc9b430eebe83629e48a799ef1195639d61",
+      "parameters": {
+        "source_offset": 37.114999999999995,
+        "first_rate": 1.18,
+        "second_rate": 0.86
+      }
+    },
+    {
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\five_family_ai\\012__basic.wav",
+      "dataset": "positive",
+      "split": "prospective_five_family",
+      "query_kind": "basic",
+      "expected_track_id": "the_mountain-instrumental-minimal-522469",
+      "source_sha256": "bcf7b26b208b4795d9f87adceefa14a3b1c07731b910e18b16d07fea68c9eb2c",
+      "sha256": "962407021873e760777d2aa23055c9f7fd9c56e89de12b72392ef0b4f1e51dff",
+      "parameters": {
+        "source_offset": 33.525000000000006,
+        "pitch_semitones": -1,
+        "speed": 1.07
+      }
+    },
+    {
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\five_family_ai\\012__instrument_layer.wav",
+      "dataset": "positive",
+      "split": "prospective_five_family",
+      "query_kind": "instrument_layer",
+      "expected_track_id": "the_mountain-instrumental-minimal-522469",
+      "source_sha256": "bcf7b26b208b4795d9f87adceefa14a3b1c07731b910e18b16d07fea68c9eb2c",
+      "sha256": "7925580e47a3e9ae5c00c70146a1b87af67acbfd6474a560d02c14ce39d50f79",
+      "parameters": {
+        "source_offset": 33.525000000000006,
+        "added_layer": "deterministic_synthetic_pad_and_pulse",
+        "layer_relative_rms": 0.35
+      }
+    },
+    {
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\five_family_ai\\012__long_auto_edit.wav",
+      "dataset": "positive",
+      "split": "prospective_five_family",
+      "query_kind": "long_auto_edit",
+      "expected_track_id": "the_mountain-instrumental-minimal-522469",
+      "source_sha256": "bcf7b26b208b4795d9f87adceefa14a3b1c07731b910e18b16d07fea68c9eb2c",
+      "sha256": "5ee931058314886110b1b659d4aaeb5e4969357d51d627099253f1b11fbfa6e2",
+      "parameters": {
+        "source_offset": 33.525000000000006,
+        "section_order": [
+          2,
+          0,
+          3,
+          1,
+          0,
+          2,
+          1,
+          3
+        ],
+        "resample_rates": [
+          1.03,
+          0.97,
+          1.05,
+          0.95,
+          1.03,
+          0.97,
+          1.05,
+          0.95
+        ],
+        "pitch_and_speed_joint_change": true
+      }
+    },
+    {
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\five_family_ai\\012__room_effect.wav",
+      "dataset": "positive",
+      "split": "prospective_five_family",
+      "query_kind": "room_effect",
+      "expected_track_id": "the_mountain-instrumental-minimal-522469",
+      "source_sha256": "bcf7b26b208b4795d9f87adceefa14a3b1c07731b910e18b16d07fea68c9eb2c",
+      "sha256": "d3bb78f26ef7b0ef2d3c736b2828b64d0a407b4fe69cd567ab0a97a7e1436640",
+      "parameters": {
+        "source_offset": 33.525000000000006,
+        "synthetic_rt60": 0.8,
+        "noise_snr_db": 18
+      }
+    },
+    {
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\five_family_ai\\012__local_tempo.wav",
+      "dataset": "positive",
+      "split": "prospective_five_family",
+      "query_kind": "local_tempo",
+      "expected_track_id": "the_mountain-instrumental-minimal-522469",
+      "source_sha256": "bcf7b26b208b4795d9f87adceefa14a3b1c07731b910e18b16d07fea68c9eb2c",
+      "sha256": "aaedce8882a81aaab29a0f0682c93ce00ad7f9faddbab175f292851c7df2c56d",
+      "parameters": {
+        "source_offset": 33.525000000000006,
+        "first_rate": 1.18,
+        "second_rate": 0.86
+      }
+    },
+    {
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\five_family_ai\\013__basic.wav",
+      "dataset": "positive",
+      "split": "prospective_five_family",
+      "query_kind": "basic",
+      "expected_track_id": "velariomusic-lofi-relaxing-598427",
+      "source_sha256": "4d5adc31231fc03a63485197d79c7385523db9a227b203c787e838db086268cd",
+      "sha256": "200c86eeab522ebd630b20ea6876a2c5595b8d912cb21dea14d338ce4f9c01f4",
+      "parameters": {
+        "source_offset": 39.8,
+        "pitch_semitones": -1,
+        "speed": 1.07
+      }
+    },
+    {
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\five_family_ai\\013__instrument_layer.wav",
+      "dataset": "positive",
+      "split": "prospective_five_family",
+      "query_kind": "instrument_layer",
+      "expected_track_id": "velariomusic-lofi-relaxing-598427",
+      "source_sha256": "4d5adc31231fc03a63485197d79c7385523db9a227b203c787e838db086268cd",
+      "sha256": "04a8d5b97926dc28654d219f6f8339d14f3a90e7b669fd15bd1ebb80100d931b",
+      "parameters": {
+        "source_offset": 39.8,
+        "added_layer": "deterministic_synthetic_pad_and_pulse",
+        "layer_relative_rms": 0.35
+      }
+    },
+    {
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\five_family_ai\\013__long_auto_edit.wav",
+      "dataset": "positive",
+      "split": "prospective_five_family",
+      "query_kind": "long_auto_edit",
+      "expected_track_id": "velariomusic-lofi-relaxing-598427",
+      "source_sha256": "4d5adc31231fc03a63485197d79c7385523db9a227b203c787e838db086268cd",
+      "sha256": "d0301ef9205c58b73680f17ff61bb048bc325fd036354756c2f826151ba8d420",
+      "parameters": {
+        "source_offset": 39.8,
+        "section_order": [
+          2,
+          0,
+          3,
+          1,
+          0,
+          2,
+          1,
+          3
+        ],
+        "resample_rates": [
+          1.03,
+          0.97,
+          1.05,
+          0.95,
+          1.03,
+          0.97,
+          1.05,
+          0.95
+        ],
+        "pitch_and_speed_joint_change": true
+      }
+    },
+    {
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\five_family_ai\\013__room_effect.wav",
+      "dataset": "positive",
+      "split": "prospective_five_family",
+      "query_kind": "room_effect",
+      "expected_track_id": "velariomusic-lofi-relaxing-598427",
+      "source_sha256": "4d5adc31231fc03a63485197d79c7385523db9a227b203c787e838db086268cd",
+      "sha256": "7ab921515fd30f3cd156ceea1c44ee9adbdad543993d968ce7028d8ea2bbcd29",
+      "parameters": {
+        "source_offset": 39.8,
+        "synthetic_rt60": 0.8,
+        "noise_snr_db": 18
+      }
+    },
+    {
+      "file": "C:\\\ube14\ub85d\uccb4\uc778\\layer2\\test_data\\five_family_ai\\013__local_tempo.wav",
+      "dataset": "positive",
+      "split": "prospective_five_family",
+      "query_kind": "local_tempo",
+      "expected_track_id": "velariomusic-lofi-relaxing-598427",
+      "source_sha256": "4d5adc31231fc03a63485197d79c7385523db9a227b203c787e838db086268cd",
+      "sha256": "e88a87c132796a0f44ec6f46e8f5097e9c515b9de6cdbd576ccd56f719bfc2d3",
+      "parameters": {
+        "source_offset": 39.8,
+        "first_rate": 1.18,
+        "second_rate": 0.86
+      }
+    }
+  ]
+}

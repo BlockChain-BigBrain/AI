@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "database": "mysql",
+  "checks": [
+    "upload_failed_state_persisted",
+    "unicode_provenance_roundtrip",
+    "provenance_upsert",
+    "contributor_rows",
+    "invalid_share_preserves_existing_rows",
+    "settlement_quote",
+    "review_roundtrip",
+    "pending_review_query"
+  ],
+  "scope": "Isolated storage HTTP test. AI intentionally unavailable; not a successful AI E2E test.",
+  "runtime": "C:\\블록체인\\.runtime-tests\\storage-mysql-1792644756429891500"
+}

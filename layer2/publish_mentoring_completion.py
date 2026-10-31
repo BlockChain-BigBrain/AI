@@ -1,0 +1,135 @@
+"""Publish mentoring progress using actual artifacts and explicit scope limits."""
+from pathlib import Path
+import csv,hashlib,json
+from scipy.stats import beta
+
+ROOT=Path(__file__).resolve().parents[1]
+ART=ROOT/'layer2/artifacts'
+
+
+def read(name):return json.loads((ART/name).read_text(encoding='utf-8'))
+
+
+def main():
+    current=read('secondary_precision_evaluation.json');five=read('five_family_ai_evaluation.json')
+    policy=read('ai_precision_policy.json');audit=read('control_collection_eligibility_summary.json')
+    live,team,local=[read(n) for n in ('ai_scope_live_validation.json','team_live_ai_e2e_validation.json','local_stack_validation.json')]
+    assert live['status']==team['status']==local['status']=='passed'
+    assert live['policy_file']==team['active_policy_file']=='ai_precision_policy.json'
+    assert team.get('precision_rescue_e2e') and len(team.get('parallel_precision_api_jobs',[]))==2
+    assert live['score_version']==team['ai_score_version']==local['score_version']
+    unit=read('next_stage_unit_validation.json');assert unit['status']=='passed'
+    queue_times='·'.join(f"{r['elapsed_seconds']:.2f}초" for r in team['parallel_precision_api_jobs'])
+    s=current['summary'];a=five['profiles']['ai_labeled_catalog']['current'];full=five['profiles']['full_catalog']
+    guard=read('dual_route_guard_evaluation.json')['profiles']['full_catalog'];g=guard['methods'][str(guard['selected_second_route_power'])]
+    pct=lambda value:f'{100*value:.2f}%'
+    count=lambda m:f"{m['correct_source_warn_top3_count']}/{m['positive_queries']} ({pct(m['correct_source_warn_top3_recall'])})"
+    families={'basic':'기본 변형','instrument_layer':'악기 레이어','long_auto_edit':'긴 자동 편집 · 약 120초','room_effect':'공간 효과','local_tempo':'국소 템포'}
+    lines=['# 멘토링 기준 최종 현황 · 2026-10-23','',
+        '**이번 후속 작업: 500곡 근사 중복 감사, 5종 변형 70개 추가 평가, 두 번째 검색 실험, 긴 편집 복원 기능의 로컬 적용, 미사용 AI 자료 접수·검증 도구, 실제 서비스 검증까지 완료했습니다. 운영 성능을 확정하는 단계는 남았습니다.**','',
+        '## 먼저 볼 결과','',
+        '**현재 서비스 범위는 Pixabay AI 표시 원곡 34곡입니다. 아래 주 결과를 원본 1,000곡 전체의 AI 전용 성능으로 해석하지 않습니다.** AI 표시는 AI 수정도 포함하며 순수 AI 생성이 독립적으로 증명된 상태가 아닙니다.','',
+        '| 목표·평가 | 이번 작업 전 | 현재 적용 후 | 목표 | 판정 |','|---|---:|---:|---:|---|',
+        f"| 새 5종 변형 종합 원곡 확인 | {count(a['all'])} | {count(s['prospective_five_family'])} | 90% 이상 | 실험 표본 충족 |",
+        f"| 긴 자동 편집 원곡 확인 | {count(a['by_family']['long_auto_edit'])} | {count(s['by_family']['long_auto_edit'])} | 90% 이상 | 실험 표본 충족 |",
+        f"| 기존 원곡 분리 시험 | 28/28 (100%) | {count(s['test'])} | 90% 이상 | 유지 |",
+        f"| 첫 복합 변형 점검 | 26/28 (92.86%) | {count(s['new_transform_stress'])} | 90% 이상 | 유지 |",
+        f"| 이전 추가 변형 점검 | 27/28 (96.43%) | {count(s['new_replication'])} | 90% 이상 | 유지 |",
+        '| 정상후보 WARN 이상 · 같은 11곡 | 1/11 (9.09%) | 1/11 (9.09%) | 10% 이하 | 관측값 충족 |',
+        '| 정상후보 HOLD · 같은 11곡 | 0/11 (0%) | 0/11 (0%) | 2% 이하 | 관측값 충족 |','',
+        '**중복 의심 1곡을 포함한 원래 12곡 전체에서는 WARN 이상 2/12 (16.67%), HOLD 1/12 (8.33%)입니다. 이 수치와 11곡 정제 결과를 함께 보존합니다. 파일을 삭제해서 성능을 올린 것이 아닙니다.**','',
+        '### 유형별로는 아직 두 약점이 있습니다','',
+        '| 새 변형 유형 | 이번 작업 전 | 현재 | 유형별 90% 기준 |','|---|---:|---:|---|']
+    for kind,name in families.items():
+        metric=s['by_family'][kind]
+        lines.append(f"| {name} | {count(a['by_family'][kind])} | {count(metric)} | {'충족' if metric['correct_source_warn_top3_recall']>=.90 else '미달'} |")
+    lines += ['','**종합 90%를 각 변형에서 모두 90%를 달성했다는 뜻으로 발표하지 않습니다. 기본 변형과 악기 레이어는 각각 11/14 (78.57%)여서 추가 개선 대상입니다.**','',
+        '## 멘토링 항목별 완료·미완료','',
+        '| 멘토링 항목 | 상태 | 완료한 범위 / 남은 일 |','|---|---|---|',
+        '| 정상 대조 17곡 교체 | 기존 완료 | 기존 완전 지문 중복 교체 이력 보존. 이번에 근사 동일 녹음 후보를 추가로 찾아 별도 격리 목록 생성 |',
+        '| 합성 양성 확대 | 완료 | 기존 전체 합성 340개 보존. AI 표시군은 기존 124개에 이번 70개를 추가해 194개. 독립 원곡 수는 34개 |',
+        '| 원본 1,000·정상후보 300·합성 340 전체 평가 | 기존 완료 | 혼합·출처 미확인 DB 평가 이력. 순수 AI 전용 성능 확정과 구분 |',
+        '| 임계값 재보정 | 로컬 실험 완료 | 기존 WARN/HOLD 유지, 보조 경로에 별도 임계값 계산. 개발용 정상곡에서 새 경고가 늘지 않게 검증 |',
+        '| 실패 사례 분석 | 완료 | 구간 재배열의 연속 정렬 실패, 후보 검색 누락, 기본·레이어 변형의 남은 누락을 분리하고 곡별 CSV 생성 |',
+        '| 근사 중복·정상 품질 감사 | 자동 검사 완료 | 500곡 전부 시도, 499곡 지문 검사·1곡 길이 부족. 정상후보 3곡·premusic 75곡 근사 동일 녹음 증거 확인 |',
+        '| 실제 화면·DB·운영 시험 | 로컬 완료 | 실제 React·인증·AI·Prisma/MySQL·재조회·모바일·권한 검증. 긴 편집의 세 구간 저장·표시와 정밀 분석 2건 동시 접수·완료 확인 |',
+        '| 1,000곡 규모의 복합 변형 목표 | 미완료 | 두 번째 검색 실험으로 개선했지만 새 5종 원곡 확인 51/70, 목표 90% 미달. 주 서비스에는 적용하지 않음 |',
+        '| 기본 변형·악기 레이어 유형별 목표 | 미완료 | 각각 11/14. 강한 음높이·음색 변화가 남은 약점 |',
+        '| 미사용 독립 AI 자료 검증 | 도구 완료·실자료 평가 미완료 | 접수·해시 고정·실제 Engine 실행·신뢰상한 계산 도구 제공. 실제 새 음원과 생성 기록은 아직 없음 |',
+        '| 순수 AI 생성 출처 확정 | 미완료 | Pixabay 표시 확인을 넘어 생성 서비스의 원본 기록·ID·모델 증빙 필요 |',
+        '| 운영 Google OAuth·HTTPS 배포 | 미완료 | 실제 설정·운영 주소가 없어 검증하지 않음. 커밋·push·배포는 수행하지 않음 |','',
+        '## 실제로 바꾼 판정 방식','',
+        '기존 음색 검색 Top-20과 음높이 흐름 점수는 그대로 유지합니다. 기존 확인 점수가 0.60보다 낮을 때 원래 음색 검색 상위 3곡만 정밀 CQT 특징으로 재확인합니다. 긴 편집은 서로 다른 원곡 구간과 맞는 약 10초 조각 세 개를 요구합니다. 각 조각은 8초 이상 대응하고, 같은 원곡의 한 구간을 세 번 세지 않도록 제한합니다.',
+        '정밀 음높이 증거와 음색 검색 점수를 함께 사용합니다. 기존 판정 경계 전체를 올리지 않고, 기존에 PASS였던 개발 정상 17곡에서 얻은 추가 증거의 최댓값에 5% 여유를 둬 보조 경로 기준을 정했습니다. 보조 경로는 기존 경고 점수 척도로 변환하며 0.80으로 제한해 현재 HOLD 경계까지 올리지 못하게 했습니다. 이 점수는 표절 확률이 아닙니다.','',
+        f"- 주 경로 WARN: **{policy['warn_threshold']:.9f}**, HOLD: **{policy['hold_threshold']:.9f}**.",
+        f"- 보조 경로의 원시 증거 기준: **{policy['secondary_warn_threshold']:.9f}**. 주 경로 점수와 다른 척도입니다.",
+        '- 검색 기준·출처·평가·새 변형 결과·구현 파일·librosa 버전을 정책에 묶었습니다. 달라지면 서버가 재보정을 요구합니다.',
+        '- 정밀 점수를 무조건 추가하는 안, 공통 화음을 제거하는 안, 전체 임계값을 올리는 안은 오경고 또는 재현율 문제로 기각·보류했고 결과 파일을 남겼습니다.','',
+        f'실제 팀 화면으로 긴 편집 음원을 업로드한 결과가 WARN으로 저장·복원됐고, 세 매칭 구간이 확인됐습니다. 추가로 정밀 분석 두 건을 동시에 제출해 모두 완료했습니다. 내부 분석은 한 작업자에서 순서대로 처리되며, 두 건의 접수부터 완료까지 약 {queue_times}였습니다. 두 표본의 기능·큐 동작 확인이며 운영 SLA나 부하 시험 전체를 뜻하지 않습니다.','',
+        f"추가 단위 검증 **{unit['unit_tests']}개**를 통과했고, 이전 양성 자료의 곡별 원곡 확인 회귀는 **{unit['old_positive_source_regressions']}건**입니다. 실제 Engine과 오프라인의 점수·후보 순서·판정도 일치했습니다.",'',
+        '## 전체 1,000곡 비교는 어디까지 왔나','',
+        '| 같은 질의 묶음 | 기존 선택적 Top-20 | 두 번째 검색·경로별 감점 실험 | 목표 90% |','|---|---:|---:|---|',
+        f"| 이전 개발 양성 | 37/40 (92.50%) | {count(g['tune'])} | 개발 결과 |",
+        f"| 이전 분리 시험 | 28/28 (100%) | {count(g['test_audited'])} | 충족 |",
+        f"| 첫 복합 변형 | 21/28 (75%) | {count(g['first_stress'])} | 미달 |",
+        f"| 이전 추가 변형 | 22/28 (78.57%) | {count(g['replication'])} | 미달 |",
+        f"| 이번 새 5종 | {count(full['current']['all'])} | {count(full['proposed']['all'])} | 미달 |",'',
+        '두 번째 검색은 음높이 변화의 짧은 시퀀스를 조옮김에 덜 민감한 서명으로 만들어 후보를 합치는 자체 구현입니다. 후보에 들어왔다는 것과 올바른 원곡으로 경고됐다는 것은 별도로 측정했습니다. 1,000곡 전체에는 정밀 보조 경로를 적용·보정하지 않았으므로, 34곡의 90%를 1,000곡 결과로 제시하지 않습니다.','',
+        '## 정상·premusic 감사와 데이터 상태','',
+        '| 항목 | music | premusic |','|---|---:|---:|',
+        '| 파일 수 · 전부 보존 | 300 | 200 |',
+        '| 근사 동일 녹음 증거로 정상 후보에서 격리 | 3 | 75 |',
+        '| 10초 미만으로 검사 불가 | 1 | 0 |',
+        '| 중복 격리 뒤 남는 AI 표시 후보 | 29 | 2 |','',
+        '500곡 중 499곡을 기존 원곡 1,000곡의 지문과 대조했습니다. 후보 검색 뒤 지문 비트 차이와 서로 떨어진 세 파형 구간으로 확인했습니다. 이는 탐색 범위가 제한된 자동 근사 녹음 검사이며, 검사에서 안 잡혔다고 독립 작품·순수 AI 생성·저작권 상태가 확정되는 것은 아닙니다. 원본 파일 이동·삭제는 0건입니다.',
+        '기존 300곡을 모두 검증된 정상 AI 곡이라고 사용할 수 없고, premusic 200곡도 그대로 새 독립 대조군으로 추가할 수 없습니다. AI 표시가 있고 중복 증거가 없는 후보 31곡도 이미 관찰한 자료여서 새 블라인드 평가 표본으로 세지 않습니다.','',
+        '## 실험 표본의 목표 충족과 운영 성능 확정은 다릅니다','',
+        '이번 5종 70개는 같은 14개 원곡에서 파생했습니다. 그 결과를 보고 보조 경로를 설계했으므로 개발용 진단 결과입니다. 기존 원곡 분리 시험과 이전 추가 변형도 이미 관찰한 상태입니다. 70개의 독립 신곡 시험이나 완전한 블라인드 검증이라고 발표하지 않습니다.',
+        f"정상 경고 1/11의 단측 95% 이항 상한은 독립·대표 표본을 가정해도 약 **{pct(float(beta.ppf(.95,2,10)))}**입니다. 따라서 현재 관측 경고율 9.09%만으로 실제 경고율 10% 이하를 증명하지 못합니다. HOLD 0/11의 같은 상한도 약 **{pct(float(beta.ppf(.95,1,11)))}**입니다.",
+        '경고 0건이라는 조건에서 WARN 10% 이하를 뒷받침하려면 최소 29개, HOLD 2% 이하에는 최소 149개의 독립·대표 정상곡이 필요합니다. 경고가 있으면 더 많은 자료가 필요합니다. 현재 실제 미사용 자료 평가는 수행하지 않았습니다.','',
+        '## 사용자가 다음으로 준비할 것','',
+        '1. **미사용 독립 AI 생성 음원과 실제 생성 기록**을 준비하세요. 생성 서비스·모델·생성 ID·원본 출력·생성 시각·서비스 기록 URL을 보관하고, 같은 생성물의 변형을 여러 독립 정상곡으로 세지 않습니다. 사람의 독립 연주 자료는 요구하지 않습니다.',
+        '2. [입력 안내](layer2/test_data/fresh_ai_validation/README.md)에 따라 CSV를 작성합니다. 접수 도구는 기존 1,500곡과 기존 변형 manifest의 해시 재사용, 같은 생성 ID의 정상 중복, 빈 양식, 기록 불일치를 거절합니다. 기록의 진위·순수 AI 제작 여부를 형식 검사만으로 인증하지는 않습니다.',
+        '3. 정책을 고정한 상태로 새 자료를 평가합니다. 결과를 보고 임계값을 바꾸면 별도 미사용 검증 묶음이 다시 필요합니다. 주 기준 DB에 없는 새 원곡의 재현율 평가는 별도 기준 인덱스를 만들어야 합니다.',
+        '4. 운영 배포를 진행할 때 실제 HTTPS API 주소와 로컬 환경설정 경로를 준비합니다. 비밀키를 채팅·프론트 환경변수·Git에 넣지 않습니다.','',
+        '```powershell','python local_team.py --serve',
+        '# 새 실자료 접수 후 아래 예시 경로를 실제 CSV로 바꾸세요.',
+        'python layer2/validate_fresh_ai.py --manifest C:/블록체인/my_validation/manifest.csv --evaluate','```','',
+        '## 근거 파일','',
+        '- [현재 실험 정책](layer2/artifacts/ai_precision_policy.json), [보조 경로 평가](layer2/artifacts/secondary_precision_evaluation.json)',
+        '- [5종 변형의 기존 방식 결과](layer2/artifacts/five_family_ai_evaluation.json), [곡별 최종 실패·경고 목록](layer2/artifacts/mentoring_final_failure_cases.csv)',
+        '- [500곡 근사 중복 검사](layer2/artifacts/control_collection_near_duplicate_audit.json), [500곡 사용 적격성 목록](layer2/artifacts/control_collection_eligibility.csv), [격리 목록](layer2/artifacts/control_collection_quarantine.csv)',
+        '- [두 번째 검색](layer2/artifacts/dual_retrieval_evaluation.json), [경로별 감점 비교](layer2/artifacts/dual_route_guard_evaluation.json)',
+        '- [실제 점수 일치](layer2/artifacts/ai_scope_live_validation.json), [실제 화면·DB 검증](layer2/artifacts/team_live_ai_e2e_validation.json), [로컬 시작 검증](layer2/artifacts/local_stack_validation.json)',
+        '- [단위 검증](layer2/artifacts/next_stage_unit_validation.json), [기존 개선 이력](AI_IMPROVEMENT_20261023.md)',
+        '- 방법 참고: [librosa CQT 특징](https://librosa.org/doc/main/auto_tutorials/01-intro/04-harmony.html), [Essentia 시퀀스 비교](https://essentia.upf.edu/reference/streaming_ChromaCrossSimilarity.html). 자체 결합·판정 규칙을 사용하며 동일 알고리즘이라는 주장은 하지 않습니다.','']
+    report=ROOT/'MENTORING_FINAL_STATUS_20261023.md';report.write_text('\n'.join(lines),encoding='utf-8')
+    failures=[]
+    for line in (ART/'secondary_precision_checkpoint.jsonl').read_text(encoding='utf-8').splitlines():
+        r=json.loads(line);positive=r['dataset']=='positive'
+        correct=r['expected_score'] is not None and r['expected_score']>=policy['warn_threshold'] and r['source_rank_after_tonal']<=3
+        if (positive and correct) or (not positive and r['score']<policy['warn_threshold']):continue
+        failures.append({'split':r['split'],'kind':r['query_kind'],'file':r['file'],'expected_source':r['expected_track_id'],
+            'expected_score':r['expected_score'],'source_rank':r['source_rank_after_tonal'],'best_source':r['candidates'][0]['trackId'],
+            'best_score':r['score'],'reason':'positive_source_not_confirmed' if positive else 'near_recording_quarantined' if Path(r['file']).name=='alex-morgan-dramatic-548632.mp3' else 'normal_candidate_warning'})
+    with (ART/'mentoring_final_failure_cases.csv').open('w',encoding='utf-8-sig',newline='') as f:
+        writer=csv.DictWriter(f,fieldnames=list(failures[0]));writer.writeheader();writer.writerows(failures)
+    status={'date':'2026-10-23','status':'completed_feasible_local_work','active_scope':'ai_labeled','reference_tracks':34,
+        'policy_file':'ai_precision_policy.json','score_version':live['score_version'],
+        'five_family':s['prospective_five_family'],'by_family':s['by_family'],'test_audited':s['test'],'test_raw':current['raw_test'],
+        'collection_audit':audit['counts'],'actual_fresh_ai_validation_performed':False,'production_readiness':False,
+        'remaining':['Independent unused AI source/normal validation and creation records','Basic/instrument-layer family recall','1000-reference complex-transform recall','Production OAuth/HTTPS deployment'],
+        'report':report.name,'report_sha256':hashlib.sha256(report.read_bytes()).hexdigest()}
+    (ART/'mentoring_final_completion_status.json').write_text(json.dumps(status,indent=2),encoding='utf-8')
+    old=read('ai_scope_completion_status.json');old.update(latest_report=report.name,latest_policy='ai_precision_policy.json',
+        test=s['test'],test_raw=current['raw_test'],five_family=s['prospective_five_family'],production_readiness=False)
+    (ART/'ai_scope_completion_status.json').write_text(json.dumps(old,indent=2),encoding='utf-8')
+    historical=read('ai_improvement_completion_status.json')
+    historical.setdefault('original_report_sha256',historical.get('report_sha256'))
+    historical['report_sha256']=hashlib.sha256((ROOT/'AI_IMPROVEMENT_20261023.md').read_bytes()).hexdigest()
+    historical['superseded_by']=report.name
+    (ART/'ai_improvement_completion_status.json').write_text(json.dumps(historical,indent=2),encoding='utf-8')
+    print('Mentoring completion report, goal comparison, failure CSV and status published.')
+
+
+if __name__=='__main__':main()

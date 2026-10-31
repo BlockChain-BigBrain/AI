@@ -1,0 +1,39 @@
+{
+  "policy_status": "calibrated_experimental_not_production_validated",
+  "evaluated_at": "2026-10-22T08:37:36.158529+00:00",
+  "candidate_retrieval": {
+    "internal_top_k": 5,
+    "display_top_k": 3,
+    "positive_queries": 340,
+    "top3_source_recall": 0.8484848484848485,
+    "top5_source_recall": 0.8787878787878788,
+    "decision_reason": "Existing display policy retained; recalls are from the new held-out source groups."
+  },
+  "risk_score": {
+    "score_name": "seg_top3_centered",
+    "hold_threshold_inclusive": 0.9668390154838562,
+    "warn_threshold_inclusive": 0.707587718963623,
+    "pass_rule": "score < warn_threshold",
+    "meaning": "Similarity/risk score, not plagiarism probability or legal finding.",
+    "hold_action": "Escrow/review hold; never automatic upload rejection by Layer 2 alone.",
+    "warn_action": "Allow registration and display risk score/candidate references.",
+    "automatic_upload_block": "Layer 1 exact fingerprint duplicate match only."
+  },
+  "held_out_metrics": {
+    "positive_queries": 132,
+    "safe_queries": 121,
+    "hold_positive_recall": 0.0,
+    "hold_safe_false_positive_rate": 0.024793388429752067,
+    "warn_positive_recall": 0.9015151515151515,
+    "warn_or_hold_safe_false_positive_rate": 1.0,
+    "seg_top3_centered_source_recall_at_3": 0.8484848484848485,
+    "seg_top3_centered_source_recall_at_5": 0.8787878787878788
+  },
+  "limitations": [
+    "Synthetic edits do not establish real plagiarism detection accuracy.",
+    "Normal controls are fingerprint-unique candidates, not expert-certified negative labels.",
+    "Independent cover pilot uses a separate 20-work corpus; do not combine it with synthetic metrics.",
+    "Local screen/storage integration has been implemented; team frontend and database configuration still need verification."
+  ],
+  "corpus_version": "5024eab8bb046fb5506be213d1abe25a81840cdc93a66d1a51e6cd287c90e191"
+}

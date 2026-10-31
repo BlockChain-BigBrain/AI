@@ -1,0 +1,10 @@
+{
+  "date": "2026-10-23",
+  "method": "cqt-agreement-three-fragment-v1",
+  "trigger": "Existing selective score<.60; original CLAP Top3 only.",
+  "whole_rule": "sqrt(FFT whole score * CQT whole score).",
+  "fragment_rule": "Three distinct 10s raw-CQT alignments, each span>=8s and score>=.65; score=.75*mean(fragment scores)^2.",
+  "thresholds": "Recalibrate WARN/HOLD on original tune groups only; no held-out numerical threshold fit.",
+  "limits": "Engineering combination after observed precision prototypes; all old scores observed, not blind validation.",
+  "acceptance": "Tune/audited test normal WARN<=10%, HOLD<=2%; no old positive recall regression; five-family source recall>=90%."
+}

@@ -1,0 +1,22 @@
+{
+  "dataset": "Covers80",
+  "acquired_annotated_pairs": 80,
+  "evaluated_pairs": 80,
+  "reference_tracks": 80,
+  "query_tracks": 80,
+  "clip_protocol": "center 30 seconds; all 10s windows at 5s stride",
+  "selection_seed": 20261022,
+  "score": "seg_top3_centered; mean of selected independent reference vectors",
+  "recall_at_1": 0.1,
+  "recall_at_3": 0.175,
+  "recall_at_5": 0.2625,
+  "mrr": 0.1899469732568474,
+  "different_work_review_candidates": 6320,
+  "limitations": [
+    "80-work independent benchmark, not the 1000-work production catalog",
+    "No production thresholds fitted on this independent benchmark",
+    "Different work IDs are benchmark labels; expert musical review remains pending",
+    "No commercial redistribution license asserted"
+  ],
+  "source_url": "https://www.labrosa.org/projects/coversongs/covers80/"
+}

@@ -1,0 +1,14 @@
+{
+  "files": 1500,
+  "folders": {
+    "original_music": 1000,
+    "music": 300,
+    "premusic": 200
+  },
+  "numeric_media_id_candidates": 1306,
+  "explicit_ai_tool_metadata_files": 0,
+  "metadata_pixabay_url_files": 0,
+  "pure_ai_creation_verified": 0,
+  "audio_based_ai_detector_used": false,
+  "note": "AI labels may include modification; neither royalty-free nor missing AI labels establishes creation method."
+}
