@@ -44,6 +44,11 @@ class VerificationResult(BaseModel):
     provisional: bool
     durationSeconds: float
     decision: Literal['PASS', 'WARN', 'HOLD', 'BLOCK']
+    reviewState: Literal['NONE', 'RECHECK', 'CONFIRMED'] = 'NONE'
+    decisionReason: str | None = None
+    policyVersion: str | None = None
+    aggregation: dict | None = None
+    secondaryFeatures: dict | None = None
     duplicate: DuplicateEvidence
     similarityScore: float | None
     similarTracks: list[SimilarTrack]

@@ -11,6 +11,8 @@ sys.path[:0] = [str(ROOT / 'layer1'), str(ROOT / 'layer2')]
 import upload_guard_api as gate
 import evaluate_retrieval_baseline as baseline
 import evaluate_top3_aggregation as aggregation
+from decision_policy import PolicyConfig, classify_segments
+import secondary_features
 
 
 class Engine:
@@ -36,10 +38,12 @@ class Engine:
         self.mean = self.vectors.mean(axis=0)
         self.centered = aggregation.unit_rows(self.vectors - self.mean)
         self.groups = [(str(t), np.flatnonzero(self.ids == t)) for t in np.unique(self.ids)]
+        self.reference_paths = {path.stem: path for path in baseline.audio_files(baseline.ORIGINAL_DIR)}
         # Bind thresholds to the actual score formula, rather than raw CLAP cosine.
         report = json.loads((baseline.ARTIFACT_DIR / 'top3_aggregation_evaluation.json').read_text('utf-8'))
         policy = report['models']['seg_top3_centered']['thresholds_from_tune_split']
         self.thresholds = {'warn': policy['warn_threshold'], 'hold': policy['hold_threshold']}
+        self.policy = PolicyConfig(warn_threshold=self.thresholds['warn'], hold_threshold=self.thresholds['hold'])
         digest = hashlib.sha256(self.vectors.tobytes() + self.ids.tobytes() + self.offsets.tobytes())
         self.corpus_version = digest.hexdigest()
 
@@ -82,7 +86,40 @@ class Engine:
                     refEndSec=float(self.offsets[indices[ri]]) + 10, score=float(local[qi, ri])))
             candidates.append(dict(trackId=track_id, score=score, matchedSegments=matches))
         candidates.sort(key=lambda x: x['score'], reverse=True)
-        score = candidates[0]['score']
-        decision = 'HOLD' if score >= self.thresholds['hold'] else 'WARN' if score >= self.thresholds['warn'] else 'PASS'
-        return dict(common, decision=decision, duplicate={'detected': False, 'matchedTrackId': None},
-                    similarityScore=score, similarTracks=candidates[:3], queryWindowCount=len(offsets))
+        top = candidates[0]
+        score = top['score']
+        segment_scores = [float(item['score']) for item in top['matchedSegments']]
+        secondary = {}
+        corroborating_scores = []
+        reference_path = self.reference_paths.get(str(top['trackId']))
+        if reference_path is not None and top['matchedSegments'] and baseline.FFMPEG_EXE:
+            try:
+                match = top['matchedSegments'][0]
+                secondary = secondary_features.compare(
+                    Path(path), reference_path, float(match['queryStartSec']),
+                    float(match['refStartSec']), baseline.FFMPEG_EXE,
+                )
+                corroborating_scores = [
+                    secondary['chromaScore'], secondary['pitchScore'],
+                    secondary['rhythmScore'],
+                ]
+            except Exception:
+                secondary = {'featureStatus': 'UNAVAILABLE'}
+        if not corroborating_scores:
+            # Without independent features, repeated temporal segments remain
+            # the fallback corroboration and HOLD is intentionally conservative.
+            corroborating_scores = segment_scores
+        decision_info = classify_segments(
+            segment_scores, config=self.policy,
+            corroborating_scores=corroborating_scores,
+        )
+        decision = str(decision_info['decision'])
+        return dict(
+            common, decision=decision, reviewState=decision_info['reviewState'],
+            decisionReason='multi_segment_multifeature_policy',
+            policyVersion='seg_top3_centered-policy-v3',
+            aggregation=decision_info, secondaryFeatures=secondary,
+            duplicate={'detected': False, 'matchedTrackId': None},
+            similarityScore=score, similarTracks=candidates[:3],
+            queryWindowCount=len(offsets),
+        )
