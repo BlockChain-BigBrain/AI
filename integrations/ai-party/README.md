@@ -3,6 +3,8 @@
 This directory is an additive integration layer. Existing frontend, backend,
 and blockchain files are intentionally unchanged.
 
+The cross-source handoff is maintained in [Notion](https://app.notion.com/p/40b4167954e181ed9af6cba16ef22221) and is grounded in the repository's [blockchain handoff](../../BLOCKCHAIN_HANDOFF.md).
+
 ## Runtime wiring
 
 ```text
