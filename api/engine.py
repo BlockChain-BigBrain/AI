@@ -11,6 +11,7 @@ sys.path[:0] = [str(ROOT / 'layer1'), str(ROOT / 'layer2')]
 import upload_guard_api as gate
 import evaluate_retrieval_baseline as baseline
 import evaluate_top3_aggregation as aggregation
+from decision_policy import PolicyConfig, classify_segments
 
 
 class Engine:
@@ -40,6 +41,7 @@ class Engine:
         report = json.loads((baseline.ARTIFACT_DIR / 'top3_aggregation_evaluation.json').read_text('utf-8'))
         policy = report['models']['seg_top3_centered']['thresholds_from_tune_split']
         self.thresholds = {'warn': policy['warn_threshold'], 'hold': policy['hold_threshold']}
+        self.policy = PolicyConfig(warn_threshold=self.thresholds['warn'], hold_threshold=self.thresholds['hold'])
         digest = hashlib.sha256(self.vectors.tobytes() + self.ids.tobytes() + self.offsets.tobytes())
         self.corpus_version = digest.hexdigest()
 
@@ -82,7 +84,28 @@ class Engine:
                     refEndSec=float(self.offsets[indices[ri]]) + 10, score=float(local[qi, ri])))
             candidates.append(dict(trackId=track_id, score=score, matchedSegments=matches))
         candidates.sort(key=lambda x: x['score'], reverse=True)
-        score = candidates[0]['score']
-        decision = 'HOLD' if score >= self.thresholds['hold'] else 'WARN' if score >= self.thresholds['warn'] else 'PASS'
-        return dict(common, decision=decision, duplicate={'detected': False, 'matchedTrackId': None},
-                    similarityScore=score, similarTracks=candidates[:3], queryWindowCount=len(offsets))
+        top = candidates[0]
+        score = top['score']
+        segment_scores = [float(item['score']) for item in top['matchedSegments']]
+        # Current CLAP runtime exposes temporal evidence only. The policy API
+        # accepts independent chroma/pitch/rhythm votes when available; until
+        # those features are wired, repeated non-overlapping segments are used
+        # as the conservative corroboration signal.
+        decision_info = classify_segments(
+            segment_scores,
+            config=self.policy,
+            corroborating_scores=segment_scores,
+        )
+        decision = str(decision_info['decision'])
+        return dict(
+            common,
+            decision=decision,
+            reviewState=decision_info['reviewState'],
+            decisionReason='multi_segment_policy',
+            policyVersion='seg_top3_centered-policy-v2',
+            aggregation=decision_info,
+            duplicate={'detected': False, 'matchedTrackId': None},
+            similarityScore=score,
+            similarTracks=candidates[:3],
+            queryWindowCount=len(offsets),
+        )
