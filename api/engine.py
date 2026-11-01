@@ -12,6 +12,7 @@ import upload_guard_api as gate
 import evaluate_retrieval_baseline as baseline
 import evaluate_top3_aggregation as aggregation
 from decision_policy import PolicyConfig, classify_segments
+import secondary_features
 
 
 class Engine:
@@ -37,6 +38,7 @@ class Engine:
         self.mean = self.vectors.mean(axis=0)
         self.centered = aggregation.unit_rows(self.vectors - self.mean)
         self.groups = [(str(t), np.flatnonzero(self.ids == t)) for t in np.unique(self.ids)]
+        self.reference_paths = {path.stem: path for path in baseline.audio_files(baseline.ORIGINAL_DIR)}
         # Bind thresholds to the actual score formula, rather than raw CLAP cosine.
         report = json.loads((baseline.ARTIFACT_DIR / 'top3_aggregation_evaluation.json').read_text('utf-8'))
         policy = report['models']['seg_top3_centered']['thresholds_from_tune_split']
@@ -87,25 +89,37 @@ class Engine:
         top = candidates[0]
         score = top['score']
         segment_scores = [float(item['score']) for item in top['matchedSegments']]
-        # Current CLAP runtime exposes temporal evidence only. The policy API
-        # accepts independent chroma/pitch/rhythm votes when available; until
-        # those features are wired, repeated non-overlapping segments are used
-        # as the conservative corroboration signal.
+        secondary = {}
+        corroborating_scores = []
+        reference_path = self.reference_paths.get(str(top['trackId']))
+        if reference_path is not None and top['matchedSegments'] and baseline.FFMPEG_EXE:
+            try:
+                match = top['matchedSegments'][0]
+                secondary = secondary_features.compare(
+                    Path(path), reference_path, float(match['queryStartSec']),
+                    float(match['refStartSec']), baseline.FFMPEG_EXE,
+                )
+                corroborating_scores = [
+                    secondary['chromaScore'], secondary['pitchScore'],
+                    secondary['rhythmScore'],
+                ]
+            except Exception:
+                secondary = {'featureStatus': 'UNAVAILABLE'}
+        if not corroborating_scores:
+            # Without independent features, repeated temporal segments remain
+            # the fallback corroboration and HOLD is intentionally conservative.
+            corroborating_scores = segment_scores
         decision_info = classify_segments(
-            segment_scores,
-            config=self.policy,
-            corroborating_scores=segment_scores,
+            segment_scores, config=self.policy,
+            corroborating_scores=corroborating_scores,
         )
         decision = str(decision_info['decision'])
         return dict(
-            common,
-            decision=decision,
-            reviewState=decision_info['reviewState'],
-            decisionReason='multi_segment_policy',
-            policyVersion='seg_top3_centered-policy-v2',
-            aggregation=decision_info,
+            common, decision=decision, reviewState=decision_info['reviewState'],
+            decisionReason='multi_segment_multifeature_policy',
+            policyVersion='seg_top3_centered-policy-v3',
+            aggregation=decision_info, secondaryFeatures=secondary,
             duplicate={'detected': False, 'matchedTrackId': None},
-            similarityScore=score,
-            similarTracks=candidates[:3],
+            similarityScore=score, similarTracks=candidates[:3],
             queryWindowCount=len(offsets),
         )
