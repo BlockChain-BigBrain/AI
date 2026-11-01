@@ -1,0 +1,34 @@
+{
+  "version": "ai-party-v1",
+  "ai": {
+    "submit": "POST /verify",
+    "poll": "GET /verify/{jobId}",
+    "header": "X-Internal-API-Key",
+    "states": ["PENDING", "RUNNING", "SUCCEEDED", "FAILED"],
+    "decisions": ["PASS", "WARN", "HOLD", "BLOCK"]
+  },
+  "persistence": {
+    "requiredEvidence": [
+      "audioHash",
+      "modelVersion",
+      "corpusVersion",
+      "scoreVersion",
+      "decisionPolicyVersion",
+      "thresholds",
+      "similarTracks",
+      "duplicate",
+      "provisional"
+    ]
+  },
+  "blockchain": {
+    "anchorFields": ["trackId", "audioHash", "manifestHash", "decisionPolicyVersion", "similarityScore", "isHold"],
+    "signaturePolicy": {
+      "PASS": {"issueRegistrationSignature": true, "allowRegisterAndMint": true, "isHold": false},
+      "WARN": {"issueRegistrationSignature": true, "allowRegisterAndMint": true, "isHold": false},
+      "HOLD": {"issueRegistrationSignature": true, "allowRegisterAndMint": true, "isHold": true},
+      "BLOCK": {"issueRegistrationSignature": false, "allowRegisterAndMint": false, "isHold": false}
+    },
+    "automaticActions": ["BLOCK registration and minting"],
+    "note": "AI evidence is not a legal ownership decision; existing review and settlement policy remains authoritative."
+  }
+}
