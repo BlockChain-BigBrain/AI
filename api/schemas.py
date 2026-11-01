@@ -48,6 +48,7 @@ class VerificationResult(BaseModel):
     decisionReason: str | None = None
     policyVersion: str | None = None
     aggregation: dict | None = None
+    secondaryFeatures: dict | None = None
     duplicate: DuplicateEvidence
     similarityScore: float | None
     similarTracks: list[SimilarTrack]
