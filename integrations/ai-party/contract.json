@@ -10,6 +10,7 @@
   "persistence": {
     "requiredEvidence": [
       "audioHash",
+      "manifestHash",
       "modelVersion",
       "corpusVersion",
       "scoreVersion",
@@ -18,17 +19,71 @@
       "similarTracks",
       "duplicate",
       "provisional"
-    ]
+    ],
+    "storage": "Detailed AI manifest is stored in IPFS/MySQL; it is not part of the current TrackRegistry ABI."
   },
   "blockchain": {
-    "anchorFields": ["trackId", "audioHash", "manifestHash", "decisionPolicyVersion", "similarityScore", "isHold"],
+    "repository": "https://github.com/BlockChain-BigBrain/Contract",
+    "contractVersion": "main / TrackRegistry + LicenseMarketplace + LicenseNFT + RevenueSplitter",
+    "registrationCall": "TrackRegistry.registerTrack",
+    "purchaseCall": "LicenseMarketplace.purchaseLicense",
+    "eip712Domain": {
+      "name": "TrackAI_Registry",
+      "version": "1"
+    },
+    "signatureFields": [
+      "audioHash",
+      "metadataCIDHash",
+      "registrant",
+      "contributorsHash",
+      "similarityScore",
+      "modelVersion",
+      "nonce",
+      "deadline"
+    ],
+    "registrationPayloadFields": [
+      "audioHash",
+      "metadataCID",
+      "contributors",
+      "shares",
+      "similarityScore",
+      "modelVersion",
+      "nonce",
+      "deadline"
+    ],
+    "derivedOnchainFields": {
+      "trackId": "TrackRegistered event / Registry counter",
+      "isHold": "getVerification(trackId).status == HOLD",
+      "licensable": "isTrackLicensable(trackId); false for HOLD",
+      "manifestHash": "off-chain IPFS/MySQL evidence only in current contract"
+    },
     "signaturePolicy": {
-      "PASS": {"issueRegistrationSignature": true, "allowRegisterAndMint": true, "isHold": false},
-      "WARN": {"issueRegistrationSignature": true, "allowRegisterAndMint": true, "isHold": false},
-      "HOLD": {"issueRegistrationSignature": true, "allowRegisterAndMint": true, "isHold": true},
-      "BLOCK": {"issueRegistrationSignature": false, "allowRegisterAndMint": false, "isHold": false}
+      "PASS": {
+        "issueRegistrationSignature": true,
+        "allowRegisterTrack": true,
+        "allowPurchase": true,
+        "onchainStatus": "PASS"
+      },
+      "WARN": {
+        "issueRegistrationSignature": true,
+        "allowRegisterTrack": true,
+        "allowPurchase": true,
+        "onchainStatus": "WARN"
+      },
+      "HOLD": {
+        "issueRegistrationSignature": true,
+        "allowRegisterTrack": true,
+        "allowPurchase": false,
+        "onchainStatus": "HOLD"
+      },
+      "BLOCK": {
+        "issueRegistrationSignature": false,
+        "allowRegisterTrack": false,
+        "allowPurchase": false,
+        "onchainStatus": null
+      }
     },
     "automaticActions": ["BLOCK registration and minting"],
-    "note": "AI evidence is not a legal ownership decision; existing review and settlement policy remains authoritative."
+    "note": "AI evidence is not a legal ownership decision; HOLD is recorded by VerificationStatus and purchase is blocked. Adding explicit manifestHash/isHold fields requires a new contract version and deployment."
   }
 }

@@ -9,7 +9,7 @@ The cross-source handoff is maintained in [Notion](https://app.notion.com/p/40b4
 
 ```text
 Frontend -> integrations/Backend API -> Track-AI FastAPI
-                               \-> existing provenance/settlement endpoints
+                               \\-> existing provenance/settlement endpoints
 ```
 
 The backend already owns upload persistence and verification state. The AI
@@ -26,13 +26,14 @@ TRACK_AI_API_KEY=<shared-internal-key>
 FRONTEND_URL=<existing-frontend-origin>
 ```
 
-The response contract is frozen in `contract.json`. `PASS`/`WARN`/`HOLD`
-receive a registration EIP-712 signature and may call `registerAndMint`;
-`HOLD` is recorded on-chain with `isHold=true` and its `similarityScore` so
-the demo can prove that review-required state reached the contract. Only
-`BLOCK` suppresses signature issuance and blocks the mint request. The
-blockchain layer should anchor the resulting `audioHash`/manifest only after
-the backend has validated the EIP-712 payload.
+The response contract is frozen in `contract.json`. With the merged
+TrackRegistry ABI, PASS/WARN/HOLD receive a `registerTrack` EIP-712 signature.
+HOLD is recorded by `VerificationStatus.HOLD` and remains non-licensable;
+`LicenseMarketplace.purchaseLicense` must reject it. Only BLOCK suppresses
+signature issuance and blocks registration. The current contract does not
+have explicit `isHold` or `manifestHash` fields: manifest evidence remains
+in IPFS/MySQL, while the signed on-chain fields are listed in `contract.json`.
+Adding explicit fields requires a new contract version and deployment.
 
 ## Verification
 
