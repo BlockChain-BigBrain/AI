@@ -21,8 +21,14 @@
     ]
   },
   "blockchain": {
-    "anchorFields": ["trackId", "audioHash", "manifestHash", "decisionPolicyVersion"],
-    "automaticActions": [],
+    "anchorFields": ["trackId", "audioHash", "manifestHash", "decisionPolicyVersion", "similarityScore", "isHold"],
+    "signaturePolicy": {
+      "PASS": {"issueRegistrationSignature": true, "allowRegisterAndMint": true, "isHold": false},
+      "WARN": {"issueRegistrationSignature": true, "allowRegisterAndMint": true, "isHold": false},
+      "HOLD": {"issueRegistrationSignature": true, "allowRegisterAndMint": true, "isHold": true},
+      "BLOCK": {"issueRegistrationSignature": false, "allowRegisterAndMint": false, "isHold": false}
+    },
+    "automaticActions": ["BLOCK registration and minting"],
     "note": "AI evidence is not a legal ownership decision; existing review and settlement policy remains authoritative."
   }
 }

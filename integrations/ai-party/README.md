@@ -27,9 +27,12 @@ FRONTEND_URL=<existing-frontend-origin>
 ```
 
 The response contract is frozen in `contract.json`. `PASS`/`WARN`/`HOLD`
-remain reviewable states; only `BLOCK` is a duplicate rejection. The
+receive a registration EIP-712 signature and may call `registerAndMint`;
+`HOLD` is recorded on-chain with `isHold=true` and its `similarityScore` so
+the demo can prove that review-required state reached the contract. Only
+`BLOCK` suppresses signature issuance and blocks the mint request. The
 blockchain layer should anchor the resulting `audioHash`/manifest only after
-the existing backend policy allows it.
+the backend has validated the EIP-712 payload.
 
 ## Verification
 
