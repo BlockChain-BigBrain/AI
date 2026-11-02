@@ -1,0 +1,35 @@
+{
+  "protocol": "frozen unused normal-control lock300; selection fixed before scoring",
+  "rows": 300,
+  "complete": true,
+  "counts": {
+    "PASS": 242,
+    "WARN": 55,
+    "HOLD": 3,
+    "BLOCK": 0
+  },
+  "errorCount": 0,
+  "validRows": 300,
+  "warnOrHigher": {
+    "count": 58,
+    "rate": 0.19333333333333333,
+    "wilson95": {
+      "low": 0.15263726685545376,
+      "high": 0.2417837554956011
+    }
+  },
+  "holdOrBlock": {
+    "count": 3,
+    "rate": 0.01,
+    "wilson95": {
+      "low": 0.003406618437715286,
+      "high": 0.02898349336233983
+    }
+  },
+  "scoreVersion": "hybrid_query_top3_pairwise_hold-v5",
+  "decisionPolicyVersion": "track-ai-balanced-policy-v5-20261102",
+  "thresholds": {
+    "warn": 0.351229127861893,
+    "hold": 0.9471999941293027
+  }
+}
