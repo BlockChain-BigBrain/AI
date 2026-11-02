@@ -15,6 +15,7 @@
       "scoreVersion",
       "decisionPolicyVersion",
       "thresholds",
+      "queryVerifierScore",
       "similarTracks",
       "duplicate",
       "provisional"

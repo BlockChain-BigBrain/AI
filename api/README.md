@@ -40,4 +40,4 @@ node api\node-client.mjs "C:\음원\test.mp3" track-123 request-123
 
 ## 응답에서 반드시 저장할 필드
 
-`audioHash`, `decision`, `similarityScore`, `similarTracks`, `thresholds`, `modelVersion`, `scoreVersion`, `corpusVersion`, `processingSeconds`를 저장해야 나중에 어떤 파일과 모델로 나온 결과인지 재현할 수 있습니다.
+`audioHash`, `decision`, `similarityScore`, `queryVerifierScore`, `similarTracks`, `thresholds`, `modelVersion`, `scoreVersion`, `corpusVersion`, `processingSeconds`를 저장해야 나중에 어떤 파일과 모델로 나온 결과인지 재현할 수 있습니다. 현재 hybrid 정책에서 `queryVerifierScore`는 WARN, `similarityScore`는 엄격 HOLD 판단에 사용됩니다.
