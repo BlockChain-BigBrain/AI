@@ -1,6 +1,13 @@
 {
   "version": "ai-party-v1",
   "ai": {
+    "scoreVersion": "hybrid_query_top3_pairwise_hold-v5",
+    "decisionPolicyVersion": "track-ai-balanced-policy-v5-20261102",
+    "modelVersion": "laion/clap-htsat-unfused",
+    "thresholds": {
+      "warn": 0.351229127861893,
+      "hold": 0.9471999941293027
+    },
     "submit": "POST /verify",
     "poll": "GET /verify/{jobId}",
     "header": "X-Internal-API-Key",
@@ -16,13 +23,14 @@
       "decisionPolicyVersion",
       "thresholds",
       "queryVerifierScore",
+      "matchedSegments",
       "similarTracks",
       "duplicate",
       "provisional"
     ]
   },
   "blockchain": {
-    "anchorFields": ["trackId", "audioHash", "manifestHash", "decisionPolicyVersion", "similarityScore", "isHold"],
+    "anchorFields": ["trackId", "audioHash", "manifestHash", "scoreVersion", "decisionPolicyVersion", "modelVersion", "thresholds", "similarityScore", "queryVerifierScore", "isHold", "provisional"],
     "signaturePolicy": {
       "PASS": {"issueRegistrationSignature": true, "allowRegisterAndMint": true, "isHold": false},
       "WARN": {"issueRegistrationSignature": true, "allowRegisterAndMint": true, "isHold": false},
