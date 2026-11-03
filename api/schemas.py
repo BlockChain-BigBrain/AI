@@ -9,9 +9,6 @@ class HealthResponse(BaseModel):
     referenceWindows: int
     modelVersion: str
     scoreVersion: str
-    evaluationScope: str = 'all'
-    decisionPolicyVersion: str | None = None
-    thresholds: dict[Literal['warn', 'hold'], float] | None = None
 
 
 class JobAccepted(BaseModel):
@@ -32,31 +29,54 @@ class MatchedSegment(BaseModel):
     score: float
 
 
+class FeatureSegment(BaseModel):
+    queryStartSec: float
+    refStartSec: float
+    pitchScore: float
+    rhythmScore: float
+    chromaScore: float
+    pitchShift: int
+
+
+class FeatureEvidence(BaseModel):
+    version: str
+    segments: list[FeatureSegment]
+    pitchScore: float
+    rhythmScore: float
+    chromaScore: float
+    matchedSegmentCount: int
+    orderedMatchFraction: float
+    orderedMatches: bool
+    pitchShiftConsistency: float
+    tempoRatioMedian: float
+    tempoRatioConsistency: float
+    longestOrderedChainSeconds: float
+    queryCoverage: float
+    referenceCoverage: float
+
+
 class SimilarTrack(BaseModel):
     trackId: str
     score: float
-    retrievalScore: float | None = None
+    fusionScore: float
+    verifierScore: float
     matchedSegments: list[MatchedSegment]
+    featureEvidence: FeatureEvidence
 
 
 class VerificationResult(BaseModel):
     audioHash: str
     modelVersion: str
     scoreVersion: str
-    evaluationScope: str = 'all'
-    referenceTracks: int | None = None
-    pureAiCreationVerified: bool = False
+    decisionPolicyVersion: str
     corpusVersion: str
     thresholds: dict[Literal['warn', 'hold'], float]
     provisional: bool
     durationSeconds: float
     decision: Literal['PASS', 'WARN', 'HOLD', 'BLOCK']
-    decisionPolicyVersion: str
-    decisionReason: str
-    disposition: Literal['ALLOW', 'HUMAN_REVIEW', 'AUTO_BLOCK']
-    reviewRequired: bool
     duplicate: DuplicateEvidence
     similarityScore: float | None
+    queryVerifierScore: float | None
     similarTracks: list[SimilarTrack]
     queryWindowCount: int
     processingSeconds: float
