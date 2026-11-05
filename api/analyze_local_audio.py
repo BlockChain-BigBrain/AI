@@ -14,8 +14,6 @@ from pathlib import Path
 BASE = Path(__file__).resolve().parent
 sys.path.insert(0, str(BASE))
 
-from engine import Engine
-
 
 def sha256_file(path: Path) -> str:
     digest = hashlib.sha256()
@@ -34,6 +32,8 @@ def main() -> None:
         parser.error(f"audio file not found: {audio}")
     if audio.suffix.lower() not in {".mp3", ".wav", ".webm", ".flac", ".m4a", ".aac", ".ogg", ".wma"}:
         parser.error("unsupported audio extension")
+
+    from engine import Engine
 
     result = Engine().verify(audio, sha256_file(audio))
     print(json.dumps(result, ensure_ascii=False, indent=2))
