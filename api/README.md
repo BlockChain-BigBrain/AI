@@ -6,15 +6,18 @@
 
 1. Layer 1 Chromaprint가 등록 음원의 전체 지문과 정확히 일치하면 `BLOCK`
 2. 그 외에는 전체 곡을 10초 창, 5초 간격으로 CLAP 분석
-3. `seg_top3_centered-v1` 점수로 `PASS`, `WARN`, `HOLD` 산출
+3. v5 hybrid 정책으로 `PASS`, `WARN`, `HOLD` 산출
 4. 내부 후보 전체를 계산하고 응답에는 Top-3와 매칭 구간을 반환
 
-현재 임계값은 WARN `0.856638`, HOLD `0.894406`이며 제품 확정값이 아니라 합성 데이터 기반의 잠정값입니다. 응답의 `provisional: true`가 이를 표시합니다.
+현재 운영 정책은 `hybrid_query_top3_pairwise_hold-v5`입니다. WARN은 query-level score
+`0.351229127861893`, HOLD는 pairwise temporal score `0.9471999941293027`로 산출합니다.
+두 값은 서로 다른 점수 공간이며, 응답의 `provisional: true`가 검토용 판정임을 표시합니다.
 
 ## 실행
 
 ```powershell
 C:\Users\82108\anaconda3\python.exe -m pip install -r api\requirements.txt
+$env:TRACK_AI_API_KEY = "Backend의 TRACK_AI_API_KEY와 같은 로컬 값"
 C:\Users\82108\anaconda3\python.exe api\server.py
 ```
 
@@ -22,6 +25,8 @@ C:\Users\82108\anaconda3\python.exe api\server.py
 
 ## API 계약
 
+- 모든 요청은 `Authorization: Bearer <TRACK_AI_API_KEY>` 헤더가 필요합니다. 값이 없으면
+  서버는 `503 AUTH_NOT_CONFIGURED`, 값이 다르면 `401 UNAUTHORIZED`를 반환합니다.
 - `GET /health`: 모델 및 기준 인덱스 준비 상태
 - `POST /verify`: `multipart/form-data`의 `file`, `trackId`, `requestId`를 받고 HTTP 202와 작업 번호 반환
 - `GET /verify/{jobId}`: `PENDING`, `RUNNING`, `SUCCEEDED`, `FAILED` 및 최종 결과 반환

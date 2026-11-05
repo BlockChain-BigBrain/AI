@@ -8,13 +8,14 @@ import asyncio
 from concurrent.futures import ThreadPoolExecutor
 from contextlib import asynccontextmanager
 import hashlib
+import hmac
 import json
 import logging
 import os
 import sqlite3
 import time
 import uuid
-from fastapi import FastAPI, UploadFile, File, Form, HTTPException
+from fastapi import Depends, FastAPI, UploadFile, File, Form, Header, HTTPException
 from engine import Engine
 from schemas import HealthResponse, JobAccepted, VerificationJob
 
@@ -23,6 +24,19 @@ DATA.mkdir(exist_ok=True)
 DB = DATA / 'jobs.sqlite3'
 POOL = ThreadPoolExecutor(max_workers=1)
 engine = None
+
+
+def require_auth(authorization: str | None = Header(default=None)):
+    """Authenticate Backend calls with the shared local AI key."""
+    expected = (
+        os.environ.get('TRACK_AI_API_KEY', '').strip()
+        or os.environ.get('TRACK_AI_API_TOKEN', '').strip()  # legacy local alias
+    )
+    if not expected:
+        raise HTTPException(503, 'AUTH_NOT_CONFIGURED')
+    scheme, _, supplied = (authorization or '').partition(' ')
+    if scheme.lower() != 'bearer' or not hmac.compare_digest(supplied, expected):
+        raise HTTPException(401, 'UNAUTHORIZED', headers={'WWW-Authenticate': 'Bearer'})
 
 
 def connection():
@@ -68,14 +82,15 @@ app = FastAPI(title='Track-AI Verification', version='1.0.0', lifespan=lifespan)
 
 
 @app.get('/health', response_model=HealthResponse)
-def health():
+def health(_: None = Depends(require_auth)):
     return dict(status='ready', referenceTracks=len(engine.groups), referenceWindows=len(engine.ids),
-                modelVersion='laion/clap-htsat-unfused', scoreVersion='seg_top3_centered-v1')
+                modelVersion='laion/clap-htsat-unfused', scoreVersion=engine.score_version)
 
 
 @app.post('/verify', status_code=202, response_model=JobAccepted)
 async def verify(file: UploadFile = File(...), trackId: str = Form(..., min_length=1, max_length=200),
-                 requestId: str = Form(..., min_length=1, max_length=200)):
+                 requestId: str = Form(..., min_length=1, max_length=200),
+                 _: None = Depends(require_auth)):
     """Multipart contract. Reusing a requestId for different input returns 409."""
     suffix = Path(file.filename or '').suffix.lower()
     if suffix not in {'.mp3','.wav','.webm','.flac','.m4a','.aac','.ogg','.wma'}:
@@ -118,7 +133,7 @@ async def verify(file: UploadFile = File(...), trackId: str = Form(..., min_leng
 
 
 @app.get('/verify/{job_id}', response_model=VerificationJob)
-def result(job_id: str):
+def result(job_id: str, _: None = Depends(require_auth)):
     with connection() as db:
         row = db.execute('SELECT track_id,state,result,error FROM jobs WHERE id=?', (job_id,)).fetchone()
     if row is None:
@@ -130,4 +145,5 @@ def result(job_id: str):
 if __name__ == '__main__':
     import uvicorn
     # One process only: the MVP owns a single worker and immutable reference snapshot.
-    uvicorn.run(app, host='127.0.0.1', port=int(os.environ.get('TRACK_AI_PORT', '8000')))
+    uvicorn.run(app, host=os.environ.get('TRACK_AI_HOST', '127.0.0.1'),
+                port=int(os.environ.get('TRACK_AI_PORT', '8000')))
