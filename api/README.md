@@ -23,6 +23,16 @@ C:\Users\82108\anaconda3\python.exe api\server.py
 
 서버 시작 후 `http://127.0.0.1:8000/docs`에서 요청 형식과 응답 스키마를 확인할 수 있습니다. 첫 기동은 CLAP과 9,847개 기준 벡터를 메모리에 올리므로 시간이 걸립니다. MVP는 분석 작업자 한 개로 실행합니다.
 
+## 단일 파일 분석
+
+파일을 프로젝트 폴더로 복사할 필요가 없습니다. 절대 경로를 넘기면 기준 코퍼스는 읽기 전용으로 유지한 채 v5 결과를 JSON으로 출력합니다.
+
+```powershell
+C:\Users\82108\anaconda3\python.exe api\analyze_local_audio.py "C:\음원\sample.mp3"
+```
+
+이 명령은 분석 결과만 출력하며 기준 음원 인덱스 추가, DB 저장, IPFS 업로드, 블록체인 등록을 수행하지 않습니다.
+
 ## API 계약
 
 - 모든 요청은 `Authorization: Bearer <TRACK_AI_API_KEY>` 헤더가 필요합니다. 값이 없으면
